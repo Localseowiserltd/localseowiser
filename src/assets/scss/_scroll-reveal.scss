@@ -1,0 +1,104 @@
+//
+// Scroll reveal animations
+//
+
+.scroll-reveal {
+    opacity: 0;
+    transition:
+        opacity 0.65s ease,
+        transform 0.65s ease;
+    will-change: opacity, transform;
+
+    &--visible {
+        opacity: 1;
+        transform: none !important;
+    }
+
+    &--fade-up {
+        transform: translateY(28px);
+    }
+
+    &--fade-down {
+        transform: translateY(-28px);
+    }
+
+    &--fade-left {
+        transform: translateX(28px);
+    }
+
+    &--fade-right {
+        transform: translateX(-28px);
+    }
+
+    &--zoom-in {
+        transform: scale(0.94);
+    }
+
+    &--fade-in {
+        transform: none;
+    }
+
+    &--hoverable.scroll-reveal--visible:hover {
+        animation: scroll-reveal-hover 0.55s ease;
+    }
+}
+
+@keyframes scroll-reveal-hover {
+    0% {
+        opacity: 0.88;
+        transform: translateY(10px) scale(0.985);
+    }
+
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@keyframes scroll-reveal-hover-zoom {
+    0% {
+        opacity: 0.9;
+        transform: scale(0.96);
+    }
+
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.scroll-reveal--zoom-in.scroll-reveal--hoverable.scroll-reveal--visible:hover {
+    animation-name: scroll-reveal-hover-zoom;
+}
+
+//
+// Card & box hover motion
+//
+
+.hover-card {
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+
+    &:hover {
+        transform: translateY(-6px);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .scroll-reveal {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+        animation: none !important;
+    }
+
+    .hover-card {
+        transition: none;
+
+        &:hover {
+            transform: none;
+        }
+    }
+}

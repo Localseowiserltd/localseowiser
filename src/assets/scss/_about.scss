@@ -1,0 +1,37 @@
+.line {
+    &::after {
+        content: "";
+        position: absolute;
+        width: 15%;
+        height: 1px;
+        left: 0;
+        right: 0;
+        border-top: 2px dashed $primary;
+        top: 14px;
+        margin: 0 auto;
+    }
+
+    small {
+        z-index: 1;
+    }
+}
+
+
+
+
+.bg-shape{
+    background-image: url("../images/business.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bg-team{
+    // background-image: url("/images/bg-team.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat; 
+}
+
+
+
