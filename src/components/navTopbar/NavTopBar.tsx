@@ -6,12 +6,10 @@ import IconifyIcon from '../wrappers/IconifyIcon'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useEffect, useRef, useState } from 'react'
-import { contactInfo, contactTelHref, servicePages, topBarSocialLinks } from '@/data/site-content'
+import { contactPhones, servicePages, topBarSocialLinks } from '@/data/site-content'
 import ServicesMegaMenu from './ServicesMegaMenu'
 
 const serviceSlugs = servicePages.map((page) => page.slug)
-
-const topBarPhones = [{ flag: '🇺🇸', phone: contactInfo.phone, tel: contactInfo.phoneTel }]
 
 const navItems = [
   { label: 'Home', href: '/' },
@@ -76,10 +74,10 @@ const NavTopBar = () => {
       <div className={`nav-topbar d-none d-lg-block ${showTopbar ? 'nav-topbar-visible' : 'nav-topbar-hidden'}`}>
         <div className="nav-topbar-inner">
           <ul className="nav-topbar-phones list-unstyled mb-0">
-            {topBarPhones.map((item) => (
-              <li key={item.phone}>
+            {contactPhones.map((item) => (
+              <li key={item.tel}>
                 <span className="nav-topbar-flag">{item.flag}</span>
-                <a href={contactTelHref}>{item.phone}</a>
+                <a href={`tel:${item.tel}`}>{item.phone}</a>
               </li>
             ))}
           </ul>

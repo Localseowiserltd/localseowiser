@@ -2596,6 +2596,7 @@ export const contactInfo = {
   hours: 'Mon–Fri, 9 AM–5 PM',
   responseTime: 'Within 24 to 48 hours',
   location: '307 Freeland St, Pittsburgh, PA 15210, United States',
+  locationUk: 'Office 1267 85 Dunstall Hill, Wolverhampton, United Kingdom, WV6 0SR',
   serviceArea: 'Pittsburgh, PA & nationwide clients',
 }
 
@@ -2647,8 +2648,27 @@ export const contactPageHero = {
 }
 
 export const contactPhones = [
-  { label: 'US', phone: '+1 412 663 7288', tel: '+14126637288' },
-  { label: 'UK', phone: '+44 7454758272', tel: '+447454758272' },
+  { label: 'US', flag: '🇺🇸', phone: '+1 412 663 7288', tel: '+14126637288' },
+  { label: 'UK', flag: '🇬🇧', phone: '+44 7454 758272', tel: '+447454758272' },
+]
+
+export const contactLocations = [
+  {
+    code: 'USA',
+    label: 'USA',
+    phone: '+1 412 663 7288',
+    tel: '+14126637288',
+    email: 'info@localseowiser.com',
+    address: '307 Freeland St, Pittsburgh, PA 15210, United States',
+  },
+  {
+    code: 'UK',
+    label: 'UK',
+    phone: '+44 7454 758272',
+    tel: '+447454758272',
+    email: 'info@localseowiser.com',
+    address: 'Office 1267 85 Dunstall Hill, Wolverhampton, United Kingdom, WV6 0SR',
+  },
 ]
 
 export const contactPageOffice = 'Local SEO Wiser, Pittsburgh, Pennsylvania, United States'
