@@ -81,7 +81,7 @@ const SiteFooter = () => {
           </div>
 
           <div className="footer-v2-brand-panel">
-            <BrandLogo className="brand-logo-footer" href="/" showTagline />
+            <BrandLogo className="brand-logo-footer" href="/" variant="footer" />
             <a href={`tel:${primaryPhone.tel}`} className="footer-v2-phone">
               <IconifyIcon icon="tabler:phone" aria-hidden="true" />
               <span>{primaryPhone.phone}</span>
