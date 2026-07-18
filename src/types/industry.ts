@@ -29,6 +29,8 @@ export type IndustrySchemaEntityType =
   | 'Restaurant'
   | 'LocalBusiness'
   | 'RealEstateAgent'
+  | 'InsuranceAgency'
+  | 'FinancialService'
 
 export type IndustrySchemaFields = {
   webPageName: string

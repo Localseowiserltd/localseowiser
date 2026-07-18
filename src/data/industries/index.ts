@@ -9,6 +9,7 @@ import localSeoForElectricians from './local-seo-for-electricians'
 import localSeoForRoofers from './local-seo-for-roofers'
 import localSeoForRestaurants from './local-seo-for-restaurants'
 import localSeoForRealEstateAgents from './local-seo-for-real-estate-agents'
+import localSeoForInsuranceAgencies from './local-seo-for-insurance-agencies'
 
 /**
  * Industry page registry.
@@ -24,6 +25,7 @@ export const industryPages: IndustryPage[] = [
   localSeoForRoofers,
   localSeoForRestaurants,
   localSeoForRealEstateAgents,
+  localSeoForInsuranceAgencies,
 ]
 
 export const getIndustryPageBySlug = (slug: string): IndustryPage | undefined =>

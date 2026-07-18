@@ -189,6 +189,22 @@ export const industries = [
     tags: ['Neighborhood targeting', 'Buyer & seller leads'],
     href: '/local-seo-for-real-estate-agents',
   },
+  {
+    imageKey: 'professional-financial',
+    title: 'Insurance agencies',
+    description:
+      'Attract more qualified Pittsburgh quote requests with stronger map pack visibility, coverage-intent pages, and trust signals that convert insurance searches into calls.',
+    tags: ['Quote-intent keywords', 'Google Maps visibility'],
+    href: '/local-seo-for-insurance-agencies',
+  },
+  {
+    imageKey: 'professional-financial',
+    title: 'Financial advisors',
+    description:
+      'Win more Pittsburgh consultation requests with stronger map visibility, planning-intent pages, and trust signals that convert financial searches into booked meetings.',
+    tags: ['Consultation intent', 'Google Maps visibility'],
+    href: '/local-seo-for-financial-advisors',
+  },
 ]
 
 /**

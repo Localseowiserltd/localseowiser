@@ -253,6 +253,8 @@ const localSeoForRealEstateAgents: IndustryPage = {
     { label: 'Contact Us', href: '/contact' },
     { label: 'Local SEO for Restaurants', href: '/local-seo-for-restaurants' },
     { label: 'Local SEO for Dentists', href: '/local-seo-for-dentists' },
+    { label: 'Local SEO for Insurance Agencies', href: '/local-seo-for-insurance-agencies' },
+    { label: 'Local SEO for Financial Advisors', href: '/local-seo-for-financial-advisors' },
     { label: 'Pittsburgh Local SEO', href: '/local-seo' },
   ],
 
