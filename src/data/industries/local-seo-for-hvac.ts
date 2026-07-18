@@ -252,6 +252,7 @@ const localSeoForHvac: IndustryPage = {
     { label: 'Portfolio', href: '/portfolio' },
     { label: 'Contact Us', href: '/contact' },
     { label: 'Local SEO for Plumbers', href: '/local-seo-for-plumbers' },
+    { label: 'Local SEO for Electricians', href: '/local-seo-for-electricians' },
     { label: 'Pittsburgh Local SEO', href: '/local-seo' },
   ],
 

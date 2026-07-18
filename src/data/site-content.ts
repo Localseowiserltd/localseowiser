@@ -159,11 +159,11 @@ export const industries = [
   },
   {
     imageKey: 'contractors',
-    title: 'Contractors & home services',
+    title: 'Electricians',
     description:
-      'Generate qualified Pittsburgh service requests by aligning local keyword clusters with project-focused landing experiences.',
-    tags: ['Project-category SEO', 'Lead funnel alignment'],
-    href: '/industries/contractors',
+      'Rank for urgent Pittsburgh electrical service queries with stronger map pack visibility, service-area pages, and trust signals that convert searches into calls.',
+    tags: ['Emergency electrical intent', 'Service-area pages'],
+    href: '/local-seo-for-electricians',
   },
   {
     imageKey: 'roofing',

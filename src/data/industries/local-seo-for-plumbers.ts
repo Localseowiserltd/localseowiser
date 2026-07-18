@@ -254,6 +254,7 @@ const localSeoForPlumbers: IndustryPage = {
     { label: 'Local SEO for Lawyers', href: '/local-seo-for-lawyers' },
     { label: 'Local SEO for Doctors', href: '/local-seo-for-doctors' },
     { label: 'Local SEO for HVAC Companies', href: '/local-seo-for-hvac' },
+    { label: 'Local SEO for Electricians', href: '/local-seo-for-electricians' },
     { label: 'Pittsburgh Local SEO', href: '/local-seo' },
   ],
 
