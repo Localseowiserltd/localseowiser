@@ -171,7 +171,7 @@ export const industries = [
     description:
       'Win more Pittsburgh roofing jobs with stronger map visibility, storm-response search coverage, and trust signals that convert urgent repair searches into calls.',
     tags: ['Storm damage intent', 'Service-area pages'],
-    href: '/industries/roofing',
+    href: '/local-seo-for-roofers',
   },
   {
     imageKey: 'restaurants',

@@ -253,6 +253,7 @@ const localSeoForElectricians: IndustryPage = {
     { label: 'Contact Us', href: '/contact' },
     { label: 'Local SEO for HVAC Companies', href: '/local-seo-for-hvac' },
     { label: 'Local SEO for Plumbers', href: '/local-seo-for-plumbers' },
+    { label: 'Local SEO for Roofing Companies', href: '/local-seo-for-roofers' },
     { label: 'Pittsburgh Local SEO', href: '/local-seo' },
   ],
 
