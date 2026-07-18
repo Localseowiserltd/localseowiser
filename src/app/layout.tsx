@@ -2,6 +2,7 @@ import '@/assets/scss/style.scss'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://localseowiser.com'),
   title: {
     template: '%s | Local SEO Wiser | Pittsburgh Local SEO Agency',
     default: 'Pittsburgh Local SEO Agency | Local SEO Wiser',

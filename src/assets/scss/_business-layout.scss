@@ -1374,6 +1374,18 @@
         box-shadow: 0 2px 10px rgba($primary, 0.1);
         transform: translateY(-1px);
     }
+
+    &--static {
+        cursor: default;
+
+        &:hover {
+            border-color: rgba($primary, 0.18);
+            color: $gray-800;
+            background-color: $white;
+            box-shadow: none;
+            transform: none;
+        }
+    }
 }
 
 .areas-we-serve-tail {

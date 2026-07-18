@@ -4,10 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build",
+    "build": "node scripts/validate-locations.mjs && next build",
     "start": "next start",
     "lint": "next lint",
-    "format": "prettier --write 'src/**/*.{ts,tsx,js,jsx}'"
+    "format": "prettier --write 'src/**/*.{ts,tsx,js,jsx}'",
+    "validate:locations": "node scripts/validate-locations.mjs"
   },
   "dependencies": {
     "@iconify/react": "^5.0.2",

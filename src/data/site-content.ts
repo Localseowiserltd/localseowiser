@@ -139,7 +139,7 @@ export const industries = [
     description:
       'Drive appointment-ready traffic with treatment intent pages, review trust signals, and stronger map pack visibility for your Pittsburgh practice.',
     tags: ['Implants & cosmetic intent', 'Emergency local searches'],
-    href: '/industries/dentists-medical',
+    href: '/local-seo-for-dentists',
   },
   {
     imageKey: 'hvac',
@@ -191,20 +191,25 @@ export const industries = [
   },
 ]
 
+/**
+ * @deprecated Prefer `getHomeAreaChips()` from `@/data/locations`.
+ * Homepage chips link only when a location page is publishable.
+ * This legacy array keeps structural names/slugs; do not use hrefs for public navigation.
+ */
 export const homeAreasServed = [
-  { name: 'Shadyside', slug: 'shadyside', href: '/areas/shadyside' },
-  { name: 'Lawrenceville', slug: 'lawrenceville', href: '/areas/lawrenceville' },
-  { name: 'Oakland', slug: 'oakland', href: '/areas/oakland' },
-  { name: 'Squirrel Hill', slug: 'squirrel-hill', href: '/areas/squirrel-hill' },
-  { name: 'Strip District', slug: 'strip-district', href: '/areas/strip-district' },
-  { name: 'South Side', slug: 'south-side', href: '/areas/south-side' },
-  { name: 'North Shore', slug: 'north-shore', href: '/areas/north-shore' },
-  { name: 'Mt. Lebanon', slug: 'mt-lebanon', href: '/areas/mt-lebanon' },
-  { name: 'Cranberry Township', slug: 'cranberry-township', href: '/areas/cranberry-township' },
-  { name: 'Monroeville', slug: 'monroeville', href: '/areas/monroeville' },
-  { name: 'Robinson Township', slug: 'robinson-township', href: '/areas/robinson-township' },
-  { name: 'North Hills', slug: 'north-hills', href: '/areas/north-hills' },
-  { name: 'South Hills', slug: 'south-hills', href: '/areas/south-hills' },
+  { name: 'Shadyside', slug: 'local-seo-shadyside', href: '/local-seo-shadyside' },
+  { name: 'Lawrenceville', slug: 'local-seo-lawrenceville', href: '/local-seo-lawrenceville' },
+  { name: 'Oakland', slug: 'local-seo-oakland', href: '/local-seo-oakland' },
+  { name: 'Squirrel Hill', slug: 'local-seo-squirrel-hill', href: '/local-seo-squirrel-hill' },
+  { name: 'Strip District', slug: 'local-seo-strip-district', href: '/local-seo-strip-district' },
+  { name: 'South Side', slug: 'local-seo-south-side', href: '/local-seo-south-side' },
+  { name: 'North Shore', slug: 'local-seo-north-shore', href: '/local-seo-north-shore' },
+  { name: 'Mt. Lebanon', slug: 'local-seo-mt-lebanon', href: '/local-seo-mt-lebanon' },
+  { name: 'Cranberry Township', slug: 'local-seo-cranberry-township', href: '/local-seo-cranberry-township' },
+  { name: 'Monroeville', slug: 'local-seo-monroeville', href: '/local-seo-monroeville' },
+  { name: 'Robinson Township', slug: 'local-seo-robinson-township', href: '/local-seo-robinson-township' },
+  { name: 'North Hills', slug: 'local-seo-north-hills', href: '/local-seo-north-hills' },
+  { name: 'South Hills', slug: 'local-seo-south-hills', href: '/local-seo-south-hills' },
 ]
 
 /** Add verified Google reviews here before enabling AggregateRating schema. */
@@ -236,52 +241,6 @@ export const homePricingPlans = [
     variant: 'competitive' as const,
   },
 ]
-
-export const portfolioFeatured = {
-  name: '4s Chemicals',
-  location: 'Norman, Oklahoma, United States',
-  category: 'Local SEO Campaign',
-  heroImageKey: 'gsc-overview-1',
-  reportsLinkLabel: 'See all 8 GSC reports',
-  reportsLinkHref: '/portfolio',
-  description:
-    'Organic clicks reached 1.66K over six months, up from 902 in the previous period. Search impressions grew to 858K, average ranking position improved from 52.2 to 37.5, and the campaign drove 50 peak phone calls in a single month.',
-  stats: [
-    { end: 1.66, suffix: 'K', decimals: 2, label: 'Organic clicks (6 months)' },
-    { end: 858, suffix: 'K', decimals: 0, label: 'Search impressions (6 months)' },
-    { end: 37.5, suffix: '', decimals: 1, label: 'Average position improved to' },
-    { end: 50, suffix: '', decimals: 0, label: 'Peak monthly phone calls' },
-  ],
-  stickySlides: [
-    {
-      imageKey: '4s',
-      title: '4s Chemicals · 6-Month GSC Overview',
-      badge: 'GSC',
-      detail: '1.66K clicks vs 902 previous period',
-      subtitle: '6-month search performance overview',
-      description: 'Organic clicks grew 84% while average position improved from 52.2 to 37.5.',
-      href: '/portfolio',
-    },
-    {
-      imageKey: '4s1',
-      title: '4s Chemicals · Impression Surge Report',
-      badge: 'GSC',
-      detail: '44.3K impressions vs 1.43K previous period',
-      subtitle: 'Visibility acceleration phase',
-      description: 'Impressions jumped as the site started ranking for broader industrial search terms.',
-      href: '/portfolio',
-    },
-    {
-      imageKey: '4s2',
-      title: '4s Chemicals · April Call Snapshot',
-      badge: 'Calls',
-      detail: '50 tracked phone calls (+6.4%)',
-      subtitle: 'April call volume snapshot',
-      description: 'Highest single-month call count recorded during the campaign.',
-      href: '/portfolio',
-    },
-  ],
-}
 
 export const homeCtaSection = {
   title: 'Ready to get found in Pittsburgh?',
@@ -1732,6 +1691,7 @@ export const servicePages: ServicePage[] = [
       title: 'Let\'s build a site that actually works for your business',
       paragraphs: [
         'Whether you\'re starting fresh, escaping a slow or outdated site, or wondering why your current one brings in nothing — Local SEO Wiser will give you a straight assessment of where it stands and what it\'ll take to fix.',
+        'See a real example of our WordPress rebuild and local SEO work in the portfolio case studies.',
       ],
       pickLabel: 'Get started',
       primaryButton: {
@@ -1740,9 +1700,9 @@ export const servicePages: ServicePage[] = [
         description: 'No spam. No obligation. Just an honest look at your site\'s performance.',
       },
       secondaryButton: {
-        label: 'Call +1 412 663 7288',
-        href: 'tel:+14126637288',
-        description: 'Mon–Fri, 9 AM–5 PM',
+        label: 'View Portfolio Case Studies',
+        href: '/portfolio',
+        description: 'Verified website rebuild and local SEO projects',
       },
     },
   },
@@ -2391,121 +2351,6 @@ export const packageComparison = {
     ['Custom Dashboard Reporting', '✗', '✗', '✓'],
   ],
 }
-
-export const portfolioReports = [
-  {
-    title: '4s Chemicals · 6-Month GSC Overview',
-    type: 'GSC Report',
-    detail: '1.66K clicks vs 902 previous period',
-    description: 'Organic clicks grew 84% while average position improved from 52.2 to 37.5.',
-  },
-  {
-    title: '4s Chemicals · Impression Surge Report',
-    type: 'GSC Report',
-    detail: '44.3K impressions vs 1.43K previous period',
-    description: 'Impressions jumped as the site started ranking for broader industrial search terms.',
-  },
-  {
-    title: '4s Chemicals · Early Traction Phase',
-    type: 'GSC Report',
-    detail: '108 clicks vs 23 previous period',
-    description: 'Launch phase Jan to Mar 2026',
-  },
-  {
-    title: '4s Chemicals · Sustained Growth Report',
-    type: 'GSC Report',
-    detail: '35.7K impressions vs 2.09K previous period',
-    description: 'Growth window Mar to May 2026',
-  },
-  {
-    title: '4s Chemicals · April Call Snapshot',
-    type: 'Call Report',
-    detail: '50 tracked phone calls (+6.4%)',
-    description: 'Highest single-month call count recorded during the campaign.',
-  },
-  {
-    title: '4s Chemicals · 6-Month Call Trend',
-    type: 'Call Report',
-    detail: '40 calls tracked over 6 months',
-    description: 'Call trend Dec 2025 to May 2026',
-  },
-  {
-    title: '4s Chemicals · Recent Call Activity',
-    type: 'Call Report',
-    detail: '28 tracked phone calls',
-    description: 'Recent window Apr to May 2026',
-  },
-  {
-    title: '4s Chemicals · Call Baseline Report',
-    type: 'Call Report',
-    detail: '42 calls Mar to Apr 2026',
-    description: 'Baseline window Mar to Apr 2026',
-  },
-]
-
-import projectDpetcare from '@/assets/images/portfolio/9.webp'
-import projectFilxpat from '@/assets/images/portfolio/10.webp'
-import projectMbc from '@/assets/images/portfolio/11.webp'
-import projectYara from '@/assets/images/portfolio/12.webp'
-import projectSmfame from '@/assets/images/portfolio/13.webp'
-
-export type PortfolioProject = {
-  name: string
-  domain: string
-  url: string
-  category: string
-  location: string
-  previewAlt: string
-  image: string
-}
-
-export const portfolioProjects: PortfolioProject[] = [
-  {
-    name: 'D Pet Care',
-    domain: 'dpetcare.ae',
-    url: 'https://dpetcare.ae/',
-    category: 'Pet Services',
-    location: 'Dubai, United Arab Emirates',
-    previewAlt: 'D Pet Care website preview',
-    image: projectDpetcare.src,
-  },
-  {
-    name: 'Fil Xpat Cleaning',
-    domain: 'filxpatcleaning.ae',
-    url: 'https://filxpatcleaning.ae/',
-    category: 'Cleaning Services',
-    location: 'Dubai, United Arab Emirates',
-    previewAlt: 'Fil Xpat Cleaning website preview',
-    image: projectFilxpat.src,
-  },
-  {
-    name: 'MBC Renovation',
-    domain: 'mbcrenovation.ae',
-    url: 'https://mbcrenovation.ae/',
-    category: 'Renovation',
-    location: 'Dubai, United Arab Emirates',
-    previewAlt: 'MBC Renovation website preview',
-    image: projectMbc.src,
-  },
-  {
-    name: 'Yara Luxe Interiors',
-    domain: 'yaraluxeinteriors.com.au',
-    url: 'https://yaraluxeinteriors.com.au/',
-    category: 'Interior Design',
-    location: 'Bentleigh, Victoria, Australia',
-    previewAlt: 'Yara Luxe Interiors website preview',
-    image: projectYara.src,
-  },
-  {
-    name: 'SmFame',
-    domain: 'smfame.us',
-    url: 'https://smfame.us/',
-    category: 'Social Media',
-    location: 'United States',
-    previewAlt: 'SmFame website preview',
-    image: projectSmfame.src,
-  },
-]
 
 export type BlogPost = {
   category: string

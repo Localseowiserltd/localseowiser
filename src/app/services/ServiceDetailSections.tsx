@@ -1,5 +1,6 @@
 'use client'
 
+import { getCaseStudyForService } from '@/data/portfolio'
 import challengeImage from '@/assets/images/cha.jpg'
 import collageMainImage from '@/assets/images/img1.jpg'
 import collageTopImage from '@/assets/images/img2.jpg'
@@ -701,9 +702,20 @@ const ServiceDetailFull = ({ service }: { service: ServicePage }) => {
                           </li>
                         ))}
                       </ul>
-                      <ButtonLink variant="primary" href="/portfolio" className="service-detail-fit-outcomes-v2__cta">
-                        View results
+                      <ButtonLink variant="primary" href="/contact" className="service-detail-fit-outcomes-v2__cta">
+                        Get a free audit
                       </ButtonLink>
+                      {(() => {
+                        const caseStudy = getCaseStudyForService(`/${service.slug}`)
+                        if (!caseStudy) return null
+                        return (
+                          <p className="mt-3 mb-0">
+                            <Link href={`/portfolio/${caseStudy.slug}`}>
+                              See the {caseStudy.clientName} case study
+                            </Link>
+                          </p>
+                        )
+                      })()}
                     </div>
                   </div>
                 </ScrollReveal>

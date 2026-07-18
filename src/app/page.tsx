@@ -3,7 +3,6 @@ import HomePageSchema from '@/components/seo/HomePageSchema'
 import FAQ from './(pages)/business/components/FAQ'
 import Hero from './(pages)/business/components/Hero'
 import Industries from './(pages)/business/components/Industries'
-import PortfolioHome from './(pages)/business/components/PortfolioHome'
 import Process from './(pages)/business/components/Process'
 import WhyLocalSeo from './(pages)/business/components/WhyLocalSeo'
 import Services from './(pages)/business/components/Services'
@@ -30,7 +29,6 @@ const HomePage = () => {
       <Industries />
       <AreasWeServe />
       <HomePricing />
-      <PortfolioHome />
       <Testimonial />
       <HonestBit />
       <FAQ />

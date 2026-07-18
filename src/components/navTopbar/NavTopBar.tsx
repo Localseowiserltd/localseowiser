@@ -7,6 +7,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useEffect, useRef, useState } from 'react'
 import { contactPhones, servicePages, topBarSocialLinks } from '@/data/site-content'
+import PortfolioNavMenu from './PortfolioNavMenu'
 import ServicesMegaMenu from './ServicesMegaMenu'
 
 const serviceSlugs = servicePages.map((page) => page.slug)
@@ -14,9 +15,6 @@ const serviceSlugs = servicePages.map((page) => page.slug)
 const navItems = [
   { label: 'Home', href: '/' },
   { label: 'About', href: '/about' },
-  { label: 'Packages', href: '/packages' },
-  { label: 'Portfolio', href: '/portfolio' },
-  { label: 'Blog', href: '/blog' },
 ]
 
 const NavTopBar = () => {
@@ -111,7 +109,7 @@ const NavTopBar = () => {
 
           <div id="brutalist-navbar-menu" className={`brutalist-navbar__menu ${menuOpen ? 'is-active' : ''}`}>
             <ul className="brutalist-navbar__list">
-              {navItems.slice(0, 2).map((item) => (
+              {navItems.map((item) => (
                 <li key={item.href} className="brutalist-navbar__item">
                   <Link
                     href={item.href}
@@ -143,16 +141,25 @@ const NavTopBar = () => {
                 </div>
               </li>
 
-              {navItems.slice(2).map((item) => (
-                <li key={item.href} className="brutalist-navbar__item">
-                  <Link
-                    href={item.href}
-                    className={`brutalist-navbar__link ${pathname === item.href ? 'is-active' : ''}`}
-                    onClick={closeMenu}>
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
+              <li className="brutalist-navbar__item brutalist-navbar__item--packages">
+                <Link
+                  href="/packages"
+                  className={`brutalist-navbar__link ${pathname === '/packages' ? 'is-active' : ''}`}
+                  onClick={closeMenu}>
+                  Packages
+                </Link>
+              </li>
+
+              <PortfolioNavMenu pathname={pathname} onNavigate={closeMenu} />
+
+              <li className="brutalist-navbar__item">
+                <Link
+                  href="/blog"
+                  className={`brutalist-navbar__link ${pathname === '/blog' ? 'is-active' : ''}`}
+                  onClick={closeMenu}>
+                  Blog
+                </Link>
+              </li>
 
               <li className="brutalist-navbar__item brutalist-navbar__item--mobile-services d-lg-none">
                 <button
