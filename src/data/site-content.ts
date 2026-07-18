@@ -147,7 +147,7 @@ export const industries = [
     description:
       'Rank for urgent Pittsburgh HVAC and seasonal service queries with tighter geo-targeting and service-area optimization built for fast-call intent.',
     tags: ['Emergency call terms', 'Service-area pages'],
-    href: '/industries/hvac',
+    href: '/local-seo-for-hvac',
   },
   {
     imageKey: 'plumbers',

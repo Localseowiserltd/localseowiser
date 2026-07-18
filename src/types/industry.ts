@@ -23,6 +23,7 @@ export type IndustrySchemaEntityType =
   | 'Attorney'
   | 'HomeAndConstructionBusiness'
   | 'PlumbingService'
+  | 'HVACBusiness'
 
 export type IndustrySchemaFields = {
   webPageName: string
