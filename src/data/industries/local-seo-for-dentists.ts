@@ -241,6 +241,7 @@ const localSeoForDentists: IndustryPage = {
     { label: 'Portfolio', href: '/portfolio' },
     { label: 'Contact Us', href: '/contact' },
     { label: 'Local SEO for Doctors', href: '/local-seo-for-doctors' },
+    { label: 'Local SEO for Lawyers', href: '/local-seo-for-lawyers' },
     { label: 'South Hills Location Page', href: '/local-seo-south-hills' },
     { label: 'North Hills Location Page', href: '/local-seo-north-hills' },
     { label: 'Mt. Lebanon Location Page', href: '/local-seo-mt-lebanon' },

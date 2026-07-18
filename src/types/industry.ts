@@ -19,6 +19,8 @@ export type IndustrySchemaEntityType =
   | 'Dentist'
   | 'Physician'
   | 'MedicalClinic'
+  | 'LegalService'
+  | 'Attorney'
 
 export type IndustrySchemaFields = {
   webPageName: string

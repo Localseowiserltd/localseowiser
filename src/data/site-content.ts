@@ -131,7 +131,7 @@ export const industries = [
     description:
       'Capture high-value Pittsburgh legal leads by improving local authority signals and city-specific service relevance across neighborhoods you serve.',
     tags: ['Practice-area localization', 'Consultation lead quality'],
-    href: '/industries/law-firms',
+    href: '/local-seo-for-lawyers',
   },
   {
     imageKey: 'dentists-medical',

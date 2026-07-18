@@ -252,6 +252,7 @@ const localSeoForDoctors: IndustryPage = {
     { label: 'Portfolio', href: '/portfolio' },
     { label: 'Contact Us', href: '/contact' },
     { label: 'Local SEO for Dentists', href: '/local-seo-for-dentists' },
+    { label: 'Local SEO for Lawyers', href: '/local-seo-for-lawyers' },
     { label: 'Pittsburgh Local SEO', href: '/local-seo' },
     { label: 'South Hills Location Page', href: '/local-seo-south-hills' },
   ],
