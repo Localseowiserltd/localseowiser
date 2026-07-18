@@ -155,7 +155,7 @@ export const industries = [
     description:
       'Rank for urgent Pittsburgh service queries with tighter geo-targeting and service-area optimization built for fast-call intent.',
     tags: ['Emergency call terms', 'Service-area pages'],
-    href: '/industries/plumbers',
+    href: '/local-seo-for-plumbers',
   },
   {
     imageKey: 'contractors',

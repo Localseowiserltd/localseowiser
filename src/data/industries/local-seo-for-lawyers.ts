@@ -253,6 +253,7 @@ const localSeoForLawyers: IndustryPage = {
     { label: 'Contact Us', href: '/contact' },
     { label: 'Local SEO for Dentists', href: '/local-seo-for-dentists' },
     { label: 'Local SEO for Doctors', href: '/local-seo-for-doctors' },
+    { label: 'Local SEO for Plumbers', href: '/local-seo-for-plumbers' },
     { label: 'Pittsburgh Local SEO', href: '/local-seo' },
   ],
 
