@@ -179,7 +179,7 @@ export const industries = [
     description:
       'Increase Pittsburgh reservations and walk-ins through menu discoverability, local map prominence, and review velocity that outpaces competitors.',
     tags: ['Near me dining intent', 'Reservation conversion flow'],
-    href: '/industries/restaurants',
+    href: '/local-seo-for-restaurants',
   },
   {
     imageKey: 'professional-financial',

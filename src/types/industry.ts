@@ -26,6 +26,8 @@ export type IndustrySchemaEntityType =
   | 'HVACBusiness'
   | 'Electrician'
   | 'RoofingContractor'
+  | 'Restaurant'
+  | 'LocalBusiness'
 
 export type IndustrySchemaFields = {
   webPageName: string
