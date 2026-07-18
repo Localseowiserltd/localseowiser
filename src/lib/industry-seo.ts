@@ -114,6 +114,7 @@ export function buildIndustryWebPageSchema(page: IndustryPage) {
   const name = page.schema.webPageName.trim() || page.metaTitle.trim() || page.name
   const description = page.schema.webPageDescription.trim() || page.metaDescription.trim() || undefined
   const aboutType: IndustrySchemaEntityType =
+    page.schema.entityTypes.find((t) => t === 'RealEstateAgent') ||
     page.schema.entityTypes.find((t) => t === 'Restaurant') ||
     page.schema.entityTypes.find((t) => t === 'RoofingContractor') ||
     page.schema.entityTypes.find((t) => t === 'Electrician') ||

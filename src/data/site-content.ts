@@ -183,11 +183,11 @@ export const industries = [
   },
   {
     imageKey: 'professional-financial',
-    title: 'Professional & financial services',
+    title: 'Real estate agents',
     description:
-      "Build neighborhood-level visibility across Pittsburgh's distinct areas with high-intent location pages and trust-led local authority.",
-    tags: ['Neighborhood targeting', 'Consultation lead quality'],
-    href: '/industries/professional-financial',
+      "Build neighborhood-level visibility across Pittsburgh's distinct areas with high-intent location pages and trust-led local authority for buyers and sellers.",
+    tags: ['Neighborhood targeting', 'Buyer & seller leads'],
+    href: '/local-seo-for-real-estate-agents',
   },
 ]
 

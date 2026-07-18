@@ -252,6 +252,7 @@ const localSeoForRestaurants: IndustryPage = {
     { label: 'Portfolio', href: '/portfolio' },
     { label: 'Contact Us', href: '/contact' },
     { label: 'Local SEO for Roofing Companies', href: '/local-seo-for-roofers' },
+    { label: 'Local SEO for Real Estate Agents', href: '/local-seo-for-real-estate-agents' },
     { label: 'Pittsburgh Local SEO', href: '/local-seo' },
   ],
 
