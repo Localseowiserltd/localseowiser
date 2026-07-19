@@ -2,7 +2,7 @@
 // Home page redesigned sections
 //
 
-// ---------- Industries carousel ----------
+// ---------- Industries grid (homepage) ----------
 .industries-section {
     padding-bottom: $section-padding-y;
 }
@@ -12,6 +12,89 @@
     margin: 0 auto 2.25rem;
 }
 
+.industries-ask-us {
+    margin-top: 0.75rem;
+    color: $gray-600;
+}
+
+.industries-grid {
+    .portfolio-project-card--industry {
+        width: 100%;
+        height: 100%;
+        transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+
+        .portfolio-project-card__visual {
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: $gray-100;
+            overflow: hidden;
+        }
+
+        .portfolio-project-card__img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .portfolio-project-card__body {
+            padding: 18px 20px 22px;
+            gap: 8px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .portfolio-project-card__name {
+            font-size: 1.05rem;
+            line-height: 1.25;
+            letter-spacing: -0.01em;
+            margin-bottom: 0;
+        }
+
+        .portfolio-project-card__desc {
+            font-size: 0.875rem;
+            line-height: 1.55;
+            color: $gray-600;
+            margin: 0;
+            flex: 1;
+        }
+    }
+}
+
+.industry-card-link {
+    color: inherit;
+    border-radius: 12px;
+
+    &:hover .portfolio-project-card--industry,
+    &:focus-visible .portfolio-project-card--industry {
+        transform: translateY(-4px);
+        border-color: rgba($primary, 0.35);
+        box-shadow: 0 12px 28px rgba($dark, 0.08);
+    }
+
+    &:focus-visible {
+        outline: 2px solid rgba($primary, 0.45);
+        outline-offset: 3px;
+    }
+}
+
+.industry-card-cta {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 0.65rem;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: $primary;
+}
+
+.industries-view-all {
+    margin-top: 1.75rem;
+}
+
+/* Legacy carousel selectors retained for safety if referenced elsewhere */
 .industries-carousel-full {
     width: 100%;
     max-width: 100%;
@@ -25,58 +108,12 @@
     max-width: 1240px;
     margin: 0 auto;
     padding: 0 clamp(1rem, 4vw, 4.5rem);
-
-    .portfolio-project-card--industry {
-        height: 100%;
-
-        .portfolio-project-card__visual {
-            height: 220px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: $gray-100;
-        }
-
-        .portfolio-project-card__img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            object-position: center;
-        }
-
-        .portfolio-project-card__body {
-            padding: 18px 20px 22px;
-            gap: 8px;
-            min-height: 88px;
-        }
-
-        .portfolio-project-card__name {
-            font-size: 0.95rem;
-            line-height: 1.25;
-            letter-spacing: -0.01em;
-        }
-    }
 }
 
 .industries-carousel-swiper {
     overflow: hidden;
     padding: 0.5rem 0 0.25rem;
     width: 100%;
-
-    .swiper-wrapper {
-        align-items: stretch;
-    }
-
-    .swiper-slide {
-        height: auto;
-        display: flex;
-
-        > a,
-        > article {
-            width: 100%;
-            height: 100%;
-        }
-    }
 }
 
 .industries-swiper-pagination {

@@ -1,6 +1,3 @@
-import blog1 from '@/assets/images/blog1.webp'
-import blog2 from '@/assets/images/blog2.webp'
-import blog3 from '@/assets/images/blog3.webp'
 import { seoServicePages } from './service-page-seo'
 
 export const heroStats = [
@@ -124,88 +121,12 @@ export const industriesSection = {
   subtitle: '',
 }
 
-export const industries = [
-  {
-    imageKey: 'law-firms',
-    title: 'Law firms',
-    description:
-      'Capture high-value Pittsburgh legal leads by improving local authority signals and city-specific service relevance across neighborhoods you serve.',
-    tags: ['Practice-area localization', 'Consultation lead quality'],
-    href: '/local-seo-for-lawyers',
-  },
-  {
-    imageKey: 'dentists-medical',
-    title: 'Dentists & medical practices',
-    description:
-      'Drive appointment-ready traffic with treatment intent pages, review trust signals, and stronger map pack visibility for your Pittsburgh practice.',
-    tags: ['Implants & cosmetic intent', 'Emergency local searches'],
-    href: '/local-seo-for-dentists',
-  },
-  {
-    imageKey: 'hvac',
-    title: 'HVAC',
-    description:
-      'Rank for urgent Pittsburgh HVAC and seasonal service queries with tighter geo-targeting and service-area optimization built for fast-call intent.',
-    tags: ['Emergency call terms', 'Service-area pages'],
-    href: '/local-seo-for-hvac',
-  },
-  {
-    imageKey: 'plumbers',
-    title: 'Plumbers',
-    description:
-      'Rank for urgent Pittsburgh service queries with tighter geo-targeting and service-area optimization built for fast-call intent.',
-    tags: ['Emergency call terms', 'Service-area pages'],
-    href: '/local-seo-for-plumbers',
-  },
-  {
-    imageKey: 'contractors',
-    title: 'Electricians',
-    description:
-      'Rank for urgent Pittsburgh electrical service queries with stronger map pack visibility, service-area pages, and trust signals that convert searches into calls.',
-    tags: ['Emergency electrical intent', 'Service-area pages'],
-    href: '/local-seo-for-electricians',
-  },
-  {
-    imageKey: 'roofing',
-    title: 'Roofing Companies',
-    description:
-      'Win more Pittsburgh roofing jobs with stronger map visibility, storm-response search coverage, and trust signals that convert urgent repair searches into calls.',
-    tags: ['Storm damage intent', 'Service-area pages'],
-    href: '/local-seo-for-roofers',
-  },
-  {
-    imageKey: 'restaurants',
-    title: 'Restaurants',
-    description:
-      'Increase Pittsburgh reservations and walk-ins through menu discoverability, local map prominence, and review velocity that outpaces competitors.',
-    tags: ['Near me dining intent', 'Reservation conversion flow'],
-    href: '/local-seo-for-restaurants',
-  },
-  {
-    imageKey: 'professional-financial',
-    title: 'Real estate agents',
-    description:
-      "Build neighborhood-level visibility across Pittsburgh's distinct areas with high-intent location pages and trust-led local authority for buyers and sellers.",
-    tags: ['Neighborhood targeting', 'Buyer & seller leads'],
-    href: '/local-seo-for-real-estate-agents',
-  },
-  {
-    imageKey: 'professional-financial',
-    title: 'Insurance agencies',
-    description:
-      'Attract more qualified Pittsburgh quote requests with stronger map pack visibility, coverage-intent pages, and trust signals that convert insurance searches into calls.',
-    tags: ['Quote-intent keywords', 'Google Maps visibility'],
-    href: '/local-seo-for-insurance-agencies',
-  },
-  {
-    imageKey: 'professional-financial',
-    title: 'Financial advisors',
-    description:
-      'Win more Pittsburgh consultation requests with stronger map visibility, planning-intent pages, and trust signals that convert financial searches into booked meetings.',
-    tags: ['Consultation intent', 'Google Maps visibility'],
-    href: '/local-seo-for-financial-advisors',
-  },
-]
+/** Homepage industry cards — single source in `@/data/industries/home`. */
+export {
+  homepageIndustryCards as industries,
+  HOMEPAGE_INDUSTRIES_INITIAL_COUNT,
+  type HomepageIndustryCard,
+} from '@/data/industries/home'
 
 /**
  * @deprecated Prefer `getHomeAreaChips()` from `@/data/locations`.
@@ -2368,86 +2289,15 @@ export const packageComparison = {
   ],
 }
 
-export type BlogPost = {
-  category: string
-  title: string
-  excerpt: string
-  intro: string
-  author: string
-  date: string
-  dateIso: string
-  readTime: string
-  slug: string
-  image: string
-  paragraphs: string[]
-}
-
-export const blogPosts: BlogPost[] = [
-  {
-    category: 'Google Business Profile',
-    title: '9 Google Business Profile Wins That Improve Local Leads',
-    excerpt: 'Simple but high-impact profile updates that help local businesses convert searchers into paying customers.',
-    intro:
-      'Practical Google Business Profile improvements that strengthen map visibility and conversion actions for local businesses.',
-    author: 'Sara Khan',
-    date: 'May 18, 2026',
-    dateIso: '2026-05-18',
-    readTime: '8 min',
-    slug: '/google-business-profile-wins',
-    image: blog1.src,
-    paragraphs: [
-      'Most businesses underuse key profile fields. Prioritize category precision, service descriptions, and visual assets that mirror real customer intent.',
-      'A high-performing profile is active. Publish posts consistently, answer common questions, and refresh photos to signal operational relevance.',
-      'Treat profile optimization as part of your larger funnel. Align services, call-to-actions, and linked landing pages for better conversion quality.',
-    ],
-  },
-  {
-    category: 'Citation Building',
-    title: 'Local Citations: Why Quality Beats Quantity in 2026',
-    excerpt: 'How to prioritize trusted sources, maintain consistency, and avoid noisy directories that add little value.',
-    intro:
-      'Learn why citation quality and data consistency outperform bulk directory submissions for local SEO campaigns.',
-    author: 'Ibrahim Hayes',
-    date: 'May 04, 2026',
-    dateIso: '2026-05-04',
-    readTime: '7 min',
-    slug: '/local-citation-quality-vs-quantity',
-    image: blog2.src,
-    paragraphs: [
-      'Citation strategy should prioritize trust and relevance. Focus on directories recognized by your market rather than low-authority listing networks.',
-      'NAP consistency matters across all sources. Even minor variations can create mixed trust signals and reduce ranking confidence.',
-      'Build a maintenance rhythm. Citation hygiene is not a one-time task, especially for growing brands and multi-location operations.',
-    ],
-  },
-  {
-    category: 'Review Management',
-    title: 'The Review Management Playbook for High-Intent Local Buyers',
-    excerpt: 'A practical framework for asking, responding, and learning from customer feedback at scale.',
-    intro:
-      'A complete review management framework for local businesses that want stronger trust, sentiment, and conversion support.',
-    author: 'Nadia Brooks',
-    date: 'Apr 21, 2026',
-    dateIso: '2026-04-21',
-    readTime: '10 min',
-    slug: '/review-management-playbook',
-    image: blog3.src,
-    paragraphs: [
-      'Review management starts with process design. Ask at the right touchpoint, simplify the request, and train teams on consistency.',
-      'Responses should be timely and human. Use templates as scaffolding, then personalize to reinforce authenticity and customer care.',
-      'Track sentiment themes monthly. Review data reveals friction points and service strengths that can shape both operations and marketing.',
-    ],
-  },
-]
-
-export const getBlogPostBySlug = (slug: string) => {
-  const normalized = slug.startsWith('/') ? slug : `/${slug}`
-  return blogPosts.find((post) => post.slug === normalized)
-}
-
-export const getRelatedBlogPosts = (slug: string) => {
-  const normalized = slug.startsWith('/') ? slug : `/${slug}`
-  return blogPosts.filter((post) => post.slug !== normalized)
-}
+/** Blog content hub — single source lives in `@/data/blog` (re-exported for compatibility). */
+export type { BlogPost } from '@/types/blog'
+export {
+  blogPosts,
+  getBlogPostBySlug,
+  getRelatedBlogPosts,
+  getPublishedBlogPosts,
+  getBlogPostPath,
+} from '@/data/blog'
 
 export const contactInfo = {
   email: 'info@localseowiser.com',

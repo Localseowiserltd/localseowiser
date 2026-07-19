@@ -3,7 +3,8 @@ import { SITE_ORIGIN } from '@/config/site'
 import { getIndustryPath, getPublishedIndustryPages } from '@/data/industries'
 import { getLocationPath, getPublishedLocationPages } from '@/data/locations'
 import { portfolioProjects } from '@/data/portfolio'
-import { blogPosts, servicePages } from '@/data/site-content'
+import { getBlogSitemapEntries } from '@/lib/blog-seo'
+import { servicePages } from '@/data/site-content'
 
 const staticRoutes = [
   '/',
@@ -34,12 +35,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }))
 
-  const blogEntries: MetadataRoute.Sitemap = blogPosts.map((post) => ({
-    url: `${SITE_ORIGIN}${post.slug.startsWith('/') ? post.slug : `/${post.slug}`}`,
-    lastModified: now,
-    changeFrequency: 'monthly',
-    priority: 0.5,
-  }))
+  const blogEntries = getBlogSitemapEntries()
 
   const portfolioEntries: MetadataRoute.Sitemap = portfolioProjects.map((project) => ({
     url: `${SITE_ORIGIN}/portfolio/${project.slug}`,

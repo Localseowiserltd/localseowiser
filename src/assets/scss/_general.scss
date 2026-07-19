@@ -49,6 +49,7 @@ p {
 
 html {
     scroll-padding-top: var(--site-header-height, 80px);
+    scroll-behavior: smooth;
     overflow-x: clip;
 }
 

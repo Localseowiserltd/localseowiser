@@ -253,6 +253,7 @@ const localSeoForRoofers: IndustryPage = {
     { label: 'Contact Us', href: '/contact' },
     { label: 'Local SEO for HVAC Companies', href: '/local-seo-for-hvac' },
     { label: 'Local SEO for Electricians', href: '/local-seo-for-electricians' },
+    { label: 'Local SEO for Pest Control Companies', href: '/local-seo-for-pest-control-companies' },
     { label: 'Local SEO for Restaurants', href: '/local-seo-for-restaurants' },
     { label: 'Pittsburgh Local SEO', href: '/local-seo' },
   ],

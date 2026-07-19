@@ -21,7 +21,9 @@ export const useScrollReveal = ({
   duration,
   once = true,
   immediate = false,
-  threshold = 0.12,
+  // Default 0 so tall sections (blog articles, long pages) still reveal when any
+  // pixel intersects. A ratio like 0.12 never fires when element ≫ viewport.
+  threshold = 0,
   hoverable = true,
 }: UseScrollRevealOptions = {}) => {
   const ref = useRef<HTMLElement>(null)
