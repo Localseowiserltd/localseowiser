@@ -15,9 +15,9 @@ const localSeoMonroeville: LocationPage = {
   contentApproved: true,
   updatedAt: '2026-07-18',
 
-  metaTitle: 'Local SEO Services in Monroeville, PA | LocalSeoWiser',
+  metaTitle: 'Local SEO Services in Monroeville | More Local Traffic',
   metaDescription:
-    'Increase your online visibility with Local SEO Services in Monroeville, PA. Improve your Google rankings, Google Maps visibility, and attract more local customers with LocalSeoWiser.',
+    'Grow your Monroeville business with Local SEO services that increase search visibility, Google Maps rankings, and customer inquiries.',
 
   h1: 'Local SEO Services in Monroeville, PA',
   intro: 'Grow Your Monroeville Business with Local SEO That Drives More Customers',
@@ -247,9 +247,9 @@ const localSeoMonroeville: LocationPage = {
   },
 
   schema: {
-    webPageName: 'Local SEO Services in Monroeville, PA | LocalSeoWiser',
+    webPageName: 'Local SEO Services in Monroeville | More Local Traffic',
     webPageDescription:
-      'Increase your online visibility with Local SEO Services in Monroeville, PA. Improve your Google rankings, Google Maps visibility, and attract more local customers with LocalSeoWiser.',
+      'Grow your Monroeville business with Local SEO services that increase search visibility, Google Maps rankings, and customer inquiries.',
     placeName: 'Monroeville',
     breadcrumbLabel: 'Local SEO in Monroeville',
     businessName: 'Local SEO Wiser',

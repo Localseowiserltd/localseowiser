@@ -15,9 +15,9 @@ const localSeoLawrenceville: LocationPage = {
   contentApproved: true,
   updatedAt: '2026-07-18',
 
-  metaTitle: 'Local SEO Services in Lawrenceville, Pittsburgh | LocalSeoWiser',
+  metaTitle: 'Local SEO Services in Lawrenceville | More Local Leads',
   metaDescription:
-    'Grow your local business with expert Local SEO Services in Lawrenceville, Pittsburgh. Improve your Google rankings, Google Maps visibility, and attract more qualified local customers with LocalSeoWiser.',
+    'Boost your Lawrenceville business with Local SEO services designed to improve local rankings, increase visibility, and generate more customer inquiries.',
 
   h1: 'Local SEO Services in Lawrenceville, Pittsburgh',
   intro: 'Helping Lawrenceville Businesses Build Stronger Local Visibility',
@@ -245,9 +245,9 @@ const localSeoLawrenceville: LocationPage = {
   },
 
   schema: {
-    webPageName: 'Local SEO Services in Lawrenceville, Pittsburgh | LocalSeoWiser',
+    webPageName: 'Local SEO Services in Lawrenceville | More Local Leads',
     webPageDescription:
-      'Grow your local business with expert Local SEO Services in Lawrenceville, Pittsburgh. Improve your Google rankings, Google Maps visibility, and attract more qualified local customers with LocalSeoWiser.',
+      'Boost your Lawrenceville business with Local SEO services designed to improve local rankings, increase visibility, and generate more customer inquiries.',
     placeName: 'Lawrenceville',
     breadcrumbLabel: 'Local SEO in Lawrenceville',
     businessName: 'Local SEO Wiser',

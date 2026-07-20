@@ -12,9 +12,9 @@ const localSeoForAccountingFirms: IndustryPage = {
   contentApproved: true,
   updatedAt: '2026-07-19',
 
-  metaTitle: 'Local SEO for Accounting Firms | Accountant SEO Services | LocalSeoWiser',
+  metaTitle: 'Local SEO for Accounting Firms | Attract More Local Clients',
   metaDescription:
-    'Grow your accounting firm with Local SEO for Accounting Firms. Improve your Google rankings, Google Maps visibility, and attract more qualified clients with LocalSeoWiser.',
+    'Increase visibility for your accounting firm with Local SEO strategies that improve Google rankings, local traffic, and qualified client inquiries.',
 
   h1: 'Local SEO for Accounting Firms',
   intro: 'Help More Local Businesses and Individuals Find Your Accounting Firm',
@@ -271,9 +271,9 @@ const localSeoForAccountingFirms: IndustryPage = {
   },
 
   schema: {
-    webPageName: 'Local SEO for Accounting Firms | Accountant SEO Services | LocalSeoWiser',
+    webPageName: 'Local SEO for Accounting Firms | Attract More Local Clients',
     webPageDescription:
-      'Grow your accounting firm with Local SEO for Accounting Firms. Improve your Google rankings, Google Maps visibility, and attract more qualified clients with LocalSeoWiser.',
+      'Increase visibility for your accounting firm with Local SEO strategies that improve Google rankings, local traffic, and qualified client inquiries.',
     breadcrumbLabel: 'Local SEO for Accounting Firms',
     businessName: 'Local SEO Wiser',
     businessDescription:

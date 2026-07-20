@@ -15,9 +15,9 @@ const localSeoSquirrelHill: LocationPage = {
   contentApproved: true,
   updatedAt: '2026-07-18',
 
-  metaTitle: 'Local SEO Services in Squirrel Hill, Pittsburgh | LocalSeoWiser',
+  metaTitle: 'Local SEO Services in Squirrel Hill | Grow Your Business',
   metaDescription:
-    'Increase your online visibility with Local SEO Services in Squirrel Hill, Pittsburgh. LocalSeoWiser helps local businesses improve Google rankings, Google Maps visibility, and attract more nearby customers.',
+    'Increase your online visibility in Squirrel Hill with Local SEO strategies that help your business rank higher and generate more local leads.',
 
   h1: 'Local SEO Services in Squirrel Hill, Pittsburgh',
   intro: 'Help Your Squirrel Hill Business Get Found Where Local Customers Are Searching',
@@ -244,9 +244,9 @@ const localSeoSquirrelHill: LocationPage = {
   },
 
   schema: {
-    webPageName: 'Local SEO Services in Squirrel Hill, Pittsburgh | LocalSeoWiser',
+    webPageName: 'Local SEO Services in Squirrel Hill | Grow Your Business',
     webPageDescription:
-      'Increase your online visibility with Local SEO Services in Squirrel Hill, Pittsburgh. LocalSeoWiser helps local businesses improve Google rankings, Google Maps visibility, and attract more nearby customers.',
+      'Increase your online visibility in Squirrel Hill with Local SEO strategies that help your business rank higher and generate more local leads.',
     placeName: 'Squirrel Hill',
     breadcrumbLabel: 'Local SEO in Squirrel Hill',
     businessName: 'Local SEO Wiser',

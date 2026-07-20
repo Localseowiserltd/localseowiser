@@ -12,9 +12,9 @@ const localSeoForLawyers: IndustryPage = {
   contentApproved: true,
   updatedAt: '2026-07-18',
 
-  metaTitle: 'Local SEO for Lawyers | Law Firm SEO Services | LocalSeoWiser',
+  metaTitle: 'Local SEO for Lawyers | Law Firm SEO That Generates Leads',
   metaDescription:
-    'Grow your law firm with Local SEO for Lawyers. Improve your Google rankings, Google Maps visibility, and attract more qualified clients with LocalSeoWiser.',
+    'Help your law firm rank higher with Local SEO for Lawyers. Increase visibility, attract qualified legal clients, and grow your practice.',
 
   h1: 'Local SEO for Lawyers',
   intro: 'Help More Potential Clients Find Your Law Firm',
@@ -272,9 +272,9 @@ const localSeoForLawyers: IndustryPage = {
   },
 
   schema: {
-    webPageName: 'Local SEO for Lawyers | Law Firm SEO Services | LocalSeoWiser',
+    webPageName: 'Local SEO for Lawyers | Law Firm SEO That Generates Leads',
     webPageDescription:
-      'Grow your law firm with Local SEO for Lawyers. Improve your Google rankings, Google Maps visibility, and attract more qualified clients with LocalSeoWiser.',
+      'Help your law firm rank higher with Local SEO for Lawyers. Increase visibility, attract qualified legal clients, and grow your practice.',
     breadcrumbLabel: 'Local SEO for Lawyers',
     businessName: 'Local SEO Wiser',
     businessDescription:

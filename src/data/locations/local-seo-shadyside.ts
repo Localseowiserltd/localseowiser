@@ -15,10 +15,9 @@ const localSeoShadyside: LocationPage = {
   contentApproved: true,
   updatedAt: '2026-07-18',
 
-  metaTitle:
-    'Local SEO Services in Shadyside, Pittsburgh | Grow Your Local Business with LocalSeoWiser',
+  metaTitle: 'Local SEO Services in Shadyside | Rank Higher on Google',
   metaDescription:
-    'Increase your online visibility with Local SEO Services in Shadyside, Pittsburgh. LocalSeoWiser helps local businesses rank higher on Google Search and Maps to attract more qualified customers.',
+    'Grow your Shadyside business with Local SEO services. Improve Google Maps rankings, attract nearby customers, and generate more qualified local leads.',
 
   h1: 'Local SEO Services in Shadyside, Pittsburgh',
   intro: 'Helping Shadyside Businesses Stand Out in Local Search',
@@ -241,10 +240,9 @@ const localSeoShadyside: LocationPage = {
   },
 
   schema: {
-    webPageName:
-      'Local SEO Services in Shadyside, Pittsburgh | Grow Your Local Business with LocalSeoWiser',
+    webPageName: 'Local SEO Services in Shadyside | Rank Higher on Google',
     webPageDescription:
-      'Increase your online visibility with Local SEO Services in Shadyside, Pittsburgh. LocalSeoWiser helps local businesses rank higher on Google Search and Maps to attract more qualified customers.',
+      'Grow your Shadyside business with Local SEO services. Improve Google Maps rankings, attract nearby customers, and generate more qualified local leads.',
     placeName: 'Shadyside',
     breadcrumbLabel: 'Local SEO in Shadyside',
     businessName: 'Local SEO Wiser',

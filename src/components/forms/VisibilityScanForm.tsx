@@ -10,6 +10,8 @@ type VisibilityScanFormProps = {
   compact?: boolean
   showNote?: boolean
   tall?: boolean
+  /** Homepage hero: fields in one responsive horizontal row */
+  layout?: 'stacked' | 'horizontal'
 }
 
 type FormStatus = 'idle' | 'submitting' | 'success' | 'error'
@@ -20,11 +22,20 @@ const VisibilityScanForm = ({
   compact = false,
   showNote = true,
   tall = false,
+  layout = 'stacked',
 }: VisibilityScanFormProps) => {
   const [status, setStatus] = useState<FormStatus>('idle')
   const [errorMessage, setErrorMessage] = useState('')
 
-  const formClassName = `visibility-scan-form ${compact ? 'visibility-scan-form--compact' : ''} ${tall ? 'visibility-scan-form--tall' : ''}`
+  const isHorizontal = layout === 'horizontal'
+  const formClassName = [
+    'visibility-scan-form',
+    compact ? 'visibility-scan-form--compact' : '',
+    tall ? 'visibility-scan-form--tall' : '',
+    isHorizontal ? 'visibility-scan-form--horizontal' : '',
+  ]
+    .filter(Boolean)
+    .join(' ')
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
@@ -131,28 +142,41 @@ const VisibilityScanForm = ({
         aria-hidden="true"
       />
 
-      <Row className={tall ? 'g-3' : 'g-2'}>
-        <Col sm={compact ? 12 : 6}>
+      {isHorizontal ? (
+        <div className="visibility-scan-form__row">
           <input name="name" type="text" className="form-control border" placeholder="Name" required />
-        </Col>
-        <Col sm={compact ? 12 : 6}>
           <input name="email" type="email" className="form-control border" placeholder="Email" required />
-        </Col>
-        <Col sm={compact ? 12 : 6}>
           <input name="business" type="text" className="form-control border" placeholder="Business" required />
-        </Col>
-        <Col sm={compact ? 12 : 6}>
           <input name="city" type="text" className="form-control border" placeholder="City" required />
-        </Col>
-        <Col xs={12}>
           <input name="website" type="text" className="form-control border" placeholder="Website (optional)" />
-        </Col>
-        <Col xs={12}>
-          <button type="submit" className="btn btn-primary fw-semibold w-100" disabled={status === 'submitting'}>
+          <button type="submit" className="btn btn-primary fw-semibold" disabled={status === 'submitting'}>
             {status === 'submitting' ? 'Sending...' : buttonLabel}
           </button>
-        </Col>
-      </Row>
+        </div>
+      ) : (
+        <Row className={tall ? 'g-3' : 'g-2'}>
+          <Col sm={compact ? 12 : 6}>
+            <input name="name" type="text" className="form-control border" placeholder="Name" required />
+          </Col>
+          <Col sm={compact ? 12 : 6}>
+            <input name="email" type="email" className="form-control border" placeholder="Email" required />
+          </Col>
+          <Col sm={compact ? 12 : 6}>
+            <input name="business" type="text" className="form-control border" placeholder="Business" required />
+          </Col>
+          <Col sm={compact ? 12 : 6}>
+            <input name="city" type="text" className="form-control border" placeholder="City" required />
+          </Col>
+          <Col xs={12}>
+            <input name="website" type="text" className="form-control border" placeholder="Website (optional)" />
+          </Col>
+          <Col xs={12}>
+            <button type="submit" className="btn btn-primary fw-semibold w-100" disabled={status === 'submitting'}>
+              {status === 'submitting' ? 'Sending...' : buttonLabel}
+            </button>
+          </Col>
+        </Row>
+      )}
 
       {status === 'error' && errorMessage ? (
         <p className="visibility-scan-form__error mb-0" role="alert">

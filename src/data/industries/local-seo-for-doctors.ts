@@ -12,9 +12,9 @@ const localSeoForDoctors: IndustryPage = {
   contentApproved: true,
   updatedAt: '2026-07-18',
 
-  metaTitle: 'Local SEO for Doctors | Medical Practice SEO Services | LocalSeoWiser',
+  metaTitle: 'Local SEO for Doctors | Medical Practice SEO Services',
   metaDescription:
-    'Grow your medical practice with Local SEO for Doctors. Improve your Google rankings, Google Maps visibility, and attract more local patients with LocalSeoWiser.',
+    'Increase patient inquiries with Local SEO for doctors. Improve local search visibility, Google Maps rankings, and attract more qualified patients.',
 
   h1: 'Local SEO for Doctors',
   intro: 'Help More Patients Find Your Medical Practice',
@@ -272,9 +272,9 @@ const localSeoForDoctors: IndustryPage = {
   },
 
   schema: {
-    webPageName: 'Local SEO for Doctors | Medical Practice SEO Services | LocalSeoWiser',
+    webPageName: 'Local SEO for Doctors | Medical Practice SEO Services',
     webPageDescription:
-      'Grow your medical practice with Local SEO for Doctors. Improve your Google rankings, Google Maps visibility, and attract more local patients with LocalSeoWiser.',
+      'Increase patient inquiries with Local SEO for doctors. Improve local search visibility, Google Maps rankings, and attract more qualified patients.',
     breadcrumbLabel: 'Local SEO for Doctors',
     businessName: 'Local SEO Wiser',
     businessDescription:

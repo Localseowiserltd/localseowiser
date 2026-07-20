@@ -15,9 +15,9 @@ const localSeoMtLebanon: LocationPage = {
   contentApproved: true,
   updatedAt: '2026-07-18',
 
-  metaTitle: 'Local SEO Services in Mt. Lebanon, Pittsburgh | LocalSeoWiser',
+  metaTitle: 'Local SEO Services in Mt. Lebanon | Grow Local Visibility',
   metaDescription:
-    'Grow your business with Local SEO Services in Mt. Lebanon, Pittsburgh. Improve your Google rankings, Google Maps visibility, and attract more local customers with LocalSeoWiser.',
+    'Increase your visibility in Mt. Lebanon with Local SEO services that help your business rank higher and attract nearby customers.',
 
   h1: 'Local SEO Services in Mt. Lebanon, Pittsburgh',
   intro: 'Help Your Mt. Lebanon Business Get Found by More Local Customers',
@@ -246,9 +246,9 @@ const localSeoMtLebanon: LocationPage = {
   },
 
   schema: {
-    webPageName: 'Local SEO Services in Mt. Lebanon, Pittsburgh | LocalSeoWiser',
+    webPageName: 'Local SEO Services in Mt. Lebanon | Grow Local Visibility',
     webPageDescription:
-      'Grow your business with Local SEO Services in Mt. Lebanon, Pittsburgh. Improve your Google rankings, Google Maps visibility, and attract more local customers with LocalSeoWiser.',
+      'Increase your visibility in Mt. Lebanon with Local SEO services that help your business rank higher and attract nearby customers.',
     placeName: 'Mt. Lebanon',
     breadcrumbLabel: 'Local SEO in Mt. Lebanon',
     businessName: 'Local SEO Wiser',

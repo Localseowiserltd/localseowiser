@@ -12,9 +12,9 @@ const localSeoForRealEstateAgents: IndustryPage = {
   contentApproved: true,
   updatedAt: '2026-07-19',
 
-  metaTitle: 'Local SEO for Real Estate Agents | Real Estate SEO Services | LocalSeoWiser',
+  metaTitle: 'Local SEO for Real Estate Agents | Generate More Buyers',
   metaDescription:
-    'Grow your real estate business with Local SEO for Real Estate Agents. Improve your Google rankings, Google Maps visibility, and generate more qualified buyers and sellers with LocalSeoWiser.',
+    'Grow your real estate business with Local SEO strategies that improve local visibility, generate quality leads, and attract buyers and sellers.',
 
   h1: 'Local SEO for Real Estate Agents',
   intro: 'Help More Buyers and Sellers Find Your Real Estate Business',
@@ -273,9 +273,9 @@ const localSeoForRealEstateAgents: IndustryPage = {
   },
 
   schema: {
-    webPageName: 'Local SEO for Real Estate Agents | Real Estate SEO Services | LocalSeoWiser',
+    webPageName: 'Local SEO for Real Estate Agents | Generate More Buyers',
     webPageDescription:
-      'Grow your real estate business with Local SEO for Real Estate Agents. Improve your Google rankings, Google Maps visibility, and generate more qualified buyers and sellers with LocalSeoWiser.',
+      'Grow your real estate business with Local SEO strategies that improve local visibility, generate quality leads, and attract buyers and sellers.',
     breadcrumbLabel: 'Local SEO for Real Estate Agents',
     businessName: 'Local SEO Wiser',
     businessDescription:

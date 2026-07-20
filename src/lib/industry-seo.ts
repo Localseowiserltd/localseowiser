@@ -175,11 +175,92 @@ export function buildIndustryFaqSchema(page: IndustryPage) {
   }
 }
 
+export function buildIndustryOrganizationSchema() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: SITE_NAME,
+    url: SITE_ORIGIN,
+    logo: {
+      '@type': 'ImageObject',
+      url: `${SITE_ORIGIN}/logo.png`,
+    },
+  }
+}
+
+export function buildIndustryServiceSchema(page: IndustryPage) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: page.h1.trim() || page.metaTitle.trim() || `Local SEO for ${page.name}`,
+    description: page.metaDescription.trim() || page.schema.businessDescription.trim() || undefined,
+    url: getIndustryPageUrl(page),
+    serviceType: 'Local SEO',
+    provider: {
+      '@type': 'Organization',
+      name: SITE_NAME,
+      url: SITE_ORIGIN,
+    },
+    areaServed: {
+      '@type': 'City',
+      name: 'Pittsburgh',
+      containedInPlace: {
+        '@type': 'State',
+        name: 'Pennsylvania',
+      },
+    },
+    hasOfferCatalog: true,
+    ...(page.heroImage.src.trim()
+      ? { image: `${SITE_ORIGIN}${page.heroImage.src}` }
+      : {}),
+  }
+}
+
+export function buildIndustryProfessionalServiceSchema(page: IndustryPage) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'ProfessionalService',
+    name: page.schema.businessName.trim() || SITE_NAME,
+    description:
+      page.schema.businessDescription.trim() || page.metaDescription.trim() || undefined,
+    url: SITE_ORIGIN,
+    areaServed: {
+      '@type': 'City',
+      name: 'Pittsburgh',
+      containedInPlace: {
+        '@type': 'State',
+        name: 'Pennsylvania',
+      },
+    },
+    ...(page.heroImage.src.trim()
+      ? { image: `${SITE_ORIGIN}${page.heroImage.src}` }
+      : {}),
+  }
+}
+
+export function buildIndustryImageObjectSchema(page: IndustryPage) {
+  const src = page.heroImage.src.trim()
+  if (!src) return null
+
+  const url = src.startsWith('http') ? src : `${SITE_ORIGIN}${src}`
+  const name = page.heroImage.alt.trim() || page.h1.trim() || page.metaTitle.trim() || page.name
+
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'ImageObject',
+    contentUrl: url,
+    url,
+    name,
+    caption: name,
+  }
+}
+
+/** Industry-specific entity types from page data (excludes ProfessionalService — emitted separately). */
 export function buildIndustryEntitySchemas(page: IndustryPage) {
-  const types =
-    page.schema.entityTypes.length > 0
-      ? page.schema.entityTypes
-      : (['ProfessionalService'] as IndustrySchemaEntityType[])
+  const types = (page.schema.entityTypes.length > 0
+    ? page.schema.entityTypes
+    : ([] as IndustrySchemaEntityType[])
+  ).filter((type) => type !== 'ProfessionalService')
 
   const shared = {
     name: page.schema.businessName.trim() || SITE_NAME,
@@ -196,4 +277,18 @@ export function buildIndustryEntitySchemas(page: IndustryPage) {
     '@type': type,
     ...shared,
   }))
+}
+
+/** Full JSON-LD set for published industry pages. */
+export function buildIndustryPageSchemas(page: IndustryPage) {
+  return [
+    buildIndustryOrganizationSchema(),
+    buildIndustryServiceSchema(page),
+    buildIndustryProfessionalServiceSchema(page),
+    buildIndustryBreadcrumbSchema(page),
+    buildIndustryWebPageSchema(page),
+    buildIndustryImageObjectSchema(page),
+    buildIndustryFaqSchema(page),
+    ...buildIndustryEntitySchemas(page),
+  ].filter(Boolean)
 }

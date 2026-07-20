@@ -4,12 +4,9 @@ import { getLocationPageBySlug } from '@/data/locations'
 import { getServicePageBySlug } from '@/data/site-content'
 import { buildLocationInternalLinks } from '@/lib/location-links'
 import {
-  buildIndustryBreadcrumbSchema,
-  buildIndustryEntitySchemas,
-  buildIndustryFaqSchema,
   buildIndustryPageMetadata,
+  buildIndustryPageSchemas,
   buildIndustryPreviewMetadata,
-  buildIndustryWebPageSchema,
   industryPageToLocationView,
 } from '@/lib/industry-seo'
 import type { IndustryPage } from '@/types/industry'
@@ -54,10 +51,7 @@ export default function IndustryPageScreen({ page }: IndustryPageScreenProps) {
     includeUnpublishedNearby: process.env.NODE_ENV !== 'production',
   })
 
-  const breadcrumbSchema = buildIndustryBreadcrumbSchema(page)
-  const webPageSchema = buildIndustryWebPageSchema(page)
-  const faqSchema = publishable ? buildIndustryFaqSchema(page) : null
-  const entitySchemas = publishable ? buildIndustryEntitySchemas(page) : []
+  const schemas = publishable ? buildIndustryPageSchemas(page) : []
   const crumbLabel = page.schema.breadcrumbLabel.trim() || page.name
 
   return (
@@ -72,31 +66,13 @@ export default function IndustryPageScreen({ page }: IndustryPageScreenProps) {
         nearbyHeading="Areas we serve"
       />
 
-      {publishable ? (
-        <>
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-          />
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
-          />
-          {faqSchema ? (
-            <script
-              type="application/ld+json"
-              dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-            />
-          ) : null}
-          {entitySchemas.map((schema) => (
-            <script
-              key={String(schema['@type'])}
-              type="application/ld+json"
-              dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-            />
-          ))}
-        </>
-      ) : null}
+      {schemas.map((schema, index) => (
+        <script
+          key={`industry-schema-${index}-${String((schema as { '@type'?: string })['@type'] || index)}`}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+      ))}
     </>
   )
 }

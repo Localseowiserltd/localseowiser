@@ -12,9 +12,9 @@ const localSeoForFinancialAdvisors: IndustryPage = {
   contentApproved: true,
   updatedAt: '2026-07-19',
 
-  metaTitle: 'Local SEO for Financial Advisors | Financial Advisor SEO Services | LocalSeoWiser',
+  metaTitle: 'Local SEO for Financial Advisors | Grow Your Client Base',
   metaDescription:
-    'Grow your financial advisory business with Local SEO for Financial Advisors. Improve your Google rankings, Google Maps visibility, and attract more qualified clients with LocalSeoWiser.',
+    'Build your financial advisory business with Local SEO strategies that improve local rankings, increase visibility, and generate qualified leads.',
 
   h1: 'Local SEO for Financial Advisors',
   intro: 'Help More Clients Find Your Financial Advisory Services',
@@ -272,9 +272,9 @@ const localSeoForFinancialAdvisors: IndustryPage = {
   },
 
   schema: {
-    webPageName: 'Local SEO for Financial Advisors | Financial Advisor SEO Services | LocalSeoWiser',
+    webPageName: 'Local SEO for Financial Advisors | Grow Your Client Base',
     webPageDescription:
-      'Grow your financial advisory business with Local SEO for Financial Advisors. Improve your Google rankings, Google Maps visibility, and attract more qualified clients with LocalSeoWiser.',
+      'Build your financial advisory business with Local SEO strategies that improve local rankings, increase visibility, and generate qualified leads.',
     breadcrumbLabel: 'Local SEO for Financial Advisors',
     businessName: 'Local SEO Wiser',
     businessDescription:

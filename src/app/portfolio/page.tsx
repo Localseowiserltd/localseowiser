@@ -2,33 +2,29 @@ import PortfolioCTA from '@/components/portfolio/PortfolioCTA'
 import PortfolioListing from '@/components/portfolio/PortfolioListing'
 import SiteShell from '@/components/layout/SiteShell'
 import SectionHeader from '@/components/SectionHeader'
-import { SITE_NAME, SITE_ORIGIN } from '@/config/site'
 import { portfolioListingMeta, portfolioProjects } from '@/data/portfolio'
+import { buildHubPageMetadata, buildPortfolioIndexSchemas } from '@/lib/hub-seo'
 import type { Metadata } from 'next'
 
-export const metadata: Metadata = {
-  title: { absolute: portfolioListingMeta.title },
+export const metadata: Metadata = buildHubPageMetadata({
+  title: portfolioListingMeta.title,
   description: portfolioListingMeta.description,
-  alternates: {
-    canonical: `${SITE_ORIGIN}/portfolio`,
-  },
-  openGraph: {
-    title: portfolioListingMeta.title,
-    description: portfolioListingMeta.description,
-    url: `${SITE_ORIGIN}/portfolio`,
-    type: 'website',
-    siteName: SITE_NAME,
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: portfolioListingMeta.title,
-    description: portfolioListingMeta.description,
-  },
-}
+  path: '/portfolio',
+  imageAlt: portfolioListingMeta.h1,
+})
 
 const PortfolioPage = () => {
+  const schemas = buildPortfolioIndexSchemas()
+
   return (
     <SiteShell>
+      {schemas.map((schema, index) => (
+        <script
+          key={`portfolio-schema-${index}`}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+      ))}
       <section className="section portfolio-listing-hero">
         <div className="container">
           <SectionHeader

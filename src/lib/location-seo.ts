@@ -163,6 +163,23 @@ export function buildLocationBusinessSchema(page: LocationPage) {
   }
 }
 
+export function buildLocationImageObjectSchema(page: LocationPage) {
+  const src = page.heroImage.src.trim()
+  if (!src) return null
+
+  const url = src.startsWith('http') ? src : `${SITE_ORIGIN}${src}`
+  const name = page.heroImage.alt.trim() || page.h1.trim() || page.metaTitle.trim() || page.name
+
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'ImageObject',
+    contentUrl: url,
+    url,
+    name,
+    caption: name,
+  }
+}
+
 /** Convenience: LocalBusiness + ProfessionalService pair when both are requested. */
 export function buildLocationServiceSchemas(page: LocationPage) {
   const shared = {

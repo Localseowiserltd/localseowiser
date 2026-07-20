@@ -15,9 +15,9 @@ const localSeoNorthHills: LocationPage = {
   contentApproved: true,
   updatedAt: '2026-07-18',
 
-  metaTitle: 'Local SEO Services in North Hills, PA | LocalSeoWiser',
+  metaTitle: 'Local SEO Services in North Hills | Grow Your Business',
   metaDescription:
-    'Grow your business with Local SEO Services in North Hills, PA. Improve your Google rankings, Google Maps visibility, and attract more local customers with LocalSeoWiser.',
+    'Increase your online visibility in North Hills with Local SEO services that help businesses rank higher and attract more local customers.',
 
   h1: 'Local SEO Services in North Hills, PA',
   intro: 'Help Your North Hills Business Reach More Local Customers',
@@ -246,9 +246,9 @@ const localSeoNorthHills: LocationPage = {
   },
 
   schema: {
-    webPageName: 'Local SEO Services in North Hills, PA | LocalSeoWiser',
+    webPageName: 'Local SEO Services in North Hills | Grow Your Business',
     webPageDescription:
-      'Grow your business with Local SEO Services in North Hills, PA. Improve your Google rankings, Google Maps visibility, and attract more local customers with LocalSeoWiser.',
+      'Increase your online visibility in North Hills with Local SEO services that help businesses rank higher and attract more local customers.',
     placeName: 'North Hills',
     breadcrumbLabel: 'Local SEO in North Hills',
     businessName: 'Local SEO Wiser',

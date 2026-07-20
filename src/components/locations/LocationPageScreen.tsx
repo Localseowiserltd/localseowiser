@@ -7,6 +7,7 @@ import { buildLocationInternalLinks } from '@/lib/location-links'
 import {
   buildLocationBreadcrumbSchema,
   buildLocationFaqSchema,
+  buildLocationImageObjectSchema,
   buildLocationPageMetadata,
   buildLocationPreviewMetadata,
   buildLocationServiceSchemas,
@@ -57,6 +58,7 @@ export default function LocationPageScreen({ page }: LocationPageScreenProps) {
   const breadcrumbSchema = buildLocationBreadcrumbSchema(page)
   const webPageSchema = buildLocationWebPageSchema(page)
   const faqSchema = publishable ? buildLocationFaqSchema(page) : null
+  const imageObjectSchema = publishable ? buildLocationImageObjectSchema(page) : null
   const businessSchemas = publishable ? buildLocationServiceSchemas(page) : []
   const crumbLabel = page.schema.breadcrumbLabel.trim() || page.name
 
@@ -84,6 +86,12 @@ export default function LocationPageScreen({ page }: LocationPageScreenProps) {
             <script
               type="application/ld+json"
               dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+            />
+          ) : null}
+          {imageObjectSchema ? (
+            <script
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{ __html: JSON.stringify(imageObjectSchema) }}
             />
           ) : null}
           {businessSchemas.map((schema) => (

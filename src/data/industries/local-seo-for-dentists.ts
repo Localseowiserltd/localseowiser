@@ -12,9 +12,9 @@ const localSeoForDentists: IndustryPage = {
   contentApproved: true,
   updatedAt: '2026-07-18',
 
-  metaTitle: 'Local SEO for Dentists | Dental SEO Services | LocalSeoWiser',
+  metaTitle: 'Local SEO for Dentists | Dental SEO Services That Grow',
   metaDescription:
-    'Grow your dental practice with Local SEO for Dentists. Improve your Google rankings, Google Maps visibility, and attract more local patients with LocalSeoWiser.',
+    'Grow your dental practice with Local SEO for Dentists. Improve Google Maps rankings, attract more local patients, and increase appointment bookings.',
 
   h1: 'Local SEO for Dentists',
   intro: 'Help More Local Patients Find Your Dental Practice',
@@ -262,9 +262,9 @@ const localSeoForDentists: IndustryPage = {
   },
 
   schema: {
-    webPageName: 'Local SEO for Dentists | Dental SEO Services | LocalSeoWiser',
+    webPageName: 'Local SEO for Dentists | Dental SEO Services That Grow',
     webPageDescription:
-      'Grow your dental practice with Local SEO for Dentists. Improve your Google rankings, Google Maps visibility, and attract more local patients with LocalSeoWiser.',
+      'Grow your dental practice with Local SEO for Dentists. Improve Google Maps rankings, attract more local patients, and increase appointment bookings.',
     breadcrumbLabel: 'Local SEO for Dentists',
     businessName: 'Local SEO Wiser',
     businessDescription:

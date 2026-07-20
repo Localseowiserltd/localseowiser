@@ -12,9 +12,9 @@ const localSeoForPlumbers: IndustryPage = {
   contentApproved: true,
   updatedAt: '2026-07-18',
 
-  metaTitle: 'Local SEO for Plumbers | Plumbing SEO Services | LocalSeoWiser',
+  metaTitle: 'Local SEO for Plumbers | Rank Higher & Get More Calls',
   metaDescription:
-    'Grow your plumbing business with Local SEO for Plumbers. Improve your Google rankings, Google Maps visibility, and generate more plumbing leads with LocalSeoWiser.',
+    'Generate more plumbing leads with Local SEO services designed to improve Google rankings, Maps visibility, and local customer inquiries.',
 
   h1: 'Local SEO for Plumbers',
   intro: 'Help More Homeowners Find Your Plumbing Business',
@@ -274,9 +274,9 @@ const localSeoForPlumbers: IndustryPage = {
   },
 
   schema: {
-    webPageName: 'Local SEO for Plumbers | Plumbing SEO Services | LocalSeoWiser',
+    webPageName: 'Local SEO for Plumbers | Rank Higher & Get More Calls',
     webPageDescription:
-      'Grow your plumbing business with Local SEO for Plumbers. Improve your Google rankings, Google Maps visibility, and generate more plumbing leads with LocalSeoWiser.',
+      'Generate more plumbing leads with Local SEO services designed to improve Google rankings, Maps visibility, and local customer inquiries.',
     breadcrumbLabel: 'Local SEO for Plumbers',
     businessName: 'Local SEO Wiser',
     businessDescription:

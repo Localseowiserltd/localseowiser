@@ -12,11 +12,12 @@ const HonestBit = () => {
         <Row className="justify-content-center">
           <Col lg={8}>
             <ScrollReveal animation="fade-up">
-              <SectionHeader
-                eyebrow={honestBitSection.eyebrow}
-                title={honestBitSection.title}
-                subtitle={honestBitSection.body}
-              />
+              <SectionHeader eyebrow={honestBitSection.eyebrow} title={honestBitSection.title} />
+              <div className="honest-bit-body">
+                {honestBitSection.paragraphs.map((paragraph) => (
+                  <p key={paragraph.slice(0, 48)}>{paragraph}</p>
+                ))}
+              </div>
             </ScrollReveal>
           </Col>
         </Row>

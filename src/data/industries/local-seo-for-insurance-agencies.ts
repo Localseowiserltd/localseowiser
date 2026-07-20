@@ -12,9 +12,9 @@ const localSeoForInsuranceAgencies: IndustryPage = {
   contentApproved: true,
   updatedAt: '2026-07-19',
 
-  metaTitle: 'Local SEO for Insurance Agencies | Insurance SEO Services | LocalSeoWiser',
+  metaTitle: 'Local SEO for Insurance Agencies | Get More Local Clients',
   metaDescription:
-    'Grow your insurance agency with Local SEO for Insurance Agencies. Improve your Google rankings, Google Maps visibility, and attract more qualified policyholders with LocalSeoWiser.',
+    'Increase insurance inquiries with Local SEO strategies designed to improve Google rankings, local visibility, and qualified lead generation.',
 
   h1: 'Local SEO for Insurance Agencies',
   intro: 'Help More Local Clients Find Your Insurance Agency',
@@ -272,9 +272,9 @@ const localSeoForInsuranceAgencies: IndustryPage = {
   },
 
   schema: {
-    webPageName: 'Local SEO for Insurance Agencies | Insurance SEO Services | LocalSeoWiser',
+    webPageName: 'Local SEO for Insurance Agencies | Get More Local Clients',
     webPageDescription:
-      'Grow your insurance agency with Local SEO for Insurance Agencies. Improve your Google rankings, Google Maps visibility, and attract more qualified policyholders with LocalSeoWiser.',
+      'Increase insurance inquiries with Local SEO strategies designed to improve Google rankings, local visibility, and qualified lead generation.',
     breadcrumbLabel: 'Local SEO for Insurance Agencies',
     businessName: 'Local SEO Wiser',
     businessDescription:

@@ -52,10 +52,10 @@ export const seoServicePages = [
     slug: 'local-seo',
     variant: 'full',
     category: 'Search Engine Optimization',
-    title: 'Get Found First. Get Chosen First.',
-    metaTitle: 'Local SEO Services in Pittsburgh, PA | Local SEO Wiser',
+    title: 'Local SEO Services in Pittsburgh',
+    metaTitle: 'Local SEO Services Pittsburgh | More Calls & Local Leads',
     metaDescription:
-      '93% of local customers check Google before they buy. Local SEO Wiser builds Pittsburgh local SEO systems that put your business in the Map Pack, organic results, and AI Overviews. Free visibility scan.',
+      'Increase your visibility with Local SEO Services in Pittsburgh. Rank higher in Google Maps, attract local customers, and grow your business with Local SEO Wiser.',
     description:
       'Local SEO services that turn Pittsburgh searches into customers — Map Pack visibility, citations, location content, and reporting tied to real leads.',
     intro:
@@ -307,10 +307,10 @@ export const seoServicePages = [
     slug: 'google-map-optimization',
     variant: 'full',
     category: 'Search Engine Optimization',
-    title: 'Google Map Optimization in Pittsburgh, PA',
-    metaTitle: 'Google Map Optimization in Pittsburgh | GBP Ranking & Map Pack Visibility',
+    title: 'Google Map Optimization in Pittsburgh',
+    metaTitle: 'Google Map Optimization Pittsburgh | Rank Higher on Maps',
     metaDescription:
-      'Local SEO Wiser optimizes your Google Business Profile to win map pack visibility, drive calls, and convert searchers in Pittsburgh and beyond. Get a free profile audit.',
+      'Improve your Google Maps rankings with professional Google Map Optimization in Pittsburgh. Get found by nearby customers and generate more local leads.',
     description: 'Profile work Pittsburgh businesses can count on for real map pack visibility.',
     intro:
       'Local SEO Wiser optimizes your Google Business Profile to win map pack visibility, drive calls, and convert searchers in Pittsburgh and beyond. Get a free profile audit.',
@@ -508,9 +508,9 @@ export const seoServicePages = [
     pageLayout: 'small-business',
     category: 'Search Engine Optimization',
     title: 'SEO For Small Business',
-    metaTitle: 'SEO for Small Business | Affordable Plans That Drive Leads | Local SEO Wiser',
+    metaTitle: 'SEO for Small Businesses Pittsburgh | Affordable SEO Services',
     metaDescription:
-      'Local SEO Wiser delivers practical SEO for small businesses: GBP optimization, citations, content, and lead-focused reporting. Pittsburgh-based, serving clients nationwide. Get a free audit.',
+      'Affordable SEO for small businesses in Pittsburgh. Increase visibility, generate more qualified leads, and grow your business with Local SEO Wiser.',
     description:
       'SEO for small business is the process of improving your website, Google Business Profile, and local citations so nearby customers find you when they search for what you sell.',
     intro:
@@ -790,6 +790,9 @@ export const seoServicePages = [
     variant: 'full',
     category: 'Search Engine Optimization',
     title: 'Local Business Citation',
+    metaTitle: 'Local Business Citation Services Pittsburgh | Local SEO Wiser',
+    metaDescription:
+      'Build consistent local business citations to improve trust, strengthen local SEO, and increase visibility across Google and business directories.',
     description:
       'Strengthen local trust signals with consistent, accurate, and strategically selected citation placements across trusted directories.',
     intro:
@@ -867,6 +870,9 @@ export const seoServicePages = [
     variant: 'full',
     category: 'Search Engine Optimization',
     title: 'Landing Page Optimization',
+    metaTitle: 'Landing Page Optimization Pittsburgh | Higher Conversion Pages',
+    metaDescription:
+      'Improve your landing pages with conversion-focused design, faster loading, stronger SEO, and better user experience for higher lead generation.',
     description:
       'Improve conversion rates on local landing pages with clearer messaging, stronger trust signals, and SEO-aligned page structure.',
     intro:
@@ -942,10 +948,10 @@ export const seoServicePages = [
     slug: 'technical-seo',
     variant: 'full',
     category: 'Search Engine Optimization',
-    title: 'Technical SEO Services in Pittsburgh, PA',
-    metaTitle: 'Technical SEO Services in Pittsburgh | Site Speed, Schema & Crawl Fixes',
+    title: 'Technical SEO Services in Pittsburgh',
+    metaTitle: 'Technical SEO Services Pittsburgh | Fix & Improve Rankings',
     metaDescription:
-      'Crawl errors, slow load times, and missing schema quietly block local rankings. Local SEO Wiser fixes the technical foundation your Pittsburgh SEO strategy depends on.',
+      'Fix crawl errors, improve site speed, optimize schema, and strengthen your website with Technical SEO Services in Pittsburgh.',
     description: 'Fixing the hidden issues that quietly kill your local rankings.',
     intro:
       'Crawl errors, slow load times, and missing schema quietly block local rankings. Local SEO Wiser fixes the technical foundation your Pittsburgh SEO strategy depends on.',

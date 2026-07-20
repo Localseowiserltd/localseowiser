@@ -15,9 +15,9 @@ const localSeoSouthHills: LocationPage = {
   contentApproved: true,
   updatedAt: '2026-07-18',
 
-  metaTitle: 'Local SEO Services in South Hills, PA | LocalSeoWiser',
+  metaTitle: 'Local SEO Services in South Hills | Get More Local Leads',
   metaDescription:
-    'Grow your business with Local SEO Services in South Hills, PA. Improve your Google rankings, Google Maps visibility, and attract more local customers with LocalSeoWiser.',
+    'Help your South Hills business rank higher in Google Search and Maps with Local SEO services focused on sustainable local growth.',
 
   h1: 'Local SEO Services in South Hills, PA',
   intro: 'Help Your South Hills Business Get Found Where Local Customers Are Searching',
@@ -247,9 +247,9 @@ const localSeoSouthHills: LocationPage = {
   },
 
   schema: {
-    webPageName: 'Local SEO Services in South Hills, PA | LocalSeoWiser',
+    webPageName: 'Local SEO Services in South Hills | Get More Local Leads',
     webPageDescription:
-      'Grow your business with Local SEO Services in South Hills, PA. Improve your Google rankings, Google Maps visibility, and attract more local customers with LocalSeoWiser.',
+      'Help your South Hills business rank higher in Google Search and Maps with Local SEO services focused on sustainable local growth.',
     placeName: 'South Hills',
     breadcrumbLabel: 'Local SEO in South Hills',
     businessName: 'Local SEO Wiser',

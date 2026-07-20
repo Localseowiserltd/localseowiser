@@ -12,9 +12,9 @@ const localSeoForHvac: IndustryPage = {
   contentApproved: true,
   updatedAt: '2026-07-18',
 
-  metaTitle: 'Local SEO for HVAC Companies | HVAC SEO Services | LocalSeoWiser',
+  metaTitle: 'Local SEO for HVAC Companies | More Calls & Bookings',
   metaDescription:
-    'Grow your HVAC business with Local SEO for HVAC Companies. Improve your Google rankings, Google Maps visibility, and generate more heating and cooling leads with LocalSeoWiser.',
+    'Grow your HVAC business with Local SEO strategies that improve local rankings, increase service calls, and attract nearby customers.',
 
   h1: 'Local SEO for HVAC Companies',
   intro: 'Help More Homeowners Find Your HVAC Business',
@@ -272,9 +272,9 @@ const localSeoForHvac: IndustryPage = {
   },
 
   schema: {
-    webPageName: 'Local SEO for HVAC Companies | HVAC SEO Services | LocalSeoWiser',
+    webPageName: 'Local SEO for HVAC Companies | More Calls & Bookings',
     webPageDescription:
-      'Grow your HVAC business with Local SEO for HVAC Companies. Improve your Google rankings, Google Maps visibility, and generate more heating and cooling leads with LocalSeoWiser.',
+      'Grow your HVAC business with Local SEO strategies that improve local rankings, increase service calls, and attract nearby customers.',
     breadcrumbLabel: 'Local SEO for HVAC Companies',
     businessName: 'Local SEO Wiser',
     businessDescription:

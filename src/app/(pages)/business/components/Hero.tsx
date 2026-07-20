@@ -1,7 +1,7 @@
 'use client'
 
 import VisibilityScanForm from '@/components/forms/VisibilityScanForm'
-import { Col, Container, Row } from 'react-bootstrap'
+import { Container } from 'react-bootstrap'
 import CountUp from 'react-countup'
 import { useInView } from 'react-intersection-observer'
 import { contactInfo, contactTelHref, homeCtaSection } from '@/data/site-content'
@@ -29,47 +29,47 @@ const Hero = () => {
     <section className="bg-home-3" id="home">
       <div className="hero-bg-dots" aria-hidden="true" />
       <Container>
-        <Row className="align-items-center g-4 g-lg-5">
-          <Col lg={7} className="hero-content-col order-1">
-            <div className="hero-above-fold">
-              <h1 className="fw-bold mb-4 hero-main-heading">
-                <span className="hero-heading-line">Local SEO Services in</span>
-                <span className="hero-heading-line">Pittsburgh, PA That</span>
-                <span className="hero-heading-line">Put You in the Map</span>
-                <span className="hero-heading-line">Pack and in AI Search</span>
-              </h1>
+        <div className="hero-centered">
+          <p className="hero-eyebrow">Pittsburgh Local SEO Agency</p>
 
-              <p className="hero-subhead mb-4">
-                In a metro of 2.4 million people, just having a Google Business Profile won&apos;t get you found. We help
-                Pittsburgh businesses rank in the Local 3-Pack, show up for &quot;near me&quot; searches, and get cited by
-                Google AI Overviews, so the calls and form fills actually come in.
-              </p>
+          <h1 className="hero-main-heading">Local SEO Services for Pittsburgh Businesses</h1>
 
-              <div className="d-flex flex-wrap gap-3 mb-4 hero-cta-row">
-                <a href="#visibility-scan-form" className="btn btn-primary fw-semibold hero-cta-primary">
-                  Get My Free Pittsburgh Visibility Scan
-                </a>
-                <a
-                  href={contactTelHref}
-                  className="btn btn-link fw-semibold px-0 py-2 text-decoration-none hero-cta-secondary"
-                >
-                  Or call us → {contactInfo.phone}
-                </a>
-              </div>
+          <p className="hero-lead">
+            Get more calls, qualified leads, and stronger visibility in Google Maps and local search.
+          </p>
 
-              <p className="hero-trust-strip mb-0">No long contracts · Real Pittsburgh team · Free scan, no obligation</p>
-            </div>
-          </Col>
+          <p className="hero-subhead">
+            We optimize your Google Business Profile, target the local keywords your customers actually search, clean up
+            citations for consistent business listings, strengthen on-page SEO, and provide transparent reporting tied to
+            real inquiries. You get a clear plan, steady execution, and visibility that compounds—without vanity metrics
+            or locked-in contracts.
+          </p>
 
-          <Col lg={5} className="hero-form-col order-2">
+          <div className="hero-cta-row">
+            <a href="#visibility-scan-form" className="btn btn-primary fw-semibold hero-cta-primary">
+              Get My Free Pittsburgh Visibility Scan
+            </a>
+            <a href={contactTelHref} className="hero-cta-secondary">
+              Call {contactInfo.phone}
+            </a>
+          </div>
+
+          <ul className="hero-trust-badges" aria-label="Trust indicators">
+            <li>Serving Pittsburgh businesses</li>
+            <li>No long-term contracts</li>
+            <li>Human-written SEO</li>
+            <li>Transparent reporting</li>
+          </ul>
+
+          <div className="hero-form-card">
             <VisibilityScanForm
               id="visibility-scan-form"
               buttonLabel={homeCtaSection.buttonLabel}
-              compact
+              layout="horizontal"
               showNote={false}
             />
-          </Col>
-        </Row>
+          </div>
+        </div>
       </Container>
     </section>
   )

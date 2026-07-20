@@ -1,13 +1,61 @@
+import { SITE_NAME, SITE_ORIGIN } from '@/config/site'
 import { contactInfo, faqItems, verifiedGoogleReviews } from '@/data/site-content'
 
 const HomePageSchema = () => {
+  const organization = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: SITE_NAME,
+    url: SITE_ORIGIN,
+    logo: {
+      '@type': 'ImageObject',
+      url: `${SITE_ORIGIN}/logo.png`,
+    },
+    email: contactInfo.email,
+    telephone: contactInfo.phoneTel,
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: '307 Freeland St',
+      addressLocality: 'Pittsburgh',
+      addressRegion: 'PA',
+      postalCode: '15210',
+      addressCountry: 'US',
+    },
+    sameAs: [
+      'https://x.com/LocalSeoWiser',
+      'https://www.linkedin.com/company/local-seo-wisers/',
+      'https://www.facebook.com/Localseowiser/',
+      'https://www.instagram.com/localseowiser/',
+    ],
+  }
+
+  const webSite = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: SITE_NAME,
+    url: SITE_ORIGIN,
+    publisher: {
+      '@type': 'Organization',
+      name: SITE_NAME,
+      url: SITE_ORIGIN,
+    },
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: {
+        '@type': 'EntryPoint',
+        urlTemplate: `${SITE_ORIGIN}/blog?q={search_term_string}`,
+      },
+      'query-input': 'required name=search_term_string',
+    },
+  }
+
   const professionalService: Record<string, unknown> = {
     '@context': 'https://schema.org',
     '@type': 'ProfessionalService',
-    name: 'Local SEO Wiser',
+    name: SITE_NAME,
     description:
       'Local SEO services in Pittsburgh, PA helping businesses rank in the Google Map Pack, show up for near me searches, and get cited by Google AI Overviews.',
-    url: 'https://localseowiser.com',
+    url: SITE_ORIGIN,
     telephone: contactInfo.phoneTel,
     email: contactInfo.email,
     areaServed: {
@@ -26,6 +74,7 @@ const HomePageSchema = () => {
       postalCode: '15210',
       addressCountry: 'US',
     },
+    image: `${SITE_ORIGIN}/logo.png`,
   }
 
   if (verifiedGoogleReviews.length > 0) {
@@ -76,16 +125,22 @@ const HomePageSchema = () => {
         '@type': 'ListItem',
         position: 1,
         name: 'Home',
-        item: 'https://localseowiser.com',
+        item: SITE_ORIGIN,
       },
     ],
   }
 
+  const schemas = [organization, webSite, professionalService, faqPage, breadcrumbList]
+
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(professionalService) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPage) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbList) }} />
+      {schemas.map((schema, index) => (
+        <script
+          key={`home-schema-${index}`}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+      ))}
     </>
   )
 }

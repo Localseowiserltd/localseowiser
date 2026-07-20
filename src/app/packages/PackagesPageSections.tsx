@@ -1,80 +1,71 @@
 'use client'
 
+import ButtonLink from '@/components/ButtonLink'
 import ScrollReveal from '@/components/ScrollReveal'
 import SectionHeader from '@/components/SectionHeader'
-import ButtonLink from '@/components/ButtonLink'
 import IconifyIcon from '@/components/wrappers/IconifyIcon'
-import { useScrollReveal } from '@/hooks/useScrollReveal'
-import { packageComparison, packages } from '@/data/site-content'
+import {
+  packageComparison,
+  packages,
+  packagesPageCardsHeader,
+  packagesPageCta,
+  packagesPageValue,
+} from '@/data/packages'
 import { Col, Container, Row, Table } from 'react-bootstrap'
-import { RefObject } from 'react'
 
-const renderCompareCell = (cell: string) => {
-  if (cell === '✓') {
-    return <IconifyIcon icon="tabler:circle-check-filled" className="package-compare-card__check" />
-  }
-  if (cell === '✗') {
-    return <IconifyIcon icon="tabler:circle-x-filled" className="package-compare-card__cross" />
+const renderCompareCell = (cell: string, isRecommendedRow: boolean) => {
+  if (!isRecommendedRow) {
+    if (cell === '✓') {
+      return <IconifyIcon icon="tabler:circle-check-filled" className="package-compare-card__check" />
+    }
+    if (cell === '✗') {
+      return <IconifyIcon icon="tabler:circle-x-filled" className="package-compare-card__cross" />
+    }
   }
   return cell
-}
-
-type PackageFeatureItemProps = {
-  feature: string
-  delay: number
-}
-
-const PackageFeatureItem = ({ feature, delay }: PackageFeatureItemProps) => {
-  const { ref, className, style } = useScrollReveal({ animation: 'fade-up', delay })
-
-  return (
-    <li ref={ref as RefObject<HTMLLIElement>} className={className} style={style}>
-      <IconifyIcon icon="tabler:circle-check" className="text-primary flex-shrink-0 mt-1" />
-      <span>{feature}</span>
-    </li>
-  )
 }
 
 const PackagesPageSections = () => {
   return (
     <>
-      <section className="section">
+      <section className="section packages-cards-section">
         <Container>
-          <ScrollReveal animation="fade-up">
+          <ScrollReveal animation="fade-up" hoverable={false}>
             <SectionHeader
-              eyebrow="Our Packages"
-              title="Choose the engagement model that fits your growth stage"
-              subtitle="Each package is customized to your business model, market competition, and growth priorities. No fixed rates, only tailored proposals."
+              eyebrow={packagesPageCardsHeader.eyebrow}
+              title={packagesPageCardsHeader.title}
+              subtitle={packagesPageCardsHeader.subtitle}
             />
           </ScrollReveal>
-          <Row className="g-3 g-lg-4">
+          <Row className="g-3 g-lg-4 align-items-stretch">
             {packages.map((pkg, idx) => (
-              <Col lg={4} key={idx}>
-                <ScrollReveal animation="zoom-in" delay={idx * 90} className="h-100">
-                  <div className="package-card-border h-100">
-                    <div className="inner-package-card h-100">
-                      <ScrollReveal animation="fade-up" delay={idx * 90 + 40}>
-                        <h4 className="inner-package-card__name">{pkg.name}</h4>
-                      </ScrollReveal>
-                      <ScrollReveal animation="fade-up" delay={idx * 90 + 80}>
-                        <p className="inner-package-card__desc">{pkg.description}</p>
-                      </ScrollReveal>
-                      <ul className="inner-package-card__features">
-                        {pkg.features.map((feature, featureIdx) => (
-                          <PackageFeatureItem
-                            key={feature}
-                            feature={feature}
-                            delay={idx * 90 + 120 + featureIdx * 50}
-                          />
-                        ))}
-                      </ul>
-                      <ScrollReveal animation="fade-up" delay={idx * 90 + 120 + pkg.features.length * 50 + 60}>
-                        <ButtonLink variant="outline-primary" href="/contact" className="w-100">
-                          Request a Quote
-                        </ButtonLink>
-                      </ScrollReveal>
+              <Col lg={4} md={6} key={pkg.id} className="d-flex">
+                <ScrollReveal animation="zoom-in" delay={idx * 80} className="h-100 w-100" hoverable={false}>
+                  <article
+                    className={`packages-plan-card h-100${pkg.popular ? ' packages-plan-card--popular' : ''}`}
+                  >
+                    {pkg.popular ? <span className="packages-plan-card__badge">Most Popular</span> : null}
+                    <h2 className="packages-plan-card__title">{pkg.name}</h2>
+                    <p className="packages-plan-card__desc">{pkg.description}</p>
+                    <ul className="packages-plan-card__features">
+                      {pkg.features.map((feature) => (
+                        <li key={feature}>
+                          <IconifyIcon icon="tabler:circle-check" className="packages-plan-card__check" />
+                          <span>{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    <div className="packages-plan-card__footer">
+                      <ButtonLink
+                        variant={pkg.popular ? 'primary' : 'outline-primary'}
+                        href="/contact"
+                        className="w-100"
+                      >
+                        Request a Custom Quote
+                      </ButtonLink>
+                      <p className="packages-plan-card__best-for">{pkg.bestFor}</p>
                     </div>
-                  </div>
+                  </article>
                 </ScrollReveal>
               </Col>
             ))}
@@ -84,13 +75,11 @@ const PackagesPageSections = () => {
 
       <section className="section package-compare-section bg-light">
         <Container>
-          <ScrollReveal animation="fade-up">
+          <ScrollReveal animation="fade-up" hoverable={false}>
             <SectionHeader eyebrow="Compare Plans" title="Feature Comparison" />
           </ScrollReveal>
-          <ScrollReveal animation="fade-in" delay={100} hoverable={false}>
+          <ScrollReveal animation="fade-in" delay={80} hoverable={false}>
             <div className="package-compare-card">
-              <div className="package-compare-card__gradient" aria-hidden="true" />
-              <div className="package-compare-card__pattern" aria-hidden="true" />
               <div className="package-compare-card__inner">
                 <Table className="package-compare-table align-middle mb-0">
                   <thead>
@@ -103,17 +92,67 @@ const PackagesPageSections = () => {
                     </tr>
                   </thead>
                   <tbody>
-                    {packageComparison.rows.map((row) => (
-                      <tr key={row[0]}>
-                        {row.map((cell, cellIdx) => (
-                          <td key={cellIdx} className={cellIdx > 0 ? 'text-center' : ''}>
-                            {cellIdx > 0 ? renderCompareCell(cell) : cell}
-                          </td>
-                        ))}
-                      </tr>
-                    ))}
+                    {packageComparison.rows.map((row) => {
+                      const isRecommendedRow = row[0] === 'Recommended For'
+                      return (
+                        <tr key={row[0]} className={isRecommendedRow ? 'is-recommended' : undefined}>
+                          {row.map((cell, cellIdx) => (
+                            <td key={`${row[0]}-${cellIdx}`} className={cellIdx > 0 ? 'text-center' : ''}>
+                              {cellIdx > 0 ? renderCompareCell(cell, isRecommendedRow) : cell}
+                            </td>
+                          ))}
+                        </tr>
+                      )
+                    })}
                   </tbody>
                 </Table>
+              </div>
+            </div>
+          </ScrollReveal>
+        </Container>
+      </section>
+
+      <section className="section packages-value-section">
+        <Container>
+          <ScrollReveal animation="fade-up" hoverable={false}>
+            <SectionHeader
+              align="center"
+              eyebrow={packagesPageValue.eyebrow}
+              title={packagesPageValue.title}
+              className="mb-4"
+            />
+          </ScrollReveal>
+          <Row className="g-3 g-lg-4">
+            {packagesPageValue.items.map((item, idx) => (
+              <Col lg={3} md={6} key={item.title} className="d-flex">
+                <ScrollReveal animation="fade-up" delay={idx * 60} className="h-100 w-100" hoverable={false}>
+                  <article className="packages-value-card h-100">
+                    <span className="packages-value-card__icon" aria-hidden="true">
+                      <IconifyIcon icon={item.icon} />
+                    </span>
+                    <h3 className="packages-value-card__title">{item.title}</h3>
+                    <p className="packages-value-card__text mb-0">{item.description}</p>
+                  </article>
+                </ScrollReveal>
+              </Col>
+            ))}
+          </Row>
+        </Container>
+      </section>
+
+      <section className="section packages-cta-section" id="packages-cta">
+        <Container>
+          <ScrollReveal animation="fade-up" hoverable={false}>
+            <div className="packages-cta-card">
+              <h2 className="packages-cta-card__title">{packagesPageCta.title}</h2>
+              <p className="packages-cta-card__text">{packagesPageCta.description}</p>
+              <div className="packages-cta-card__actions">
+                <ButtonLink variant="primary" href={packagesPageCta.primary.href}>
+                  {packagesPageCta.primary.label}
+                </ButtonLink>
+                <ButtonLink variant="light" href={packagesPageCta.secondary.href}>
+                  {packagesPageCta.secondary.label}
+                </ButtonLink>
               </div>
             </div>
           </ScrollReveal>

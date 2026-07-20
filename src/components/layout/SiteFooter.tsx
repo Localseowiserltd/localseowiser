@@ -107,7 +107,17 @@ const SiteFooter = () => {
                 </Link>
               ))}
             </div>
-            <p className="footer-v2-copy">© Copyright 2026 All Rights Reserved. Local SEO Agency in Pittsburgh.</p>
+            <p className="footer-v2-copy">
+              © Copyright 2026 All Rights Reserved. Local SEO Agency in Pittsburgh.
+              {' · '}
+              <Link href="/faq">FAQ</Link>
+              {' · '}
+              <Link href="/privacy-policy">Privacy</Link>
+              {' · '}
+              <Link href="/terms-and-conditions">Terms</Link>
+              {' · '}
+              <Link href="/refund-policy">Refunds</Link>
+            </p>
           </div>
         </div>
 

@@ -15,9 +15,9 @@ const localSeoStripDistrict: LocationPage = {
   contentApproved: true,
   updatedAt: '2026-07-18',
 
-  metaTitle: 'Local SEO Services in Strip District, Pittsburgh | LocalSeoWiser',
+  metaTitle: 'Local SEO Services in Strip District | Local SEO Experts',
   metaDescription:
-    'Grow your business with Local SEO Services in Strip District, Pittsburgh. Improve your Google rankings, Google Maps visibility, and attract more local customers with LocalSeoWiser.',
+    "Reach more customers in Pittsburgh's Strip District with Local SEO services focused on Google Maps rankings, visibility, and lead generation.",
 
   h1: 'Local SEO Services in Strip District, Pittsburgh',
   intro: "Get Your Business Found by More Customers in Pittsburgh's Strip District",
@@ -248,9 +248,9 @@ const localSeoStripDistrict: LocationPage = {
   },
 
   schema: {
-    webPageName: 'Local SEO Services in Strip District, Pittsburgh | LocalSeoWiser',
+    webPageName: 'Local SEO Services in Strip District | Local SEO Experts',
     webPageDescription:
-      'Grow your business with Local SEO Services in Strip District, Pittsburgh. Improve your Google rankings, Google Maps visibility, and attract more local customers with LocalSeoWiser.',
+      "Reach more customers in Pittsburgh's Strip District with Local SEO services focused on Google Maps rankings, visibility, and lead generation.",
     placeName: 'Strip District',
     breadcrumbLabel: 'Local SEO in Strip District',
     businessName: 'Local SEO Wiser',

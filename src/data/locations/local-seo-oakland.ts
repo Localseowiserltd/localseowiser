@@ -15,9 +15,9 @@ const localSeoOakland: LocationPage = {
   contentApproved: true,
   updatedAt: '2026-07-18',
 
-  metaTitle: 'Local SEO Services in Oakland, Pittsburgh | LocalSeoWiser',
+  metaTitle: 'Local SEO Services in Oakland | Local SEO Wiser',
   metaDescription:
-    'Boost your visibility with Local SEO Services in Oakland, Pittsburgh. LocalSeoWiser helps businesses improve Google rankings, Google Maps visibility, and attract more local customers.',
+    'Get found by more customers in Oakland with Local SEO services that improve Google rankings, Google Maps visibility, and local business growth.',
 
   h1: 'Local SEO Services in Oakland, Pittsburgh',
   intro: 'Grow Your Oakland Business with Local SEO That Connects You with Local Customers',
@@ -244,9 +244,9 @@ const localSeoOakland: LocationPage = {
   },
 
   schema: {
-    webPageName: 'Local SEO Services in Oakland, Pittsburgh | LocalSeoWiser',
+    webPageName: 'Local SEO Services in Oakland | Local SEO Wiser',
     webPageDescription:
-      'Boost your visibility with Local SEO Services in Oakland, Pittsburgh. LocalSeoWiser helps businesses improve Google rankings, Google Maps visibility, and attract more local customers.',
+      'Get found by more customers in Oakland with Local SEO services that improve Google rankings, Google Maps visibility, and local business growth.',
     placeName: 'Oakland',
     breadcrumbLabel: 'Local SEO in Oakland',
     businessName: 'Local SEO Wiser',

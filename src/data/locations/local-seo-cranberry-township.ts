@@ -15,9 +15,9 @@ const localSeoCranberryTownship: LocationPage = {
   contentApproved: true,
   updatedAt: '2026-07-18',
 
-  metaTitle: 'Local SEO Services in Cranberry Township, PA | LocalSeoWiser',
+  metaTitle: 'Local SEO Services in Cranberry Township | Better Rankings',
   metaDescription:
-    'Grow your business with Local SEO Services in Cranberry Township, PA. Improve your Google rankings, Google Maps visibility, and attract more local customers with LocalSeoWiser.',
+    'Improve your online presence in Cranberry Township with Local SEO strategies that drive local traffic, leads, and business growth.',
 
   h1: 'Local SEO Services in Cranberry Township, PA',
   intro: 'Help Your Cranberry Township Business Get Found by More Local Customers',
@@ -246,9 +246,9 @@ const localSeoCranberryTownship: LocationPage = {
   },
 
   schema: {
-    webPageName: 'Local SEO Services in Cranberry Township, PA | LocalSeoWiser',
+    webPageName: 'Local SEO Services in Cranberry Township | Better Rankings',
     webPageDescription:
-      'Grow your business with Local SEO Services in Cranberry Township, PA. Improve your Google rankings, Google Maps visibility, and attract more local customers with LocalSeoWiser.',
+      'Improve your online presence in Cranberry Township with Local SEO strategies that drive local traffic, leads, and business growth.',
     placeName: 'Cranberry Township',
     breadcrumbLabel: 'Local SEO in Cranberry Township',
     businessName: 'Local SEO Wiser',

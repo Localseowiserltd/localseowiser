@@ -35,6 +35,12 @@ const HomePricing = () => {
                 <div className="home-pricing-card__body">
                   <span className="home-pricing-card__best-for">Best for</span>
                   <p className="home-pricing-card__desc mb-0">{plan.bestFor}</p>
+                  <span className="home-pricing-card__includes-label">Includes</span>
+                  <ul className="home-pricing-card__includes">
+                    {plan.includes.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
                 </div>
               </article>
             ))}

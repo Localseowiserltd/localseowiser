@@ -12,6 +12,8 @@ const legacyBlogRedirects = [
 }))
 
 const nextConfig: NextConfig = {
+  // Allow `NEXT_DIST_DIR=.next-build npm run build` while `next dev` uses `.next`
+  distDir: process.env.NEXT_DIST_DIR || '.next',
   sassOptions: {
     // Legacy theme SCSS still uses darken()/lighten() and @import.
     // Silence these so Vercel production builds don't fail on Sass deprecations.

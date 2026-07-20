@@ -15,9 +15,9 @@ const localSeoNorthShore: LocationPage = {
   contentApproved: true,
   updatedAt: '2026-07-18',
 
-  metaTitle: 'Local SEO Services in North Shore, Pittsburgh | LocalSeoWiser',
+  metaTitle: 'Local SEO Services in North Shore | Local SEO Wiser',
   metaDescription:
-    'Grow your business with Local SEO Services in North Shore, Pittsburgh. Improve your Google visibility, Google Maps rankings, and attract more local customers with LocalSeoWiser.',
+    'Help customers find your North Shore business with Local SEO strategies that improve rankings, traffic, and qualified local leads.',
 
   h1: 'Local SEO Services in North Shore, Pittsburgh',
   intro: 'Help Your North Shore Business Stand Out in Local Search',
@@ -248,9 +248,9 @@ const localSeoNorthShore: LocationPage = {
   },
 
   schema: {
-    webPageName: 'Local SEO Services in North Shore, Pittsburgh | LocalSeoWiser',
+    webPageName: 'Local SEO Services in North Shore | Local SEO Wiser',
     webPageDescription:
-      'Grow your business with Local SEO Services in North Shore, Pittsburgh. Improve your Google visibility, Google Maps rankings, and attract more local customers with LocalSeoWiser.',
+      'Help customers find your North Shore business with Local SEO strategies that improve rankings, traffic, and qualified local leads.',
     placeName: 'North Shore',
     breadcrumbLabel: 'Local SEO in North Shore',
     businessName: 'Local SEO Wiser',

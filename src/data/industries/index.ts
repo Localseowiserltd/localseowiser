@@ -11,6 +11,8 @@ import localSeoForRestaurants from './local-seo-for-restaurants'
 import localSeoForRealEstateAgents from './local-seo-for-real-estate-agents'
 import localSeoForInsuranceAgencies from './local-seo-for-insurance-agencies'
 import localSeoForFinancialAdvisors from './local-seo-for-financial-advisors'
+import localSeoForAccountingFirms from './local-seo-for-accounting-firms'
+import localSeoForPestControlCompanies from './local-seo-for-pest-control-companies'
 
 /**
  * Industry page registry.
@@ -28,6 +30,8 @@ export const industryPages: IndustryPage[] = [
   localSeoForRealEstateAgents,
   localSeoForInsuranceAgencies,
   localSeoForFinancialAdvisors,
+  localSeoForAccountingFirms,
+  localSeoForPestControlCompanies,
 ]
 
 export const getIndustryPageBySlug = (slug: string): IndustryPage | undefined =>

@@ -15,9 +15,9 @@ const localSeoRobinsonTownship: LocationPage = {
   contentApproved: true,
   updatedAt: '2026-07-18',
 
-  metaTitle: 'Local SEO Services in Robinson Township, PA | LocalSeoWiser',
+  metaTitle: 'Local SEO Services in Robinson Township | Local SEO Wiser',
   metaDescription:
-    'Grow your business with Local SEO Services in Robinson Township, PA. Improve your Google rankings, Google Maps visibility, and attract more local customers with LocalSeoWiser.',
+    'Generate more local leads in Robinson Township with Local SEO services designed to improve rankings, visibility, and customer acquisition.',
 
   h1: 'Local SEO Services in Robinson Township, PA',
   intro: 'Help Your Robinson Township Business Reach More Local Customers',
@@ -247,9 +247,9 @@ const localSeoRobinsonTownship: LocationPage = {
   },
 
   schema: {
-    webPageName: 'Local SEO Services in Robinson Township, PA | LocalSeoWiser',
+    webPageName: 'Local SEO Services in Robinson Township | Local SEO Wiser',
     webPageDescription:
-      'Grow your business with Local SEO Services in Robinson Township, PA. Improve your Google rankings, Google Maps visibility, and attract more local customers with LocalSeoWiser.',
+      'Generate more local leads in Robinson Township with Local SEO services designed to improve rankings, visibility, and customer acquisition.',
     placeName: 'Robinson Township',
     breadcrumbLabel: 'Local SEO in Robinson Township',
     businessName: 'Local SEO Wiser',

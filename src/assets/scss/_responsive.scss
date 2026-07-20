@@ -14,6 +14,14 @@
         line-height: 1.2 !important;
     }
 
+    .bg-home-3 .hero-main-heading {
+        font-size: clamp(40px, 5.5vw, 48px) !important;
+        line-height: 1.08 !important;
+        font-weight: 800 !important;
+        letter-spacing: -0.025em;
+        max-width: 850px;
+    }
+
     h2,
     .h2 {
         font-size: 1.65rem !important;
@@ -39,8 +47,8 @@
 
     .services-page .page-hero-header,
     .contact-page-hero.page-hero-header {
-        padding-top: 72px !important;
-        padding-bottom: 2.5rem !important;
+        padding-top: 2.75rem !important;
+        padding-bottom: 2.25rem !important;
     }
 
     .bg-home-3 {
@@ -55,10 +63,6 @@
     .services-panel-title,
     .process-section__title {
         font-size: clamp(1.5rem, 4.5vw, 2rem) !important;
-    }
-
-    .about-team-card--horizontal .about-team-card__badge {
-        white-space: normal;
     }
 
     .home-cta-task__actions .btn {
@@ -166,6 +170,11 @@
         font-size: 1.75rem !important;
     }
 
+    .bg-home-3 .hero-main-heading {
+        font-size: clamp(36px, 8.5vw, 42px) !important;
+        line-height: 1.08 !important;
+    }
+
     h2,
     .h2 {
         font-size: 1.5rem !important;
@@ -212,31 +221,27 @@
         padding: 68px 0 36px;
     }
 
-    .hero-content-col {
-        order: 1 !important;
+    .hero-centered {
+        align-items: center;
+        text-align: center;
     }
 
     .hero-above-fold {
-        .hero-main-heading {
-            font-size: clamp(1.35rem, 5.5vw, 1.75rem);
-            margin-bottom: 0.75rem !important;
-        }
-
         .hero-subhead {
             font-size: 0.88rem;
             line-height: 1.6;
-            margin-bottom: 0.85rem !important;
         }
 
-        .hero-trust-strip {
+        .hero-trust-strip,
+        .hero-trust-badges {
             margin-bottom: 0 !important;
         }
     }
 
     .hero-form-col {
-        order: 2 !important;
-        margin-top: 1rem;
+        margin-top: 0.25rem;
         justify-content: center;
+        max-width: none;
 
         .visibility-scan-form {
             max-width: 100%;
@@ -248,12 +253,7 @@
     }
 
     .hero-cta-row {
-        flex-direction: column;
-        align-items: stretch !important;
-
         .btn {
-            width: 100%;
-            text-align: center;
             white-space: normal !important;
         }
     }
@@ -261,26 +261,6 @@
     .hero-rating-row {
         flex-wrap: wrap;
         gap: 0.35rem 0.5rem !important;
-    }
-
-    .about-story-grid {
-        &__cell {
-            min-height: 220px;
-
-            &--white,
-            &--dark,
-            &--primary {
-                padding: 28px 20px;
-            }
-        }
-
-        &__title {
-            font-size: 1.25rem !important;
-        }
-    }
-
-    .about-team-card {
-        padding: 1.25rem 1.1rem 1.2rem;
     }
 
     .portfolio-projects-section {

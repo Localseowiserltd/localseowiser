@@ -45,7 +45,7 @@ export const homeServices = [
     icon: 'tabler:brand-google',
     title: 'Google Business Profile Optimization',
     description:
-      'Your GBP is the single biggest lever in local SEO. It drives roughly a third of your Map Pack ranking power. We optimize every field, including categories, attributes, services, posts, photos, and Q&A.',
+      'Your Google Business Profile is often the strongest local ranking and conversion asset you control. We audit and optimize categories, services, attributes, photos, posts, and Q&A so the profile matches how Pittsburgh customers search. That work improves Map Pack eligibility, click-through rates, and the trust signals that turn map views into phone calls.',
     tags: ['Profile Fields', 'Map Pack Signals'],
     href: '/google-map-optimization',
   },
@@ -53,7 +53,7 @@ export const homeServices = [
     icon: 'tabler:map-pin',
     title: 'Neighborhood & Keyword Targeting',
     description:
-      'We map the exact searches your Pittsburgh customers use by service and neighborhood, then build your pages around them.',
+      'Pittsburgh search is neighborhood-driven, not one-size-fits-all. We research the exact service and location phrases your customers use across suburbs and city districts, then structure pages and content around that intent. The goal is qualified visibility in the places you actually serve—not broad rankings that never convert.',
     tags: ['Neighborhood Pages', 'Intent Mapping'],
     href: '/local-seo',
   },
@@ -61,7 +61,7 @@ export const homeServices = [
     icon: 'tabler:list-check',
     title: 'Citations & NAP Consistency',
     description:
-      'We clean up and align your Name, Address, and Phone across every directory. That helps Google trust your business as one consistent entity.',
+      'Inconsistent Name, Address, and Phone details across directories confuse both customers and Google. We clean up duplicates, correct outdated listings, and align core business data so your entity looks stable and trustworthy. Strong citation hygiene supports local pack rankings and reduces wasted clicks from wrong-number or wrong-address listings.',
     tags: ['NAP Cleanup', 'Directory Alignment'],
     href: '/local-business-citation',
   },
@@ -69,7 +69,7 @@ export const homeServices = [
     icon: 'tabler:star',
     title: 'Reviews That Build Trust',
     description:
-      'We help you earn reviews consistently and respond the right way. Review volume and recency are major ranking and conversion signals.',
+      'Reviews influence both ranking signals and buying decisions. We help you build a repeatable process to request honest feedback, respond professionally, and keep review activity fresh over time. Higher volume and better response quality strengthen credibility on Google Maps while improving conversion once people find your profile.',
     tags: ['Review Volume', 'Response Quality'],
     href: '/local-seo',
   },
@@ -77,7 +77,7 @@ export const homeServices = [
     icon: 'tabler:file-text',
     title: 'On-Page & Location Content',
     description:
-      'We create real, human-written pages for your services and the areas you serve. No duplicated city pages with swapped-out names.',
+      'Thin or duplicated city pages rarely win competitive local markets. We create human-written service and location content that reflects real customer questions, local proof, and clear next steps. That gives Google stronger topical relevance and gives visitors a reason to contact you instead of bouncing to a competitor.',
     tags: ['Service Pages', 'Location Content'],
     href: '/landing-page-optimization',
   },
@@ -85,7 +85,7 @@ export const homeServices = [
     icon: 'tabler:link',
     title: 'Local Link Building',
     description:
-      'We earn relevant, authoritative local links and "best of" mentions that lift your prominence in Pittsburgh search.',
+      'Local prominence still depends on relevant authority. We pursue links and mentions from trusted local sources, partners, and industry placements that reinforce your Pittsburgh relevance. These signals help search engines understand your business as an established local option—not just another website chasing rankings.',
     tags: ['Local Authority', 'Best-Of Mentions'],
     href: '/local-seo',
   },
@@ -93,7 +93,7 @@ export const homeServices = [
     icon: 'tabler:brain',
     title: 'AI & Generative Search (GEO)',
     description:
-      'We position your business to surface in Google AI Overviews, ChatGPT, Gemini, and Perplexity. Strong local SEO fundamentals already cover most AI visibility, with no gimmicks required.',
+      'Customers increasingly discover businesses through AI answers as well as classic search results. We strengthen the same entity, content, and local proof signals that help you appear in experiences like Google AI Overviews. No shortcuts or gimmicks—just durable local SEO fundamentals that support visibility across traditional and generative search.',
     tags: ['AI Overviews', 'GEO Fundamentals'],
     href: '/local-seo',
   },
@@ -101,7 +101,7 @@ export const homeServices = [
     icon: 'tabler:chart-bar',
     title: 'Clear Reporting',
     description:
-      "You get clear reports on rankings, calls, and form fills: the metrics that drive revenue. No 40-page PDFs packed with vanity numbers.",
+      'You should never need a 40-page PDF to understand progress. Our reporting focuses on rankings that matter, Google Business Profile engagement, calls, and form fills. Every update is written so you can see what changed, why it matters for revenue, and what we are prioritizing next.',
     tags: ['Calls & Leads', 'Rank Tracking'],
     href: '/local-seo',
   },
@@ -109,7 +109,7 @@ export const homeServices = [
     icon: 'tabler:trending-up',
     title: 'Results You Can Expect',
     description:
-      'More qualified leads, stronger Google Maps visibility, and increased phone calls. Sustainable local growth driven by proven local SEO strategies.',
+      'The outcome we optimize for is practical growth: stronger Maps visibility, more qualified inquiries, and more phone calls from people searching nearby. Timelines vary by competition, but the process is built for compounding gains—visibility that keeps working after the first wins instead of short-lived spikes.',
     tags: ['Lead Growth', 'Map Visibility'],
     href: '/local-seo',
   },
@@ -163,6 +163,7 @@ export const homePricingPlans = [
     bestFor: 'Solo & new local businesses getting the foundation right',
     priceRange: '$150–$300',
     variant: 'starter' as const,
+    includes: ['GBP Optimization', 'Citation Cleanup', 'Monthly Reporting'],
   },
   {
     name: 'Growth',
@@ -170,12 +171,14 @@ export const homePricingPlans = [
     priceRange: '$750–$2,500',
     variant: 'growth' as const,
     featured: true,
+    includes: ['Everything in Starter', 'Service Pages', 'Review Strategy'],
   },
   {
     name: 'Competitive',
     bestFor: 'Legal, medical & home services in dense categories',
     priceRange: '$1,500–$5,000',
     variant: 'competitive' as const,
+    includes: ['Everything in Growth', 'Authority Link Building', 'Advanced Local SEO'],
   },
 ]
 
@@ -278,50 +281,15 @@ export const processSteps = [
   },
 ]
 
-export const testimonials = [
-  {
-    name: 'Angela Park 🇺🇸',
-    role: 'Owner, Midtown Smiles',
-    description:
-      'Local SEO Wiser gave us a clear roadmap and handled the execution. We now see consistent calls coming directly from Google Maps results.',
-  },
-  {
-    name: 'Joseph Reed 🇬🇧',
-    role: 'Managing Partner, Reed Family Law',
-    description:
-      'The team improved our local visibility without overpromising. The reporting is transparent, strategic, and actually tied to leads, not rankings.',
-  },
-  {
-    name: 'Olivia Chen 🇦🇺',
-    role: 'Director, Harbour Clinic',
-    description:
-      'Their review and profile strategy helped us stand out in a competitive area. The quality of leads we are getting from Google Maps has noticeably improved.',
-  },
-  {
-    name: 'Maria Santos 🇨🇦',
-    role: 'Marketing Lead, Riverstone Realty',
-    description:
-      'Their local content and Pittsburgh neighborhood strategy helped us attract higher-intent buyers from the areas we actually serve.',
-  },
-  {
-    name: 'David Carter 🇳🇿',
-    role: 'Owner, Carter HVAC Services',
-    description:
-      'We finally have consistent calls from discovery searches. People finding us on Maps who had no idea we existed before.',
-  },
-  {
-    name: 'Lisa Williams 🇺🇸',
-    role: 'Practice Manager, Northside Wellness',
-    description:
-      'The review workflow and profile updates made a measurable difference in booked appointments within just a few weeks.',
-  },
-]
-
 export const honestBitSection = {
   eyebrow: 'The Honest Bit',
   title: "What we won't promise you",
-  body:
-    'Some agencies "guarantee #1 rankings." Google itself says no one can, and anyone who does is a red flag. Here\'s what we actually commit to: a transparent process, real reporting, and steady, compounding visibility in the searches that bring you customers. No contracts that trap you, no vanity metrics, no jargon.',
+  paragraphs: [
+    'Some agencies promise #1 rankings. Google itself makes clear that no one can guarantee specific positions, and anyone who does should be treated as a red flag. Local search is competitive, algorithms change, and your results depend on your market, website, reviews, and how consistently the work is executed. We will never sell you a ranking guarantee.',
+    'What we do commit to is transparent reporting and sustainable SEO. You will see what we worked on, why it matters, and which metrics moved—calls, form fills, Maps engagement, and meaningful ranking progress. We avoid vanity dashboards that look busy while your phone stays quiet.',
+    'We also refuse shortcuts that put your business at risk. No fake reviews, no doorway-page spam, no mass-generated location pages, and no link schemes. Those tactics can create short-term noise and long-term penalties. Our approach is built for durable local visibility that compounds month over month.',
+    'If you want a partner focused on long-term growth instead of empty promises, we are the right fit. Month-to-month engagement, clear communication, and work aimed at real customer acquisition—not contracts designed to trap you after the pitch.',
+  ],
 }
 
 export const faqSection = {
@@ -329,283 +297,83 @@ export const faqSection = {
   title: 'Frequently asked questions',
 }
 
-export const faqItems = [
+export type HomeFaqItem = {
+  question: string
+  answer: string
+  links?: { label: string; href: string }[]
+}
+
+export const faqItems: HomeFaqItem[] = [
   {
     question: 'How much do local SEO services cost in Pittsburgh?',
     answer:
-      "It depends on your industry's competition and goals. Foundational plans start lower, while competitive categories like legal, medical, and home services need more. Our plans are listed above. A quick call gets you an exact number.",
+      "It depends on your industry's competition and goals. Foundational plans start lower, while competitive categories like legal, medical, and home services need more. See our pricing ranges above, or compare full Local SEO packages for engagement options. A quick call gets you an exact number.",
+    links: [
+      { label: 'Local SEO packages', href: '/packages' },
+      { label: 'pricing ranges above', href: '/#pricing' },
+    ],
   },
   {
     question: 'How competitive is local SEO in Pittsburgh?',
     answer:
-      "Very. With 2.4 million people in the metro, you're often up against dozens of established businesses for the top 3 Map Pack spots. The upside: many of them have weak local SEO, so there's real room to win if you invest strategically.",
+      "Very. With 2.4 million people in the metro, you're often up against dozens of established businesses for the top 3 Map Pack spots. The upside: many of them have weak local SEO, so there's real room to win if you invest strategically in Local SEO services built for this market.",
+    links: [{ label: 'Local SEO services', href: '/local-seo' }],
   },
   {
     question: 'How long until I see results?',
     answer:
-      'Most Pittsburgh businesses see measurable improvement in 60–90 days, with stronger results building over 4–6 months. Competitive categories take longer. We set realistic timelines based on your market.',
+      'Most Pittsburgh businesses see measurable improvement in 60–90 days, with stronger results building over 4–6 months. Competitive categories take longer. We set realistic timelines based on your market after a free visibility scan.',
+    links: [{ label: 'free visibility scan', href: '/contact' }],
   },
   {
     question: 'Do you work with businesses in the Pittsburgh suburbs?',
     answer:
-      'Yes. We cover the entire metro: Cranberry, Mt. Lebanon, Monroeville, Robinson, the North and South Hills, and everywhere between. Suburban search has its own dynamics and we tailor for it.',
+      'Yes. We cover the entire metro: Cranberry, Mt. Lebanon, Monroeville, Robinson, the North and South Hills, and everywhere between. Suburban search has its own dynamics and we tailor for it across the areas we serve.',
+    links: [{ label: 'areas we serve', href: '/#areas' }],
   },
   {
     question: "What's the difference between local SEO and regular SEO?",
     answer:
-      'Regular SEO competes globally; local SEO targets a specific area and a different set of signals: Google Business Profile, proximity, reviews, and citations. A modest local business can outrank a much bigger competitor by getting these right.',
+      'Regular SEO competes globally; local SEO targets a specific area and a different set of signals: Google Business Profile, proximity, reviews, and citations. Learn more on our Google Business Profile Optimization page. A modest local business can outrank a much bigger competitor by getting these right.',
+    links: [{ label: 'Google Business Profile Optimization page', href: '/google-map-optimization' }],
   },
   {
     question: 'Do you optimize for AI searches like ChatGPT and Google AI Overviews?',
     answer:
-      'Yes. The good news is that strong local SEO fundamentals already make you eligible for most AI answers, so we build the foundation right and you benefit on both fronts.',
+      'Yes. The good news is that strong local SEO fundamentals already make you eligible for most AI answers, so we build the foundation right and you benefit on both fronts. Technical SEO and clear local content support that work.',
+    links: [
+      { label: 'local SEO', href: '/local-seo' },
+      { label: 'Technical SEO', href: '/technical-seo' },
+    ],
   },
   {
     question: 'Do you guarantee #1 rankings?',
     answer:
-      'No. You should be cautious of anyone who does. Google prohibits ranking guarantees. We commit to a transparent process and real, reported results instead.',
+      'No. You should be cautious of anyone who does. Google prohibits ranking guarantees. We commit to a transparent process and real, reported results instead—exactly what we outline in our honest approach to local search.',
+    links: [{ label: 'honest approach', href: '/#honest' }],
   },
   {
     question: 'Are there long contracts?',
     answer:
-      'No long contracts. We work month-to-month so you stay because results are coming in, not because you are locked in.',
+      'No long contracts. We work month-to-month so you stay because results are coming in, not because you are locked in. Ready to talk? Contact Local SEO Wiser and we will map the right next step.',
+    links: [{ label: 'Contact Local SEO Wiser', href: '/contact' }],
   },
 ]
 
-export const aboutMission = [
-  {
-    title: 'Built for Real Results',
-    description:
-      'Everything we do connects to Google Maps visibility, profile clicks, phone calls, and direction requests — not charts that look busy but never ring your phone.',
-  },
-  {
-    title: 'Pittsburgh-First Strategy',
-    description:
-      'Pittsburgh is not one market — it is dozens. We build around how each neighborhood actually searches, from Shadyside to Cranberry and everywhere between.',
-  },
-  {
-    title: 'Honest, Transparent Work',
-    description:
-      'You always know what we are working on, why we are doing it, and how it helps your business. No confusing terms. No hidden work. No useless reports.',
-  },
-]
-
-export const aboutTeam = [
-  {
-    label: 'Founder',
-    name: 'Usman Fadi',
-    role: 'Founder & Local SEO Lead',
-    image: '/team-founder.webp',
-    badge: 'Top-rated specialist',
-    description: 'Leads strategy and client growth, turning local search demand into measurable calls, bookings, and revenue.',
-    tags: ['Local Strategy', 'Growth', 'GBP'],
-  },
-  {
-    label: 'Co Founder',
-    name: 'Bilal Ahmad',
-    role: 'Co Founder',
-    image: '/cofounder.jpg',
-    badge: 'Top-rated specialist',
-    description: 'Partners on vision and operations, scaling client delivery and long-term growth while keeping every local SEO engagement aligned with measurable business outcomes.',
-    tags: ['Business Growth', 'Partnerships', 'Operations'],
-  },
-  {
-    label: 'Strategist',
-    name: 'Najaf',
-    role: 'SEO Strategist',
-    image: '/team-seo-strategist.webp',
-    badge: 'Top-rated specialist',
-    description: 'Owns on-page, technical, and citation execution that builds durable local relevance compounding month over month.',
-    tags: ['Technical SEO', 'On-Page', 'Citations'],
-  },
-  {
-    label: 'HR',
-    name: 'Tayyab',
-    role: 'Human Resources',
-    image: '/team-hr.webp',
-    badge: 'Top-rated specialist',
-    description: 'Builds and supports the team by handling hiring, onboarding, and people operations so delivery stays smooth and dependable.',
-    tags: ['Hiring', 'Onboarding', 'People Ops'],
-  },
-]
-
-export const aboutWhyChoose = [
-  'We have worked in Pittsburgh\'s toughest local markets — healthcare, legal, and home services',
-  'We measure success in calls and leads, not just rankings',
-  'We hold a 4.9/5 average client satisfaction rating',
-  'Our reports are simple and easy to understand',
-  'We have experience in markets across the US, UK, Canada, and Australia',
-]
-
-export const aboutPageMeta = {
-  title: 'About Local SEO Wiser | Pittsburgh Local SEO Agency',
-  description:
-    'Local SEO Wiser is a Pittsburgh local SEO agency that helps local businesses rank in Google Maps and get more calls. Learn who we are and how we work.',
-}
-
-export const aboutPageHero = {
-  badge: 'About Us',
-  title: 'About Local SEO Wiser',
-  description:
-    'A Pittsburgh local SEO agency helping businesses turn Google searches into real customers — more calls, more leads, more growth.',
-}
-
-export const aboutPageWhoWeAre = {
-  eyebrow: 'Who We Are',
-  title: 'One focus: local businesses that get found and chosen',
-  lead:
-    'Local SEO Wiser is a local SEO agency based in Pittsburgh. We do one thing, and we do it well: we help local businesses show up on Google when customers search for their services.',
-  paragraphs: [
-    'We work with small business owners and growing local brands across the US, UK, Canada, and Australia. Our clients want real results — more calls, more leads, more customers — not just fancy ranking reports.',
-    'We started this agency because we noticed a problem. Many local businesses were paying for SEO every month but getting nothing back. They received reports full of charts and numbers, but their phones were not ringing. We built Local SEO Wiser to change that.',
-    'Everything we do is connected to real results: Google Maps visibility, profile clicks, phone calls, and direction requests. If our work is not bringing you customers, we want to fix it fast.',
-  ],
-}
-
-export const aboutPageBeliefs = {
-  eyebrow: 'What We Believe',
-  title: 'What we believe about local search',
-  paragraphs: [
-    'We believe local search is the fastest way to connect a business with its next customer. When someone in Pittsburgh searches for a plumber, a dentist, or an HVAC company, they are ready to buy. Our job is simple: make sure they find you first.',
-    'We also believe in honesty. You will always know what we are working on, why we are doing it, and how it helps your business. No confusing terms. No hidden work. No useless reports.',
-  ],
-}
-
-export const aboutPageProcess = {
-  eyebrow: 'How We Work',
-  title: 'How we work with every client',
-  intro:
-    'We do not use copy-paste templates. Every business is different, so every plan we make is different too. We start with a full check of your Google Business Profile, your website, your online listings, and your top competitors in your area. Then we build a clear plan — the most important fixes come first.',
-  steps: [
-    {
-      step: '01',
-      title: 'Audit',
-      phase: 'Phase 1',
-      paragraphs: ['We check your Google profile, website, listings, reviews, and competitors'],
-      icon: 'tabler:report-search',
-    },
-    {
-      step: '02',
-      title: 'Strategy',
-      phase: 'Phase 2',
-      paragraphs: ['We build a clear plan made for your market'],
-      icon: 'tabler:map',
-    },
-    {
-      step: '03',
-      title: 'Optimization',
-      phase: 'Phase 3',
-      paragraphs: ['We fix your profile, content, listings, and reviews'],
-      icon: 'tabler:settings',
-    },
-    {
-      step: '04',
-      title: 'Tracking',
-      phase: 'Phase 4',
-      paragraphs: ['We watch your rankings, calls, and customer activity'],
-      icon: 'tabler:chart-line',
-    },
-    {
-      step: '05',
-      title: 'Reporting',
-      phase: 'Phase 5',
-      paragraphs: ['Every month, you get a simple report showing real results'],
-      icon: 'tabler:report-analytics',
-    },
-  ],
-}
-
-export const aboutPageClients = {
-  eyebrow: 'Who We Work With',
-  title: 'Who we work with',
-  paragraphs: [
-    'Most of our clients are local service businesses. We work with dentists, lawyers, plumbers, HVAC companies, contractors, clinics, real estate agents, restaurants, and local shops.',
-    'Whether you have one location or many, we know how to grow your local visibility.',
-  ],
-  industries: [
-    'Dentists',
-    'Lawyers',
-    'Plumbers',
-    'HVAC',
-    'Contractors',
-    'Clinics',
-    'Real Estate',
-    'Restaurants',
-    'Local Shops',
-  ],
-  areas: ['Shadyside', 'Mt. Lebanon', 'South Hills', 'Cranberry Township', 'Bethel Park', 'UK', 'Canada', 'Australia'],
-}
-
-export const aboutPageTrust = {
-  eyebrow: 'Why Businesses Trust Us',
-  title: 'Why businesses trust Local SEO Wiser',
-  items: [
-    {
-      title: 'Toughest Pittsburgh markets',
-      description: 'Healthcare, legal, and home services — categories where local SEO is hardest to win.',
-      icon: 'tabler:building-store',
-    },
-    {
-      title: 'Calls and leads, not vanity rankings',
-      description: 'We measure success in the metrics that pay bills — not keyword reports that impress but do not convert.',
-      icon: 'tabler:phone-call',
-    },
-    {
-      title: '4.9/5 client satisfaction',
-      description: 'A track record of happy clients who stay because the work produces real business outcomes.',
-      icon: 'tabler:star',
-    },
-    {
-      title: 'Reports you can actually read',
-      description: 'Simple monthly reporting — no 40-page PDFs packed with numbers that mean nothing to your bottom line.',
-      icon: 'tabler:report-analytics',
-    },
-    {
-      title: 'US, UK, Canada & Australia',
-      description: 'Pittsburgh is home, but we run campaigns for service businesses across four major English-speaking markets.',
-      icon: 'tabler:world',
-    },
-  ],
-}
-
-export const aboutPageStats = {
-  eyebrow: 'Our Numbers',
-  title: 'Proof behind the work',
-  items: [
-    {
-      value: '50+',
-      label: 'Markets with active local SEO campaigns',
-      icon: 'tabler:world',
-    },
-    {
-      value: '90%+',
-      label: 'Clients staying beyond 12 months',
-      icon: 'tabler:heart-handshake',
-    },
-    {
-      value: '18.7M+',
-      label: 'Map discovery views improved',
-      icon: 'tabler:map-pin',
-    },
-    {
-      value: '4.9/5',
-      label: 'Average client satisfaction rating',
-      icon: 'tabler:star',
-    },
-  ],
-}
-
-export const aboutPageClosing = {
-  title: 'One last thing',
-  paragraphs: [
-    'We do not take every client who comes to us. Good results need focus, so we keep our client list small. When you work with Local SEO Wiser, you get a team that knows your market, knows your competitors, and works on your campaign every single month.',
-    'Want to know exactly why your business is not showing up on Google Maps? Start with a free audit. We will show you what we find before you pay anything.',
-  ],
-  cta: {
-    label: 'Get My Free Audit',
-    href: '/contact',
-  },
-}
+/** @deprecated Import from `@/data/about` instead. Re-exported for compatibility. */
+export {
+  aboutPageBeliefs,
+  aboutPageClients,
+  aboutPageClosing,
+  aboutPageExperience,
+  aboutPageHero,
+  aboutPageMeta,
+  aboutPageProcess,
+  aboutPageTrust,
+  aboutPageWhoWeAre,
+  aboutTeamMembers as aboutTeam,
+  aboutTeamSection,
+} from './about'
 
 export type ServiceMenuItem = {
   id: string
@@ -882,9 +650,9 @@ export const servicePages: ServicePage[] = [
     variant: 'full',
     category: 'Search Engine Marketing',
     title: 'PPC Advertising in Pittsburgh, PA — The Right Channels, Not Every Channel',
-    metaTitle: 'PPC Advertising in Pittsburgh, PA | Local SEO Wiser',
+    metaTitle: 'PPC Advertising Pittsburgh | Google Ads Management Services',
     metaDescription:
-      'More ad channels isn\'t the goal — the right ones are. Local SEO Wiser runs focused, profitable PPC across Google, Microsoft, and Meta for Pittsburgh businesses. No wasted spend, no long contracts. Free audit.',
+      'Drive targeted traffic with PPC Advertising in Pittsburgh. Our Google Ads experts create campaigns that maximize ROI and generate qualified leads.',
     description:
       'Focused PPC management for Pittsburgh businesses — the right channels, not every channel, with transparent fees and no long contracts.',
     intro:
@@ -1140,9 +908,9 @@ export const servicePages: ServicePage[] = [
     variant: 'full',
     category: 'Search Engine Marketing',
     title: 'Google Ads Management in Pittsburgh, PA That Turns Ad Spend Into Leads',
-    metaTitle: 'Google Ads Management in Pittsburgh, PA | Local SEO Wiser',
+    metaTitle: 'Google Ads Management Pittsburgh | Generate More Leads',
     metaDescription:
-      'Stop wasting ad spend. Local SEO Wiser builds and manages Google Ads campaigns for Pittsburgh businesses — flat fees, no long contracts, and you keep your account. Free ad audit.',
+      'Professional Google Ads Management in Pittsburgh to increase qualified traffic, improve conversions, and maximize your advertising budget.',
     description:
       'Paid search management for Pittsburgh businesses that need leads now — without wasted ad spend.',
     intro:
@@ -1383,9 +1151,9 @@ export const servicePages: ServicePage[] = [
     variant: 'full',
     category: 'Web Design & Development',
     title: 'WordPress Development in Pittsburgh, PA — Built to Rank, Not Just to Look Good',
-    metaTitle: 'WordPress Development in Pittsburgh, PA | Local SEO Wiser',
+    metaTitle: 'WordPress Development Pittsburgh | SEO-Friendly Websites',
     metaDescription:
-      'Most WordPress sites are built to look good — not to be found. Local SEO Wiser builds Pittsburgh businesses fast, conversion-focused WordPress websites engineered to rank from day one. Free site review.',
+      'Custom WordPress development in Pittsburgh with fast, secure, SEO-friendly websites designed to generate more leads and support business growth.',
     description:
       'SEO-first WordPress websites for Pittsburgh businesses — built to rank, convert, and stay easy to manage after launch.',
     intro:
@@ -1648,9 +1416,9 @@ export const servicePages: ServicePage[] = [
     variant: 'full',
     category: 'Web Design & Development',
     title: 'Shopify Development in Pittsburgh, PA — Stores Built to Sell and Be Found',
-    metaTitle: 'Shopify Development in Pittsburgh, PA | Local SEO Wiser',
+    metaTitle: 'Shopify Development Pittsburgh | High-Converting Online Stores',
     metaDescription:
-      'Shopify makes selling easy — getting found is the hard part. Local SEO Wiser builds and optimizes Pittsburgh Shopify stores engineered to rank, load fast, and convert. Free store review.',
+      'Professional Shopify development in Pittsburgh with fast, conversion-focused online stores built for better user experience and long-term growth.',
     description:
       'SEO-first Shopify stores for Pittsburgh businesses — built to rank, convert, and stay easy to manage after launch.',
     intro:
@@ -1914,9 +1682,9 @@ export const servicePages: ServicePage[] = [
     variant: 'full',
     category: 'Social Media',
     title: 'Show Up Consistently. Build Trust That Turns Into Business.',
-    metaTitle: 'Social Media Management in Pittsburgh, PA | Local SEO Wiser',
+    metaTitle: 'Social Media Management Pittsburgh | Grow Your Local Brand',
     metaDescription:
-      'Your customers check your social profiles before they call. Local SEO Wiser manages Pittsburgh business social media — consistent content, community management, and reporting that ties to real growth. Free snapshot.',
+      'Build a stronger online presence with Social Media Management in Pittsburgh. Engage your audience, increase brand awareness, and support business growth.',
     description:
       'Social media management for Pittsburgh businesses — consistent content, community engagement, and local targeting that builds trust and drives customers.',
     intro:
@@ -2244,50 +2012,8 @@ export const serviceCategories = [
   },
 ]
 
-export const packages = [
-  {
-    name: 'Starter Local SEO',
-    description: 'For single-location businesses establishing local visibility',
-    features: [
-      'Google Business Profile setup and optimization',
-      'Core citation cleanup and consistency checks',
-      'Monthly local ranking tracking',
-      'Review response guidance',
-    ],
-  },
-  {
-    name: 'Growth Local SEO',
-    description: 'For businesses ready to scale lead volume and map exposure',
-    features: [
-      'Everything in Starter, plus expanded citations',
-      'Location page enhancements and internal linking',
-      'Review generation workflows',
-      'Competitor gap analysis and strategy updates',
-    ],
-  },
-  {
-    name: 'Advanced Local SEO',
-    description: 'For multi-location or highly competitive service markets',
-    features: [
-      'Everything in Growth, plus multi-location architecture',
-      'Advanced geo-grid map tracking',
-      'Custom reporting dashboards and quarterly roadmaps',
-      'Strategic consulting with implementation support',
-    ],
-  },
-]
-
-export const packageComparison = {
-  headers: ['Feature', 'Starter', 'Growth', 'Advanced'],
-  rows: [
-    ['Google Business Profile Optimization', '✓', '✓', '✓'],
-    ['Core Citation Management', '✓', '✓', '✓'],
-    ['Geo-grid Tracking', '✗', '✓', '✓'],
-    ['Location Page SEO', '✗', '✓', '✓'],
-    ['Multi-location Framework', '✗', '✗', '✓'],
-    ['Custom Dashboard Reporting', '✗', '✗', '✓'],
-  ],
-}
+/** @deprecated Import from `@/data/packages` instead. */
+export { packageComparison, packages } from './packages'
 
 /** Blog content hub — single source lives in `@/data/blog` (re-exported for compatibility). */
 export type { BlogPost } from '@/types/blog'
@@ -2340,23 +2066,19 @@ export const topBarSocialLinks = [
   { icon: 'tabler:brand-pinterest', href: socialLinks.pinterest, label: 'Pinterest' },
 ]
 
-export const contactMailtoHref = `mailto:${contactInfo.email}?subject=${encodeURIComponent('Free SEO Audit Request')}&body=${encodeURIComponent('Hi, I would like to request a free local SEO audit.')}`
+export const contactMailtoHref = `mailto:${contactInfo.email}?subject=${encodeURIComponent('Local SEO Review Request')}&body=${encodeURIComponent('Hi, I would like to request a free local SEO review.')}`
 export const contactTelHref = `tel:${contactInfo.phoneTel}`
 
-export const contactPageMeta = {
-  title: 'Contact Local SEO Wiser | Pittsburgh Local SEO Agency',
-  description:
-    'Contact Local SEO Wiser for a free local SEO audit. Talk to a local SEO expert today and find out how to improve your Google Maps rankings.',
-}
+/** @deprecated Import from `@/data/contact` instead. */
+export {
+  contactPageFaq,
+  contactPageHero,
+  contactPageMeta,
+  contactPageNextSteps,
+  contactPageReview as contactPageAudit,
+} from './contact'
 
-export const contactPageHero = {
-  title: "Let's Grow Your Local Business Together",
-  paragraphs: [
-    'Is your business missing from Google Maps? Are competitors taking your calls? Is your website getting visitors but no leads? If yes, let\'s talk.',
-    'Our free audit takes less than 48 hours. It shows you exactly where your business stands on Google and what needs to be fixed.',
-    'We work with businesses across Pittsburgh and nearby areas, plus clients in the UK, Canada, and Australia. Whether you run one location or many, we are ready to help.',
-  ],
-}
+export const contactPageOffice = 'Pittsburgh, Pennsylvania, USA'
 
 export const contactPhones = [
   { label: 'US', flag: '🇺🇸', phone: '+1 412 663 7288', tel: '+14126637288' },
@@ -2370,7 +2092,7 @@ export const contactLocations = [
     phone: '+1 412 663 7288',
     tel: '+14126637288',
     email: 'info@localseowiser.com',
-    address: '307 Freeland St, Pittsburgh, PA 15210, United States',
+    address: 'Pittsburgh, Pennsylvania, USA',
   },
   {
     code: 'UK',
@@ -2378,79 +2100,6 @@ export const contactLocations = [
     phone: '+44 7454 758272',
     tel: '+447454758272',
     email: 'info@localseowiser.com',
-    address: 'Office 1267 85 Dunstall Hill, Wolverhampton, United Kingdom, WV6 0SR',
+    address: 'United Kingdom',
   },
 ]
-
-export const contactPageOffice = 'Local SEO Wiser, Pittsburgh, Pennsylvania, United States'
-
-export const contactPageAudit = {
-  title: 'Request Your Free SEO Audit',
-  intro:
-    'Fill out the contact form on our website or send us an email. To help us serve you faster, please share:',
-  helpful: [
-    'Your business name and website',
-    'The services or products you offer',
-    'The areas or neighborhoods you want to target',
-    'Your biggest problem with Google visibility right now',
-  ],
-  closing:
-    'Before we talk, we will review your Google Business Profile, website, and competitors — so our first conversation is based on real data, not guesses.',
-}
-
-export const contactPageNextSteps = {
-  title: 'What Happens Next',
-  steps: [
-    {
-      title: 'Quick Review',
-      icon: 'tabler:report-search',
-      description:
-        'Within 24 to 48 hours, our team checks your Google profile, website health, and online listings against your top local competitors.',
-    },
-    {
-      title: 'Discovery Call',
-      icon: 'tabler:phone-call',
-      description:
-        'We set up a short call to share what we found, learn about your goals, and understand which areas and services matter most to you.',
-    },
-    {
-      title: 'Your Custom Proposal',
-      icon: 'tabler:file-description',
-      description:
-        'You get a clear proposal showing exactly what we recommend, in what order, and why. No generic packages — everything is made for your business.',
-    },
-    {
-      title: 'You Decide',
-      icon: 'tabler:circle-check',
-      description:
-        'No pressure at all. If the plan makes sense, we start working. If not, you still walk away knowing exactly where your local SEO stands.',
-    },
-  ],
-}
-
-export const contactPageFaq = {
-  eyebrow: 'FAQ',
-  title: 'Frequently Asked Questions',
-  items: [
-    {
-      question: 'How fast will I get a proposal?',
-      answer:
-        'Most proposals are ready within 2 to 3 business days. For single-location businesses, it is often even faster.',
-    },
-    {
-      question: 'Is the audit really free?',
-      answer:
-        'Yes. No cost, no pressure, no obligation. The audit helps both of us start the conversation with real facts.',
-    },
-    {
-      question: 'Do you work with businesses outside Pittsburgh?',
-      answer:
-        'Yes. Pittsburgh is our home market, but we work with clients across the US, UK, Canada, and Australia.',
-    },
-    {
-      question: 'What if I already have an SEO agency?',
-      answer:
-        'No problem. We can review your current campaign and give you an honest opinion about what is working and what is not. Many of our clients came to us after a bad experience with another agency.',
-    },
-  ],
-}

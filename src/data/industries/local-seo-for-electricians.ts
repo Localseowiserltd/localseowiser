@@ -12,9 +12,9 @@ const localSeoForElectricians: IndustryPage = {
   contentApproved: true,
   updatedAt: '2026-07-18',
 
-  metaTitle: 'Local SEO for Electricians | Electrical Contractor SEO Services | LocalSeoWiser',
+  metaTitle: 'Local SEO for Electricians | Grow Your Electrical Business',
   metaDescription:
-    'Grow your electrical business with Local SEO for Electricians. Improve your Google rankings, Google Maps visibility, and generate more qualified electrical service leads with LocalSeoWiser.',
+    'Increase your electrical service bookings with Local SEO for Electricians. Improve Google Maps visibility and attract more local customers.',
 
   h1: 'Local SEO for Electricians',
   intro: 'Help More Customers Find Your Electrical Business',
@@ -272,9 +272,9 @@ const localSeoForElectricians: IndustryPage = {
   },
 
   schema: {
-    webPageName: 'Local SEO for Electricians | Electrical Contractor SEO Services | LocalSeoWiser',
+    webPageName: 'Local SEO for Electricians | Grow Your Electrical Business',
     webPageDescription:
-      'Grow your electrical business with Local SEO for Electricians. Improve your Google rankings, Google Maps visibility, and generate more qualified electrical service leads with LocalSeoWiser.',
+      'Increase your electrical service bookings with Local SEO for Electricians. Improve Google Maps visibility and attract more local customers.',
     breadcrumbLabel: 'Local SEO for Electricians',
     businessName: 'Local SEO Wiser',
     businessDescription:

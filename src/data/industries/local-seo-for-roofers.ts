@@ -12,9 +12,9 @@ const localSeoForRoofers: IndustryPage = {
   contentApproved: true,
   updatedAt: '2026-07-18',
 
-  metaTitle: 'Local SEO for Roofing Companies | Roofing SEO Services | LocalSeoWiser',
+  metaTitle: 'Local SEO for Roofing Companies | Get More Roofing Leads',
   metaDescription:
-    'Grow your roofing business with Local SEO for Roofing Companies. Improve your Google rankings, Google Maps visibility, and generate more qualified roofing leads with LocalSeoWiser.',
+    'Generate more roofing leads with Local SEO strategies that improve rankings, increase local visibility, and grow your roofing business.',
 
   h1: 'Local SEO for Roofing Companies',
   intro: 'Help More Property Owners Find Your Roofing Business',
@@ -273,9 +273,9 @@ const localSeoForRoofers: IndustryPage = {
   },
 
   schema: {
-    webPageName: 'Local SEO for Roofing Companies | Roofing SEO Services | LocalSeoWiser',
+    webPageName: 'Local SEO for Roofing Companies | Get More Roofing Leads',
     webPageDescription:
-      'Grow your roofing business with Local SEO for Roofing Companies. Improve your Google rankings, Google Maps visibility, and generate more qualified roofing leads with LocalSeoWiser.',
+      'Generate more roofing leads with Local SEO strategies that improve rankings, increase local visibility, and grow your roofing business.',
     breadcrumbLabel: 'Local SEO for Roofing Companies',
     businessName: 'Local SEO Wiser',
     businessDescription:

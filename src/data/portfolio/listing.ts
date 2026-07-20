@@ -1,10 +1,10 @@
 import type { PortfolioListingMeta } from '@/types/portfolio'
 
 export const portfolioListingMeta: PortfolioListingMeta = {
-  title: 'Our Work & SEO Case Studies | LocalSeoWiser',
+  title: 'SEO Case Studies & Client Results | Local SEO Wiser',
   description:
-    'Explore real website design, development, and local SEO projects completed by LocalSeoWiser, including verified strategies and performance results.',
-  h1: 'Our Work & SEO Case Studies',
+    'Explore Local SEO case studies, website projects, and Google Business Profile success stories that demonstrate real business growth.',
+  h1: 'SEO Case Studies & Client Results',
   intro:
     'This portfolio features verified client projects with real screenshots and platform data. We only publish work we can substantiate — no placeholder projects and no invented results.',
   ctaTitle: 'Have a website or local SEO project in mind?',

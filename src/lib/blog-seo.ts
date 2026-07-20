@@ -18,9 +18,9 @@ function absoluteImageUrl(src: string) {
 }
 
 export function buildBlogIndexMetadata(): Metadata {
-  const title = 'Local SEO Insights & Resources | LocalSeoWiser Blog'
+  const title = 'Local SEO Blog | Guides, Tips & Strategies | Local SEO Wiser'
   const description =
-    'Practical guides, Google Business Profile strategies, Local SEO best practices, and educational resources to help local businesses improve their online visibility.'
+    'Read expert Local SEO guides, Google Business Profile tips, ranking strategies, and marketing insights to grow your local business.'
   const canonical = `${SITE_ORIGIN}/blog`
 
   return {
@@ -33,11 +33,13 @@ export function buildBlogIndexMetadata(): Metadata {
       url: canonical,
       type: 'website',
       siteName: SITE_NAME,
+      images: [{ url: `${SITE_ORIGIN}/logo.png`, alt: title }],
     },
     twitter: {
       card: 'summary_large_image',
       title,
       description,
+      images: [`${SITE_ORIGIN}/logo.png`],
     },
     robots: { index: true, follow: true },
   }

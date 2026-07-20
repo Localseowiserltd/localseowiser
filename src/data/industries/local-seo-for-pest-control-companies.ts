@@ -12,9 +12,9 @@ const localSeoForPestControlCompanies: IndustryPage = {
   contentApproved: true,
   updatedAt: '2026-07-19',
 
-  metaTitle: 'Local SEO for Pest Control Companies | Pest Control SEO Services | LocalSeoWiser',
+  metaTitle: 'Local SEO for Pest Control Companies | More Service Calls',
   metaDescription:
-    'Grow your pest control business with Local SEO for Pest Control Companies. Improve your Google rankings, Google Maps visibility, and generate more qualified service calls with LocalSeoWiser.',
+    'Grow your pest control business with Local SEO strategies that improve local rankings, Google Maps visibility, and service call inquiries.',
 
   h1: 'Local SEO for Pest Control Companies',
   intro: 'Help More Homeowners and Businesses Find Your Pest Control Company',
@@ -272,9 +272,9 @@ const localSeoForPestControlCompanies: IndustryPage = {
   },
 
   schema: {
-    webPageName: 'Local SEO for Pest Control Companies | Pest Control SEO Services | LocalSeoWiser',
+    webPageName: 'Local SEO for Pest Control Companies | More Service Calls',
     webPageDescription:
-      'Grow your pest control business with Local SEO for Pest Control Companies. Improve your Google rankings, Google Maps visibility, and generate more qualified service calls with LocalSeoWiser.',
+      'Grow your pest control business with Local SEO strategies that improve local rankings, Google Maps visibility, and service call inquiries.',
     breadcrumbLabel: 'Local SEO for Pest Control Companies',
     businessName: 'Local SEO Wiser',
     businessDescription:

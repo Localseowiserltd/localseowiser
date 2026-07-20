@@ -2,9 +2,44 @@
 
 import SectionHeader from '@/components/SectionHeader'
 import IconifyIcon from '@/components/wrappers/IconifyIcon'
-import { faqItems, faqSection } from '@/data/site-content'
-import React, { useState } from 'react'
+import { faqItems, faqSection, type HomeFaqItem } from '@/data/site-content'
+import Link from 'next/link'
+import React, { Fragment, useState, type ReactNode } from 'react'
 import { Container } from 'react-bootstrap'
+
+function renderAnswerWithLinks(item: HomeFaqItem): ReactNode {
+  const links = item.links ?? []
+  if (links.length === 0) return item.answer
+
+  const sorted = [...links].sort((a, b) => b.label.length - a.label.length)
+  type Part = { type: 'text'; value: string } | { type: 'link'; label: string; href: string }
+  let parts: Part[] = [{ type: 'text', value: item.answer }]
+
+  for (const link of sorted) {
+    const next: Part[] = []
+    for (const part of parts) {
+      if (part.type !== 'text') {
+        next.push(part)
+        continue
+      }
+      const chunks = part.value.split(link.label)
+      chunks.forEach((chunk, index) => {
+        if (chunk) next.push({ type: 'text', value: chunk })
+        if (index < chunks.length - 1) next.push({ type: 'link', label: link.label, href: link.href })
+      })
+    }
+    parts = next
+  }
+
+  return parts.map((part, index) => {
+    if (part.type === 'text') return <Fragment key={`t-${index}`}>{part.value}</Fragment>
+    return (
+      <Link key={`l-${index}`} href={part.href} className="text-primary fw-semibold">
+        {part.label}
+      </Link>
+    )
+  })
+}
 
 const FAQ = () => {
   const [openIndex, setOpenIndex] = useState<number>(0)
@@ -36,7 +71,7 @@ const FAQ = () => {
                 </button>
                 <div className={`faq-modern-panel ${isOpen ? 'is-open' : ''}`}>
                   <div className="faq-modern-panel-inner">
-                    <p>{item.answer}</p>
+                    <p>{renderAnswerWithLinks(item)}</p>
                   </div>
                 </div>
               </div>

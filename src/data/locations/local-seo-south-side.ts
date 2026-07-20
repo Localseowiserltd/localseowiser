@@ -15,9 +15,9 @@ const localSeoSouthSide: LocationPage = {
   contentApproved: true,
   updatedAt: '2026-07-18',
 
-  metaTitle: 'Local SEO Services in South Side, Pittsburgh | LocalSeoWiser',
+  metaTitle: 'Local SEO Services in South Side | Get More Customers',
   metaDescription:
-    'Increase your online visibility with Local SEO Services in South Side, Pittsburgh. Improve Google rankings, Google Maps visibility, and attract more local customers with LocalSeoWiser.',
+    'Grow your South Side business with Local SEO services that increase your visibility in Google Search and Google Maps.',
 
   h1: 'Local SEO Services in South Side, Pittsburgh',
   intro: 'Grow Your South Side Business with Local SEO That Delivers Results',
@@ -248,9 +248,9 @@ const localSeoSouthSide: LocationPage = {
   },
 
   schema: {
-    webPageName: 'Local SEO Services in South Side, Pittsburgh | LocalSeoWiser',
+    webPageName: 'Local SEO Services in South Side | Get More Customers',
     webPageDescription:
-      'Increase your online visibility with Local SEO Services in South Side, Pittsburgh. Improve Google rankings, Google Maps visibility, and attract more local customers with LocalSeoWiser.',
+      'Grow your South Side business with Local SEO services that increase your visibility in Google Search and Google Maps.',
     placeName: 'South Side',
     breadcrumbLabel: 'Local SEO in South Side',
     businessName: 'Local SEO Wiser',

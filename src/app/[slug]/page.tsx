@@ -6,6 +6,10 @@ import {
   getServicePageBySlug,
   servicePages,
 } from '@/data/site-content'
+import {
+  buildServicePageMetadata,
+  buildServicePageSchemas,
+} from '@/lib/service-seo'
 import type { Metadata } from 'next'
 import { notFound, permanentRedirect } from 'next/navigation'
 
@@ -24,13 +28,10 @@ export async function generateMetadata({ params }: DynamicPageProps): Promise<Me
   const service = getServicePageBySlug(slug)
 
   if (service) {
-    return {
-      title: service.metaTitle ? { absolute: service.metaTitle } : service.title,
-      description: service.metaDescription ?? service.intro,
-    }
+    return buildServicePageMetadata(service)
   }
 
-  return { title: 'Page Not Found' }
+  return { title: 'Page Not Found', robots: { index: false, follow: false } }
 }
 
 /**
@@ -48,8 +49,16 @@ const DynamicPage = async ({ params }: DynamicPageProps) => {
   const service = getServicePageBySlug(slug)
   if (service) {
     const relatedServices = getRelatedServicePages(service.slug)
+    const schemas = buildServicePageSchemas(service)
     return (
       <SiteShell>
+        {schemas.map((schema, index) => (
+          <script
+            key={`service-schema-${index}`}
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+          />
+        ))}
         <ServiceDetailSections service={service} relatedServices={relatedServices} />
       </SiteShell>
     )

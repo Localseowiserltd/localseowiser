@@ -12,9 +12,9 @@ const localSeoForRestaurants: IndustryPage = {
   contentApproved: true,
   updatedAt: '2026-07-18',
 
-  metaTitle: 'Local SEO for Restaurants | Restaurant SEO Services | LocalSeoWiser',
+  metaTitle: 'Local SEO for Restaurants | Increase Local Reservations',
   metaDescription:
-    'Grow your restaurant with Local SEO for Restaurants. Improve your Google rankings, Google Maps visibility, and attract more local diners with LocalSeoWiser.',
+    'Attract more local diners with Local SEO for Restaurants. Improve Google Maps rankings, online visibility, and reservation requests.',
 
   h1: 'Local SEO for Restaurants',
   intro: 'Help More Diners Discover Your Restaurant',
@@ -271,9 +271,9 @@ const localSeoForRestaurants: IndustryPage = {
   },
 
   schema: {
-    webPageName: 'Local SEO for Restaurants | Restaurant SEO Services | LocalSeoWiser',
+    webPageName: 'Local SEO for Restaurants | Increase Local Reservations',
     webPageDescription:
-      'Grow your restaurant with Local SEO for Restaurants. Improve your Google rankings, Google Maps visibility, and attract more local diners with LocalSeoWiser.',
+      'Attract more local diners with Local SEO for Restaurants. Improve Google Maps rankings, online visibility, and reservation requests.',
     breadcrumbLabel: 'Local SEO for Restaurants',
     businessName: 'Local SEO Wiser',
     businessDescription:

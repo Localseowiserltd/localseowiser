@@ -1,42 +1,19 @@
 'use client'
 
+import ContactReviewForm from '@/components/forms/ContactReviewForm'
 import ScrollReveal from '@/components/ScrollReveal'
 import SectionHeader from '@/components/SectionHeader'
-import VisibilityScanForm from '@/components/forms/VisibilityScanForm'
 import IconifyIcon from '@/components/wrappers/IconifyIcon'
 import {
-  contactInfo,
-  contactMailtoHref,
-  contactPageAudit,
   contactPageFaq,
   contactPageHero,
+  contactPageMethods,
   contactPageNextSteps,
-  contactPageOffice,
-  contactPhones,
-} from '@/data/site-content'
-import React, { useState } from 'react'
+  contactPageReview,
+} from '@/data/contact'
+import { contactInfo, contactMailtoHref, contactPhones } from '@/data/site-content'
+import { useState } from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
-
-const contactCards = [
-  {
-    icon: 'tabler:phone',
-    title: 'Phone',
-    type: 'phones' as const,
-  },
-  {
-    icon: 'tabler:mail',
-    title: 'Email',
-    type: 'email' as const,
-    value: contactInfo.email,
-    href: contactMailtoHref,
-  },
-  {
-    icon: 'tabler:map-pin',
-    title: 'Office',
-    type: 'office' as const,
-    value: contactPageOffice,
-  },
-]
 
 const ContactPageSections = () => {
   const [openFaqIndex, setOpenFaqIndex] = useState<number>(0)
@@ -47,14 +24,12 @@ const ContactPageSections = () => {
         <div className="hero-bg-dots" aria-hidden="true" />
         <Container>
           <Row className="justify-content-center text-center">
-            <Col lg={8}>
+            <Col lg={9} xl={8}>
               <ScrollReveal animation="fade-up" hoverable={false}>
+                <p className="contact-page-eyebrow">{contactPageHero.eyebrow}</p>
                 <h1 className="contact-page-h1">{contactPageHero.title}</h1>
-                {contactPageHero.paragraphs.map((paragraph) => (
-                  <p key={paragraph} className="contact-page-body mx-auto">
-                    {paragraph}
-                  </p>
-                ))}
+                <p className="contact-page-body contact-page-hero__lead mx-auto">{contactPageHero.description}</p>
+                <p className="contact-page-hero__secondary mx-auto">{contactPageHero.secondary}</p>
               </ScrollReveal>
             </Col>
           </Row>
@@ -64,38 +39,34 @@ const ContactPageSections = () => {
       <section className="contact-page-cards section">
         <Container>
           <ScrollReveal animation="fade-up" hoverable={false}>
-            <h2 className="contact-page-h2 contact-page-section-heading">How to Reach Us</h2>
+            <h2 className="contact-page-h2 contact-page-section-heading text-center">{contactPageMethods.title}</h2>
           </ScrollReveal>
           <Row className="g-3 g-lg-4 contact-page-cards__row">
-            {contactCards.map((card, idx) => (
-              <Col lg={4} md={6} key={card.title} className="d-flex">
-                <ScrollReveal animation="zoom-in" delay={idx * 80} className="h-100 w-100" hoverable={false}>
-                  <div className="package-card-border h-100 w-100">
-                    <div className="inner-contact-info-card h-100">
-                      <span className="inner-contact-info-card__icon">
-                        <IconifyIcon icon={card.icon} />
-                      </span>
-                      <p className="inner-contact-info-card__title">{card.title}</p>
-                      {card.type === 'phones' ? (
-                        <div className="contact-page-phone-list">
-                          {contactPhones.map((entry) => (
-                            <p key={entry.label} className="contact-page-phone-list__item">
-                              <span className="contact-page-phone-list__label">{entry.label}:</span>{' '}
-                              <a href={`tel:${entry.tel}`} className="inner-contact-info-card__value">
-                                {entry.phone}
-                              </a>
-                            </p>
-                          ))}
-                        </div>
-                      ) : card.href ? (
-                        <a href={card.href} className="inner-contact-info-card__value">
-                          {card.value}
-                        </a>
-                      ) : (
-                        <p className="inner-contact-info-card__value">{card.value}</p>
-                      )}
-                    </div>
-                  </div>
+            {contactPageMethods.cards.map((card, idx) => (
+              <Col lg={4} md={6} key={card.id} className="d-flex">
+                <ScrollReveal animation="zoom-in" delay={idx * 70} className="h-100 w-100" hoverable={false}>
+                  <article className="contact-method-card h-100">
+                    <span className="contact-method-card__icon" aria-hidden="true">
+                      <IconifyIcon icon={card.icon} />
+                    </span>
+                    <h3 className="contact-method-card__title">{card.title}</h3>
+                    {card.type === 'phones' ? (
+                      <div className="contact-page-phone-list">
+                        {contactPhones.map((entry) => (
+                          <p key={entry.label} className="contact-page-phone-list__item">
+                            <span className="contact-page-phone-list__label">{entry.label}:</span>{' '}
+                            <a href={`tel:${entry.tel}`}>{entry.phone}</a>
+                          </p>
+                        ))}
+                      </div>
+                    ) : card.type === 'email' ? (
+                      <a href={contactMailtoHref} className="contact-method-card__value">
+                        {contactInfo.email}
+                      </a>
+                    ) : (
+                      <p className="contact-method-card__value mb-0">{card.value}</p>
+                    )}
+                  </article>
                 </ScrollReveal>
               </Col>
             ))}
@@ -106,74 +77,57 @@ const ContactPageSections = () => {
       <section className="section contact-page-direct bg-light">
         <Container>
           <Row className="g-4 g-lg-5 align-items-start">
-            <Col lg={6}>
+            <Col lg={5}>
               <ScrollReveal animation="fade-up" hoverable={false}>
-                <div className="inner-contact-steps">
-                  <h2 className="contact-page-h2 contact-page-section-heading">{contactPageAudit.title}</h2>
-                  <p className="contact-page-body contact-page-direct__intro">{contactPageAudit.intro}</p>
-                  <ul className="inner-contact-steps__helpful-list contact-page-body">
-                    {contactPageAudit.helpful.map((item) => (
-                      <li key={item}>
-                        <IconifyIcon icon="tabler:point-filled" className="text-primary flex-shrink-0 mt-1" />
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <p className="contact-page-body contact-page-direct__intro">{contactPageAudit.closing}</p>
-                </div>
+                <h2 className="contact-page-h2 contact-page-section-heading">{contactPageReview.title}</h2>
+                <p className="contact-page-body">{contactPageReview.intro}</p>
+                <ul className="contact-page-checklist">
+                  {contactPageReview.checklist.map((item) => (
+                    <li key={item}>
+                      <IconifyIcon icon="tabler:check" className="contact-page-checklist__icon" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
               </ScrollReveal>
             </Col>
-            <Col lg={6}>
+            <Col lg={7}>
               <ScrollReveal animation="fade-up" delay={80} hoverable={false}>
-                <div className="inner-contact-form">
-                  <p className="inner-contact-form__title">Send us your details</p>
-                  <VisibilityScanForm
-                    id="contact-page-audit-form"
-                    buttonLabel="Request My Free SEO Audit"
-                    compact
-                    showNote
-                  />
+                <div className="contact-form-card">
+                  <ContactReviewForm />
                 </div>
               </ScrollReveal>
             </Col>
           </Row>
-
-          <ScrollReveal animation="fade-up" delay={120} hoverable={false}>
-            <div className="contact-timeline">
-              <h2 className="contact-page-h2 contact-page-section-heading">{contactPageNextSteps.title}</h2>
-              <div className="contact-timeline__track" role="list">
-                {contactPageNextSteps.steps.map((step, idx) => (
-                  <ScrollReveal
-                    key={step.title}
-                    animation="fade-up"
-                    delay={idx * 120}
-                    hoverable
-                    className="contact-timeline__reveal"
-                  >
-                    <div className="contact-timeline__item" role="listitem">
-                      <div className="contact-timeline__bullet" aria-hidden="true">
-                        <IconifyIcon icon={step.icon} />
-                      </div>
-                      <div className="contact-timeline__body">
-                        <h3 className="contact-timeline__step-title">
-                          Step {idx + 1}: {step.title}
-                        </h3>
-                        <p className="contact-page-body contact-timeline__step-desc">{step.description}</p>
-                      </div>
-                    </div>
-                  </ScrollReveal>
-                ))}
-              </div>
-            </div>
-          </ScrollReveal>
         </Container>
       </section>
 
-      <section className="section faq-modern-section" id="contact-faq">
+      <section className="section contact-page-next">
+        <Container>
+          <ScrollReveal animation="fade-up" hoverable={false}>
+            <h2 className="contact-page-h2 contact-page-section-heading text-center">{contactPageNextSteps.title}</h2>
+          </ScrollReveal>
+          <Row className="g-3 g-lg-4">
+            {contactPageNextSteps.steps.map((step, idx) => (
+              <Col lg={3} md={6} key={step.number} className="d-flex">
+                <ScrollReveal animation="fade-up" delay={idx * 60} className="h-100 w-100" hoverable={false}>
+                  <article className="contact-step-card h-100">
+                    <span className="contact-step-card__number">{step.number}</span>
+                    <h3 className="contact-step-card__title">{step.title}</h3>
+                    <p className="contact-step-card__text mb-0">{step.description}</p>
+                  </article>
+                </ScrollReveal>
+              </Col>
+            ))}
+          </Row>
+        </Container>
+      </section>
+
+      <section className="section faq-modern-section contact-page-faq" id="contact-faq">
         <div className="faq-modern-section__accent" aria-hidden="true">
           <div className="faq-modern-section__grid" />
         </div>
-        <Container className="faq-modern-section__inner">
+        <Container className="faq-modern-section__inner contact-page-faq__inner">
           <div className="faq-modern-header">
             <SectionHeader eyebrow={contactPageFaq.eyebrow} title={contactPageFaq.title} />
           </div>

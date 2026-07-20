@@ -22,6 +22,10 @@ const AreasWeServe = () => {
               Areas We Serve
             </p>
             <h2 className="areas-we-serve-title mb-0">Serving the entire Pittsburgh metro</h2>
+            <p className="areas-we-serve-intro mb-0">
+              We help businesses throughout Pittsburgh and the surrounding communities. Whether your customers search by
+              neighborhood or city, we build localized SEO strategies that improve visibility where it matters most.
+            </p>
           </div>
 
           <div className="areas-we-serve-body">
