@@ -40,9 +40,9 @@ const mbcRenovation: PortfolioProject = {
   summary:
     'A complete WordPress website rebuild and ongoing local SEO campaign for a Dubai renovation company, replacing an outdated single-page website with a scalable service-focused platform.',
   cardTitle: 'MBC Renovation Website & Local SEO',
-  metaTitle: 'MBC Renovation Website & Local SEO Case Study | LocalSeoWiser',
+  metaTitle: 'MBC Renovation Website SEO Case Study | LocalSeoWiser',
   metaDescription:
-    'See how LocalSeoWiser rebuilt MBC Renovation’s WordPress website and developed a local SEO foundation that generated 10.8K impressions and increased Google Business Profile interactions.',
+    'See how LocalSeoWiser rebuilt MBC Renovation’s WordPress site and local SEO foundation, driving 10.8K impressions and stronger GBP engagement.',
   h1: 'MBC Renovation Website Design & Local SEO Case Study',
   supportingText:
     'A complete website rebuild, content strategy, and ongoing local SEO project for a renovation company serving Dubai.',

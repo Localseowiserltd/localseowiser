@@ -14,7 +14,7 @@ const localSeoForHvac: IndustryPage = {
 
   metaTitle: 'Local SEO for HVAC Companies | More Calls & Bookings',
   metaDescription:
-    'Grow your HVAC business with Local SEO strategies that improve local rankings, increase service calls, and attract nearby customers.',
+    'Grow your HVAC business with Local SEO strategies that improve local rankings, increase service calls, and attract more nearby customers searching for help.',
 
   h1: 'Local SEO for HVAC Companies',
   intro: 'Help More Homeowners Find Your HVAC Business',

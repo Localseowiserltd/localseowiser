@@ -14,7 +14,7 @@ const localSeoForPlumbers: IndustryPage = {
 
   metaTitle: 'Local SEO for Plumbers | Rank Higher & Get More Calls',
   metaDescription:
-    'Generate more plumbing leads with Local SEO services designed to improve Google rankings, Maps visibility, and local customer inquiries.',
+    'Generate more plumbing leads with Local SEO services designed to improve Google rankings, Maps visibility, and high-intent local customer inquiries.',
 
   h1: 'Local SEO for Plumbers',
   intro: 'Help More Homeowners Find Your Plumbing Business',

@@ -14,7 +14,7 @@ const localSeoForPestControlCompanies: IndustryPage = {
 
   metaTitle: 'Local SEO for Pest Control Companies | More Service Calls',
   metaDescription:
-    'Grow your pest control business with Local SEO strategies that improve local rankings, Google Maps visibility, and service call inquiries.',
+    'Grow your pest control business with Local SEO strategies that improve local rankings, Google Maps visibility, and consistent service call inquiries.',
 
   h1: 'Local SEO for Pest Control Companies',
   intro: 'Help More Homeowners and Businesses Find Your Pest Control Company',

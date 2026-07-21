@@ -39,9 +39,9 @@ const dPetCare: PortfolioProject = {
   summary:
     'A WordPress website and local SEO launch for a Dubai pet care company — service and location architecture, content, technical SEO, and Google Business Profile foundations with verified Search Console and GBP data.',
   cardTitle: 'D Pet Care LLC Website & Local SEO',
-  metaTitle: 'D Pet Care LLC Website & Local SEO Case Study | LocalSeoWiser',
+  metaTitle: 'D Pet Care Website & Local SEO Case Study | Results',
   metaDescription:
-    'See how LocalSeoWiser built and optimized D Pet Care LLC’s WordPress website for Dubai pet care search — 30.9K Search Console impressions, 389 clicks, and 368 Google Business Profile interactions.',
+    'See how LocalSeoWiser built and optimized D Pet Care LLC’s WordPress site for Dubai pet care search—30.9K impressions, 389 clicks, and strong GBP engagement.',
   h1: 'D Pet Care LLC Website Design & Local SEO Case Study',
   supportingText:
     'A website and local SEO project for a Dubai pet care company — WordPress, Elementor, service and location pages, and ongoing search foundations.',

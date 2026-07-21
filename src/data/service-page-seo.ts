@@ -37,7 +37,7 @@ export const seoServicePages = [
     title: 'Get Found by More Local Customers in Pittsburgh',
     metaTitle: 'Local SEO Services Pittsburgh | Maps, GBP & Local Leads',
     metaDescription:
-      'Hire Local SEO Services in Pittsburgh focused on Google Maps, Google Business Profile, and local search visibility that drives calls and customers—not vanity rankings.',
+      'Hire Local SEO services in Pittsburgh focused on Google Maps, Google Business Profile, and local search visibility that drives calls—not vanity rankings.',
     description:
       'Local SEO Wiser helps businesses across Pittsburgh improve their visibility where customers are searching most—Google Search and Google Maps. We build practical Local SEO strategies that combine Google Business Profile optimization, local content, citation management, technical improvements, and neighborhood-focused targeting to help you generate more qualified calls, enquiries, and long-term business growth.',
     intro:
@@ -531,7 +531,7 @@ export const seoServicePages = [
     pageLayout: 'small-business',
     category: 'Search Engine Optimization',
     title: 'SEO For Small Business',
-    metaTitle: 'SEO for Small Businesses Pittsburgh | Affordable SEO Services',
+    metaTitle: 'SEO for Small Business Pittsburgh | Affordable Plans',
     metaDescription:
       'Affordable SEO for small businesses in Pittsburgh. Increase visibility, generate more qualified leads, and grow your business with Local SEO Wiser.',
     description:
@@ -815,7 +815,7 @@ export const seoServicePages = [
     title: 'Build a Strong Technical Foundation for Rankings',
     metaTitle: 'Technical SEO Services Pittsburgh | Fix & Improve Rankings',
     metaDescription:
-      'Fix crawl errors, improve site speed, optimize schema, and strengthen your website with Technical SEO Services in Pittsburgh.',
+      'Fix crawl errors, improve site speed, optimize schema markup, and strengthen your website with Technical SEO services from Local SEO Wiser in Pittsburgh.',
     description:
       'Our technical SEO services help your website meet search engine requirements, improve performance, and remove barriers that prevent your business from ranking higher on Google.',
     intro:

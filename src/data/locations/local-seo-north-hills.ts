@@ -17,7 +17,7 @@ const localSeoNorthHills: LocationPage = {
 
   metaTitle: 'Local SEO Services in North Hills | Grow Your Business',
   metaDescription:
-    'Increase your online visibility in North Hills with Local SEO services that help businesses rank higher and attract more local customers.',
+    'Increase your online visibility in North Hills with Local SEO services that help businesses rank higher and attract more nearby local customers.',
 
   h1: 'Local SEO Services in North Hills, PA',
   intro: 'Help Your North Hills Business Reach More Local Customers',

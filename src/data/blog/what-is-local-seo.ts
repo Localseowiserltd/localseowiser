@@ -1209,7 +1209,7 @@ const whatIsLocalSeo: BlogPost = {
   readingTime: '17 min',
   seoTitle: 'What Is Local SEO? Complete Guide for Local Businesses',
   seoDescription:
-    'Learn what Local SEO is, how it works, and how businesses can improve visibility in Google Search and Maps to attract more local customers.',
+    'Learn what Local SEO is, how it works, and how local businesses can improve visibility in Google Search and Maps to attract more nearby customers.',
   featuredImage: '/images/blog/what-is-local-seo-guide.webp',
   featuredImageAlt: 'Local business owner reviewing a Local SEO strategy',
   draft: false,

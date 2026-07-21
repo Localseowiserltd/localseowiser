@@ -17,7 +17,7 @@ const localSeoMtLebanon: LocationPage = {
 
   metaTitle: 'Local SEO Services in Mt. Lebanon | Grow Local Visibility',
   metaDescription:
-    'Increase your visibility in Mt. Lebanon with Local SEO services that help your business rank higher and attract nearby customers.',
+    'Increase your visibility in Mt. Lebanon with Local SEO services that help your business rank higher on Google and attract more nearby customers.',
 
   h1: 'Local SEO Services in Mt. Lebanon, Pittsburgh',
   intro: 'Help Your Mt. Lebanon Business Get Found by More Local Customers',

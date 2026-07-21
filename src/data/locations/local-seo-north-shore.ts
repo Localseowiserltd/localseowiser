@@ -17,7 +17,7 @@ const localSeoNorthShore: LocationPage = {
 
   metaTitle: 'Local SEO Services in North Shore | Local SEO Wiser',
   metaDescription:
-    'Help customers find your North Shore business with Local SEO strategies that improve rankings, traffic, and qualified local leads.',
+    'Help customers find your North Shore business with Local SEO strategies that improve rankings, organic traffic, and qualified local lead volume.',
 
   h1: 'Local SEO Services in North Shore, Pittsburgh',
   intro: 'Help Your North Shore Business Stand Out in Local Search',

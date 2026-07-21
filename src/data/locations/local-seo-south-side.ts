@@ -17,7 +17,7 @@ const localSeoSouthSide: LocationPage = {
 
   metaTitle: 'Local SEO Services in South Side | Get More Customers',
   metaDescription:
-    'Grow your South Side business with Local SEO services that increase your visibility in Google Search and Google Maps.',
+    'Grow your South Side Pittsburgh business with Local SEO services that increase visibility in Google Search and Google Maps for nearby customers.',
 
   h1: 'Local SEO Services in South Side, Pittsburgh',
   intro: 'Grow Your South Side Business with Local SEO That Delivers Results',

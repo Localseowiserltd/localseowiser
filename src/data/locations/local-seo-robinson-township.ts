@@ -17,7 +17,7 @@ const localSeoRobinsonTownship: LocationPage = {
 
   metaTitle: 'Local SEO Services in Robinson Township | Local SEO Wiser',
   metaDescription:
-    'Generate more local leads in Robinson Township with Local SEO services designed to improve rankings, visibility, and customer acquisition.',
+    'Generate more local leads in Robinson Township with Local SEO services designed to improve rankings, Maps visibility, and customer acquisition.',
 
   h1: 'Local SEO Services in Robinson Township, PA',
   intro: 'Help Your Robinson Township Business Reach More Local Customers',

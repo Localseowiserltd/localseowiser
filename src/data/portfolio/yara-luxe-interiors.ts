@@ -40,9 +40,9 @@ const yaraLuxeInteriors: PortfolioProject = {
   summary:
     'A from-scratch WordPress website and local SEO foundation for a Melbourne luxury interior design studio — premium brand presence, service architecture, technical SEO, and Google Business Profile optimization.',
   cardTitle: 'Yara Luxe Interiors Website & Local SEO Launch',
-  metaTitle: 'Yara Luxe Interiors Website & Local SEO Case Study | LocalSeoWiser',
+  metaTitle: 'Yara Luxe Interiors SEO Case Study | LocalSeoWiser',
   metaDescription:
-    'See how LocalSeoWiser launched Yara Luxe Interiors from scratch — a premium WordPress website, technical SEO foundation, and Google Business Profile optimization with 106 verified Business Profile interactions.',
+    'See how LocalSeoWiser launched Yara Luxe Interiors with a WordPress site, technical SEO, and Google Business Profile work that drove 106 verified interactions.',
   h1: 'Yara Luxe Interiors Website Design & Local SEO Case Study',
   supportingText:
     'A new-business website launch for a luxury interior design studio in Melbourne — planned, designed, and developed from scratch with no previous website or redesign.',

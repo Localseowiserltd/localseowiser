@@ -14,9 +14,9 @@ const confidentialGsc04 = buildConfidentialProject({
   displayName: 'Confidential Local Business',
   publishedAt: '2026-07-18',
   cardTitle: 'Confidential Local Business — Search Console Results',
-  metaTitle: 'Confidential SEO Case Study — 35.7K Impressions | LocalSeoWiser',
+  metaTitle: 'Confidential SEO Case Study — 35.7K | LocalSeoWiser',
   metaDescription:
-    'Privacy-safe SEO case study with verified Google Search Console metrics: 177 clicks and 35.7K impressions over the latest 6-month period.',
+    'Privacy-safe SEO case study with verified Google Search Console metrics: 177 clicks and 35.7K impressions across the latest six-month reporting period.',
   h1: 'Confidential Local Business — Search Console Case Study',
   supportingText:
     'Privacy-safe organic search reporting for a confidential client. Only anonymized Google Search Console overview metrics are published.',

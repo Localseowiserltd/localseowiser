@@ -14,7 +14,7 @@ const localSeoForRestaurants: IndustryPage = {
 
   metaTitle: 'Local SEO for Restaurants | Increase Local Reservations',
   metaDescription:
-    'Attract more local diners with Local SEO for Restaurants. Improve Google Maps rankings, online visibility, and reservation requests.',
+    'Attract more local diners with Local SEO for restaurants. Improve Google Maps rankings, online visibility, and reservation requests from nearby guests.',
 
   h1: 'Local SEO for Restaurants',
   intro: 'Help More Diners Discover Your Restaurant',

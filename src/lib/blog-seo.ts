@@ -20,7 +20,7 @@ function absoluteImageUrl(src: string) {
 export function buildBlogIndexMetadata(): Metadata {
   const title = 'Local SEO Blog | Guides, Tips & Strategies | Local SEO Wiser'
   const description =
-    'Read expert Local SEO guides, Google Business Profile tips, ranking strategies, and marketing insights to grow your local business.'
+    'Read expert Local SEO guides, Google Business Profile tips, ranking strategies, and marketing insights to help grow your local Pittsburgh business.'
   const canonical = `${SITE_ORIGIN}/blog`
 
   return {

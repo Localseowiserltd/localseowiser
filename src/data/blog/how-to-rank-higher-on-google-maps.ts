@@ -627,9 +627,9 @@ const howToRankHigherOnGoogleMaps: BlogPost = {
   publishedDate: '2026-07-19',
   date: 'July 19, 2026',
   readingTime: '7 min',
-  seoTitle: 'How to Rank Higher on Google Maps: Complete Guide',
+  seoTitle: 'How to Rank Higher on Google Maps: A Complete Guide',
   seoDescription:
-    'Learn how to rank higher on Google Maps using accurate business information, genuine reviews, website improvements, citations, local content, and ethical Local SEO.',
+    'Learn how to rank higher on Google Maps with accurate business info, reviews, website improvements, citations, local content, and ethical Local SEO tactics.',
   featuredImage: '/images/blog/google-maps-local-pack.webp',
   featuredImageAlt: 'Illustration showing local businesses appearing in map search results',
   draft: false,

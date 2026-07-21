@@ -47,7 +47,7 @@ const BlogCard = ({ post, priority = false }: BlogCardProps) => {
           </h3>
           <p className="inner-blog-card__excerpt">{post.excerpt}</p>
           <Link href={href} className="inner-blog-card__link">
-            Read More
+            Read more: {post.title}
             <IconifyIcon icon="tabler:arrow-right" />
           </Link>
         </div>

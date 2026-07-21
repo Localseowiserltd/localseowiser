@@ -14,7 +14,7 @@ const localSeoForLawyers: IndustryPage = {
 
   metaTitle: 'Local SEO for Lawyers | Law Firm SEO That Generates Leads',
   metaDescription:
-    'Help your law firm rank higher with Local SEO for Lawyers. Increase visibility, attract qualified legal clients, and grow your practice.',
+    'Help your law firm rank higher with Local SEO for lawyers. Increase visibility, attract qualified legal clients, and grow your practice with local search.',
 
   h1: 'Local SEO for Lawyers',
   intro: 'Help More Potential Clients Find Your Law Firm',

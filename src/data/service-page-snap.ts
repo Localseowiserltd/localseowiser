@@ -18,7 +18,7 @@ export const snapServicePages = [
     variant: 'full' as const,
     category: 'PPC Advertising Services in Pittsburgh',
     title: 'Targeted PPC Campaigns That Drive Leads, Sales and Maximum ROI',
-    metaTitle: 'PPC Advertising Pittsburgh | High-ROI Pay-Per-Click Campaigns',
+    metaTitle: 'PPC Advertising Pittsburgh | High-ROI Paid Campaigns',
     metaDescription:
       'Get more leads and sales with PPC advertising in Pittsburgh. Local SEO Wiser builds high-converting campaigns that lower cost per click and maximize ROI.',
     description:
@@ -251,7 +251,7 @@ export const snapServicePages = [
     variant: 'full' as const,
     category: 'Google Ads Management in Pittsburgh',
     title: 'Drive More Leads and Sales with High-Performing Google Ads',
-    metaTitle: 'Google Ads Management Pittsburgh | Certified Google Ads Experts',
+    metaTitle: 'Google Ads Management Pittsburgh | Certified Experts',
     metaDescription:
       'Grow leads and sales with Google Ads management in Pittsburgh. Certified experts, transparent reporting, and ROI-focused campaigns from Local SEO Wiser.',
     description:
@@ -483,7 +483,7 @@ export const snapServicePages = [
     variant: 'full' as const,
     category: 'Content Writing Services in Pittsburgh',
     title: 'Content That Engages Readers and Ranks on Google',
-    metaTitle: 'Content Writing Services Pittsburgh | SEO Blog & Website Copy',
+    metaTitle: 'Content Writing Pittsburgh | SEO Blog & Website Copy',
     metaDescription:
       'Get SEO-friendly content writing in Pittsburgh. Local SEO Wiser creates engaging blogs, website pages, and landing copy that inform, rank, and convert.',
     description:
@@ -715,9 +715,9 @@ export const snapServicePages = [
     variant: 'full' as const,
     category: 'Social Media Marketing in Pittsburgh',
     title: 'Build Your Brand and Engage Customers with Social Media',
-    metaTitle: 'Social Media Marketing Pittsburgh | Strategy, Content & Growth',
+    metaTitle: 'Social Media Marketing Pittsburgh | Content & Growth',
     metaDescription:
-      'Grow your brand with social media marketing in Pittsburgh. Strategic content, paid social, engagement, and reporting from Local SEO Wiser.',
+      'Grow your brand with social media marketing in Pittsburgh. Get strategic content, paid social, engagement, and clear reporting from Local SEO Wiser.',
     description:
       'We create social media marketing strategies that build your brand, engage the right audience, and turn attention into real business growth.',
     intro:
@@ -947,7 +947,7 @@ export const snapServicePages = [
     variant: 'full' as const,
     category: 'Social Media Management Services in Pittsburgh',
     title: 'We Manage Your Social Media So You Can Focus on Growing Your Business',
-    metaTitle: 'Social Media Management Pittsburgh | Content, Posting & Growth',
+    metaTitle: 'Social Media Management Pittsburgh | Posts & Growth',
     metaDescription:
       'Hands-off social media management in Pittsburgh. Content creation, posting, engagement, profile optimization, and monthly reporting from Local SEO Wiser.',
     description:
@@ -1182,7 +1182,7 @@ export const snapServicePages = [
     variant: 'full' as const,
     category: 'Web Design Services in Pittsburgh',
     title: 'Beautiful Websites That Impress Visitors and Grow Your Business',
-    metaTitle: 'Web Design Services Pittsburgh | Custom, Fast & Conversion-Focused',
+    metaTitle: 'Web Design Services Pittsburgh | Fast & Conversion-Ready',
     metaDescription:
       'Get custom web design in Pittsburgh. Local SEO Wiser builds responsive, SEO-friendly websites that look great, load fast, and convert visitors into customers.',
     description:
@@ -1417,7 +1417,7 @@ export const snapServicePages = [
     variant: 'full' as const,
     category: 'WordPress Development in Pittsburgh',
     title: 'Professional WordPress Websites That Perform',
-    metaTitle: 'WordPress Development Pittsburgh | Custom, Fast & SEO-Friendly',
+    metaTitle: 'WordPress Development Pittsburgh | Fast & SEO-Friendly',
     metaDescription:
       'Get professional WordPress development in Pittsburgh. Custom design, speed optimization, SEO-friendly builds, and ongoing support from Local SEO Wiser.',
     description:
@@ -1882,7 +1882,7 @@ export const snapServicePages = [
     title: 'High-Quality Link Building That Boosts Rankings and Drives Real Results',
     metaTitle: 'Link Building Services Pittsburgh | White-Hat Backlinks',
     metaDescription:
-      'High-quality white-hat link building in Pittsburgh that builds authority, improves rankings, and drives long-term organic growth.',
+      'High-quality white-hat link building in Pittsburgh that builds authority, improves organic rankings, and drives long-term sustainable search growth.',
     description:
       'We build authoritative, white-hat backlinks through manual outreach so your website earns trust, ranks higher, and attracts more qualified traffic.',
     intro:
@@ -2116,7 +2116,7 @@ export const snapServicePages = [
     title: 'Accurate Local Citations That Improve Rankings, Build Trust & Drive More Customers',
     metaTitle: 'Local Citation Services Pittsburgh | NAP Consistency',
     metaDescription:
-      'Local citation services in Pittsburgh that fix NAP consistency, clean up listings, and improve local rankings and trust.',
+      'Local citation services in Pittsburgh that fix NAP consistency, clean up online listings, and improve local rankings, trust, and Google Maps visibility.',
     description:
       'We create, clean, and manage accurate business citations so your name, address, and phone number stay consistent across the directories that matter.',
     intro:

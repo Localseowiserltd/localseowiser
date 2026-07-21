@@ -39,9 +39,9 @@ const filXpatCleaning: PortfolioProject = {
   summary:
     'A from-scratch website and local SEO launch for a new Dubai cleaning company — brand site, service and location architecture, and ongoing search foundations with verified Search Console and Google Business Profile data.',
   cardTitle: 'Fil Xpat Cleaning Service Website & Local SEO Launch',
-  metaTitle: 'Fil Xpat Cleaning Service Website & Local SEO Case Study | LocalSeoWiser',
+  metaTitle: 'Fil Xpat Cleaning Website SEO Case Study | Results',
   metaDescription:
-    'See how LocalSeoWiser planned, designed, and launched Fil Xpat Cleaning Service from scratch — building a WordPress platform that reached 20.1K Search Console impressions and 302 Google Business Profile interactions.',
+    'See how LocalSeoWiser launched Fil Xpat Cleaning from scratch—a WordPress platform that reached 20.1K Search Console impressions and 302 GBP interactions.',
   h1: 'Fil Xpat Cleaning Service Website Design & Local SEO Case Study',
   supportingText:
     'A new-business website and local SEO launch for a residential and commercial cleaning company in Dubai — built from scratch with no previous website or domain migration.',

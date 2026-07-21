@@ -385,8 +385,6 @@ export const servicesMegaMenuSections: ServiceMegaMenuSection[] = [
       { id: 'wordpress-development', title: 'WordPress Development', description: 'Custom, fast & SEO-friendly', href: '/wordpress-development', icon: 'tabler:brand-wordpress' },
       { id: 'shopify-development', title: 'Shopify Development', description: 'High-converting online stores', href: '/shopify-development', icon: 'tabler:shopping-bag' },
       { id: 'web-design', title: 'Web Design Services', description: 'Modern, responsive designs', href: '/web-design', icon: 'tabler:layout' },
-      { id: 'ecommerce-development', title: 'E-Commerce Development', description: 'Build powerful e-commerce sites', href: '/services', icon: 'tabler:shopping-cart' },
-      { id: 'website-maintenance', title: 'Website Maintenance', description: 'Keep your site secure & updated', href: '/services', icon: 'tabler:settings' },
     ],
   },
   {

@@ -4,7 +4,7 @@ import { buildHubPageMetadata, buildLegalPageSchemas } from '@/lib/hub-seo'
 import type { Metadata } from 'next'
 import { Col, Container, Row } from 'react-bootstrap'
 
-const title = 'Terms & Conditions | Local SEO Wiser'
+const title = 'Terms & Conditions | Local SEO Wiser Site Policies'
 const description =
   'Read the Terms & Conditions for using the Local SEO Wiser website and services, including payment terms, responsibilities, and service policies.'
 

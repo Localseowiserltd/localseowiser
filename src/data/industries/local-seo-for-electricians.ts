@@ -14,7 +14,7 @@ const localSeoForElectricians: IndustryPage = {
 
   metaTitle: 'Local SEO for Electricians | Grow Your Electrical Business',
   metaDescription:
-    'Increase your electrical service bookings with Local SEO for Electricians. Improve Google Maps visibility and attract more local customers.',
+    'Increase your electrical service bookings with Local SEO for electricians. Improve Google Maps visibility and attract more nearby local customers.',
 
   h1: 'Local SEO for Electricians',
   intro: 'Help More Customers Find Your Electrical Business',

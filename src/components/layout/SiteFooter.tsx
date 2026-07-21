@@ -20,6 +20,13 @@ const footerLocations = [
     email: 'info@localseowiser.com',
     address: 'United Kingdom',
   },
+  {
+    code: 'PK',
+    phone: '+92 302 8212279',
+    tel: '+923028212279',
+    email: 'info@localseowiser.com',
+    address: 'Burj AlGhori Faisal Colony Pattoki, Pakistan',
+  },
 ] as const
 
 const primaryPhone = contactPhones?.[0] ?? footerLocations[0]

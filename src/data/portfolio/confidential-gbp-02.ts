@@ -16,7 +16,7 @@ const confidentialGbp02 = buildConfidentialProject({
   cardTitle: 'Confidential Local Business — GBP Call Engagement',
   metaTitle: 'Confidential GBP Case Study — 40 Calls | LocalSeoWiser',
   metaDescription:
-    'Privacy-safe local SEO case study with verified Google Business Profile data: 40 calls from December 2025 through May 2026.',
+    'Privacy-safe local SEO case study with verified Google Business Profile data: 40 calls from December 2025 through May 2026 for a confidential client.',
   h1: 'Confidential Local Business — GBP Engagement Case Study',
   supportingText:
     'Anonymized Google Business Profile evidence for a confidential local SEO engagement. Profile name and contact details are not published.',

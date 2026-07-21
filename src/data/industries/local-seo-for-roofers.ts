@@ -14,7 +14,7 @@ const localSeoForRoofers: IndustryPage = {
 
   metaTitle: 'Local SEO for Roofing Companies | Get More Roofing Leads',
   metaDescription:
-    'Generate more roofing leads with Local SEO strategies that improve rankings, increase local visibility, and grow your roofing business.',
+    'Generate more roofing leads with Local SEO strategies that improve rankings, increase local visibility, and grow your roofing business with qualified calls.',
 
   h1: 'Local SEO for Roofing Companies',
   intro: 'Help More Property Owners Find Your Roofing Business',

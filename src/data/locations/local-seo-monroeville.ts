@@ -17,7 +17,7 @@ const localSeoMonroeville: LocationPage = {
 
   metaTitle: 'Local SEO Services in Monroeville | More Local Traffic',
   metaDescription:
-    'Grow your Monroeville business with Local SEO services that increase search visibility, Google Maps rankings, and customer inquiries.',
+    'Grow your Monroeville business with Local SEO services that increase search visibility, Google Maps rankings, and high-intent customer inquiries.',
 
   h1: 'Local SEO Services in Monroeville, PA',
   intro: 'Grow Your Monroeville Business with Local SEO That Drives More Customers',

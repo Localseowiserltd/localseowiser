@@ -17,7 +17,7 @@ const localSeoCranberryTownship: LocationPage = {
 
   metaTitle: 'Local SEO Services in Cranberry Township | Better Rankings',
   metaDescription:
-    'Improve your online presence in Cranberry Township with Local SEO strategies that drive local traffic, leads, and business growth.',
+    'Improve your online presence in Cranberry Township with Local SEO strategies that drive local traffic, qualified leads, and measurable business growth.',
 
   h1: 'Local SEO Services in Cranberry Township, PA',
   intro: 'Help Your Cranberry Township Business Get Found by More Local Customers',

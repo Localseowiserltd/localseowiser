@@ -4,7 +4,7 @@ import { buildHubPageMetadata, buildLegalPageSchemas } from '@/lib/hub-seo'
 import type { Metadata } from 'next'
 import { Col, Container, Row } from 'react-bootstrap'
 
-const title = 'Refund Policy | Local SEO Wiser'
+const title = 'Refund Policy | Local SEO Wiser Billing and Cancels'
 const description =
   'Read the Local SEO Wiser Refund Policy to understand refund eligibility, cancellations, completed work, and how refund requests are reviewed.'
 

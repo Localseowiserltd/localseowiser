@@ -636,7 +636,7 @@ const localSeoRankingFactors: BlogPost = {
   publishedDate: '2026-07-19',
   date: 'July 19, 2026',
   readingTime: '7 min',
-  seoTitle: 'Local SEO Ranking Factors: Complete Guide for Better Rankings',
+  seoTitle: 'Local SEO Ranking Factors: Guide for Better Rankings',
   seoDescription:
     'Learn the most important Local SEO ranking factors, including Google Business Profile, reviews, website quality, citations, backlinks, and technical SEO.',
   featuredImage: '/images/blog/local-seo-ranking-factors-overview.webp',

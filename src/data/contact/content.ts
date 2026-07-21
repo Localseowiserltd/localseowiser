@@ -3,7 +3,7 @@
  */
 
 export const contactPageMeta = {
-  title: 'Contact Local SEO Wiser | Free Consultation',
+  title: 'Contact Local SEO Wiser | Free Growth Consultation',
   description:
     'Contact Local SEO Wiser for a free consultation. Call, email, or send a message about Local SEO, Google Ads, web design, and digital growth.',
 }

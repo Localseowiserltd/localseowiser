@@ -17,7 +17,7 @@ const localSeoSouthHills: LocationPage = {
 
   metaTitle: 'Local SEO Services in South Hills | Get More Local Leads',
   metaDescription:
-    'Help your South Hills business rank higher in Google Search and Maps with Local SEO services focused on sustainable local growth.',
+    'Help your South Hills business rank higher in Google Search and Maps with Local SEO services focused on sustainable, long-term local growth.',
 
   h1: 'Local SEO Services in South Hills, PA',
   intro: 'Help Your South Hills Business Get Found Where Local Customers Are Searching',

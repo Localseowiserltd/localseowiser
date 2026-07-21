@@ -4,7 +4,7 @@ import { buildHubPageMetadata, buildLegalPageSchemas } from '@/lib/hub-seo'
 import type { Metadata } from 'next'
 import { Col, Container, Row } from 'react-bootstrap'
 
-const title = 'Privacy Policy | Local SEO Wiser'
+const title = 'Privacy Policy | How Local SEO Wiser Protects Data'
 const description =
   'Learn how Local SEO Wiser collects, uses, stores, and protects your personal information when you visit our website or contact us for SEO services.'
 

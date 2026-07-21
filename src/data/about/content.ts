@@ -3,7 +3,7 @@
  */
 
 export const aboutPageMeta = {
-  title: 'About Local SEO Wiser | Our Local SEO Team',
+  title: 'About Local SEO Wiser | Pittsburgh Digital SEO Team',
   description:
     'Meet the team behind Local SEO Wiser and learn how we help businesses improve visibility across Google Search, Maps, websites, and local markets.',
 }

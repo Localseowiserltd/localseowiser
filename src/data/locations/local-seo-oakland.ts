@@ -15,7 +15,7 @@ const localSeoOakland: LocationPage = {
   contentApproved: true,
   updatedAt: '2026-07-18',
 
-  metaTitle: 'Local SEO Services in Oakland | Local SEO Wiser',
+  metaTitle: 'Local SEO Services in Oakland PA | Local SEO Wiser',
   metaDescription:
     'Get found by more customers in Oakland with Local SEO services that improve Google rankings, Google Maps visibility, and local business growth.',
 

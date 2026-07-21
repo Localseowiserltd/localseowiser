@@ -15,7 +15,7 @@ import HomeCta from '@/components/sections/HomeCta'
 
 const homeTitle = 'Pittsburgh Digital Marketing Agency | Local SEO Wiser'
 const homeDescription =
-  'Local SEO Wiser helps Pittsburgh businesses rank higher, get more leads, and grow with Local SEO, Google Ads, websites, and digital marketing—transparent reporting, no long-term contracts.'
+  'Local SEO Wiser helps Pittsburgh businesses rank higher and get more leads with Local SEO, Google Ads, websites, and clear reporting—no long-term contracts.'
 
 export const metadata: Metadata = {
   title: { absolute: homeTitle },

@@ -6,7 +6,7 @@ import Link from 'next/link'
 import { Col, Container, Row } from 'react-bootstrap'
 import type { ReactNode } from 'react'
 
-const title = 'FAQ | Local SEO Wiser'
+const title = 'Frequently Asked Questions | Local SEO Wiser Guide'
 const description =
   'Find answers to common questions about Local SEO Wiser, our SEO services, Google Business Profile optimization, website development, and how to get started.'
 
