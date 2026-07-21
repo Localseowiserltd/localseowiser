@@ -110,8 +110,13 @@ const Media = ({ image, className = '' }: { image?: LocationMedia; className?: s
   if (!image?.src.trim()) return null
   return (
     <div className={`loc-media ${className}`.trim()}>
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src={image.src} alt={image.alt || ''} loading="lazy" />
+      <Image
+        src={image.src}
+        alt={image.alt || ''}
+        fill
+        sizes="(max-width: 767px) 100vw, (max-width: 1199px) 50vw, 560px"
+        className="loc-media__img"
+      />
     </div>
   )
 }
@@ -126,8 +131,14 @@ const HeroComposition = ({ page }: { page: LocationPage }) => (
     <div className="loc-compose__laptop">
       <div className="loc-compose__bezel">
         {page.heroImage.src.trim() ? (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img src={page.heroImage.src} alt="" />
+          <Image
+            src={page.heroImage.src}
+            alt=""
+            fill
+            sizes="(max-width: 991px) 70vw, 420px"
+            className="loc-compose__screen-img"
+            priority
+          />
         ) : (
           <div className="loc-compose__screen-fallback" />
         )}

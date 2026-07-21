@@ -15,10 +15,8 @@ const HomePageSchema = () => {
     telephone: contactInfo.phoneTel,
     address: {
       '@type': 'PostalAddress',
-      streetAddress: '307 Freeland St',
       addressLocality: 'Pittsburgh',
       addressRegion: 'PA',
-      postalCode: '15210',
       addressCountry: 'US',
     },
     sameAs: [
@@ -68,10 +66,8 @@ const HomePageSchema = () => {
     },
     address: {
       '@type': 'PostalAddress',
-      streetAddress: '307 Freeland St',
       addressLocality: 'Pittsburgh',
       addressRegion: 'PA',
-      postalCode: '15210',
       addressCountry: 'US',
     },
     image: `${SITE_ORIGIN}/logo.png`,

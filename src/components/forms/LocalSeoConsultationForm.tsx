@@ -1,6 +1,6 @@
 'use client'
 
-import { FormEvent, useState } from 'react'
+import { FormEvent, useId, useState } from 'react'
 
 type LocalSeoConsultationFormProps = {
   id?: string
@@ -19,6 +19,9 @@ const LocalSeoConsultationForm = ({
   buttonLabel = 'Get My Free Consultation',
   privacyNote = 'We respect your privacy. No spam, ever.',
 }: LocalSeoConsultationFormProps) => {
+  const reactId = useId()
+  const errorId = `${reactId}-error`
+  const privacyId = `${reactId}-privacy`
   const [status, setStatus] = useState<FormStatus>('idle')
   const [errorMessage, setErrorMessage] = useState('')
 
@@ -108,10 +111,21 @@ const LocalSeoConsultationForm = ({
     )
   }
 
+  const describedBy = [privacyNote ? privacyId : null, status === 'error' ? errorId : null]
+    .filter(Boolean)
+    .join(' ')
+
   return (
-    <form id={id} className="lseo-lead-form" onSubmit={handleSubmit} noValidate>
+    <form
+      id={id}
+      className="lseo-lead-form"
+      onSubmit={handleSubmit}
+      noValidate
+      aria-describedby={describedBy || undefined}>
       <div className="lseo-lead-form__header">
-        <p className="lseo-lead-form__title">{title}</p>
+        <p className="lseo-lead-form__title" id={`${reactId}-title`}>
+          {title}
+        </p>
         {subtitle ? <p className="lseo-lead-form__subtitle">{subtitle}</p> : null}
       </div>
       <input
@@ -122,16 +136,88 @@ const LocalSeoConsultationForm = ({
         className="lseo-lead-form__honeypot"
         aria-hidden="true"
       />
-      <input name="name" type="text" className="form-control" placeholder="Full Name" required autoComplete="name" />
-      <input name="business" type="text" className="form-control" placeholder="Business Name" required />
-      <input name="email" type="email" className="form-control" placeholder="Email Address" required autoComplete="email" />
-      <input name="phone" type="tel" className="form-control" placeholder="Phone Number" required autoComplete="tel" />
-      <input name="website" type="text" className="form-control" placeholder="Website (Optional)" autoComplete="url" />
+      <div className="lseo-lead-form__field">
+        <label htmlFor={`${reactId}-name`} className="visually-hidden">
+          Full Name
+        </label>
+        <input
+          id={`${reactId}-name`}
+          name="name"
+          type="text"
+          className="form-control"
+          placeholder="Full Name"
+          required
+          autoComplete="name"
+        />
+      </div>
+      <div className="lseo-lead-form__field">
+        <label htmlFor={`${reactId}-business`} className="visually-hidden">
+          Business Name
+        </label>
+        <input
+          id={`${reactId}-business`}
+          name="business"
+          type="text"
+          className="form-control"
+          placeholder="Business Name"
+          required
+          autoComplete="organization"
+        />
+      </div>
+      <div className="lseo-lead-form__field">
+        <label htmlFor={`${reactId}-email`} className="visually-hidden">
+          Email Address
+        </label>
+        <input
+          id={`${reactId}-email`}
+          name="email"
+          type="email"
+          className="form-control"
+          placeholder="Email Address"
+          required
+          autoComplete="email"
+        />
+      </div>
+      <div className="lseo-lead-form__field">
+        <label htmlFor={`${reactId}-phone`} className="visually-hidden">
+          Phone Number
+        </label>
+        <input
+          id={`${reactId}-phone`}
+          name="phone"
+          type="tel"
+          className="form-control"
+          placeholder="Phone Number"
+          required
+          autoComplete="tel"
+        />
+      </div>
+      <div className="lseo-lead-form__field">
+        <label htmlFor={`${reactId}-website`} className="visually-hidden">
+          Website (Optional)
+        </label>
+        <input
+          id={`${reactId}-website`}
+          name="website"
+          type="url"
+          className="form-control"
+          placeholder="Website (Optional)"
+          autoComplete="url"
+        />
+      </div>
       <button type="submit" className="btn btn-primary lseo-lead-form__submit" disabled={status === 'submitting'}>
         {status === 'submitting' ? 'Sending...' : buttonLabel}
       </button>
-      {privacyNote ? <p className="lseo-lead-form__privacy">{privacyNote}</p> : null}
-      {status === 'error' ? <p className="lseo-lead-form__error mb-0">{errorMessage}</p> : null}
+      {privacyNote ? (
+        <p id={privacyId} className="lseo-lead-form__privacy">
+          {privacyNote}
+        </p>
+      ) : null}
+      {status === 'error' ? (
+        <p id={errorId} className="lseo-lead-form__error mb-0" role="alert">
+          {errorMessage}
+        </p>
+      ) : null}
     </form>
   )
 }

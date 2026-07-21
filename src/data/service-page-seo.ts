@@ -53,9 +53,9 @@ export const seoServicePages = [
     variant: 'full',
     category: 'Search Engine Optimization',
     title: 'Get Found by More Local Customers in Pittsburgh',
-    metaTitle: 'Local SEO Services Pittsburgh | More Calls & Local Leads',
+    metaTitle: 'Local SEO Services Pittsburgh | Maps, GBP & Local Leads',
     metaDescription:
-      'Increase your visibility with Local SEO Services in Pittsburgh. Rank higher in Google Maps, attract local customers, and grow your business with Local SEO Wiser.',
+      'Hire Local SEO Services in Pittsburgh focused on Google Maps, Google Business Profile, and local search visibility that drives calls and customers—not vanity rankings.',
     description:
       'Local SEO Wiser helps businesses across Pittsburgh improve their visibility where customers are searching most—Google Search and Google Maps. We build practical Local SEO strategies that combine Google Business Profile optimization, local content, citation management, technical improvements, and neighborhood-focused targeting to help you generate more qualified calls, enquiries, and long-term business growth.',
     intro:

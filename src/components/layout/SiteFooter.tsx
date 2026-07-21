@@ -11,14 +11,14 @@ const footerLocations = [
     phone: '+1 412 663 7288',
     tel: '+14126637288',
     email: 'info@localseowiser.com',
-    address: '307 Freeland St, Pittsburgh, PA 15210, United States',
+    address: 'Pittsburgh, PA',
   },
   {
     code: 'UK',
     phone: '+44 7454 758272',
     tel: '+447454758272',
     email: 'info@localseowiser.com',
-    address: 'Office 1267 85 Dunstall Hill, Wolverhampton, United Kingdom, WV6 0SR',
+    address: 'United Kingdom',
   },
 ] as const
 
@@ -27,7 +27,7 @@ const primaryPhone = contactPhones?.[0] ?? footerLocations[0]
 const seoCategory = serviceCategories?.find((category) => category.id === 'search-engine-optimization')
 const webCategory = serviceCategories?.find((category) => category.id === 'web-design')
 const semCategory = serviceCategories?.find((category) => category.id === 'search-engine-marketing')
-const socialCategory = serviceCategories?.find((category) => category.id === 'social-media')
+const socialCategory = serviceCategories?.find((category) => category.id === 'content-social')
 
 const FooterLinkList = ({ title, items }: { title: string; items: { title: string; href: string }[] }) => (
   <div className="footer-v2-nav-block">

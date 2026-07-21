@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import ScrollReveal from '@/components/ScrollReveal'
 import IconifyIcon from '@/components/wrappers/IconifyIcon'
@@ -25,8 +26,13 @@ const PortfolioCard = ({ project }: PortfolioCardProps) => {
     <article className={`portfolio-hub-card${confidential ? ' portfolio-hub-card--confidential' : ''}`}>
       <ScrollReveal animation="fade-up" className="h-100">
         <Link href={`/portfolio/${project.slug}`} className="portfolio-hub-card__media">
-          {/* eslint-disable-next-line @next/next/no-img-element -- fixed crop for tall screenshots */}
-          <img src={image.src} alt={image.alt} className="portfolio-hub-card__img" loading="lazy" decoding="async" />
+          <Image
+            src={image.src}
+            alt={image.alt}
+            fill
+            className="portfolio-hub-card__img"
+            sizes="(max-width: 767px) 100vw, 50vw"
+          />
         </Link>
         <div className="portfolio-hub-card__body">
           <div className="portfolio-hub-card__top">

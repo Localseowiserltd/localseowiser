@@ -223,7 +223,7 @@ export function buildIndustryProfessionalServiceSchema(page: IndustryPage) {
     name: page.schema.businessName.trim() || SITE_NAME,
     description:
       page.schema.businessDescription.trim() || page.metaDescription.trim() || undefined,
-    url: SITE_ORIGIN,
+    url: getIndustryPageUrl(page),
     areaServed: {
       '@type': 'City',
       name: 'Pittsburgh',
@@ -266,7 +266,7 @@ export function buildIndustryEntitySchemas(page: IndustryPage) {
     name: page.schema.businessName.trim() || SITE_NAME,
     description:
       page.schema.businessDescription.trim() || page.metaDescription.trim() || undefined,
-    url: SITE_ORIGIN,
+    url: getIndustryPageUrl(page),
     ...(page.heroImage.src.trim()
       ? { image: `${SITE_ORIGIN}${page.heroImage.src}` }
       : {}),

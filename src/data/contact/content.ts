@@ -79,7 +79,7 @@ export const contactFormServices = [
 
 export const contactPageMap = {
   title: 'Our Office',
-  address: 'Pittsburgh, PA, United States',
+  address: 'Pittsburgh, PA',
   directionsLabel: 'Get Directions',
   directionsHref: 'https://www.google.com/maps/search/?api=1&query=Local+SEO+Wiser+Pittsburgh',
   embedSrc:

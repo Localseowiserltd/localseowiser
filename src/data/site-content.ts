@@ -130,25 +130,8 @@ export {
 } from '@/data/industries/home'
 
 /**
- * @deprecated Prefer `getHomeAreaChips()` from `@/data/locations`.
- * Homepage chips link only when a location page is publishable.
- * This legacy array keeps structural names/slugs; do not use hrefs for public navigation.
+ * Homepage area chips come from `getHomeAreaChips()` in `@/data/locations`.
  */
-export const homeAreasServed = [
-  { name: 'Shadyside', slug: 'local-seo-shadyside', href: '/local-seo-shadyside' },
-  { name: 'Lawrenceville', slug: 'local-seo-lawrenceville', href: '/local-seo-lawrenceville' },
-  { name: 'Oakland', slug: 'local-seo-oakland', href: '/local-seo-oakland' },
-  { name: 'Squirrel Hill', slug: 'local-seo-squirrel-hill', href: '/local-seo-squirrel-hill' },
-  { name: 'Strip District', slug: 'local-seo-strip-district', href: '/local-seo-strip-district' },
-  { name: 'South Side', slug: 'local-seo-south-side', href: '/local-seo-south-side' },
-  { name: 'North Shore', slug: 'local-seo-north-shore', href: '/local-seo-north-shore' },
-  { name: 'Mt. Lebanon', slug: 'local-seo-mt-lebanon', href: '/local-seo-mt-lebanon' },
-  { name: 'Cranberry Township', slug: 'local-seo-cranberry-township', href: '/local-seo-cranberry-township' },
-  { name: 'Monroeville', slug: 'local-seo-monroeville', href: '/local-seo-monroeville' },
-  { name: 'Robinson Township', slug: 'local-seo-robinson-township', href: '/local-seo-robinson-township' },
-  { name: 'North Hills', slug: 'local-seo-north-hills', href: '/local-seo-north-hills' },
-  { name: 'South Hills', slug: 'local-seo-south-hills', href: '/local-seo-south-hills' },
-]
 
 /** Add verified Google reviews here before enabling AggregateRating schema. */
 export const verifiedGoogleReviews: {
@@ -781,8 +764,8 @@ export const contactInfo = {
   whatsapp: 'https://wa.me/14126637288',
   hours: 'Mon–Fri, 9 AM–5 PM',
   responseTime: 'Within 24 to 48 hours',
-  location: '307 Freeland St, Pittsburgh, PA 15210, United States',
-  locationUk: 'Office 1267 85 Dunstall Hill, Wolverhampton, United Kingdom, WV6 0SR',
+  location: 'Pittsburgh, PA',
+  locationUk: 'United Kingdom',
   serviceArea: 'Pittsburgh, PA & nationwide clients',
 }
 
@@ -832,7 +815,7 @@ export {
   contactPageReview as contactPageAudit,
 } from './contact'
 
-export const contactPageOffice = 'Pittsburgh, Pennsylvania, USA'
+export const contactPageOffice = 'Pittsburgh, PA'
 
 export const contactPhones = [
   { label: 'US', flag: '🇺🇸', phone: '+1 412 663 7288', tel: '+14126637288' },
@@ -846,7 +829,7 @@ export const contactLocations = [
     phone: '+1 412 663 7288',
     tel: '+14126637288',
     email: 'info@localseowiser.com',
-    address: 'Pittsburgh, Pennsylvania, USA',
+    address: 'Pittsburgh, PA',
   },
   {
     code: 'UK',

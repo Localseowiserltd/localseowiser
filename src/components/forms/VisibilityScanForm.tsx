@@ -1,7 +1,7 @@
 'use client'
 
 import { contactInfo } from '@/data/site-content'
-import { FormEvent, useState } from 'react'
+import { FormEvent, useId, useState } from 'react'
 import { Col, Row } from 'react-bootstrap'
 
 type VisibilityScanFormProps = {
@@ -24,6 +24,9 @@ const VisibilityScanForm = ({
   tall = false,
   layout = 'stacked',
 }: VisibilityScanFormProps) => {
+  const reactId = useId()
+  const errorId = `${reactId}-error`
+  const noteId = `${reactId}-note`
   const [status, setStatus] = useState<FormStatus>('idle')
   const [errorMessage, setErrorMessage] = useState('')
 
@@ -131,8 +134,95 @@ const VisibilityScanForm = ({
     )
   }
 
+  const describedBy = [showNote ? noteId : null, status === 'error' ? errorId : null].filter(Boolean).join(' ')
+
+  const nameField = (
+    <div className="visibility-scan-form__field">
+      <label htmlFor={`${reactId}-name`} className="visually-hidden">
+        Name
+      </label>
+      <input
+        id={`${reactId}-name`}
+        name="name"
+        type="text"
+        className="form-control border"
+        placeholder="Name"
+        required
+        autoComplete="name"
+      />
+    </div>
+  )
+  const emailField = (
+    <div className="visibility-scan-form__field">
+      <label htmlFor={`${reactId}-email`} className="visually-hidden">
+        Email
+      </label>
+      <input
+        id={`${reactId}-email`}
+        name="email"
+        type="email"
+        className="form-control border"
+        placeholder="Email"
+        required
+        autoComplete="email"
+      />
+    </div>
+  )
+  const businessField = (
+    <div className="visibility-scan-form__field">
+      <label htmlFor={`${reactId}-business`} className="visually-hidden">
+        Business
+      </label>
+      <input
+        id={`${reactId}-business`}
+        name="business"
+        type="text"
+        className="form-control border"
+        placeholder="Business"
+        required
+        autoComplete="organization"
+      />
+    </div>
+  )
+  const cityField = (
+    <div className="visibility-scan-form__field">
+      <label htmlFor={`${reactId}-city`} className="visually-hidden">
+        City
+      </label>
+      <input
+        id={`${reactId}-city`}
+        name="city"
+        type="text"
+        className="form-control border"
+        placeholder="City"
+        required
+        autoComplete="address-level2"
+      />
+    </div>
+  )
+  const websiteField = (
+    <div className="visibility-scan-form__field">
+      <label htmlFor={`${reactId}-website`} className="visually-hidden">
+        Website (optional)
+      </label>
+      <input
+        id={`${reactId}-website`}
+        name="website"
+        type="url"
+        className="form-control border"
+        placeholder="Website (optional)"
+        autoComplete="url"
+      />
+    </div>
+  )
+
   return (
-    <form id={id} className={formClassName} onSubmit={handleSubmit} noValidate>
+    <form
+      id={id}
+      className={formClassName}
+      onSubmit={handleSubmit}
+      noValidate
+      aria-describedby={describedBy || undefined}>
       <input
         type="text"
         name="company"
@@ -144,32 +234,22 @@ const VisibilityScanForm = ({
 
       {isHorizontal ? (
         <div className="visibility-scan-form__row">
-          <input name="name" type="text" className="form-control border" placeholder="Name" required />
-          <input name="email" type="email" className="form-control border" placeholder="Email" required />
-          <input name="business" type="text" className="form-control border" placeholder="Business" required />
-          <input name="city" type="text" className="form-control border" placeholder="City" required />
-          <input name="website" type="text" className="form-control border" placeholder="Website (optional)" />
+          {nameField}
+          {emailField}
+          {businessField}
+          {cityField}
+          {websiteField}
           <button type="submit" className="btn btn-primary fw-semibold" disabled={status === 'submitting'}>
             {status === 'submitting' ? 'Sending...' : buttonLabel}
           </button>
         </div>
       ) : (
         <Row className={tall ? 'g-3' : 'g-2'}>
-          <Col sm={compact ? 12 : 6}>
-            <input name="name" type="text" className="form-control border" placeholder="Name" required />
-          </Col>
-          <Col sm={compact ? 12 : 6}>
-            <input name="email" type="email" className="form-control border" placeholder="Email" required />
-          </Col>
-          <Col sm={compact ? 12 : 6}>
-            <input name="business" type="text" className="form-control border" placeholder="Business" required />
-          </Col>
-          <Col sm={compact ? 12 : 6}>
-            <input name="city" type="text" className="form-control border" placeholder="City" required />
-          </Col>
-          <Col xs={12}>
-            <input name="website" type="text" className="form-control border" placeholder="Website (optional)" />
-          </Col>
+          <Col sm={compact ? 12 : 6}>{nameField}</Col>
+          <Col sm={compact ? 12 : 6}>{emailField}</Col>
+          <Col sm={compact ? 12 : 6}>{businessField}</Col>
+          <Col sm={compact ? 12 : 6}>{cityField}</Col>
+          <Col xs={12}>{websiteField}</Col>
           <Col xs={12}>
             <button type="submit" className="btn btn-primary fw-semibold w-100" disabled={status === 'submitting'}>
               {status === 'submitting' ? 'Sending...' : buttonLabel}
@@ -179,13 +259,13 @@ const VisibilityScanForm = ({
       )}
 
       {status === 'error' && errorMessage ? (
-        <p className="visibility-scan-form__error mb-0" role="alert">
+        <p id={errorId} className="visibility-scan-form__error mb-0" role="alert">
           {errorMessage}
         </p>
       ) : null}
 
       {showNote ? (
-        <p className="visibility-scan-form__note mb-0">
+        <p id={noteId} className="visibility-scan-form__note mb-0">
           No spam. No obligation. Or call{' '}
           <a href={`tel:${contactInfo.phoneTel}`} className="text-primary fw-semibold">
             {contactInfo.phone}

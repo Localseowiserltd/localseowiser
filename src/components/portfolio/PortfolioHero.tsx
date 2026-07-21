@@ -2,6 +2,7 @@ import ButtonLink from '@/components/ButtonLink'
 import ScrollReveal from '@/components/ScrollReveal'
 import AnonymizedPrivacyNotice from '@/components/portfolio/AnonymizedPrivacyNotice'
 import ScreenshotFrame from '@/components/portfolio/ScreenshotFrame'
+import Image from 'next/image'
 import {
   getProjectDisplayName,
   isConfidentialProject,
@@ -30,8 +31,13 @@ const PortfolioHero = ({ project }: PortfolioHeroProps) => {
                 <span className="section-eyebrow-line" aria-hidden="true" />
               </p>
               {shouldShowLogo(project) && project.logo ? (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img src={project.logo.src} alt={project.logo.alt} className="case-study-hero__logo" />
+                <Image
+                  src={project.logo.src}
+                  alt={project.logo.alt}
+                  width={180}
+                  height={64}
+                  className="case-study-hero__logo"
+                />
               ) : null}
               <h1 className="case-study-hero__title">{project.h1}</h1>
               {confidential ? <AnonymizedPrivacyNotice className="mb-3" /> : null}

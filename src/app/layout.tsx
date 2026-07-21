@@ -1,5 +1,14 @@
 import '@/assets/scss/style.scss'
 import { Metadata } from 'next'
+import { Rethink_Sans } from 'next/font/google'
+
+const rethinkSans = Rethink_Sans({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-rethink-sans',
+  weight: 'variable',
+  style: ['normal', 'italic'],
+})
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://localseowiser.com'),
@@ -17,7 +26,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={rethinkSans.variable}>
       <head>
         {/* Explicit icons so Chrome picks them up on first paint (Next 15 streaming metadata can miss favicons). */}
         <link rel="icon" href="/favicon.svg?v=3" type="image/svg+xml" />
@@ -26,7 +35,7 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=3" sizes="180x180" />
         <style suppressHydrationWarning>{}</style>
       </head>
-      <body className={``}>{children}</body>
+      <body className={rethinkSans.className}>{children}</body>
     </html>
   )
 }

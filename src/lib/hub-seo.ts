@@ -243,3 +243,36 @@ export function buildServicesHubSchemas(
   ]
 }
 
+export function buildAreasHubSchemas(
+  items: { name: string; url: string; description?: string }[],
+) {
+  return [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'CollectionPage',
+      name: 'Local SEO Locations in Pittsburgh | Areas We Serve',
+      description:
+        'Explore Local SEO services across Pittsburgh neighborhoods and surrounding communities served by Local SEO Wiser.',
+      url: buildAbsoluteUrl('/areas'),
+      isPartOf: { '@type': 'WebSite', name: SITE_NAME, url: SITE_ORIGIN },
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      name: 'Pittsburgh Areas We Serve',
+      itemListElement: items.map((item, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        name: item.name,
+        url: item.url.startsWith('http') ? item.url : buildAbsoluteUrl(item.url),
+        ...(item.description ? { description: item.description } : {}),
+      })),
+    },
+    buildBreadcrumbSchema([
+      { name: 'Home', path: '/' },
+      { name: 'Areas', path: '/areas' },
+    ]),
+    buildOrganizationSchema(),
+  ]
+}
+

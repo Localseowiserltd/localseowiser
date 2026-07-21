@@ -152,7 +152,7 @@ export function buildLocationBusinessSchema(page: LocationPage) {
     '@type': type,
     name,
     description,
-    url: SITE_ORIGIN,
+    url: getLocationPageUrl(page),
     areaServed: {
       '@type': 'Place',
       name: [page.name, page.region, page.state].filter(Boolean).join(', '),
@@ -182,11 +182,12 @@ export function buildLocationImageObjectSchema(page: LocationPage) {
 
 /** Convenience: LocalBusiness + ProfessionalService pair when both are requested. */
 export function buildLocationServiceSchemas(page: LocationPage) {
+  const pageUrl = getLocationPageUrl(page)
   const shared = {
     name: page.schema.businessName.trim() || SITE_NAME,
     description:
       page.schema.businessDescription.trim() || page.metaDescription.trim() || undefined,
-    url: SITE_ORIGIN,
+    url: pageUrl,
     areaServed: {
       '@type': 'Place',
       name: [page.name, page.region, page.state].filter(Boolean).join(', '),
