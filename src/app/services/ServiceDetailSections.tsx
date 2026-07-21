@@ -12,6 +12,7 @@ import IconifyIcon from '@/components/wrappers/IconifyIcon'
 import ServiceHeroParagraphSlider from '@/app/services/ServiceHeroParagraphSlider'
 import ServiceDetailGmp from '@/app/services/ServiceDetailGmp'
 import ServiceDetailTechnical from '@/app/services/ServiceDetailTechnical'
+import ServiceDetailSnap from '@/app/services/ServiceDetailSnap'
 import ServiceDetailSmallBusiness from '@/app/services/ServiceDetailSmallBusiness'
 import ServiceOutcomesTree from '@/app/services/ServiceOutcomesTree'
 import ServiceOutcomesFeatures from '@/app/services/ServiceOutcomesFeatures'
@@ -263,8 +264,21 @@ const ServiceDetailHero = ({ service }: { service: ServicePage }) => {
   const isShowcaseLayout = service.heroLayout === 'showcase'
   const isGmpLayout = service.heroLayout === 'gmp'
   const isTechnicalLayout = service.heroLayout === 'technical'
+  const isSnapLayout = service.heroLayout === 'snap'
 
-  if (isTechnicalLayout) {
+  if (isTechnicalLayout || isSnapLayout) {
+    const accent = service.heroTitleAccent
+    const titleNode =
+      accent && service.title.includes(accent) ? (
+        <>
+          {service.title.slice(0, service.title.indexOf(accent))}
+          <span className="service-detail-hero__snap-accent">{accent}</span>
+          {service.title.slice(service.title.indexOf(accent) + accent.length)}
+        </>
+      ) : (
+        service.title
+      )
+
     return (
       <section className="service-detail-hero service-detail-hero--technical">
         <div className="service-detail-hero__technical-glow" aria-hidden="true" />
@@ -273,7 +287,7 @@ const ServiceDetailHero = ({ service }: { service: ServicePage }) => {
             <Col lg={5} xl={5}>
               <ScrollReveal animation="fade-up">
                 <p className="section-eyebrow mb-3">{service.category}</p>
-                <h1 className="page-hero-header__title service-detail-hero__technical-title">{service.title}</h1>
+                <h1 className="page-hero-header__title service-detail-hero__technical-title">{titleNode}</h1>
                 {service.description ? (
                   <p className="service-detail-hero__technical-lead">{service.description}</p>
                 ) : null}
@@ -308,9 +322,9 @@ const ServiceDetailHero = ({ service }: { service: ServicePage }) => {
                 <div className="service-detail-hero__technical-laptop">
                   <Image
                     src={service.heroImage ?? '/tech-seo-hero-laptop-transparent.png'}
-                    alt={service.imageAlt ?? 'Technical SEO dashboard'}
-                    width={service.heroImageDimensions?.width ?? 1344}
-                    height={service.heroImageDimensions?.height ?? 936}
+                    alt={service.imageAlt ?? service.title}
+                    width={service.heroImageDimensions?.width ?? 900}
+                    height={service.heroImageDimensions?.height ?? 700}
                     className="service-detail-hero__technical-laptop-img"
                     priority
                     unoptimized
@@ -321,10 +335,13 @@ const ServiceDetailHero = ({ service }: { service: ServicePage }) => {
             <Col lg={4} xl={4}>
               <ScrollReveal animation="fade-up" delay={100} hoverable={false}>
                 <LocalSeoConsultationForm
-                  id="technical-seo-consultation-form"
-                  title="Ready to Improve Your Website's Performance?"
-                  subtitle="Get a free consultation and receive a custom technical SEO strategy tailored to your business."
-                  buttonLabel="Get My Free Consultation"
+                  id={`${service.slug}-consultation-form`}
+                  title={service.leadForm?.title ?? 'Get My Free Consultation'}
+                  subtitle={
+                    service.leadForm?.subtitle ??
+                    'Get a free consultation and a custom strategy tailored to your business.'
+                  }
+                  buttonLabel={service.leadForm?.buttonLabel ?? 'Get My Free Consultation'}
                   privacyNote="We respect your privacy. No spam. Ever."
                 />
               </ScrollReveal>
@@ -1462,6 +1479,7 @@ const ServiceDetailSections = ({ service, relatedServices }: ServiceDetailSectio
       service.slug === 'local-seo' && 'service-detail-page--local-seo',
       service.slug === 'google-map-optimization' && 'service-detail-page--gmp',
       service.slug === 'technical-seo' && 'service-detail-page--technical',
+      service.heroLayout === 'snap' && 'service-detail-page--snap',
     )}>
     <ServiceDetailHero service={service} />
     {service.variant === 'full' ? (
@@ -1469,6 +1487,8 @@ const ServiceDetailSections = ({ service, relatedServices }: ServiceDetailSectio
         <ServiceDetailGmp service={service} />
       ) : service.slug === 'technical-seo' ? (
         <ServiceDetailTechnical service={service} />
+      ) : service.heroLayout === 'snap' ? (
+        <ServiceDetailSnap service={service} />
       ) : service.pageLayout === 'small-business' ? (
         <ServiceDetailSmallBusiness service={service} />
       ) : (

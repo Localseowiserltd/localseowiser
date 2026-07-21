@@ -6,16 +6,23 @@ import IconifyIcon from '../wrappers/IconifyIcon'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useEffect, useRef, useState } from 'react'
-import { contactPhones, servicePages, topBarSocialLinks } from '@/data/site-content'
-import PortfolioNavMenu from './PortfolioNavMenu'
+import { servicePages, topBarContact, topBarSocialLinks } from '@/data/site-content'
+import { getPublishedIndustryPages, getIndustryPath } from '@/data/industries'
+import { getLocationNavItems } from '@/data/locations'
+import NavDropdown from './NavDropdown'
 import ServicesMegaMenu from './ServicesMegaMenu'
 
 const serviceSlugs = servicePages.map((page) => page.slug)
 
-const navItems = [
-  { label: 'Home', href: '/' },
-  { label: 'About', href: '/about' },
-]
+const industryNavItems = getPublishedIndustryPages().map((page) => ({
+  label: page.name,
+  href: getIndustryPath(page),
+}))
+
+const locationNavItems = getLocationNavItems(13).map((item) => ({
+  label: item.label,
+  href: item.href,
+}))
 
 const NavTopBar = () => {
   const { scrollY } = useScrollEvent()
@@ -71,23 +78,40 @@ const NavTopBar = () => {
       id="navbar-sticky">
       <div className={`nav-topbar d-none d-lg-block ${showTopbar ? 'nav-topbar-visible' : 'nav-topbar-hidden'}`}>
         <div className="nav-topbar-inner">
-          <ul className="nav-topbar-phones list-unstyled mb-0">
-            {contactPhones.map((item) => (
-              <li key={item.tel}>
-                <span className="nav-topbar-flag">{item.flag}</span>
-                <a href={`tel:${item.tel}`}>{item.phone}</a>
-              </li>
-            ))}
+          <ul className="nav-topbar-contact list-unstyled mb-0">
+            <li>
+              <span className="nav-topbar-contact-icon">
+                <IconifyIcon icon="tabler:phone" />
+              </span>
+              <a href={`tel:${topBarContact.tel}`}>
+                {topBarContact.phoneLabel} {topBarContact.phone}
+              </a>
+            </li>
+            <li>
+              <span className="nav-topbar-contact-icon">
+                <IconifyIcon icon="tabler:mail" />
+              </span>
+              <a href={`mailto:${topBarContact.email}`}>{topBarContact.email}</a>
+            </li>
+            <li>
+              <span className="nav-topbar-contact-icon">
+                <IconifyIcon icon="tabler:map-pin" />
+              </span>
+              <span>{topBarContact.location}</span>
+            </li>
           </ul>
-          <ul className="nav-topbar-social list-unstyled mb-0">
-            {topBarSocialLinks.map((item) => (
-              <li key={item.icon}>
-                <Link href={item.href} target="_blank" rel="noopener noreferrer" aria-label={item.label}>
-                  <IconifyIcon icon={item.icon} />
-                </Link>
-              </li>
-            ))}
-          </ul>
+          <div className="nav-topbar-follow">
+            <span className="nav-topbar-follow-label">Follow Us:</span>
+            <ul className="nav-topbar-social list-unstyled mb-0">
+              {topBarSocialLinks.map((item) => (
+                <li key={item.icon}>
+                  <Link href={item.href} target="_blank" rel="noopener noreferrer" aria-label={item.label}>
+                    <IconifyIcon icon={item.icon} />
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
 
@@ -109,16 +133,23 @@ const NavTopBar = () => {
 
           <div id="brutalist-navbar-menu" className={`brutalist-navbar__menu ${menuOpen ? 'is-active' : ''}`}>
             <ul className="brutalist-navbar__list">
-              {navItems.map((item) => (
-                <li key={item.href} className="brutalist-navbar__item">
-                  <Link
-                    href={item.href}
-                    className={`brutalist-navbar__link ${pathname === item.href ? 'is-active' : ''}`}
-                    onClick={closeMenu}>
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
+              <li className="brutalist-navbar__item">
+                <Link
+                  href="/"
+                  className={`brutalist-navbar__link ${pathname === '/' ? 'is-active' : ''}`}
+                  onClick={closeMenu}>
+                  Home
+                </Link>
+              </li>
+
+              <li className="brutalist-navbar__item">
+                <Link
+                  href="/about"
+                  className={`brutalist-navbar__link ${pathname === '/about' ? 'is-active' : ''}`}
+                  onClick={closeMenu}>
+                  About Us
+                </Link>
+              </li>
 
               <li
                 className={`brutalist-navbar__item brutalist-navbar__item--has-dropdown d-none d-lg-block ${servicesOpen ? 'is-open' : ''}`}
@@ -141,17 +172,6 @@ const NavTopBar = () => {
                 </div>
               </li>
 
-              <PortfolioNavMenu pathname={pathname} onNavigate={closeMenu} />
-
-              <li className="brutalist-navbar__item">
-                <Link
-                  href="/blog"
-                  className={`brutalist-navbar__link ${pathname === '/blog' ? 'is-active' : ''}`}
-                  onClick={closeMenu}>
-                  Blog
-                </Link>
-              </li>
-
               <li className="brutalist-navbar__item brutalist-navbar__item--mobile-services d-lg-none">
                 <button
                   type="button"
@@ -164,10 +184,53 @@ const NavTopBar = () => {
                 {servicesMobileOpen ? <ServicesMegaMenu onNavigate={closeMenu} variant="mobile" /> : null}
               </li>
 
+              <NavDropdown label="Industries" items={industryNavItems} pathname={pathname} onNavigate={closeMenu} />
+
+              <NavDropdown
+                label="Locations"
+                href="/areas"
+                items={locationNavItems}
+                pathname={pathname}
+                onNavigate={closeMenu}
+              />
+
               <li className="brutalist-navbar__item">
-                <Link href="/contact" className="brutalist-navbar__link brutalist-navbar__link--cta" onClick={closeMenu}>
-                  Contact Us
+                <Link
+                  href="/portfolio"
+                  className={`brutalist-navbar__link ${pathname === '/portfolio' || pathname.startsWith('/portfolio/') ? 'is-active' : ''}`}
+                  onClick={closeMenu}>
+                  Portfolio
                 </Link>
+              </li>
+
+              <li className="brutalist-navbar__item">
+                <Link
+                  href="/blog"
+                  className={`brutalist-navbar__link ${pathname === '/blog' ? 'is-active' : ''}`}
+                  onClick={closeMenu}>
+                  Blog
+                </Link>
+              </li>
+
+              <li className="brutalist-navbar__item">
+                <Link
+                  href="/contact"
+                  className={`brutalist-navbar__link ${pathname === '/contact' ? 'is-active' : ''}`}
+                  onClick={closeMenu}>
+                  Contact
+                </Link>
+              </li>
+
+              <li className="brutalist-navbar__item brutalist-navbar__item--cta-stack">
+                <a
+                  href="https://wa.me/14126637288"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="brutalist-navbar__cta-btn"
+                  onClick={closeMenu}>
+                  Get Free Consultation
+                  <IconifyIcon icon="tabler:arrow-right" aria-hidden="true" />
+                </a>
               </li>
             </ul>
           </div>

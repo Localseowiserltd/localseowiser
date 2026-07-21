@@ -1252,7 +1252,8 @@
 }
 
 .service-detail-page--gmp,
-.service-detail-page--technical {
+.service-detail-page--technical,
+.service-detail-page--snap {
   .section-eyebrow {
     color: $primary;
     font-weight: 700;
@@ -1686,6 +1687,12 @@
   }
 }
 
+.service-detail-page--snap .gmp-process__grid {
+  @media (min-width: 992px) {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  }
+}
+
 .gmp-process__col {
   height: 100%;
 }
@@ -2097,6 +2104,10 @@
     letter-spacing: -0.03em;
   }
 
+  .service-detail-hero__snap-accent {
+    color: $primary;
+  }
+
   .service-detail-hero__technical-lead {
     margin: 0 0 1.25rem;
     max-width: 34rem;
@@ -2370,5 +2381,113 @@
       max-width: 28rem;
       margin-inline: auto;
     }
+  }
+}
+
+.snap-problem-list {
+  display: grid;
+  gap: 0.85rem;
+  margin: 0;
+  padding: 0;
+
+  li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.7rem;
+    color: #334155;
+    font-size: 1.02rem;
+    line-height: 1.5;
+    font-weight: 500;
+
+    svg {
+      color: #ef4444;
+      font-size: 1.3rem;
+      margin-top: 0.1rem;
+      flex-shrink: 0;
+    }
+  }
+}
+
+.snap-center-card {
+  display: inline-block;
+  width: min(100%, 260px);
+  margin-inline: auto;
+  padding: 1.2rem 1.15rem 1.1rem;
+  border-radius: 18px;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  background: #fff;
+  box-shadow: none;
+  text-align: left;
+}
+
+.snap-center-card__title {
+  margin: 0 0 0.85rem;
+  color: #0f1f3e;
+  font-size: 0.92rem;
+  font-weight: 750;
+}
+
+.snap-center-card__rows {
+  display: grid;
+  gap: 0.95rem;
+  margin: 0;
+  padding: 0;
+}
+
+.snap-center-card__row-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.snap-center-card__label {
+  color: #64748b;
+  font-size: 0.78rem;
+  font-weight: 650;
+}
+
+.snap-center-card__change {
+  font-size: 0.75rem;
+  font-weight: 750;
+
+  &--up {
+    color: #16a34a;
+  }
+
+  &--down {
+    color: #ef4444;
+  }
+}
+
+.snap-center-card__value {
+  margin: 0.15rem 0 0.35rem;
+  color: #0f1f3e;
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.snap-center-card__spark {
+  display: block;
+  width: 100%;
+  height: 2.1rem;
+  border-radius: 8px;
+  background: linear-gradient(90deg, transparent, currentColor);
+  opacity: 0.2;
+
+  &--up {
+    color: #16a34a;
+    background:
+      radial-gradient(ellipse at 70% 30%, rgba(22, 163, 74, 0.35), transparent 55%),
+      linear-gradient(105deg, rgba(22, 163, 74, 0.08), rgba(22, 163, 74, 0.28));
+  }
+
+  &--down {
+    color: #ef4444;
+    background:
+      radial-gradient(ellipse at 30% 70%, rgba(239, 68, 68, 0.35), transparent 55%),
+      linear-gradient(75deg, rgba(239, 68, 68, 0.28), rgba(239, 68, 68, 0.08));
   }
 }

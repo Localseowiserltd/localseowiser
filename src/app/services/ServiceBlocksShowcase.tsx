@@ -30,18 +30,18 @@ type ServiceBlock = {
   services: ServiceItem[]
 }
 
-const categoryIds = ['search-engine-marketing', 'web-design', 'social-media'] as const
+const categoryIds = ['search-engine-marketing', 'web-design', 'content-social'] as const
 
 const blockImages: Record<(typeof categoryIds)[number], { src: StaticImageData; alt: string }> = {
   'search-engine-marketing': { src: marketingImage, alt: 'Search Engine Marketing' },
   'web-design': { src: designImage, alt: 'Web Development' },
-  'social-media': { src: socialImage, alt: 'Social Media' },
+  'content-social': { src: socialImage, alt: 'Content & Social' },
 }
 
 const blockLayouts: Record<(typeof categoryIds)[number], ServiceListLayout> = {
   'search-engine-marketing': 'list',
   'web-design': 'staggered',
-  'social-media': 'list',
+  'content-social': 'list',
 }
 
 const serviceBlocks: ServiceBlock[] = categoryIds.map((categoryId) => {
