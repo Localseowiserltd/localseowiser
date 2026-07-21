@@ -1,4 +1,4 @@
-import { createEmptyLocationPage, getLocationPath, usesAreasDynamicRoute } from '@/lib/location-publish'
+import { createEmptyLocationPage, getLocationPath } from '@/lib/location-publish'
 import type { LocationListingMeta, LocationNavItem, LocationPage } from '@/types/location'
 import {
   assertNoInvalidApprovedLocations,
@@ -80,16 +80,6 @@ export const getPublishedLocationPages = (): LocationPage[] =>
 export const getDraftLocationPages = (): LocationPage[] =>
   locationPages.filter((page) => !isLocationPublishable(page))
 
-/**
- * Pages for `/areas/[slug]` SSG.
- * Custom-path pages (e.g. /local-seo-shadyside) are excluded — they have dedicated routes.
- */
-export const getAreasRouteLocationPages = (): LocationPage[] => {
-  const pool =
-    process.env.NODE_ENV === 'production' ? getPublishedLocationPages() : locationPages
-  return pool.filter(usesAreasDynamicRoute)
-}
-
 /** All pages that may be previewed or published (includes custom-path pages). */
 export const getRoutableLocationPages = (): LocationPage[] => {
   if (process.env.NODE_ENV === 'production') {
@@ -119,5 +109,4 @@ export {
   isLocationPublishable,
   validateLocationPage,
   getLocationPath,
-  usesAreasDynamicRoute,
 }

@@ -269,7 +269,7 @@
         position: relative;
         display: grid;
         grid-template-columns: repeat(var(--outcome-count), minmax(0, 1fr));
-        align-items: start;
+        align-items: flex-start;
         max-width: 920px;
         height: 28px;
         margin: 0.85rem auto 1.15rem;
@@ -606,7 +606,7 @@
         @media (min-width: 992px) {
             grid-template-columns: minmax(0, 1fr) minmax(300px, 380px);
             gap: 1.75rem;
-            align-items: start;
+            align-items: flex-start;
         }
     }
 
@@ -1266,7 +1266,7 @@
     display: grid;
     gap: 0.55rem;
     width: 100%;
-    align-content: start;
+    align-content: flex-start;
     padding: 1.45rem 1.3rem 1.2rem;
     border-radius: 18px;
     border: 1px solid rgba(15, 23, 42, 0.08);

@@ -1,10 +1,7 @@
-'use client'
-
 import IconifyIcon from '@/components/wrappers/IconifyIcon'
 import { contactInfo, contactTelHref } from '@/data/site-content'
 import { portfolioListingMeta } from '@/data/portfolio'
 import type { PortfolioCta } from '@/types/portfolio'
-import { Container } from 'react-bootstrap'
 
 type PortfolioCTAProps = {
   cta?: PortfolioCta
@@ -15,7 +12,7 @@ const PortfolioCTA = ({ cta, variant = 'case-study' }: PortfolioCTAProps) => {
   if (variant === 'listing') {
     return (
       <section className="section portfolio-hub-cta">
-        <Container>
+        <div className="container">
           <div className="portfolio-hub-cta__card">
             <div className="portfolio-hub-cta__copy">
               <h2 className="portfolio-hub-cta__title">{cta?.title ?? portfolioListingMeta.ctaTitle}</h2>
@@ -36,7 +33,7 @@ const PortfolioCTA = ({ cta, variant = 'case-study' }: PortfolioCTAProps) => {
               </a>
             </div>
           </div>
-        </Container>
+        </div>
       </section>
     )
   }

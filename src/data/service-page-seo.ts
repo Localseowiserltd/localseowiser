@@ -1,5 +1,3 @@
-const sharedHeroBadges = ['Pittsburgh-based team', 'Lead-focused reporting', 'Nationwide clients']
-
 export const defaultServiceStats = [
   {
     resultLabel: 'Result 01',
@@ -30,22 +28,6 @@ export const defaultServiceStats = [
     countEnd: 50,
   },
 ]
-
-const sharedChallengeFootnote =
-  'Based in Pittsburgh, Pennsylvania, we turn local search intent into measurable leads, not vanity metrics.'
-
-const sharedWhyChoose = [
-  'Pittsburgh-based team with nationwide campaign experience',
-  'Clear reporting tied to calls, clicks, and qualified leads',
-  'Strategy-first execution without overpromising rankings',
-  'Dedicated support from audit through ongoing optimization',
-]
-
-const sharedExploreCta = {
-  text: 'Serving Pittsburgh, PA & nationwide clients. Browse our full service lineup.',
-  buttonLabel: 'All Services',
-  buttonHref: '/services',
-}
 
 export const seoServicePages = [
   {

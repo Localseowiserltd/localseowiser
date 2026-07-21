@@ -93,12 +93,6 @@ export const getLocationPath = (page: LocationPage | string): string => {
   return `/areas/${page.slug}`
 }
 
-/** True when the page is served under `/areas/[slug]` (not a custom root path). */
-export const usesAreasDynamicRoute = (page: LocationPage): boolean => {
-  const path = getLocationPath(page)
-  return path === `/areas/${page.slug}`
-}
-
 export const filterPublishableLocations = (pages: LocationPage[]): LocationPage[] =>
   pages.filter(isLocationPublishable)
 

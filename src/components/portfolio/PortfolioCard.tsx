@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import ScrollReveal from '@/components/ScrollReveal'
 import IconifyIcon from '@/components/wrappers/IconifyIcon'
 import {
   getProjectCardTitle,
@@ -24,7 +23,7 @@ const PortfolioCard = ({ project }: PortfolioCardProps) => {
 
   return (
     <article className={`portfolio-hub-card${confidential ? ' portfolio-hub-card--confidential' : ''}`}>
-      <ScrollReveal animation="fade-up" className="h-100">
+      <div className="h-100">
         <Link href={`/portfolio/${project.slug}`} className="portfolio-hub-card__media">
           <Image
             src={image.src}
@@ -55,7 +54,7 @@ const PortfolioCard = ({ project }: PortfolioCardProps) => {
             <IconifyIcon icon="tabler:arrow-right" aria-hidden="true" />
           </Link>
         </div>
-      </ScrollReveal>
+      </div>
     </article>
   )
 }

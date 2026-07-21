@@ -1,4 +1,4 @@
-const groupByFields = (array: Array<any>, f: any): Array<any> => {
+const groupByFields = <T>(array: T[], getFields: (item: T) => unknown): T[][] => {
   /*
     params description :
         f : function which returnf the array of fields 
@@ -7,9 +7,9 @@ const groupByFields = (array: Array<any>, f: any): Array<any> => {
         }
         array : array of data to group e.g. : [{...}, {...}]       
     */
-  const groups: { [key: string]: any[] } = {}
+  const groups: Record<string, T[]> = {}
   array.forEach((o) => {
-    const group = JSON.stringify(f(o))
+    const group = JSON.stringify(getFields(o))
     groups[group] = groups[group] || []
     groups[group].push(o)
   })
@@ -25,7 +25,7 @@ const groupByFields = (array: Array<any>, f: any): Array<any> => {
  * @param chunkSize - chunk size
  * @returns
  */
-const splitArray = (array: Array<any>, chunkSize: number) => {
+const splitArray = <T>(array: T[], chunkSize: number): T[][] => {
   const chunks = Array(Math.ceil(array.length / chunkSize))
     .fill(1)
     .map((_, index) => index * chunkSize)

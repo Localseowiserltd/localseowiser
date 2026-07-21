@@ -5,7 +5,6 @@ import {
   getRelatedProjects,
   portfolioProjects,
 } from '@/data/portfolio'
-import { getProjectDisplayName } from '@/lib/portfolio-display'
 import {
   buildPortfolioBreadcrumbSchema,
   buildPortfolioCaseStudyMetadata,

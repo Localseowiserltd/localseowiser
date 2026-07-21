@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "format": "prettier --write 'src/**/*.{ts,tsx,js,jsx}'",
-    "validate:locations": "node scripts/validate-locations.mjs"
+    "validate:locations": "node scripts/validate-locations.mjs",
+    "smoke": "node scripts/smoke-test.mjs"
   },
   "dependencies": {
     "@iconify/react": "^5.0.2",

@@ -6,13 +6,20 @@ import IconifyIcon from '../wrappers/IconifyIcon'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useEffect, useRef, useState } from 'react'
-import { servicePages, topBarContact, topBarSocialLinks } from '@/data/site-content'
+import {
+  servicePages,
+  servicesMegaMenuSections,
+  topBarContact,
+  topBarSocialLinks,
+} from '@/data/site-content'
 import { getPublishedIndustryPages, getIndustryPath } from '@/data/industries'
 import { getLocationNavItems } from '@/data/locations'
 import NavDropdown from './NavDropdown'
 import ServicesMegaMenu from './ServicesMegaMenu'
 
 const serviceSlugs = servicePages.map((page) => page.slug)
+
+type MobileNavSection = 'services' | 'industries' | 'locations'
 
 const industryNavItems = getPublishedIndustryPages().map((page) => ({
   label: page.name,
@@ -29,7 +36,7 @@ const NavTopBar = () => {
   const pathname = usePathname()
   const [menuOpen, setMenuOpen] = useState(false)
   const [servicesOpen, setServicesOpen] = useState(false)
-  const [servicesMobileOpen, setServicesMobileOpen] = useState(false)
+  const [openSection, setOpenSection] = useState<MobileNavSection | null>(null)
   const [showTopbar, setShowTopbar] = useState(true)
   const lastScrollY = useRef(0)
   const servicesTimeout = useRef<ReturnType<typeof setTimeout> | null>(null)
@@ -38,8 +45,31 @@ const NavTopBar = () => {
 
   useEffect(() => {
     setMenuOpen(false)
-    setServicesMobileOpen(false)
+    setOpenSection(null)
   }, [pathname])
+
+  // Lock body scrolling while the mobile drawer is open.
+  useEffect(() => {
+    if (!menuOpen) return
+    const originalOverflow = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+    return () => {
+      document.body.style.overflow = originalOverflow
+    }
+  }, [menuOpen])
+
+  // Close the drawer on Escape.
+  useEffect(() => {
+    if (!menuOpen) return
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setMenuOpen(false)
+        setOpenSection(null)
+      }
+    }
+    window.addEventListener('keydown', onKeyDown)
+    return () => window.removeEventListener('keydown', onKeyDown)
+  }, [menuOpen])
 
   useEffect(() => {
     if (scrollY <= 20) {
@@ -55,7 +85,12 @@ const NavTopBar = () => {
 
   const closeMenu = () => {
     setMenuOpen(false)
-    setServicesMobileOpen(false)
+    setOpenSection(null)
+  }
+
+  // Only one main accordion section stays open at a time.
+  const toggleSection = (section: MobileNavSection) => {
+    setOpenSection((current) => (current === section ? null : section))
   }
 
   const openServicesMenu = () => {
@@ -172,19 +207,57 @@ const NavTopBar = () => {
                 </div>
               </li>
 
-              <li className="brutalist-navbar__item brutalist-navbar__item--mobile-services d-lg-none">
+              <li
+                className={`brutalist-navbar__item brutalist-navbar__item--mobile-services d-lg-none ${openSection === 'services' ? 'is-mobile-open' : ''}`}>
                 <button
                   type="button"
-                  className={`brutalist-navbar__link brutalist-navbar__link--services-toggle ${servicesMobileOpen ? 'is-open' : ''}`}
-                  aria-expanded={servicesMobileOpen}
-                  onClick={() => setServicesMobileOpen((open) => !open)}>
+                  className={`brutalist-navbar__link brutalist-navbar__link--services-toggle ${openSection === 'services' ? 'is-open' : ''} ${isServicesActive ? 'is-active' : ''}`}
+                  aria-expanded={openSection === 'services'}
+                  aria-controls="mobile-services-panel"
+                  onClick={() => toggleSection('services')}>
                   Services
                   <IconifyIcon icon="tabler:chevron-down" className="brutalist-navbar__chevron" />
                 </button>
-                {servicesMobileOpen ? <ServicesMegaMenu onNavigate={closeMenu} variant="mobile" /> : null}
+                <div
+                  id="mobile-services-panel"
+                  className="mobile-nav-accordion"
+                  hidden={openSection !== 'services'}>
+                  <Link href="/services" className="mobile-nav-accordion__all" onClick={closeMenu}>
+                    All Services
+                    <IconifyIcon icon="tabler:arrow-right" aria-hidden="true" />
+                  </Link>
+                  {servicesMegaMenuSections.map((section) => (
+                    <div key={section.id} className="mobile-nav-accordion__group">
+                      <p className="mobile-nav-accordion__heading">
+                        <IconifyIcon icon={section.icon} aria-hidden="true" />
+                        {section.title}
+                      </p>
+                      <ul className="mobile-nav-accordion__list">
+                        {section.items.map((item) => (
+                          <li key={item.id}>
+                            <Link
+                              href={item.href}
+                              className={pathname === item.href ? 'is-active' : ''}
+                              onClick={closeMenu}>
+                              {item.title}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
               </li>
 
-              <NavDropdown label="Industries" items={industryNavItems} pathname={pathname} onNavigate={closeMenu} />
+              <NavDropdown
+                label="Industries"
+                items={industryNavItems}
+                pathname={pathname}
+                onNavigate={closeMenu}
+                mobileOpen={openSection === 'industries'}
+                onMobileToggle={() => toggleSection('industries')}
+                mobileId="mobile-industries-panel"
+              />
 
               <NavDropdown
                 label="Locations"
@@ -192,6 +265,9 @@ const NavTopBar = () => {
                 items={locationNavItems}
                 pathname={pathname}
                 onNavigate={closeMenu}
+                mobileOpen={openSection === 'locations'}
+                onMobileToggle={() => toggleSection('locations')}
+                mobileId="mobile-locations-panel"
               />
 
               <li className="brutalist-navbar__item">
@@ -234,6 +310,14 @@ const NavTopBar = () => {
               </li>
             </ul>
           </div>
+
+          {menuOpen ? (
+            <div
+              className="brutalist-navbar__overlay d-lg-none"
+              aria-hidden="true"
+              onClick={closeMenu}
+            />
+          ) : null}
         </div>
       </nav>
     </header>

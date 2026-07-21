@@ -778,7 +778,7 @@
 
     @media (min-width: 992px) {
         grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
-        align-items: start;
+        align-items: flex-start;
         gap: 2rem 3.5rem;
     }
 
@@ -1455,12 +1455,12 @@
     display: grid;
     grid-template-columns: 1fr;
     gap: 1.25rem;
-    align-items: start;
+    align-items: flex-start;
 
     @media (min-width: 992px) {
         grid-template-columns: 45% 55%;
         gap: 2rem;
-        align-items: start;
+        align-items: flex-start;
     }
 }
 

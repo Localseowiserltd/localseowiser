@@ -14,7 +14,7 @@
 | `node scripts/validate-locations.mjs` | Pass — 0 stubs, 13 dedicated location files |
 | `npx tsc --noEmit` | Pass |
 | `npm run build` (`next build`) | Pass — 79 static routes generated |
-| ESLint during build | Warnings only (unused vars / `any` in legacy utils) — **no build failure** |
+| ESLint during build | Pass — **zero warnings or errors** |
 | Production smoke (`next start`, localhost) | Pass — representative routes returned **200** |
 | `/packages` redirect | Pass — **308** → `/contact` |
 | Security headers on HTML responses | Pass — CSP, HSTS, nosniff, XFO, Referrer-Policy, Permissions-Policy |
@@ -44,18 +44,14 @@
 
 | ID | Issue | Notes |
 |----|-------|-------|
-| H1 | Portfolio mobile LCP / Performance | Lighthouse mobile Performance **65** on `/portfolio` (LCP ~8.7s). Hub cards use `next/image`; remaining cost is still large case-study media + client filters. |
-| H2 | Public Web3Forms access key | Form endpoint key remains client-visible by design of Web3Forms; rotate/monitor abuse; not introduced by this pass. |
-| H3 | CSP still allows `'unsafe-inline'` / `'unsafe-eval'` on scripts | Required for Next.js / runtime patterns; tighten later with nonces if feasible. |
-| H4 | Location / industry decorative empty `alt=""` | Intentional on some chrome images; ensure all *content* images keep meaningful alts (spot-check remaining). |
-| H5 | Unused `/areas/[slug]` App Router segment | Still present but generates no published pages; remove or wire only when product needs nested area URLs. |
+| H1 | Public Web3Forms access key | Form endpoint key remains client-visible by design of Web3Forms; move submission behind a Server Action or Route Handler when the owner is ready. |
+| H2 | CSP still allows `'unsafe-inline'` for scripts | Production no longer allows `'unsafe-eval'`; removing `'unsafe-inline'` requires a nonce-based Next.js CSP implementation. |
+| H3 | Location / industry decorative empty `alt=""` | Intentional on some chrome images; ensure all *content* images keep meaningful alts (spot-check remaining). |
 
 ### Medium / backlog (not blocking launch)
 
-- Legacy ESLint warnings (`service-page-seo` unused consts, `utils/array` `any`, unused import on portfolio slug page).
 - Bootstrap + large SCSS bundle still dominate CSS weight.
 - Two Yara Luxe portfolio WebPs (~500–600 KB) could not be overwritten on Windows (file lock / EPERM) during recompress; already WebP and under prior multi-MB originals.
-- Autoprefixer warning: `start` → prefer `flex-start` in SCSS.
 
 ---
 
@@ -118,7 +114,7 @@ npx lighthouse http://localhost:3456/ --form-factor=mobile --screenEmulation.mob
 | `/local-seo-oakland` | 84 | 86 | 100 | 100 | 3.3 s | 0 |
 | `/local-seo-for-dentists` | 81 | 86 | 100 | 100 | 4.1 s | 0 |
 | `/blog/what-is-local-seo` | 94 | 91 | 93 | 92 | 2.4 s | 0 |
-| `/portfolio` | 65 | 86 | 93 | 100 | 8.7 s | 0.011 |
+| `/portfolio` (post-optimization, 3 runs) | **82–87** | 86 | 96–100 | 100 | **2.8–3.4 s** | 0.005–0.033 |
 
 **Note:** Scores are lab estimates on localhost; field data (CrUX) may differ after deploy + CDN caching.
 
@@ -128,6 +124,6 @@ Forms: consultation / visibility scan fields now have persistent visually-hidden
 
 ## Launch recommendation
 
-**Ready to launch** from a technical SEO / security-headers / build standpoint, with **High** follow-ups focused on portfolio LCP and Web3Forms key hygiene.
+**Ready to launch** from a technical SEO / security-headers / build standpoint. Portfolio mobile Performance now clears the 80+ target; the main remaining High follow-up is moving Web3Forms behind a server-owned endpoint.
 
 Do not add unverifiable street addresses, review counts, hours, or ranking claims without owner verification.

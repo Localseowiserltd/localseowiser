@@ -10,7 +10,6 @@ import {
   type PortfolioListingFilterId,
 } from '@/lib/portfolio-display'
 import type { PortfolioProject } from '@/types/portfolio'
-import { Container } from 'react-bootstrap'
 
 type PortfolioListingProps = {
   projects: PortfolioProject[]
@@ -36,7 +35,7 @@ const PortfolioListing = ({ projects }: PortfolioListingProps) => {
   return (
     <>
       <section className="section portfolio-hub-projects pt-0">
-        <Container>
+        <div className="container">
           <div className="portfolio-hub-filters" role="toolbar" aria-label="Filter case studies">
             {PORTFOLIO_LISTING_FILTERS.map((item) => (
               <button
@@ -60,12 +59,12 @@ const PortfolioListing = ({ projects }: PortfolioListingProps) => {
               <p className="portfolio-hub-empty mb-0">No case studies match this filter yet.</p>
             )}
           </div>
-        </Container>
+        </div>
       </section>
 
       {showConfidentialPromo ? (
         <section className="section portfolio-hub-confidential" id="confidential-projects">
-          <Container>
+          <div className="container">
             <ScrollReveal animation="fade-up" hoverable={false}>
               <div className="portfolio-hub-confidential__card">
                 <div className="portfolio-hub-confidential__copy">
@@ -100,12 +99,12 @@ const PortfolioListing = ({ projects }: PortfolioListingProps) => {
                 </div>
               </div>
             </ScrollReveal>
-          </Container>
+          </div>
         </section>
       ) : null}
 
       <section className="portfolio-hub-stats-bar" aria-label="Portfolio statistics">
-        <Container>
+        <div className="container">
           <div className="portfolio-hub-stats-bar__grid">
             <article>
               <span className="portfolio-hub-stats-bar__icon">
@@ -151,7 +150,7 @@ const PortfolioListing = ({ projects }: PortfolioListingProps) => {
               </div>
             </article>
           </div>
-        </Container>
+        </div>
       </section>
     </>
   )
