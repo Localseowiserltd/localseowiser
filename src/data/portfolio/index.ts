@@ -11,6 +11,7 @@ import confidentialGsc04 from './confidential-gsc-04'
 import dPetCare from './d-pet-care'
 import filXpatCleaning from './fil-xpat-cleaning'
 import mbcRenovation from './mbc-renovation'
+import smartRefrigerants from './smart-refrigerants'
 import yaraLuxeInteriors from './yara-luxe-interiors'
 import { isConfidentialProject } from '@/lib/portfolio-display'
 
@@ -20,6 +21,7 @@ import { isConfidentialProject } from '@/lib/portfolio-display'
  * Do not invent metrics, testimonials, or rankings.
  */
 export const portfolioProjects: PortfolioProject[] = [
+  smartRefrigerants,
   mbcRenovation,
   filXpatCleaning,
   dPetCare,

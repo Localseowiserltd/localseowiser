@@ -22,6 +22,7 @@ export type PortfolioFilterCategory =
   | 'cleaning'
   | 'pet-care'
   | 'interior-design'
+  | 'web-design'
 
 export type PortfolioScreenshot = {
   src: string

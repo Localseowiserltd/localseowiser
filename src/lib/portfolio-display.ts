@@ -62,24 +62,27 @@ export const PORTFOLIO_LISTING_FILTERS: { id: PortfolioListingFilterId; label: s
   { id: 'cleaning', label: 'Cleaning Services' },
   { id: 'pet-care', label: 'Pet Care' },
   { id: 'interior-design', label: 'Interior Design' },
+  { id: 'web-design', label: 'Website Design & Development' },
   { id: 'confidential', label: 'Confidential Projects' },
 ]
 
+const FILTER_CATEGORY_LABELS: Record<PortfolioFilterCategory, string> = {
+  construction: 'Construction',
+  cleaning: 'Cleaning Services',
+  'pet-care': 'Pet Care',
+  'interior-design': 'Interior Design',
+  'web-design': 'Website Design & Development',
+}
+
 export const getProjectCategoryLabel = (project: PortfolioProject): string => {
   if (isConfidentialProject(project)) return 'Confidential'
-  if (project.filterCategory === 'construction') return 'Construction'
-  if (project.filterCategory === 'cleaning') return 'Cleaning Services'
-  if (project.filterCategory === 'pet-care') return 'Pet Care'
-  if (project.filterCategory === 'interior-design') return 'Interior Design'
+  if (project.filterCategory && FILTER_CATEGORY_LABELS[project.filterCategory]) {
+    return FILTER_CATEGORY_LABELS[project.filterCategory]
+  }
 
   const haystack = `${project.industry} ${project.services.join(' ')} ${project.cardTitle}`
   for (const { id, match } of INDUSTRY_FILTERS) {
-    if (match.test(haystack)) {
-      if (id === 'construction') return 'Construction'
-      if (id === 'cleaning') return 'Cleaning Services'
-      if (id === 'pet-care') return 'Pet Care'
-      if (id === 'interior-design') return 'Interior Design'
-    }
+    if (match.test(haystack)) return FILTER_CATEGORY_LABELS[id]
   }
   return project.industry
 }
@@ -95,7 +98,10 @@ export const getProjectHighlightMetric = (
 export const getProjectFilterIds = (project: PortfolioProject): PortfolioListingFilterId[] => {
   const ids = new Set<PortfolioListingFilterId>()
   if (isConfidentialProject(project)) ids.add('confidential')
-  if (project.filterCategory) ids.add(project.filterCategory)
+  if (project.filterCategory) {
+    ids.add(project.filterCategory)
+    return [...ids]
+  }
 
   const haystack = `${project.industry} ${project.services.join(' ')} ${project.cardTitle}`
   for (const { id, match } of INDUSTRY_FILTERS) {
