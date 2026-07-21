@@ -185,13 +185,9 @@ const HeroComposition = ({ page }: { page: LocationPage }) => (
 const LocationHero = ({
   page,
   isPreview,
-  breadcrumbLabel,
-  breadcrumbParent = { label: 'Areas', href: '/areas' },
 }: {
   page: LocationPage
   isPreview?: boolean
-  breadcrumbLabel: string
-  breadcrumbParent?: LocationBreadcrumbParent
 }) => {
   const title = page.h1.trim() || (isPreview ? page.name : '')
   const heroParagraphs = paragraphsFrom('', page.heroParagraphs)
@@ -217,17 +213,6 @@ const LocationHero = ({
     <section className="bg-home-3 loc-hero" aria-labelledby={title ? 'location-hero-heading' : undefined}>
       <div className="hero-bg-dots" aria-hidden="true" />
       <Container>
-        <nav className="location-breadcrumbs" aria-label="Breadcrumb">
-          <ol>
-            <li>
-              <Link href="/">Home</Link>
-            </li>
-            <li>
-              <Link href={breadcrumbParent.href}>{breadcrumbParent.label}</Link>
-            </li>
-            <li aria-current="page">{breadcrumbLabel}</li>
-          </ol>
-        </nav>
         {isPreview ? <LocationDevBanner page={page} /> : null}
         <Row className="align-items-center g-4 g-lg-5 loc-hero__row">
           <Col lg={6}>
@@ -843,7 +828,8 @@ type LocationPageViewProps = {
   isPreview?: boolean
   serviceLinks: LocationInternalLink[]
   nearbyLinks: LocationInternalLink[]
-  breadcrumbLabel: string
+  /** Kept for JSON-LD callers; the visible breadcrumb bar has been removed. */
+  breadcrumbLabel?: string
   breadcrumbParent?: LocationBreadcrumbParent
   nearbyHeading?: string
 }
@@ -853,17 +839,10 @@ const LocationPageView = ({
   isPreview,
   serviceLinks,
   nearbyLinks,
-  breadcrumbLabel,
-  breadcrumbParent,
   nearbyHeading,
 }: LocationPageViewProps) => (
   <div className="loc-page">
-    <LocationHero
-      page={page}
-      isPreview={isPreview}
-      breadcrumbLabel={breadcrumbLabel}
-      breadcrumbParent={breadcrumbParent}
-    />
+    <LocationHero page={page} isPreview={isPreview} />
     <TrustBar />
     <WhyLocalSeo page={page} />
     <IndustriesStrip page={page} />

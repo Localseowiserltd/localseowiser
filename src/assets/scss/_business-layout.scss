@@ -91,7 +91,7 @@
 .hero-main-heading {
     margin: 0 0 1rem;
     max-width: 850px;
-    font-size: clamp(36px, 5vw, 64px);
+    font-size: clamp(36px, 5vw, 64px) !important;
     font-weight: 800;
     line-height: 1.08;
     letter-spacing: -0.025em;
@@ -1468,29 +1468,6 @@
     min-width: 0;
 }
 
-.areas-we-serve-map {
-    width: 100%;
-    height: clamp(180px, 42vw, 220px);
-    max-height: 220px;
-    border-radius: 12px;
-    overflow: hidden;
-    border: 1px solid rgba($primary, 0.12);
-    background: $white;
-    box-shadow: 0 10px 28px rgba($dark, 0.06);
-
-    @media (min-width: 992px) {
-        height: 260px;
-        max-height: 260px;
-    }
-
-    iframe {
-        width: 100%;
-        height: 100%;
-        border: 0;
-        display: block;
-    }
-}
-
 .areas-we-serve-locations-col {
     display: flex;
     flex-direction: column;
@@ -1532,6 +1509,100 @@
     font-weight: 700;
     line-height: 1.25;
     color: $dark;
+
+    &__accent {
+        color: $primary;
+    }
+}
+
+.areas-we-serve-map-card {
+    background: $white;
+    border: 1px solid $gray-200;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 12px 32px rgba($dark, 0.06);
+
+    &__footer {
+        display: flex;
+        flex-direction: column;
+        gap: 0.85rem;
+        padding: 1rem 1.15rem 1.15rem;
+        background: #fff4ee;
+
+        @media (min-width: 768px) {
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+
+    &__footer-copy {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.7rem;
+        font-size: 0.9rem;
+        line-height: 1.5;
+        color: $gray-700;
+
+        strong {
+            color: $dark;
+        }
+    }
+
+    &__footer-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background: rgba($primary, 0.12);
+        color: $primary;
+        font-size: 18px;
+        flex-shrink: 0;
+    }
+
+    &__cta {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+        padding: 0.55rem 0.95rem;
+        border: 1px solid $primary;
+        border-radius: 999px;
+        color: $primary;
+        font-size: 0.88rem;
+        font-weight: 700;
+        white-space: nowrap;
+        background: $white;
+
+        &:hover {
+            background: $primary;
+            color: $white;
+        }
+    }
+}
+
+.areas-we-serve-map {
+    width: 100%;
+    height: clamp(260px, 48vw, 360px);
+    max-height: none;
+    border-radius: 0;
+    overflow: hidden;
+    border: none;
+    background: #e8eef8;
+    box-shadow: none;
+
+    @media (min-width: 992px) {
+        height: 340px;
+        max-height: none;
+    }
+
+    iframe {
+        width: 100%;
+        height: 100%;
+        border: 0;
+        display: block;
+    }
 }
 
 .areas-we-serve-pill {
@@ -1539,16 +1610,17 @@
     align-items: center;
     gap: 0.45rem;
     width: 100%;
-    padding: 0.65rem 0.9rem;
+    padding: 0.75rem 0.95rem;
     background: $white;
-    border: 1px solid rgba($primary, 0.18);
-    border-radius: 8px;
-    color: $gray-800;
-    font-size: 0.88rem;
-    font-weight: 500;
+    border: 1px solid $gray-200;
+    border-radius: 12px;
+    color: $dark;
+    font-size: 0.92rem;
+    font-weight: 600;
     line-height: 1.3;
     text-decoration: none;
     white-space: normal;
+    box-shadow: 0 4px 14px rgba($dark, 0.04);
     transition: border-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
 
     svg {
@@ -1569,19 +1641,109 @@
         cursor: default;
 
         &:hover {
-            border-color: rgba($primary, 0.18);
-            color: $gray-800;
+            border-color: $gray-200;
+            color: $dark;
             background-color: $white;
-            box-shadow: none;
+            box-shadow: 0 4px 14px rgba($dark, 0.04);
             transform: none;
         }
     }
 }
 
 .areas-we-serve-tail {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-top: 0.35rem;
+    padding: 1rem 1.1rem;
+    border-radius: 14px;
+    background: #f3f5f9;
     color: $gray-700;
-    font-size: 0.9rem;
-    line-height: 1.6;
+    font-size: 0.92rem;
+    line-height: 1.55;
+
+    strong {
+        color: $dark;
+    }
+
+    &__icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background: rgba($primary, 0.12);
+        color: $primary;
+        font-size: 18px;
+        flex-shrink: 0;
+    }
+}
+
+.areas-we-serve-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.9rem;
+    margin-top: 1.75rem;
+
+    @media (min-width: 992px) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    &__card {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.35rem;
+        padding: 1.15rem 1.1rem;
+        border-radius: 14px;
+        background: $white;
+        border: 1px solid $gray-200;
+        box-shadow: 0 6px 18px rgba($dark, 0.04);
+
+        strong {
+            font-size: 1.45rem;
+            font-weight: 800;
+            color: $dark;
+            line-height: 1.2;
+        }
+
+        span:last-child {
+            font-size: 0.9rem;
+            color: $gray-600;
+        }
+    }
+
+    &__icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 12px;
+        font-size: 20px;
+        margin-bottom: 0.25rem;
+    }
+
+    &__card--orange .areas-we-serve-stats__icon {
+        background: rgba($primary, 0.12);
+        color: $primary;
+    }
+
+    &__card--blue .areas-we-serve-stats__icon {
+        background: rgba(#3b82f6, 0.12);
+        color: #2563eb;
+    }
+
+    &__card--green .areas-we-serve-stats__icon {
+        background: rgba(#22c55e, 0.12);
+        color: #16a34a;
+    }
+
+    &__card--purple .areas-we-serve-stats__icon {
+        background: rgba(#8b5cf6, 0.12);
+        color: #7c3aed;
+    }
 }
 
 .home-investment-panel,

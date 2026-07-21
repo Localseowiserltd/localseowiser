@@ -33,20 +33,21 @@ body {
 
 h1,
 .h1 {
-    font-size: 52px !important;
-    line-height: 1.2 !important;
+    font-size: $h1-font-size !important;
+    line-height: $h1-line-height !important;
+    letter-spacing: -0.03em;
 }
 
 h2,
 .h2 {
-    font-size: 42px !important;
-    line-height: 1.25 !important;
+    font-size: $h2-font-size !important;
+    line-height: $h2-line-height !important;
 }
 
 h3,
 .h3 {
-    font-size: 28px !important;
-    line-height: 1.3 !important;
+    font-size: $h3-font-size !important;
+    line-height: $h3-line-height !important;
 }
 
 p,
@@ -101,9 +102,9 @@ p,
 .section-title,
 .services-panel-title,
 .process-section__title {
-    font-size: clamp(1.75rem, 3vw, 2.35rem) !important;
+    font-size: $h2-font-size !important;
     font-weight: 700 !important;
-    line-height: 1.25 !important;
+    line-height: $h2-line-height !important;
     color: $dark;
     margin-bottom: 0.5rem;
 }
@@ -150,9 +151,9 @@ p,
 
     h2,
     h3 {
-        font-size: clamp(1.75rem, 3vw, 2.35rem) !important;
+        font-size: $h2-font-size !important;
         font-weight: 700 !important;
-        line-height: 1.25 !important;
+        line-height: $h2-line-height !important;
         color: $dark;
     }
 
@@ -200,11 +201,15 @@ p,
     border-radius: 0 !important;
 }
 
-// Uniform card heading size site-wide (matches Why Choose / What's Included cards)
+// Uniform card heading size site-wide (matches Shopify / snap card titles)
 [class*='card__title'],
 [class*='card-title'],
 .services-grid-title,
-.portfolio-project-card__name {
-    font-size: 1.1rem !important;
-    line-height: 1.3 !important;
+.portfolio-project-card__name,
+.gmp-included__title,
+.gmp-why__title,
+.gmp-process__title,
+.lseo-why-card__title {
+    font-size: $h3-font-size !important;
+    line-height: $h3-line-height !important;
 }

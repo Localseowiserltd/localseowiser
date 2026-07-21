@@ -1,51 +1,65 @@
 /**
- * Contact page copy — concise, no unverified promises.
+ * Contact page copy — matched to current design snap.
  */
 
 export const contactPageMeta = {
-  title: 'Contact Local SEO Wiser | Request a Local SEO Review',
+  title: 'Contact Local SEO Wiser | Free Consultation',
   description:
-    'Contact Local SEO Wiser to discuss your website, Google Business Profile, local search visibility, and digital marketing goals.',
+    'Contact Local SEO Wiser for a free consultation. Call, email, or send a message about Local SEO, Google Ads, web design, and digital growth.',
 }
 
 export const contactPageHero = {
-  eyebrow: 'Contact Local SEO Wiser',
-  title: 'Let’s Talk About Your Local Visibility',
+  eyebrow: 'Contact Us',
+  title: "Let's Grow Your Business Together",
+  titleAccent: 'Business Together',
   description:
-    'Tell us where your business is struggling to get found. We’ll review your website, Google Business Profile, and local search presence, then explain the clearest next steps.',
-  secondary:
-    'Serving businesses in Pittsburgh, across the United States, and selected international markets.',
+    'Tell us about your goals and we will help you choose the right mix of Local SEO, ads, content, and website services to attract more customers.',
+  trustItems: [
+    { label: 'Free Consultation', icon: 'tabler:message-circle' },
+    { label: '24/7 Support', icon: 'tabler:headset' },
+    { label: 'Custom Strategies', icon: 'tabler:target' },
+    { label: '100% Transparency', icon: 'tabler:eye' },
+  ],
+  image: '/contact-hub-hero.png',
+  imageAlt: 'Contact illustration with envelope, phone, and paper plane',
 }
 
 export const contactPageMethods = {
-  title: 'Choose the Easiest Way to Reach Us',
+  title: 'Get in Touch',
   cards: [
     {
       id: 'phone',
       icon: 'tabler:phone',
-      title: 'Phone',
+      title: 'Call Us',
       type: 'phones' as const,
+      note: 'Mon–Fri, 9:00 AM – 6:00 PM',
     },
     {
       id: 'email',
       icon: 'tabler:mail',
-      title: 'Email',
+      title: 'Email Us',
       type: 'email' as const,
     },
     {
       id: 'location',
       icon: 'tabler:map-pin',
-      title: 'Location',
+      title: 'Office Location',
       type: 'location' as const,
-      value: 'Pittsburgh, Pennsylvania, USA',
+      value: 'Pittsburgh, PA',
+    },
+    {
+      id: 'hours',
+      icon: 'tabler:clock',
+      title: 'Business Hours',
+      type: 'location' as const,
+      value: 'Mon–Fri 9:00 AM – 6:00 PM',
     },
   ],
 }
 
 export const contactPageReview = {
-  title: 'Request Your Free Local SEO Review',
-  intro:
-    'Share a few details about your business and where you want to improve visibility. We’ll use that information to review your current local search presence before the first conversation.',
+  title: 'Send Us a Message',
+  intro: 'Share a few details and we will get back with clear next steps for your business.',
   checklist: [
     'Your business name and website',
     'The services or products you offer',
@@ -63,59 +77,71 @@ export const contactFormServices = [
   'Other',
 ] as const
 
+export const contactPageMap = {
+  title: 'Our Office',
+  address: 'Pittsburgh, PA, United States',
+  directionsLabel: 'Get Directions',
+  directionsHref: 'https://www.google.com/maps/search/?api=1&query=Local+SEO+Wiser+Pittsburgh',
+  embedSrc:
+    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3037.5334164650594!2d-80.00688940986495!3d40.41918598185811!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8834f1e08e63b315%3A0x8e82080820c54157!2sLocal%20Seo%20Wiser!5e0!3m2!1sen!2sae!4v1784604838823!5m2!1sen!2sae',
+}
+
 export const contactPageNextSteps = {
   title: 'What Happens After You Contact Us?',
   steps: [
     {
       number: '01',
       title: 'Initial Review',
-      description:
-        'We review your website, Google Business Profile, and the information you submitted.',
+      description: 'We review your website, Google Business Profile, and the information you submitted.',
     },
     {
       number: '02',
       title: 'Discovery Call',
-      description:
-        'We discuss your goals, target locations, current challenges, and priorities.',
+      description: 'We discuss your goals, target locations, current challenges, and priorities.',
     },
     {
       number: '03',
       title: 'Clear Recommendation',
-      description:
-        'You receive a practical recommendation based on your business, market, and needs.',
+      description: 'You receive a practical recommendation based on your business, market, and needs.',
     },
     {
       number: '04',
       title: 'You Decide',
-      description:
-        'There is no pressure. You can review the recommendation and decide whether to move forward.',
+      description: 'There is no pressure. You can review the recommendation and decide whether to move forward.',
     },
   ],
 }
 
 export const contactPageFaq = {
-  eyebrow: 'FAQ',
-  title: 'Contact Questions',
+  eyebrow: 'Frequently Asked Questions',
+  title: 'Common Contact Questions',
   items: [
     {
-      question: 'How quickly will I receive a response?',
-      answer:
-        'We aim to reply within one to two business days after reviewing your message. Response timing can vary with volume and how complete the details you share are.',
+      question: 'How quickly will you reply?',
+      answer: 'We typically respond within one business day. Urgent requests are prioritized whenever possible.',
     },
     {
-      question: 'Do you offer a free review?',
-      answer:
-        'Yes. We offer a free preliminary review of your local search presence based on the information you submit. It is meant to clarify next steps — not a full paid project scope.',
+      question: 'Is the consultation really free?',
+      answer: 'Yes. Your first consultation is free and focused on understanding your goals and recommending practical next steps.',
     },
     {
-      question: 'Do you work with businesses outside Pittsburgh?',
-      answer:
-        'Yes. Pittsburgh is a primary market, and we also work with businesses across the United States and selected international markets.',
+      question: 'Do you only work with Pittsburgh businesses?',
+      answer: 'Pittsburgh is our home market, but we also support businesses across the United States and selected international markets.',
     },
     {
-      question: 'What happens after I submit the form?',
-      answer:
-        'We review your details, then follow up to discuss what we found and whether a discovery call makes sense. There is no obligation to continue.',
+      question: 'What information should I include in the form?',
+      answer: 'Share your business name, website if you have one, the services you need, and a short note about your current challenge or goal.',
+    },
+    {
+      question: 'Can I schedule a call instead of emailing?',
+      answer: 'Yes. Call us directly or send a message and we will schedule a convenient time to talk.',
     },
   ],
+}
+
+export const contactPageSideCta = {
+  title: 'Ready to Grow Your Business?',
+  text: 'Get a free consultation and a clear plan for the services that will help you attract more customers.',
+  buttonLabel: 'Get Free Consultation',
+  buttonHref: 'https://wa.me/14126637288',
 }

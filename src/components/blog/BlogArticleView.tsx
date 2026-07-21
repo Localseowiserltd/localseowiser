@@ -40,20 +40,6 @@ const BlogArticleView = ({ post, relatedPosts, previous, next }: BlogArticleView
 
       <article className="section blog-article-section">
         <Container>
-          <nav className="blog-breadcrumbs" aria-label="Breadcrumb">
-            <ol className="blog-breadcrumbs__list">
-              <li>
-                <Link href="/">Home</Link>
-              </li>
-              <li>
-                <Link href="/blog">Blog</Link>
-              </li>
-              <li aria-current="page">
-                <span>{post.title}</span>
-              </li>
-            </ol>
-          </nav>
-
           <div className={`blog-article-layout${toc.length > 0 ? ' blog-article-layout--with-toc' : ''}`}>
             {toc.length > 0 ? (
               <aside className="blog-article-layout__toc">

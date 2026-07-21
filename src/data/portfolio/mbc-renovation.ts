@@ -32,6 +32,7 @@ const mbcRenovation: PortfolioProject = {
   featured: true,
   clientName: 'MBC Renovation',
   industry: 'Renovation and Construction',
+  filterCategory: 'construction',
   country: 'UAE',
   location: 'Dubai, UAE',
   liveUrl: 'https://mbcrenovation.ae',

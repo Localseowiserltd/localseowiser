@@ -1,10 +1,11 @@
 'use client'
 
-import VisibilityScanForm from '@/components/forms/VisibilityScanForm'
 import { Container } from 'react-bootstrap'
 import CountUp from 'react-countup'
 import { useInView } from 'react-intersection-observer'
-import { contactInfo, contactTelHref, homeCtaSection } from '@/data/site-content'
+import IconifyIcon from '@/components/wrappers/IconifyIcon'
+import Image from 'next/image'
+import { contactInfo, contactTelHref } from '@/data/site-content'
 
 type HeroStatCounterProps = {
   end: number
@@ -24,49 +25,61 @@ export const HeroStatCounter = ({ end, suffix, decimals, className }: HeroStatCo
   )
 }
 
+const homeHero = {
+  eyebrow: 'Pittsburgh Digital Marketing Agency',
+  title: 'Rank Higher. Get More Leads. Grow Your Business.',
+  lead: 'Local SEO, Google Ads, websites, and digital marketing that help Pittsburgh businesses get found and convert more customers.',
+  trustItems: [
+    'Serving Pittsburgh businesses',
+    'No long-term contracts',
+    'Transparent reporting',
+    'Free consultation',
+  ],
+  image: '/services-hub-hero.png',
+  imageAlt: 'SEO growth dashboard showing leads and rankings',
+}
+
 const Hero = () => {
   return (
-    <section className="bg-home-3" id="home">
-      <div className="hero-bg-dots" aria-hidden="true" />
+    <section className="home-hub-hero" id="home">
       <Container>
-        <div className="hero-centered">
-          <p className="hero-eyebrow">Pittsburgh Local SEO Agency</p>
-
-          <h1 className="hero-main-heading">Local SEO Services for Pittsburgh Businesses</h1>
-
-          <p className="hero-lead">
-            Get more calls, qualified leads, and stronger visibility in Google Maps and local search.
-          </p>
-
-          <p className="hero-subhead">
-            We optimize your Google Business Profile, target the local keywords your customers actually search, clean up
-            citations for consistent business listings, strengthen on-page SEO, and provide transparent reporting tied to
-            real inquiries. You get a clear plan, steady execution, and visibility that compounds—without vanity metrics
-            or locked-in contracts.
-          </p>
-
-          <div className="hero-cta-row">
-            <a href="#visibility-scan-form" className="btn btn-primary fw-semibold hero-cta-primary">
-              Get My Free Pittsburgh Visibility Scan
-            </a>
-            <a href={contactTelHref} className="hero-cta-secondary">
-              Call {contactInfo.phone}
-            </a>
+        <div className="home-hub-hero__grid">
+          <div className="home-hub-hero__copy">
+            <p className="section-eyebrow mb-3">{homeHero.eyebrow}</p>
+            <h1 className="home-hub-hero__title">{homeHero.title}</h1>
+            <p className="home-hub-hero__lead">{homeHero.lead}</p>
+            <div className="home-hub-hero__actions">
+              <a
+                href="https://wa.me/14126637288"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="home-hub-hero__btn home-hub-hero__btn--primary">
+                Get Free Consultation
+                <IconifyIcon icon="tabler:arrow-right" aria-hidden="true" />
+              </a>
+              <a href={contactTelHref} className="home-hub-hero__btn home-hub-hero__btn--outline">
+                <IconifyIcon icon="tabler:phone" aria-hidden="true" />
+                Call Us: {contactInfo.phone}
+              </a>
+            </div>
+            <ul className="home-hub-hero__trust list-unstyled mb-0">
+              {homeHero.trustItems.map((item) => (
+                <li key={item}>
+                  <IconifyIcon icon="tabler:circle-check-filled" aria-hidden="true" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
           </div>
-
-          <ul className="hero-trust-badges" aria-label="Trust indicators">
-            <li>Serving Pittsburgh businesses</li>
-            <li>No long-term contracts</li>
-            <li>Human-written SEO</li>
-            <li>Transparent reporting</li>
-          </ul>
-
-          <div className="hero-form-card">
-            <VisibilityScanForm
-              id="visibility-scan-form"
-              buttonLabel={homeCtaSection.buttonLabel}
-              layout="horizontal"
-              showNote={false}
+          <div className="home-hub-hero__media">
+            <Image
+              src={homeHero.image}
+              alt={homeHero.imageAlt}
+              width={1100}
+              height={820}
+              className="home-hub-hero__img"
+              priority
+              unoptimized
             />
           </div>
         </div>

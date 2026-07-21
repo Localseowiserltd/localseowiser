@@ -57,13 +57,40 @@ const INDUSTRY_FILTERS: { id: PortfolioFilterCategory; match: RegExp }[] = [
 export type PortfolioListingFilterId = 'all' | 'confidential' | PortfolioFilterCategory
 
 export const PORTFOLIO_LISTING_FILTERS: { id: PortfolioListingFilterId; label: string }[] = [
-  { id: 'all', label: 'All' },
+  { id: 'all', label: 'All Projects' },
   { id: 'construction', label: 'Construction' },
-  { id: 'cleaning', label: 'Cleaning' },
+  { id: 'cleaning', label: 'Cleaning Services' },
   { id: 'pet-care', label: 'Pet Care' },
   { id: 'interior-design', label: 'Interior Design' },
   { id: 'confidential', label: 'Confidential Projects' },
 ]
+
+export const getProjectCategoryLabel = (project: PortfolioProject): string => {
+  if (isConfidentialProject(project)) return 'Confidential'
+  if (project.filterCategory === 'construction') return 'Construction'
+  if (project.filterCategory === 'cleaning') return 'Cleaning Services'
+  if (project.filterCategory === 'pet-care') return 'Pet Care'
+  if (project.filterCategory === 'interior-design') return 'Interior Design'
+
+  const haystack = `${project.industry} ${project.services.join(' ')} ${project.cardTitle}`
+  for (const { id, match } of INDUSTRY_FILTERS) {
+    if (match.test(haystack)) {
+      if (id === 'construction') return 'Construction'
+      if (id === 'cleaning') return 'Cleaning Services'
+      if (id === 'pet-care') return 'Pet Care'
+      if (id === 'interior-design') return 'Interior Design'
+    }
+  }
+  return project.industry
+}
+
+export const getProjectHighlightMetric = (
+  project: PortfolioProject,
+): { value: string; label: string } | null => {
+  const metric = project.results.metrics[0]
+  if (!metric) return null
+  return { value: metric.value, label: metric.title }
+}
 
 export const getProjectFilterIds = (project: PortfolioProject): PortfolioListingFilterId[] => {
   const ids = new Set<PortfolioListingFilterId>()
@@ -81,7 +108,7 @@ export const projectMatchesFilter = (
   project: PortfolioProject,
   filter: PortfolioListingFilterId,
 ): boolean => {
-  if (filter === 'all') return true
+  if (filter === 'all') return !isConfidentialProject(project)
   return getProjectFilterIds(project).includes(filter)
 }
 

@@ -10,20 +10,40 @@ export const aboutPageMeta = {
 
 export const aboutPageHero = {
   badge: 'About Us',
-  title: 'About Local SEO Wiser',
+  title: 'We Help Businesses Grow with Smart Digital Solutions',
+  titleAccent: 'Digital Solutions',
   description:
-    'We help local businesses get found on Google Search and Maps — with clear strategy, practical execution, and honest reporting.',
+    'Local SEO Wiser helps businesses get found online with practical Local SEO, Google Maps optimization, websites, and digital marketing built for real growth.',
+  trustItems: [
+    { label: 'Result Driven Strategies', icon: 'tabler:target' },
+    { label: 'Transparent Reporting', icon: 'tabler:report-analytics' },
+    { label: 'Dedicated Support', icon: 'tabler:headset' },
+    { label: 'Affordable Pricing', icon: 'tabler:coin' },
+  ],
+  image: '/about-hub-hero.png',
+  imageAlt: 'Digital growth dashboard illustration',
+  primaryCta: { label: 'Get Free Consultation', href: 'https://wa.me/14126637288' },
+  secondaryCta: { label: 'Call Us: +1 412 663 7288', href: 'tel:+14126637288' },
 }
 
+export const aboutPageStats = [
+  { value: '100+', label: 'Happy Clients', icon: 'tabler:users' },
+  { value: '140+', label: 'Projects Completed', icon: 'tabler:briefcase' },
+  { value: '98%', label: 'Client Satisfaction', icon: 'tabler:thumb-up' },
+  { value: '10+', label: 'Years Experience', icon: 'tabler:award' },
+]
+
 export const aboutPageWhoWeAre = {
-  eyebrow: 'Who We Are',
-  title: 'A local SEO agency serving businesses from Pittsburgh',
+  eyebrow: 'Our Story',
+  title: 'Built to Help Local Businesses Get Found and Grow',
   lead:
     'Local SEO Wiser helps local businesses show up when nearby customers search for their services on Google Search and Google Maps.',
   paragraphs: [
     'We work with owners and growing brands who want practical outcomes: more visibility, more inquiries, and clearer next steps — not vanity dashboards.',
     'Our work centers on Google Business Profile strength, local keyword targeting, citation consistency, on-page improvements, and reporting you can act on.',
   ],
+  ctaLabel: 'Our Process',
+  ctaHref: '#about-process',
 }
 
 export const aboutPageBeliefs = {
@@ -114,28 +134,38 @@ export const aboutPageClients = {
 }
 
 export const aboutPageTrust = {
-  eyebrow: 'Why Businesses Choose Us',
-  title: 'Why businesses choose Local SEO Wiser',
+  eyebrow: 'Why Choose Us',
+  title: 'Why Businesses Choose Local SEO Wiser',
   items: [
     {
-      title: 'Pittsburgh market focus',
-      description: 'We understand competitive local categories and neighborhood-level search behavior across the metro.',
-      icon: 'tabler:building-store',
+      title: 'Experienced Team',
+      description: 'Specialists across Local SEO, Google Ads, websites, and digital marketing.',
+      icon: 'tabler:users-group',
     },
     {
-      title: 'Outcomes over vanity metrics',
-      description: 'We prioritize visibility and inquiry signals that support real business conversations.',
-      icon: 'tabler:phone-call',
+      title: 'Data-Driven Approach',
+      description: 'Every recommendation is guided by analytics, testing, and measurable outcomes.',
+      icon: 'tabler:chart-dots',
     },
     {
-      title: 'Clear monthly reporting',
-      description: 'Updates are written to show what changed, why it matters, and what comes next.',
+      title: 'Transparent Reporting',
+      description: 'Clear monthly updates that show what changed and why it matters.',
       icon: 'tabler:report-analytics',
     },
     {
-      title: 'Multi-market experience',
-      description: 'We support campaigns for service businesses across the US, UK, Canada, and Australia.',
-      icon: 'tabler:world',
+      title: 'Affordable Pricing',
+      description: 'Practical packages designed for local and growing businesses.',
+      icon: 'tabler:coin',
+    },
+    {
+      title: 'Dedicated Support',
+      description: 'Direct communication so you always know what is happening.',
+      icon: 'tabler:headset',
+    },
+    {
+      title: 'Proven Results',
+      description: 'A track record of helping businesses earn more visibility and leads.',
+      icon: 'tabler:trophy',
     },
   ],
 }
@@ -173,13 +203,12 @@ export const aboutPageExperience = {
 }
 
 export const aboutPageClosing = {
-  title: 'Ready to talk about your local visibility?',
+  title: 'Ready to Grow Your Business?',
   paragraphs: [
-    'If your business is not showing up clearly in Google Search or Maps, we can review where you stand and what to fix first.',
-    'Start with a free audit. We will share what we find before you commit to ongoing work.',
+    'Get a free consultation and a clear plan for the services that will help you attract more customers.',
   ],
   cta: {
-    label: 'Get My Free Audit',
-    href: '/contact',
+    label: 'Get Free Consultation',
+    href: 'https://wa.me/14126637288',
   },
 }

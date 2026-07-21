@@ -32,6 +32,7 @@ const filXpatCleaning: PortfolioProject = {
   featured: true,
   clientName: 'Fil Xpat Cleaning Service',
   industry: 'Residential & Commercial Cleaning Services',
+  filterCategory: 'cleaning',
   country: 'UAE',
   location: 'Dubai, UAE',
   liveUrl: 'https://filxpatcleaning.ae',

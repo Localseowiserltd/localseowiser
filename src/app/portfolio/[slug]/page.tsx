@@ -13,7 +13,6 @@ import {
   buildPortfolioWebPageSchema,
 } from '@/lib/portfolio-seo'
 import type { Metadata } from 'next'
-import Link from 'next/link'
 import { notFound } from 'next/navigation'
 
 type PortfolioCaseStudyPageProps = {
@@ -46,19 +45,6 @@ const PortfolioCaseStudyPage = async ({ params }: PortfolioCaseStudyPageProps) =
 
   return (
     <SiteShell>
-      <nav className="case-study-breadcrumbs" aria-label="Breadcrumb">
-        <div className="container">
-          <ol>
-            <li>
-              <Link href="/">Home</Link>
-            </li>
-            <li>
-              <Link href="/portfolio">Portfolio</Link>
-            </li>
-            <li aria-current="page">{getProjectDisplayName(project)}</li>
-          </ol>
-        </div>
-      </nav>
       <CaseStudyView project={project} relatedProjects={relatedProjects} />
       <script
         type="application/ld+json"

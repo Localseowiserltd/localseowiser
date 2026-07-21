@@ -1,6 +1,5 @@
-import PageHeader from '@/components/layout/PageHeader'
 import SiteShell from '@/components/layout/SiteShell'
-import { aboutPageHero, aboutPageMeta } from '@/data/about'
+import { aboutPageMeta } from '@/data/about'
 import { buildAboutPageSchemas, buildHubPageMetadata } from '@/lib/hub-seo'
 import type { Metadata } from 'next'
 import AboutPageSections from './AboutPageSections'
@@ -24,7 +23,6 @@ const AboutPage = () => {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
         />
       ))}
-      <PageHeader badge={aboutPageHero.badge} title={aboutPageHero.title} description={aboutPageHero.description} />
       <AboutPageSections />
     </SiteShell>
   )

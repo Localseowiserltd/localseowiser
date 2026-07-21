@@ -4,10 +4,9 @@ export const portfolioListingMeta: PortfolioListingMeta = {
   title: 'SEO Case Studies & Client Results | Local SEO Wiser',
   description:
     'Explore Local SEO case studies, website projects, and Google Business Profile success stories that demonstrate real business growth.',
-  h1: 'SEO Case Studies & Client Results',
+  h1: 'Real Results for Local Businesses',
   intro:
-    'This portfolio features verified client projects with real screenshots and platform data. We only publish work we can substantiate — no placeholder projects and no invented results.',
-  ctaTitle: 'Have a website or local SEO project in mind?',
-  ctaText:
-    'Share your goals and we will outline a practical website and search plan based on your market — without inflated promises.',
+    'We partner with local businesses to improve visibility, attract more customers, and grow revenue through proven SEO strategies.',
+  ctaTitle: 'Ready to Grow Your Business?',
+  ctaText: 'Get a free consultation and let our experts create a custom strategy that drives real results.',
 }

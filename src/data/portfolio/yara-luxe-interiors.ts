@@ -33,6 +33,7 @@ const yaraLuxeInteriors: PortfolioProject = {
   featured: true,
   clientName: 'Yara Luxe Interiors',
   industry: 'Luxury Interior Design',
+  filterCategory: 'interior-design',
   country: 'Australia',
   location: 'Melbourne, Victoria, Australia',
   liveUrl: 'https://yaraluxeinteriors.com.au',

@@ -32,6 +32,7 @@ const dPetCare: PortfolioProject = {
   featured: true,
   clientName: 'D Pet Care LLC',
   industry: 'Pet Care Services',
+  filterCategory: 'pet-care',
   country: 'UAE',
   location: 'Dubai, UAE',
   liveUrl: 'https://dpetcare.ae',

@@ -54,12 +54,14 @@ export const locationPages: LocationPage[] = [
   ...LOCATION_STUBS.map((stub) => createEmptyLocationPage(stub)),
 ]
 
-/** Listing chrome only — empty until owner supplies approved listing copy. */
+/** Listing chrome — areas hub page. */
 export const locationListingMeta: LocationListingMeta = {
-  title: '',
-  description: '',
-  h1: '',
-  intro: '',
+  title: 'Local SEO Locations in Pittsburgh | Areas We Serve',
+  description:
+    'Explore Local SEO services across Pittsburgh neighborhoods and surrounding communities. Find your area and see how we help local businesses get found.',
+  h1: 'Serving the Entire Pittsburgh Metro',
+  intro:
+    'We help businesses throughout Pittsburgh and the surrounding communities with localized SEO strategies that improve visibility where customers actually search.',
 }
 
 assertNoInvalidApprovedLocations(locationPages)
