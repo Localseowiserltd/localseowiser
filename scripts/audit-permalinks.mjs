@@ -158,7 +158,6 @@ const hubs = [
   '/terms-and-conditions',
   '/refund-policy',
   '/services',
-  '/packages',
 ]
 
 console.log('=== HUB PAGE EXISTENCE ===')

@@ -52,454 +52,495 @@ export const seoServicePages = [
     slug: 'local-seo',
     variant: 'full',
     category: 'Search Engine Optimization',
-    title: 'Local SEO Services in Pittsburgh',
+    title: 'Get Found by More Local Customers in Pittsburgh',
     metaTitle: 'Local SEO Services Pittsburgh | More Calls & Local Leads',
     metaDescription:
       'Increase your visibility with Local SEO Services in Pittsburgh. Rank higher in Google Maps, attract local customers, and grow your business with Local SEO Wiser.',
     description:
-      'Local SEO services that turn Pittsburgh searches into customers — Map Pack visibility, citations, location content, and reporting tied to real leads.',
+      'Local SEO Wiser helps businesses across Pittsburgh improve their visibility where customers are searching most—Google Search and Google Maps. We build practical Local SEO strategies that combine Google Business Profile optimization, local content, citation management, technical improvements, and neighborhood-focused targeting to help you generate more qualified calls, enquiries, and long-term business growth.',
     intro:
-      'Local SEO services that turn Pittsburgh searches into customers — Map Pack visibility, citations, location content, and reporting tied to real leads.',
+      'Local SEO Wiser helps businesses across Pittsburgh improve their visibility where customers are searching most—Google Search and Google Maps. We build practical Local SEO strategies that combine Google Business Profile optimization, local content, citation management, technical improvements, and neighborhood-focused targeting to help you generate more qualified calls, enquiries, and long-term business growth.',
     icon: 'tabler:map-pin',
     imageAlt: 'Local SEO service',
-    heroLayout: 'centered',
+    heroLayout: 'showcase',
     hideStats: true,
-    heroParagraphs: [
-      '93% of local customers check Google before they call, visit, or buy. If your business isn\'t showing up in the Map Pack, local organic results, or Google\'s AI Overviews — your competitors are getting the calls that should be yours.',
-      'We build local SEO systems that put your business in front of ready-to-buy customers exactly when they\'re searching.',
-    ],
-    heroPrimaryCta: { label: 'Get My Free Pittsburgh Visibility Scan', href: '/contact' },
-    heroSecondaryCta: { label: 'Or call us → +1 412 663 7288', href: 'tel:+14126637288' },
+    challengeImage: '/hero-card-1.png',
+    challengeImageDimensions: { width: 1200, height: 900 },
+    idealFitImage: '/images/about/localseo-wiser-office.webp',
+    idealFitImageDimensions: { width: 1200, height: 900 },
+    heroPrimaryCta: { label: 'Get My Free Consultation', href: '/contact' },
+    heroSecondaryCta: { label: 'Call Us: +1 412 663 7288', href: 'tel:+14126637288' },
     heroTrustItems: [
-      { label: 'No long contracts', icon: 'tabler:lock-open' },
-      { label: 'Real Pittsburgh team', icon: 'tabler:map-pin' },
-      { label: 'Free scan, no obligation', icon: 'tabler:clipboard-check' },
+      { label: 'No Long-Term Contracts', icon: 'tabler:circle-check' },
+      { label: 'Google Business Profile Experts', icon: 'tabler:circle-check' },
+      { label: 'Transparent Monthly Reporting', icon: 'tabler:circle-check' },
     ],
     challenge: {
       eyebrow: 'The Problem',
-      title: 'The problem most local businesses face',
+      title: 'The Problem Most Local Businesses Face',
       paragraphs: [
-        'You\'ve got a great Pittsburgh business. Real reviews, real customers, real results. But online, you\'re invisible next to competitors with weaker service and worse reviews — just because their SEO is dialed in and yours isn\'t.',
-        'Pittsburgh isn\'t one market — it\'s dozens. Someone searching in Shadyside gets different results than someone in the North Shore or Cranberry. Most agencies treat the whole metro the same way. We don\'t — we build your strategy around how each Pittsburgh neighborhood actually searches: Shadyside, Lawrenceville, Oakland, the Strip District, Mt. Lebanon, Cranberry, Monroeville, Robinson Township, the North and South Hills, and beyond.',
+        'You may offer outstanding products or services, but that doesn\'t automatically mean customers can find you online. Every day, people search Google for businesses near them, and most choose companies that appear at the top of local search results or inside Google Maps.',
+        'Without a well-optimized Google Business Profile, consistent business information, location-focused website content, and a strong Local SEO strategy, your competitors can continue attracting customers who were looking for businesses just like yours.',
+        'Many Pittsburgh businesses lose valuable calls, enquiries, and opportunities simply because their online visibility doesn\'t reflect the quality of their work.',
       ],
     },
     idealFit: {
-      eyebrow: 'Common Signs',
-      title: 'It\'s costing you money if...',
+      eyebrow: 'Our Solution',
+      title: 'It\'s Costing You Business If You\'re Not Visible Online',
       items: [
-        'Your Google Business Profile hasn\'t been touched in months (or ever)',
-        'You rank for your business name, but not for what customers actually search',
-        'Competitors show up in the Map Pack, and you don\'t — even in your own neighborhood',
-        'Your website has zero location-specific content for the areas you actually serve',
-        'Reviews are trickling in randomly instead of being part of a system',
+        'People are already searching for the services you offer.',
+        'If your business isn\'t visible, those customers often choose a competitor.',
+        'Local SEO helps increase qualified calls, enquiries, and website visits.',
+        'We improve your Google Business Profile, local website signals, and online presence to help your business become easier to find.',
       ],
     },
-    idealFitClosing:
-      'None of this is permanent. It\'s fixable — with the right strategy, applied consistently.',
     splitOutcomes: true,
     outcomes: {
-      eyebrow: 'What You Gain',
-      title: 'Local SEO built for how Pittsburgh actually searches',
+      eyebrow: 'Why Local SEO Matters',
+      title: 'Helping Your Business Stand Out Where Customers Are Searching',
       intro:
-        'Map Pack visibility, neighborhood-level content, and reporting tied to calls and leads — not vanity metrics.',
+        'Local SEO isn\'t just about improving rankings—it\'s about connecting your business with people who are actively looking for your products or services. A stronger local presence means more opportunities to generate enquiries, phone calls, and long-term customers.',
       layout: 'features',
       items: [],
       cards: [
         {
-          title: 'Map Pack Visibility',
+          title: 'Improve Local Visibility',
           icon: 'tabler:map-pin',
           paragraphs: [
-            'Show up where ready-to-buy customers decide — Google Maps, local pack results, and the listings that drive calls before anyone visits a website.',
+            'Increase your presence across Google Search and Google Maps so nearby customers can find your business more easily when they\'re searching for the services you offer.',
           ],
-          takeaway: 'Be the business customers see first.',
         },
         {
-          title: 'Neighborhood-Level Strategy',
-          icon: 'tabler:map-search',
+          title: 'Generate More Qualified Leads',
+          icon: 'tabler:target',
           paragraphs: [
-            'Shadyside, Lawrenceville, Cranberry, Mt. Lebanon, and every market in between get their own search strategy — not one generic Pittsburgh campaign.',
+            'Reach people who are already looking for businesses like yours, helping attract enquiries from customers with genuine buying intent.',
           ],
-          takeaway: 'Rank where your customers actually are.',
         },
         {
-          title: 'Leads You Can Measure',
-          icon: 'tabler:chart-bar',
+          title: 'Build Long-Term Growth',
+          icon: 'tabler:trending-up',
           paragraphs: [
-            'Monthly reporting on ranking movement, calls, form fills, and map views — so you always know what your SEO investment is producing.',
+            'A well-executed Local SEO strategy continues delivering value over time by strengthening your online presence and supporting sustainable business growth.',
           ],
-          takeaway: 'Results tied to revenue, not rankings alone.',
         },
       ],
     },
     deliverables: [],
     deliverablesEyebrow: 'What\'s Included',
     deliverablesTitle: 'What\'s included in our local SEO service',
-    deliverablesIntro:
-      'A complete local SEO system — from your Google Business Profile to citations, content, links, and reporting.',
     deliverablesDetailed: [
       {
         title: 'Google Business Profile Optimization',
         description:
-          'Full GBP audit and rebuild — categories, service areas, attributes, photos, Q&A, posts, and a review-generation system that runs on autopilot. This is the single highest-leverage asset in local SEO, and most businesses use less than half of it.',
-        icon: 'tabler:brand-google',
+          'We optimize your profile to rank higher in local searches and on Google Maps.',
+        icon: 'tabler:map-pin',
       },
       {
-        title: 'Citation Building & NAP Cleanup',
+        title: 'Local Keyword Targeting',
         description:
-          'We find every place your business is listed online, fix inconsistent name/address/phone info, and build new citations on the directories that actually move rankings — not spam lists that hurt you.',
+          'We target the right keywords your customers use to find businesses like yours.',
+        icon: 'tabler:target',
+      },
+      {
+        title: 'On-Page SEO & Content Optimization',
+        description:
+          'We optimize your website pages and content for local search visibility.',
+        icon: 'tabler:file-text',
+      },
+      {
+        title: 'Local Citations & NAP Consistency',
+        description:
+          'We build and fix citations to ensure your business info is accurate everywhere.',
         icon: 'tabler:world',
-      },
-      {
-        title: 'Location & Service Page Content',
-        description:
-          'If you serve multiple Pittsburgh neighborhoods or suburbs, you need dedicated pages for each — written for real search intent, not stuffed with keywords. We build these to convert, not just rank.',
-        icon: 'tabler:layout',
-      },
-      {
-        title: 'On-Page & Technical SEO',
-        description:
-          'Site speed, schema markup (LocalBusiness, Service, Review), mobile experience, internal linking, and metadata — all tuned so Google and AI search understand exactly who you are and where you operate.',
-        icon: 'tabler:code',
-      },
-      {
-        title: 'Review Strategy',
-        description:
-          'A simple, ethical system to get more reviews from real customers, respond to all of them professionally, and turn your reputation into a ranking advantage.',
-        icon: 'tabler:star',
       },
       {
         title: 'Local Link Building',
         description:
-          'Outreach to local publications, associations, chambers of commerce, and industry-relevant sites to build the kind of authority that compounds over time.',
+          'We get quality local links that improve your authority and boost rankings.',
         icon: 'tabler:link',
       },
       {
-        title: 'Reporting You Can Actually Read',
+        title: 'Review Generation Strategy',
         description:
-          'Monthly reports tied to what matters: ranking movement, calls, form fills, and map views — not vanity metrics.',
-        icon: 'tabler:report-analytics',
-      },
-    ],
-    benefits: [],
-    process: {
-      eyebrow: 'How We Work',
-      title: 'How we build your local SEO system',
-      align: 'center',
-      subtitle:
-        'From audit and foundation through build, optimization, and compounding growth — with clear priorities at every stage.',
-      steps: [
-        {
-          step: '01',
-          title: 'Audit & Foundation',
-          phase: 'Weeks 1–2',
-          paragraphs: [
-            'Full technical and GBP audit, competitor gap analysis, and a keyword + area map built specifically for your market and service radius.',
-          ],
-        },
-        {
-          step: '02',
-          title: 'Build & Optimize',
-          phase: 'Weeks 3–8',
-          paragraphs: [
-            'GBP overhaul goes live, citations get cleaned and built, location pages get written and published, and your review system activates. This is usually when the first ranking movement shows up.',
-          ],
-        },
-        {
-          step: '03',
-          title: 'Grow & Compound',
-          phase: 'Ongoing',
-          paragraphs: [
-            'Link building, content expansion, and continuous optimization. Local SEO is an asset, not an ad you switch off — the longer it runs, the more it compounds.',
-          ],
-        },
-      ],
-    },
-    hideWhyChoose: false,
-    whyChooseItems: [
-      {
-        title: 'No long contracts',
-        icon: 'tabler:lock-open',
-        description:
-          'Month-to-month engagement. You stay because the leads are coming in — not because an agreement traps you.',
+          'We help you get more 5-star reviews to build trust and improve rankings.',
+        icon: 'tabler:star',
       },
       {
-        title: 'Transparent pricing',
-        icon: 'tabler:receipt',
+        title: 'Technical SEO & Website Health',
         description:
-          'Most Pittsburgh agencies hide their pricing. We don\'t — you\'ll know what your plan includes and what it costs before you commit.',
-      },
-      {
-        title: 'Pittsburgh neighborhood strategy',
-        icon: 'tabler:map-search',
-        description:
-          'We build around how each neighborhood actually searches — Shadyside, Lawrenceville, Cranberry, Mt. Lebanon, and the full metro — not one generic city campaign.',
-      },
-      {
-        title: 'Reporting tied to leads',
-        icon: 'tabler:chart-bar',
-        description:
-          'Calls, form fills, map views, and ranking movement — not vanity metrics that look good in a deck but don\'t pay bills.',
-      },
-      {
-        title: 'Websites built in when needed',
+          'We fix technical issues so your website is fast, secure, and easy for Google to crawl.',
         icon: 'tabler:code',
-        description:
-          'If your site itself is holding you back, we can rebuild it with local SEO built in from day one — not bolted on after launch.',
-      },
-    ],
-    faq: {
-      eyebrow: 'FAQ',
-      title: 'Common Questions About Local SEO',
-      subtitle:
-        'Transparent pricing — most Pittsburgh agencies hide theirs. Foundational plans for single-location businesses start at $150–$300/mo; Growth plans for established SMBs run $750–$2,500/mo; Aggressive/Multi-Location programs for competitive categories run $1,500–$5,000/mo. Exact pricing depends on your industry and goals — book a free call for a quote.',
-      items: [
-        {
-          question: 'How long until I see results?',
-          answer:
-            'Most Pittsburgh businesses see measurable improvement in 60–90 days, with stronger results building over 4–6 months. Competitive categories (legal, medical, home services) take longer — we set realistic timelines based on your market.',
-        },
-        {
-          question: 'How competitive is local SEO in Pittsburgh?',
-          answer:
-            'Very. With 2.4 million people in the metro, you\'re often up against dozens of established businesses for the top 3 Map Pack spots. The upside: many of them have weak local SEO, so there\'s real room to win if you invest strategically.',
-        },
-        {
-          question: 'Do you work with businesses in the Pittsburgh suburbs?',
-          answer:
-            'Yes — the entire metro: Cranberry, Mt. Lebanon, Monroeville, Robinson, the North and South Hills, and everywhere between.',
-        },
-        {
-          question: 'Is local SEO worth it compared to paid ads?',
-          answer:
-            'Ads stop the moment you stop paying. Local SEO keeps working in the background, compounding month over month. Most of our clients run both — but local SEO is what keeps paying off long-term.',
-        },
-        {
-          question: 'What makes you different from other agencies?',
-          answer:
-            'No long contracts, transparent pricing, and reporting tied to actual leads — not just keyword rankings that don\'t translate into revenue.',
-        },
-        {
-          question: 'Do you build websites too?',
-          answer:
-            'Yes — if your site itself is holding you back, we can rebuild it with local SEO built in from day one, not bolted on after.',
-        },
-      ],
-    },
-    closingCta: {
-      title: 'Ready to show up where it counts in Pittsburgh?',
-      paragraphs: [
-        'Get a free, no-obligation visibility scan and see exactly where you\'re losing customers to competitors — and what it takes to fix it.',
-      ],
-      pickLabel: 'Get started',
-      primaryButton: {
-        label: 'Get My Free Pittsburgh Visibility Scan',
-        href: '/contact',
-        description: 'No spam. No obligation. Just an honest read on your local visibility.',
-      },
-      secondaryButton: {
-        label: 'Call +1 412 663 7288',
-        href: 'tel:+14126637288',
-        description: 'Mon–Fri, 9 AM–5 PM',
-      },
-    },
-  },
-  {
-    slug: 'google-map-optimization',
-    variant: 'full',
-    category: 'Search Engine Optimization',
-    title: 'Google Map Optimization in Pittsburgh',
-    metaTitle: 'Google Map Optimization Pittsburgh | Rank Higher on Maps',
-    metaDescription:
-      'Improve your Google Maps rankings with professional Google Map Optimization in Pittsburgh. Get found by nearby customers and generate more local leads.',
-    description: 'Profile work Pittsburgh businesses can count on for real map pack visibility.',
-    intro:
-      'Local SEO Wiser optimizes your Google Business Profile to win map pack visibility, drive calls, and convert searchers in Pittsburgh and beyond. Get a free profile audit.',
-    heroParagraphs: [
-      'Google map optimization is the process of refining your Google Business Profile (GBP) so it ranks higher in the local map pack and converts more searchers into calls, direction requests, and customers. It covers category selection, service alignment, business description, photos, posts, Q&A, review management, and ongoing profile activity, the signals Google uses to decide which three businesses appear in front of buyers ready to act.',
-      'Three spots. That is all the Google Map Pack gives you. Every day, businesses with stronger reputations, better reviews, and longer track records lose those spots to competitors who simply did the profile work. At Local SEO Wiser, we do that work, from category selection and service alignment to photo strategy, post cadence, and ongoing profile health, so your business shows up where buyers are already looking.',
-    ],
-    icon: 'tabler:brand-google',
-    imageAlt: 'Google Map Optimization service',
-    heroBadges: sharedHeroBadges,
-    heroLayout: 'centered',
-    hideStats: true,
-    heroPrimaryCta: { label: 'Get My Free Profile Audit', href: '/contact' },
-    heroSecondaryCta: { label: 'Explore Services', href: '/services' },
-    heroTrustItems: [
-      { label: 'Pittsburgh-based team', icon: 'tabler:map-pin' },
-      { label: 'Lead-focused reporting', icon: 'tabler:target' },
-      { label: 'Nationwide clients', icon: 'tabler:world' },
-    ],
-    challenge: {
-      eyebrow: 'Why This Service Matters',
-      title: 'A Half-Built Profile Costs You More Than You Realize',
-      paragraphs: [
-        'Google treats your Business Profile as a primary local relevance signal. When fields are missing, categories are too broad, or the profile sits untouched for months, Google has less reason to surface you in the top three. That gap gets filled by a competitor who did the work.',
-        'The issue is not effort. Most owners set up their profile once and move on. They do not know which signals move map pack rankings and which ones are noise. That knowledge gap is exactly where Local SEO Wiser comes in.',
-        'Neighborhoods like Squirrel Hill, the South Side, and the North Shore generate consistent near-me search traffic every day in Pittsburgh. An unoptimized profile in those areas means missed calls, not occasionally, but daily. The same dynamic plays out in every market we serve.',
-      ],
-    },
-    challengeImage: '/googlemap1.png',
-    challengeImageDimensions: { width: 512, height: 512 },
-    idealFit: {
-      eyebrow: 'Who It Is For',
-      title: 'This Service Fits If You Are:',
-      items: [
-        'A business that runs most leads through Google Maps but has never done a structured profile audit',
-        'Running outdated categories that do not reflect how customers actually search for your services',
-        'Sitting in positions four through seven in the local pack and cannot break into the top three despite strong reviews',
-        'Losing map pack clicks to competitors with weaker reputations because their profile structure is tighter than yours',
-        'A business with a static profile, no recent posts, and photos that have not been updated in months',
-        'A multi-location brand needing consistent optimization across every storefront or service area',
-      ],
-    },
-    idealFitImage: '/googlemap2.png',
-    idealFitImageDimensions: { width: 630, height: 419 },
-    splitOutcomes: true,
-    outcomes: {
-      eyebrow: 'What You Gain',
-      title: 'What Local SEO Wiser Delivers Through Google Map Optimization',
-      paragraphs: [
-        'Stronger relevance signals through category and service alignment. Category selection tells Google which searches your business should compete for. Most profiles use categories that are either too broad or incomplete. We restructure yours based on what buyers in your market are actually searching, not what seemed logical at setup.',
-        'Higher click-through from map results. A tight business description, active photo library, and current offers give customers a reason to choose your listing over the two beside it. When ratings are similar, presentation decides the click.',
-        'Trust through consistent profile activity. Google surfaces businesses that behave like active, customer-facing operations. Regular posts, answered Q&A, and fresh media all feed that signal. A dormant profile signals uncertainty, and uncertainty drives customers toward whoever looks more present.',
-        'Clear visibility into what is driving leads. We track calls, direction requests, website clicks, and photo views at the profile level every month. You see which actions the profile generates, not just where it ranks.',
-      ],
-      items: [],
-    },
-    deliverables: [],
-    deliverablesEyebrow: 'Deliverables',
-    deliverablesTitle: 'What Is Included',
-    deliverablesDetailed: [
-      {
-        title: 'Category and service attribute optimization',
-        description:
-          'We audit your primary and secondary categories against real search queries your customers use, then restructure them to maximize relevance. Service attributes are aligned to what you actually offer, not left at whatever defaults were selected at setup.',
       },
       {
-        title: 'Business description rewrite',
+        title: 'Monthly Reporting & Insights',
         description:
-          'Your description is what customers read before they decide whether to call. We rewrite it to communicate what you do, where you serve, and why your business is the right choice, without filler phrases that pad word count and say nothing.',
-      },
-      {
-        title: 'Photo and post strategy with publishing cadence',
-        description:
-          'Google measures profile activity. A consistent schedule for posts and fresh photos signals an active business and supports ranking. We build a publishing plan around your services and service area, then manage execution.',
-      },
-      {
-        title: 'Q&A and messaging setup',
-        description:
-          'We populate your Q&A section with the questions customers ask before calling, answered in a way that handles real objections. Messaging setup removes friction so customers can reach you directly through the profile.',
-      },
-      {
-        title: 'Geo-grid rank tracking',
-        description:
-          'Most agencies show you one ranking position. We map your visibility across a geo-grid covering your entire service area, so you see exactly where you rank strong and where map pack gaps still exist.',
-      },
-      {
-        title: 'Monthly performance tracking',
-        description:
-          'Every month you get a report covering calls, clicks, direction requests, and photo views pulled from your actual profile data. You always know what is working, what changed, and what comes next.',
+          'You get easy-to-understand reports showing your growth and results.',
+        icon: 'tabler:chart-bar',
       },
     ],
     benefits: [],
     process: {
       eyebrow: 'Our Process',
-      title: 'How Local SEO Wiser Delivers Google Map Optimization',
+      title: 'A Simple Process Focused on Long-Term Results',
+      align: 'center',
       steps: [
         {
           step: '01',
-          title: 'Profile Audit',
-          phase: 'Step 01',
-          description:
-            'We review your existing Google Business Profile field by field and compare it against the top three competitors ranking in your market. Every gap, outdated field, and missed signal is documented before anything is changed.',
+          title: 'Understand Your Business',
+          phase: 'Discovery',
+          paragraphs: [
+            'We begin by learning about your business, target audience, competitors, and goals before developing a strategy that fits your local market.',
+          ],
         },
         {
           step: '02',
-          title: 'Category and Entity Refinement',
-          phase: 'Step 02',
-          description:
-            'We restructure your primary and secondary categories, clean up your service list, and align your profile entity signals with the specific service types and neighborhoods you want to rank for.',
+          title: 'Build Your Local SEO Strategy',
+          phase: 'Execution',
+          paragraphs: [
+            'Our team improves your Google Business Profile, website, technical SEO, and local search signals using proven best practices.',
+          ],
         },
         {
           step: '03',
-          title: 'Content and Media Rollout',
-          phase: 'Step 03',
-          description:
-            'We rewrite all profile text sections, build an initial photo set, and launch your post schedule. Posts are written to match seasonal service demand and local search intent, not recycled generic templates.',
-        },
-        {
-          step: '04',
-          title: 'Review and Q&A Framework',
-          phase: 'Step 04',
-          description:
-            'We respond to existing reviews, build out the Q&A section, and set up a review generation workflow suited to how your business operates. Reputation signals are treated as a ranking factor, not an afterthought.',
+          title: 'Monitor & Improve',
+          phase: 'Ongoing',
+          paragraphs: [
+            'Local SEO is an ongoing process. We continuously review performance, refine the strategy, and make improvements to help your business stay competitive.',
+          ],
         },
       ],
     },
-    hideWhyChoose: true,
+    hideWhyChoose: false,
+    whyChooseEyebrow: 'Why Choose Local SEO Wiser',
+    whyChooseTitle: 'Why choose Local SEO Wiser',
+    whyChooseItems: [
+      {
+        title: 'No long contracts',
+        icon: 'tabler:eye',
+        description: 'Work with us month-to-month with complete flexibility.',
+      },
+      {
+        title: 'Transparent pricing',
+        icon: 'tabler:map-pin',
+        description: 'Clear pricing with no hidden fees. You always know what you\'re paying for.',
+      },
+      {
+        title: 'Pittsburgh neighborhood strategy',
+        icon: 'tabler:chart-bar',
+        description: 'We focus on your local area so you get more visibility where it matters.',
+      },
+      {
+        title: 'Reporting tied to leads',
+        icon: 'tabler:report-analytics',
+        description: 'We track calls, forms, and traffic so you can see real business growth.',
+      },
+      {
+        title: 'GBP experts',
+        icon: 'tabler:brand-google',
+        description: 'We manage your Google Business Profile as a primary ranking and lead-generation asset.',
+      },
+      {
+        title: 'Websites built when needed',
+        icon: 'tabler:device-desktop',
+        description: 'Need a new website? We build fast, SEO-friendly websites that rank.',
+      },
+    ],
     faq: {
       eyebrow: 'FAQ',
-      title: 'Common Questions About Google Map Optimization',
+      title: 'Frequently Asked Questions',
       items: [
         {
-          question: 'How much does Google Business Profile optimization cost?',
+          question: 'How long does Local SEO take?',
           answer:
-            'It depends on whether you need a one-time profile overhaul or ongoing management. A standalone optimization, including category restructuring, description rewrite, Q&A buildout, and initial photo and post setup, is typically a one-time project. Ongoing map optimization with monthly posts, review responses, and performance tracking is a monthly engagement. Your audit comes with a clear scope and price before any work begins, never a surprise invoice.',
+            'Local SEO is an ongoing process. While every business is different, improvements often become more noticeable over time as your website, Google Business Profile, and local authority continue to strengthen.',
         },
         {
-          question: 'How often should a business update its Google Business Profile?',
+          question: 'Do you guarantee first-page rankings?',
           answer:
-            'At minimum, fresh photos monthly and new posts at least once a week. Q&A responses should go up within 48 hours. Reviews should get a reply within a few days of being posted. Profiles that go weeks without activity lose the freshness signals Google uses to assess whether a business is operational.',
+            'No. We don\'t guarantee specific rankings because search results depend on many factors outside any agency\'s control. Instead, we focus on following proven Local SEO best practices.',
         },
         {
-          question: 'Can map optimization drive results without a website redesign?',
+          question: 'Can you work with an existing website?',
           answer:
-            'Yes. Profile optimization directly generates calls, direction requests, and website clicks from buyers who never make it past Google search results. A strong website improves conversion once someone clicks through, but the profile can perform as a standalone lead source before any website changes are made.',
+            'Yes. Whether your website was built by another company or developed in-house, we can review it and recommend improvements as part of your Local SEO strategy.',
         },
         {
-          question: 'What does Local SEO Wiser actually change in my profile?',
+          question: 'Do you only work with Pittsburgh businesses?',
           answer:
-            'We rewrite your business description, restructure categories, add missing service attributes, build out Q&A, establish a photo and post cadence, and implement review response workflows. After that we monitor monthly and adjust based on what the data shows is working in your market.',
+            'No. While Pittsburgh is our primary focus, we also work with businesses in other locations depending on their goals and requirements.',
         },
         {
-          question: 'How long before map pack position improves?',
+          question: 'How do I get started?',
           answer:
-            'Profile engagement metrics like clicks and direction requests typically show improvement four to six weeks after structured optimizations are in place. Map pack position movement in competitive industries takes three to five months because Google needs to observe sustained signals before adjusting rankings.',
+            'Simply contact our team for a free consultation. We\'ll discuss your business, review your current online presence, and recommend the most suitable Local SEO strategy.',
+        },
+      ],
+    },
+    investment: {
+      eyebrow: 'Our Approach',
+      title: 'How We Build Your Local SEO Strategy',
+      paragraphs: [
+        'No two businesses have the same goals, competition, or local market. That\'s why we don\'t offer one-size-fits-all SEO packages.',
+        'Your proposal is tailored after reviewing factors such as:',
+        'This allows us to recommend a strategy that\'s appropriate for your business instead of asking you to fit into a fixed package.',
+      ],
+      factors: [
+        'Your industry',
+        'Your target locations',
+        'Your website\'s current condition',
+        'Your Google Business Profile',
+        'The level of local competition',
+        'Your business goals',
+      ],
+      cta: { label: 'Request Your Custom Proposal', href: '/contact' },
+    },
+    closingCta: {
+      title: 'Ready to Improve Your Local Visibility?',
+      paragraphs: [
+        'Whether you\'re launching a new business or looking to strengthen your existing online presence, we\'re here to help you build a Local SEO strategy that supports long-term growth.',
+      ],
+      pickLabel: 'Get started',
+      primaryButton: {
+        label: 'Get My Free Consultation',
+        href: '/contact',
+      },
+      secondaryButton: {
+        label: 'Call +1 412 663 7288',
+        href: 'tel:+14126637288',
+      },
+      trustItems: [
+        { label: 'No Long-Term Contracts', icon: 'tabler:circle-check' },
+        { label: 'Transparent Monthly Reporting', icon: 'tabler:circle-check' },
+        { label: 'Tailored Local SEO Strategies', icon: 'tabler:circle-check' },
+      ],
+    },
+  },
+
+  {
+    slug: 'google-map-optimization',
+    variant: 'full',
+    category: 'Google Map Optimization in Pittsburgh',
+    title: 'Dominate Google Maps and Get More Local Calls',
+    metaTitle: 'Google Map Optimization Pittsburgh | Rank Higher on Maps',
+    metaDescription:
+      'Improve your Google Maps rankings with professional Google Map Optimization in Pittsburgh. Get found by nearby customers and generate more local leads.',
+    description:
+      'We optimize your Google Business Profile to help your business appear in the Google Map Pack, attract more local customers, and increase phone calls, website visits, and enquiries.',
+    intro:
+      'Local SEO Wiser helps Pittsburgh businesses dominate Google Maps with practical Google Business Profile optimization that drives calls, directions, and qualified local leads.',
+    icon: 'tabler:brand-google',
+    imageAlt: 'Google Map Optimization in Pittsburgh',
+    heroLayout: 'gmp',
+    hideStats: true,
+    heroPrimaryCta: { label: 'Get My Free Consultation', href: '/contact' },
+    heroSecondaryCta: { label: 'Call Us: +1 412 663 7288', href: 'tel:+14126637288' },
+    heroTrustItems: [
+      { label: '100% White Hat SEO', icon: 'tabler:circle-check-filled' },
+      { label: 'Google Business Profile Experts', icon: 'tabler:circle-check-filled' },
+      { label: 'Monthly Performance Reports', icon: 'tabler:circle-check-filled' },
+    ],
+    heroImage: '/gmp-hero-phone-transparent.png',
+    heroImageDimensions: { width: 640, height: 1298 },
+    challenge: {
+      eyebrow: 'The Problem',
+      title: "Why Most Businesses Don't Show Up in Google Maps",
+      paragraphs: [
+        "Many businesses have a Google Business Profile, but it's incomplete, outdated, or not optimized correctly. This makes it difficult to rank in the Google Map Pack, resulting in fewer calls, less visibility, and lost customers.",
+      ],
+    },
+    challengeImage: undefined,
+    challengeImageDimensions: undefined,
+    idealFit: {
+      eyebrow: 'Our Solution',
+      title: 'We Optimize Your Profile to Help You Get Found More Often',
+      items: [
+        'We fully optimize your Google Business Profile',
+        'We improve your map rankings and local visibility',
+        'We help you get more calls, messages, and direction requests',
+        'We build trust with photos, reviews, posts, and accurate information',
+      ],
+    },
+    splitOutcomes: false,
+    outcomes: {
+      eyebrow: 'Results',
+      title: 'What stronger Google Maps visibility can unlock',
+      items: [],
+      paragraphs: [],
+    },
+    deliverables: [],
+    deliverablesEyebrow: "What's Included",
+    deliverablesTitle: 'Complete Google Map Optimization Services',
+    deliverablesDetailed: [
+      {
+        title: 'Profile Optimization',
+        icon: 'tabler:building-store',
+        description:
+          'We refine your business name, categories, services, hours, and description so Google understands exactly what you offer.',
+      },
+      {
+        title: 'Photo & Video Optimization',
+        icon: 'tabler:photo',
+        description:
+          'We improve your media strategy with relevant photos and visuals that help your listing stand out in Google Maps.',
+      },
+      {
+        title: 'Google Posts',
+        icon: 'tabler:news',
+        description:
+          'We publish timely updates, offers, and service posts that keep your profile active and more engaging.',
+      },
+      {
+        title: 'Review Management',
+        icon: 'tabler:star',
+        description:
+          'We help you build a stronger review presence and respond in a way that builds trust with local customers.',
+      },
+      {
+        title: 'Local Citation Building',
+        icon: 'tabler:link',
+        description:
+          'We improve consistency across trusted directories so your NAP signals stay accurate and reliable.',
+      },
+      {
+        title: 'Map Rank Tracking',
+        icon: 'tabler:map-search',
+        description:
+          'We monitor your Google Maps visibility so you can see where you rank and where opportunities remain.',
+      },
+      {
+        title: 'Monthly Reporting',
+        icon: 'tabler:report-analytics',
+        description:
+          'You receive clear monthly reports covering completed work, profile activity, and performance insights.',
+      },
+      {
+        title: 'Ongoing Optimization',
+        icon: 'tabler:refresh',
+        description:
+          'We continue refining your profile based on results, competition, and changes in local search behavior.',
+      },
+    ],
+    benefits: [],
+    process: {
+      eyebrow: 'Our Process',
+      title: 'A Simple Process That Delivers Results',
+      align: 'center',
+      steps: [
+        {
+          step: '01',
+          title: 'Analyze',
+          phase: 'Step 01',
+          description:
+            'We analyze your current Google Business Profile, competitors, and local market.',
         },
         {
-          question: 'Will I lose access to my profile if I stop working with you?',
-          answer:
-            'No. Your Google Business Profile always belongs to you. We work as a manager on your profile, never the owner. You keep every change we implement if the engagement ends.',
+          step: '02',
+          title: 'Optimize',
+          phase: 'Step 02',
+          description:
+            'We optimize every part of your profile to improve visibility and relevance.',
         },
         {
-          question: 'Does my business need to be in Pittsburgh to work with Local SEO Wiser?',
+          step: '03',
+          title: 'Rank',
+          phase: 'Step 03',
+          description:
+            'Your profile starts ranking higher in Google Maps and local search results.',
+        },
+        {
+          step: '04',
+          title: 'Get More Customers',
+          phase: 'Step 04',
+          description:
+            'More visibility brings more calls, messages, website visits, and new customers.',
+        },
+      ],
+    },
+    hideWhyChoose: false,
+    whyChooseEyebrow: 'Why Choose Local SEO Wiser',
+    whyChooseTitle: 'A Local SEO Team You Can Rely On',
+    whyChooseItems: [
+      {
+        title: 'Focused on Results',
+        icon: 'tabler:target',
+        description: 'Every recommendation is built to improve visibility, trust, and real customer enquiries.',
+      },
+      {
+        title: 'Dedicated Support',
+        icon: 'tabler:headset',
+        description: 'You work with a team that keeps communication clear and stays involved throughout the campaign.',
+      },
+      {
+        title: 'Transparent Process',
+        icon: 'tabler:eye',
+        description: 'You always know what work is being completed and how your Google Maps strategy is progressing.',
+      },
+      {
+        title: 'Proven Experience',
+        icon: 'tabler:certificate',
+        description: 'Our team applies current Local SEO and Google Business Profile best practices across competitive markets.',
+      },
+      {
+        title: 'No Long-Term Contracts',
+        icon: 'tabler:calendar-off',
+        description: 'Work with us month-to-month with flexibility and no locked-in agreements.',
+      },
+      {
+        title: 'Continuous Improvement',
+        icon: 'tabler:trending-up',
+        description: 'We keep refining your profile so your Google Maps presence stays competitive over time.',
+      },
+    ],
+    faq: {
+      eyebrow: 'Frequently Asked Questions',
+      title: 'Google Map Optimization FAQs',
+      items: [
+        {
+          question: 'How long does it take to see results?',
           answer:
-            'No. The team is based in Pittsburgh and knows the market well, but we run Google map optimization campaigns for businesses across the United States and internationally. The profile signals and frameworks we use apply regardless of location.',
+            'Every business is different, but many profiles begin showing stronger engagement and clearer visibility improvements over the following weeks and months as optimizations take effect.',
+        },
+        {
+          question: 'Do you guarantee first-page or #1 Google Maps rankings?',
+          answer:
+            'No. We do not guarantee specific rankings because Google Maps results depend on many factors outside any agency’s control. We focus on proven optimization practices that improve your chances of getting found.',
+        },
+        {
+          question: 'Can you optimize an existing Google Business Profile?',
+          answer:
+            'Yes. Whether your profile was set up years ago or recently claimed, we can audit it and improve the details, media, reviews framework, and ongoing activity that support stronger map visibility.',
+        },
+        {
+          question: 'Do you only work with Pittsburgh businesses?',
+          answer:
+            'Pittsburgh is our primary focus, but we also help businesses in other locations depending on their goals, competition, and Google Maps needs.',
+        },
+        {
+          question: 'How do I get started?',
+          answer:
+            'Contact us for a free consultation. We will review your Google Business Profile, discuss your goals, and recommend the clearest next steps for Google Map Optimization.',
         },
       ],
     },
     closingCta: {
-      title: 'Your Competitors Are Working Their Profiles. Are You?',
+      title: 'Ready to Dominate Google Maps in Pittsburgh?',
       paragraphs: [
-        'The businesses holding the top three map pack spots in your market are not there by accident. They have cleaner categories, more consistent activity, and tighter profile structure. Local SEO Wiser gives you the same foundation, built around your service area and the neighborhoods that matter most to your business.',
+        'Let our experts optimize your Google Business Profile and help you get more local customers.',
       ],
-      bullets: [
-        'A full Google Business Profile audit comparing your listing against your top three map pack competitors',
-        'Category, service, and entity alignment based on how local buyers actually search',
-        'A clear action plan so you know exactly what gets fixed and in what order',
-      ],
-      pickLabel: 'Pick your next move',
       primaryButton: {
-        label: 'Get My Free Profile Audit',
+        label: 'Get My Free Consultation',
         href: '/contact',
-        description: 'Talk to a Local SEO Wiser map optimization specialist',
       },
       secondaryButton: {
-        label: 'Explore Services',
-        href: '/services',
-        description: 'Compare our services and see what fits your business',
+        label: 'Call Us: +1 412 663 7288',
+        href: 'tel:+14126637288',
       },
+      trustItems: [
+        { label: 'No Long-Term Contracts', icon: 'tabler:circle-check-filled' },
+        { label: 'Google Business Profile Experts', icon: 'tabler:circle-check-filled' },
+        { label: 'Transparent Monthly Reporting', icon: 'tabler:circle-check-filled' },
+      ],
     },
   },
   {
@@ -684,11 +725,11 @@ export const seoServicePages = [
       {
         title: 'How Much Does SEO Cost for a Small Business?',
         layout: 'ledger',
-        highlightPhrase: 'a few hundred to a few thousand dollars per month',
+        highlightPhrase: 'scoped to your market and goals',
         paragraphs: [
-          'Most small businesses should expect to invest a few hundred to a few thousand dollars per month depending on market competitiveness, service area size, and how fast they want to grow. As a rule of thumb: a single-location business in a moderately competitive market needs less than a multi-location brand fighting in a major metro.',
-          'What matters more than the number is what the budget buys. Ask any agency, including us, three questions:',
-          'If the answers are vague, walk away. Our packages page breaks down exactly what each tier includes, and your audit comes with a recommendation matched to your actual market, not an upsell script.',
+          'Most small businesses should expect an investment scoped to your market and goals — based on competitiveness, service area size, and how fast you want to grow. As a rule of thumb: a single-location business in a moderately competitive market needs a different scope than a multi-location brand fighting in a major metro.',
+          'What matters more than a sticker price is what the budget buys. Ask any agency, including us, three questions:',
+          'If the answers are vague, walk away. We quote every engagement individually after your audit — matched to your actual market, not an upsell script.',
         ],
         questions: [
           'What tasks are completed each month?',
@@ -739,7 +780,7 @@ export const seoServicePages = [
         {
           question: 'How much does small business SEO cost per month?',
           answer:
-            'Most small business SEO programs range from a few hundred to a few thousand dollars per month, depending on your market and goals. We publish our packages openly and recommend a tier based on your audit, never on a sales quota.',
+            'It depends on your market, competition, and goals. We do not publish fixed packages — your audit comes with a custom recommendation and clear investment, never an upsell script.',
         },
         {
           question: 'How long does SEO take to work for a small business?',
@@ -947,196 +988,227 @@ export const seoServicePages = [
   {
     slug: 'technical-seo',
     variant: 'full',
-    category: 'Search Engine Optimization',
-    title: 'Technical SEO Services in Pittsburgh',
+    category: 'Technical SEO Services in Pittsburgh',
+    title: 'Build a Strong Technical Foundation for Rankings',
     metaTitle: 'Technical SEO Services Pittsburgh | Fix & Improve Rankings',
     metaDescription:
       'Fix crawl errors, improve site speed, optimize schema, and strengthen your website with Technical SEO Services in Pittsburgh.',
-    description: 'Fixing the hidden issues that quietly kill your local rankings.',
+    description:
+      'Our technical SEO services help your website meet search engine requirements, improve performance, and remove barriers that prevent your business from ranking higher on Google.',
     intro:
-      'Crawl errors, slow load times, and missing schema quietly block local rankings. Local SEO Wiser fixes the technical foundation your Pittsburgh SEO strategy depends on.',
-    heroParagraphs: [
-      'Technical SEO is the process of fixing how your website is crawled, indexed, and understood by search engines. It covers site speed, Core Web Vitals, schema markup, internal linking, canonical tags, and crawl errors, the invisible layer that decides whether Google can find your pages, trust them, and rank them. At Local SEO Wiser, we audit, prioritize, and fix these issues for Pittsburgh businesses so every other part of your SEO finally performs at full potential.',
-      'A business can have solid content, an optimized Google Business Profile, and strong reviews, and still not rank where it should. The reason is usually the website itself. Slow load times, crawl errors, missing schema, and duplicate content are invisible to visitors but clearly visible to Google on every crawl.',
-    ],
+      'Local SEO Wiser helps Pittsburgh businesses build a stronger technical SEO foundation with practical fixes that support better crawling, indexing, speed, and long-term rankings.',
     icon: 'tabler:tool',
-    imageAlt: 'Technical SEO service',
-    heroBadges: sharedHeroBadges,
-    heroLayout: 'centered',
+    imageAlt: 'Technical SEO Services in Pittsburgh',
+    heroLayout: 'technical',
     hideStats: true,
-    heroPrimaryCta: { label: 'Get My Free Technical SEO Audit', href: '/contact' },
-    heroSecondaryCta: { label: 'Explore Services', href: '/services' },
+    heroPrimaryCta: { label: 'Get My Free Consultation', href: '/contact' },
+    heroSecondaryCta: { label: 'Call Us: +1 412 663 7288', href: 'tel:+14126637288' },
     heroTrustItems: [
-      { label: 'Pittsburgh-based team', icon: 'tabler:map-pin' },
-      { label: 'Lead-focused reporting', icon: 'tabler:target' },
-      { label: 'Nationwide clients', icon: 'tabler:world' },
+      { label: 'No Long-Term Contracts', icon: 'tabler:circle-check-filled' },
+      { label: 'Technical SEO Experts', icon: 'tabler:circle-check-filled' },
+      { label: 'Transparent Monthly Reporting', icon: 'tabler:circle-check-filled' },
     ],
+    heroImage: '/tech-seo-hero-laptop-transparent.png',
+    heroImageDimensions: { width: 1344, height: 936 },
     challenge: {
-      eyebrow: 'Why This Service Matters',
-      title: 'A Broken Foundation Limits Everything Built on Top of It',
+      eyebrow: 'The Problem',
+      title: 'Technical Issues Can Hold You Back',
       paragraphs: [
-        'Most small business websites were built to look good and load, not to perform in search. Developers focused on design and function rarely configure crawl efficiency, Core Web Vitals, schema markup, or internal linking structure. Those gaps do not show up when you load the homepage. But Google sees all of them on every crawl.',
-        'A site that takes more than three seconds to load on mobile loses searchers before they read a single line. A site with duplicate content across service or location pages causes Google to split ranking signals instead of concentrating them. Missing schema means Google cannot confidently interpret who the business is, where it operates, or what it offers.',
-        'These are not rare edge cases. They show up consistently across the Pittsburgh service business websites we audit, from home services and healthcare to legal and restaurants. And they silently cap what local SEO can achieve as long as they stay unresolved.',
+        'Even with great content and the right keywords, technical problems on your website can stop search engines from crawling, indexing, and ranking your pages properly.',
+        'Slow speed, broken links, crawl errors, and poor site structure can all hurt your visibility and user experience.',
       ],
     },
-    challengeImage: '/tech1.png',
-    challengeImageDimensions: { width: 786, height: 651 },
     idealFit: {
-      eyebrow: 'Who It Is For',
-      title: 'This Service Fits If You Are:',
+      eyebrow: 'Our Solution',
+      title: 'We Fix Technical Issues and Build a Strong SEO Foundation',
       items: [
-        'A business with slow mobile load times or failing Core Web Vitals in Google Search Console',
-        'Noticing pages that should rank for local service queries but stay unindexed or inconsistently crawled',
-        'A site that was recently migrated, redesigned, or rebuilt without any SEO migration plan',
-        'Running multiple location or service pages with suspected content duplication splitting ranking authority',
-        'Missing local business schema or service schema across your key pages',
-        'Wanting to understand what Google actually sees when it crawls your site, not just what it looks like in a browser',
+        'We identify and fix issues that impact your rankings',
+        'We improve site speed, structure, and crawlability',
+        'We ensure a better experience for both users and search engines',
+        'We build a solid technical foundation for long-term growth',
       ],
     },
-    idealFitImage: '/tech2.png',
-    idealFitImageDimensions: { width: 731, height: 678 },
-    splitOutcomes: true,
+    splitOutcomes: false,
     outcomes: {
-      eyebrow: 'What You Gain',
-      title: 'What Local SEO Wiser Delivers Through Technical SEO',
-      paragraphs: [
-        'Cleaner crawl paths for Googlebot. When Google can crawl your site without hitting dead ends, redirect chains, or blocked resources, it indexes your pages more reliably and picks up content changes faster after you make them.',
-        'Faster pages that keep visitors on the site. Core Web Vitals performance is a confirmed ranking factor and a direct signal of user experience quality. Local customers on mobile expect fast pages. A site that meets that expectation keeps visitors long enough to convert.',
-        'Stronger structured data for local entities. Schema markup tells Google exactly what your business is, what it offers, and where it operates. That clarity supports richer search results and improves how your business appears across Google\'s local surfaces, including AI Overviews and the map pack.',
-        'Fewer indexation and duplicate content issues. Canonical tags, clean redirects, and proper URL architecture stop Google from splitting signals across multiple versions of the same page. Consolidating that authority keeps ranking power where it belongs.',
-      ],
+      eyebrow: 'Results',
+      title: 'What stronger technical SEO can unlock',
       items: [],
+      paragraphs: [],
     },
     deliverables: [],
-    deliverablesEyebrow: 'Deliverables',
-    deliverablesTitle: 'What Is Included',
+    deliverablesEyebrow: "What's Included",
+    deliverablesTitle: 'Our Technical SEO Services Include',
     deliverablesDetailed: [
       {
-        title: 'Full technical audit with a prioritized fix list',
+        title: 'Technical SEO Audit',
+        icon: 'tabler:clipboard-check',
         description:
-          'We crawl your entire website and produce a structured report that documents every issue found, ordered by ranking impact. You know exactly what to fix first, what can wait, and why the sequence matters.',
+          'We review your website to uncover crawl issues, indexing problems, speed gaps, and technical barriers that may limit search performance.',
       },
       {
-        title: 'Core Web Vitals and mobile usability review',
+        title: 'Site Speed Optimization',
+        icon: 'tabler:bolt',
         description:
-          'We assess Largest Contentful Paint, Cumulative Layout Shift, and Interaction to Next Paint across your key service pages, then identify the specific files, scripts, or rendering issues causing failures. Mobile usability is reviewed against live Search Console data.',
+          'We improve page load times and Core Web Vitals so your site loads faster for visitors and search engines.',
       },
       {
-        title: 'Schema markup for local business and services',
+        title: 'Crawlability & Indexing',
+        icon: 'tabler:spider',
         description:
-          'We implement LocalBusiness schema, Service schema, and where applicable FAQ schema across your pages. Every schema block is validated in Google\'s Rich Results Test before it goes live.',
+          'We help Google discover and understand your important pages more efficiently through cleaner crawl paths and indexing signals.',
       },
       {
-        title: 'Internal linking and canonical recommendations',
+        title: 'Broken Link & Error Fixes',
+        icon: 'tabler:link-off',
         description:
-          'We map your current internal link structure, identify orphaned pages, consolidate duplicate content with canonical tags, and build an internal linking plan that distributes authority efficiently across your location and service pages.',
+          'We find and fix broken links, redirect issues, and error pages that create friction for users and search crawlers.',
       },
       {
-        title: 'Post-fix validation and ongoing monitoring',
+        title: 'Website Structure Optimization',
+        icon: 'tabler:hierarchy-2',
         description:
-          'After implementing fixes, we validate changes against Search Console data and re-crawl the site to confirm resolution. Ongoing monitoring catches new issues before they compound.',
+          'We improve internal linking and site architecture so your most important pages are easier to find and rank.',
       },
       {
-        title: 'XML sitemap and robots.txt optimization',
+        title: 'Mobile Optimization',
+        icon: 'tabler:device-mobile',
         description:
-          'We review and optimize your XML sitemap and robots.txt file to ensure search engines can efficiently crawl and index your website. We remove crawl blockers, improve indexation signals, and verify that important pages are discoverable while unnecessary URLs are excluded.',
-        icon: 'lucide:file-search',
+          'We strengthen mobile usability and responsiveness so your website performs well across phones and tablets.',
+      },
+      {
+        title: 'Schema Markup Implementation',
+        icon: 'tabler:code',
+        description:
+          'We add structured data that helps search engines better understand your business, services, and website content.',
+      },
+      {
+        title: 'Technical Reporting',
+        icon: 'tabler:report-analytics',
+        description:
+          'You receive clear reports showing completed technical work, improvements made, and next priorities.',
       },
     ],
     benefits: [],
     process: {
       eyebrow: 'Our Process',
-      title: 'How Local SEO Wiser Delivers Technical SEO',
+      title: 'A Simple Process That Delivers Results',
+      align: 'center',
       steps: [
         {
           step: '01',
-          title: 'Technical Audit',
+          title: 'Audit & Analyze',
           phase: 'Step 01',
           description:
-            'We run a full crawl of your website and cross-reference findings with your Google Search Console coverage report, Core Web Vitals data, and manual inspection of key pages. Every issue is logged by severity and ranking impact.',
+            'We audit your website to identify technical issues affecting crawlability, speed, indexing, and overall SEO performance.',
         },
         {
           step: '02',
-          title: 'Critical Fixes First',
+          title: 'Fix & Optimize',
           phase: 'Step 02',
           description:
-            'We address the highest-priority crawl, indexation, and speed issues before anything else. This typically includes redirect chain resolution, blocked resource fixes, mobile usability corrections, and Core Web Vitals improvements on your top landing pages.',
+            'We prioritize and fix the most important technical issues to strengthen your website foundation.',
         },
         {
           step: '03',
-          title: 'Schema and Internal Linking',
+          title: 'Test & Validate',
           phase: 'Step 03',
           description:
-            'Once critical fixes are live, we deploy structured data across service and location pages and build an internal linking plan that concentrates authority toward the pages most important for your local rankings.',
+            'We test the changes to confirm improvements in site health, usability, and search readiness.',
         },
         {
           step: '04',
-          title: 'Validation and Monitoring',
+          title: 'Monitor & Improve',
           phase: 'Step 04',
           description:
-            'Every fix is confirmed in Search Console and re-crawl data. Ongoing monitoring is set up so your site maintains technical health as content is added and the site evolves over time.',
+            'We continue monitoring technical performance and refine your site as new issues or opportunities appear.',
         },
       ],
     },
-    hideWhyChoose: true,
+    hideWhyChoose: false,
+    whyChooseEyebrow: 'Why Choose Local SEO Wiser',
+    whyChooseTitle: 'A Technical SEO Team You Can Trust',
+    whyChooseItems: [
+      {
+        title: 'Experienced Experts',
+        icon: 'tabler:certificate',
+        description: 'Our team applies proven Technical SEO practices to improve crawlability, speed, and site health.',
+      },
+      {
+        title: 'Focused on Results',
+        icon: 'tabler:target',
+        description: 'Every fix is prioritized based on what can meaningfully support better search performance.',
+      },
+      {
+        title: 'Clear Communication',
+        icon: 'tabler:messages',
+        description: 'You always know what issues were found, what was fixed, and why the work matters.',
+      },
+      {
+        title: 'Transparent Reporting',
+        icon: 'tabler:eye',
+        description: 'We provide clear updates and reports so you can track progress without technical confusion.',
+      },
+      {
+        title: 'No Long-Term Contracts',
+        icon: 'tabler:calendar-off',
+        description: 'Work with us month-to-month with flexibility and no locked-in agreements.',
+      },
+      {
+        title: 'Ongoing Optimization',
+        icon: 'tabler:refresh',
+        description: 'We keep monitoring and improving your technical foundation as your website evolves.',
+      },
+    ],
     faq: {
-      eyebrow: 'FAQ',
-      title: 'Common Questions About Technical SEO',
+      eyebrow: 'Frequently Asked Questions',
+      title: 'Technical SEO FAQs',
       items: [
         {
-          question: 'Do small business websites actually need technical SEO?',
+          question: 'What is Technical SEO?',
           answer:
-            'Yes, and often more urgently than larger sites. Small business websites are frequently built on themes or templates without any SEO configuration, which means slow mobile load times, missing schema, uncrawlable pages, and duplicate content are common from day one. These issues do not need to be severe to limit rankings. Even minor speed problems or missing structured data create friction that compounds across the whole campaign.',
+            'Technical SEO focuses on how search engines crawl, index, and understand your website. It includes site speed, crawlability, indexing, structure, mobile performance, schema markup, and related technical factors.',
         },
         {
-          question: 'How much does technical SEO cost?',
+          question: 'How does Technical SEO improve rankings?',
           answer:
-            'It depends on the size of your site and the depth of the issues found. A one-time technical audit with a prioritized fix list costs less than an ongoing program that includes implementation, validation, and monitoring. Most Pittsburgh small businesses fall into a modest one-time or short-term project range rather than a heavy monthly retainer, and your audit comes with a clear scope and price before any work begins.',
+            'When your website is easier for Google to crawl and understand, and faster for users to load, your Local SEO and content efforts have a stronger foundation to perform.',
         },
         {
-          question: 'Will Local SEO Wiser implement fixes or only provide recommendations?',
+          question: 'How long does it take to see results?',
           answer:
-            'We implement prioritized fixes directly when CMS or hosting access is available. For clients on WordPress this includes plugin configuration, image optimization, schema deployment, redirect management, and internal linking updates. For fixes that need developer involvement, we provide detailed implementation documentation and can coordinate directly with your developer.',
+            'Some improvements can appear relatively quickly after fixes are implemented and re-crawled, while broader ranking impact usually builds over time as Google processes the changes.',
         },
         {
-          question: 'How do I know if my site has technical SEO problems?',
+          question: 'Do you work with websites built on WordPress?',
           answer:
-            'Common signs are pages that do not appear in Google results despite being published, slow load times on mobile, a Search Console Coverage report with a high number of excluded or errored pages, and rankings that plateau despite consistent content and profile work. A technical audit identifies exactly what is holding performance back.',
+            'Yes. We regularly work with WordPress websites and can also review other platforms depending on your setup and access.',
         },
         {
-          question: 'What are Core Web Vitals and why do they matter for rankings?',
+          question: 'Will Technical SEO affect my website design or content?',
           answer:
-            'Core Web Vitals are Google\'s metrics for load speed, visual stability, and interactivity. Google uses them as a ranking signal in both organic and local search. Customers searching from mobile expect fast, stable pages. Sites that fail Core Web Vitals thresholds carry a consistent disadvantage against competitors with a cleaner technical foundation.',
-        },
-        {
-          question: 'How long before technical SEO improvements show in rankings?',
-          answer:
-            'Simple fixes like eliminating redirect chains or resolving index coverage errors can show in Search Console within two to four weeks once Googlebot recrawls the affected pages. Core Web Vitals and schema improvements typically reflect in performance data within six to eight weeks. More complex issues like site architecture restructuring take longer to stabilize, but directional improvement is usually visible within the first 60 days.',
+            'Most Technical SEO work focuses on performance, structure, and search readiness behind the scenes. Design and content usually stay intact unless a specific fix requires a related change.',
         },
       ],
     },
     closingCta: {
-      title: 'Your Competitors\' Sites Are Faster. Google Notices.',
+      title: 'Ready to Build a Strong Technical Foundation?',
       paragraphs: [
-        'The Pittsburgh businesses outranking you are not always producing better content. Many of them simply run on a cleaner technical foundation: faster pages, valid schema, and crawl paths Google can move through without friction. That advantage is invisible in a browser but decisive in rankings, and it is completely fixable.',
+        'Let our technical SEO experts optimize your website and help you rank higher in search results.',
       ],
-      bullets: [
-        'A full technical audit of your site with every issue ranked by impact',
-        'Core Web Vitals, schema, and indexation reviewed against live Search Console data',
-        'A clear fix sequence so you know exactly what gets resolved and in what order',
-      ],
-      pickLabel: 'Pick your next move',
       primaryButton: {
-        label: 'Get My Free Technical SEO Audit',
+        label: 'Get My Free Consultation',
         href: '/contact',
-        description: 'Talk to a Local SEO Wiser technical SEO specialist',
       },
       secondaryButton: {
-        label: 'Explore Services',
-        href: '/services',
-        description: 'Compare our services and see what fits your business',
+        label: 'Call Us: +1 412 663 7288',
+        href: 'tel:+14126637288',
       },
+      trustItems: [
+        { label: 'No Long-Term Contracts', icon: 'tabler:circle-check-filled' },
+        { label: 'Technical SEO Experts', icon: 'tabler:circle-check-filled' },
+        { label: 'Transparent Monthly Reporting', icon: 'tabler:circle-check-filled' },
+        { label: 'Focused on Long-Term Growth', icon: 'tabler:circle-check-filled' },
+      ],
     },
   },
 ]

@@ -24,7 +24,7 @@ const Work = () => {
               <div>
                 <p className="mb-1 fw-semibold f-18">Strategy</p>
                 <p className="mb-0 f-15 text-muted">
-                  Our digital marketing packages are tailored specifically for residential and commercial painting companies.
+                  Our digital marketing services are tailored specifically for residential and commercial painting companies.
                 </p>
               </div>
             </div>

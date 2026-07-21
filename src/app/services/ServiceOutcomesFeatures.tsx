@@ -4,6 +4,7 @@ import ScrollReveal from '@/components/ScrollReveal'
 import SectionHeader from '@/components/SectionHeader'
 import IconifyIcon from '@/components/wrappers/IconifyIcon'
 import { ServiceOutcomeCard } from '@/data/site-content'
+import Link from 'next/link'
 import { Container } from 'react-bootstrap'
 
 type ServiceOutcomesFeaturesProps = {
@@ -45,11 +46,18 @@ const ServiceOutcomesFeatures = ({ eyebrow, title, intro, cards }: ServiceOutcom
                   ) : null}
                 </div>
 
-                {card.takeaway ? (
+                {card.takeaway && !(card.ctaLabel && card.ctaHref) ? (
                   <div className="service-outcomes-features__takeaway">
                     <IconifyIcon icon="tabler:check" className="service-outcomes-features__takeaway-icon" aria-hidden="true" />
                     <span>{card.takeaway}</span>
                   </div>
+                ) : null}
+
+                {card.ctaLabel && card.ctaHref ? (
+                  <Link href={card.ctaHref} className="service-outcomes-features__cta">
+                    {card.ctaLabel}
+                    <IconifyIcon icon="tabler:arrow-right" aria-hidden="true" />
+                  </Link>
                 ) : null}
               </article>
             </ScrollReveal>

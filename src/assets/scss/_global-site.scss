@@ -199,3 +199,12 @@ p,
 .industry-coverflow-card__tags li {
     border-radius: 0 !important;
 }
+
+// Uniform card heading size site-wide (matches Why Choose / What's Included cards)
+[class*='card__title'],
+[class*='card-title'],
+.services-grid-title,
+.portfolio-project-card__name {
+    font-size: 1.1rem !important;
+    line-height: 1.3 !important;
+}

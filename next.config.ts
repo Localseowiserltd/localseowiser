@@ -20,7 +20,14 @@ const nextConfig: NextConfig = {
     silenceDeprecations: ['legacy-js-api', 'import', 'global-builtin', 'color-functions'],
   },
   async redirects() {
-    return legacyBlogRedirects
+    return [
+      ...legacyBlogRedirects,
+      {
+        source: '/packages',
+        destination: '/contact',
+        permanent: true,
+      },
+    ]
   },
 }
 

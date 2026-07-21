@@ -141,15 +141,6 @@ const NavTopBar = () => {
                 </div>
               </li>
 
-              <li className="brutalist-navbar__item brutalist-navbar__item--packages">
-                <Link
-                  href="/packages"
-                  className={`brutalist-navbar__link ${pathname === '/packages' ? 'is-active' : ''}`}
-                  onClick={closeMenu}>
-                  Packages
-                </Link>
-              </li>
-
               <PortfolioNavMenu pathname={pathname} onNavigate={closeMenu} />
 
               <li className="brutalist-navbar__item">

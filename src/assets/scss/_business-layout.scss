@@ -1,4 +1,4 @@
-// 
+﻿// 
 // Business Layout
 // 
 
@@ -11,7 +11,7 @@
     overflow: hidden;
     isolation: isolate;
 
-    // Radial gradient pattern — hero only (bottom layer)
+    // Radial gradient pattern â€” hero only (bottom layer)
     &::before {
         content: '';
         position: absolute;
@@ -39,7 +39,7 @@
         pointer-events: none;
     }
 
-    // Dot grid pattern — brand colors, on top of gradient + image
+    // Dot grid pattern â€” brand colors, on top of gradient + image
     .hero-bg-dots {
         position: absolute;
         inset: 0;
@@ -59,7 +59,7 @@
         max-width: $container-max-width;
     }
 
-    // Homepage hero only — keep shared bg-home-3 pages unaffected
+    // Homepage hero only â€” keep shared bg-home-3 pages unaffected
     &#home {
         padding: 112px 0 96px;
         min-height: 0;
@@ -577,7 +577,7 @@
 
 /******** Services grid panel ********/
 
-// Section header typography: see _global-site.scss (.section-eyebrow, .section-title, …)
+// Section header typography: see _global-site.scss (.section-eyebrow, .section-title, â€¦)
 
 .services-panel-view-all {
     display: inline-flex;
@@ -765,7 +765,7 @@
     }
 }
 
-/******** Why local SEO — editorial layout ********/
+/******** Why local SEO â€” editorial layout ********/
 
 .why-local-section {
     background: $white;
@@ -883,7 +883,7 @@
     }
 }
 
-/******** Why local SEO — ticket stat cards (legacy) ********/
+/******** Why local SEO â€” ticket stat cards (legacy) ********/
 
 .why-local-ticket-row {
     align-items: stretch;
@@ -1584,127 +1584,85 @@
     line-height: 1.6;
 }
 
-.home-pricing-cards {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.25rem;
-    max-width: 1040px;
+.home-investment-panel,
+.service-investment-panel {
+    max-width: 760px;
     margin: 0 auto;
-
-    @media (min-width: 768px) {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1rem;
-        align-items: stretch;
-    }
-}
-
-.home-pricing-card {
-    display: flex;
-    flex-direction: column;
+    padding: 1.75rem 1.5rem;
     border-radius: 14px;
-    overflow: hidden;
     border: 1px solid rgba($gray-800, 0.1);
     background: $white;
     box-shadow: 0 2px 12px rgba($dark, 0.04);
+    text-align: left;
 
-    &--featured {
-        border-color: $primary;
-        box-shadow: 0 8px 28px rgba($primary, 0.14);
-
-        @media (min-width: 768px) {
-            transform: translateY(-4px);
-        }
+    @media (min-width: 768px) {
+        padding: 2rem 2.25rem;
     }
 }
 
-.home-pricing-card__top {
-    padding: 1.35rem 1.25rem 1.15rem;
-    text-align: center;
-}
-
-.home-pricing-card__label {
-    display: block;
-    font-size: 0.68rem;
-    font-weight: 600;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    margin-bottom: 0.65rem;
-}
-
-.home-pricing-card__price {
-    font-size: clamp(1.15rem, 1.9vw, 1.4rem);
+.home-investment-panel__label,
+.service-investment-panel__label {
+    margin-bottom: 0.75rem;
+    color: $gray-700;
+    font-size: 0.8rem;
     font-weight: 700;
-    line-height: 1.2;
-    letter-spacing: -0.02em;
-}
-
-.home-pricing-card__period {
-    display: inline;
-    font-size: 0.72rem;
-    font-weight: 500;
-    letter-spacing: 0;
-}
-
-.home-pricing-card__body {
-    flex: 1;
-    padding: 1.15rem 1.25rem 1.35rem;
-    background: $white;
-    border-top: 1px solid rgba($gray-800, 0.06);
-}
-
-.home-pricing-card__best-for {
-    display: block;
-    font-size: 0.68rem;
-    font-weight: 600;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.06em;
     text-transform: uppercase;
-    color: $gray-500;
-    margin-bottom: 0.45rem;
 }
 
-.home-pricing-card__desc {
-    color: $gray-800;
-    font-size: 0.9rem;
-    line-height: 1.55;
-}
-
-.home-pricing-card__includes-label {
-    display: block;
-    margin-top: 1rem;
-    font-size: 0.68rem;
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: $gray-500;
-}
-
-.home-pricing-card__includes {
-    list-style: none;
-    margin: 0.45rem 0 0;
+.home-investment-panel__factors,
+.service-investment-panel__factors {
+    display: grid;
+    gap: 0.65rem;
+    margin: 0 0 1.5rem;
     padding: 0;
+    list-style: none;
+
+    @media (min-width: 768px) {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.75rem 1.25rem;
+    }
 
     li {
-        position: relative;
-        padding-left: 0.95rem;
-        margin: 0 0 0.35rem;
+        display: flex;
+        align-items: flex-start;
+        gap: 0.55rem;
         color: $gray-800;
-        font-size: 0.88rem;
+        font-size: 0.95rem;
         line-height: 1.45;
+    }
+}
 
-        &::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0.55em;
-            width: 0.35rem;
-            height: 0.35rem;
-            border-radius: 50%;
-            background: $primary;
-        }
+.home-investment-panel__icon,
+.service-investment-panel__icon {
+    flex-shrink: 0;
+    margin-top: 0.15rem;
+    color: $primary;
+    font-size: 1.1rem;
+}
 
-        &:last-child {
-            margin-bottom: 0;
-        }
+.home-investment-panel__actions,
+.service-investment-panel__actions {
+    margin-bottom: 1rem;
+}
+
+.home-investment-panel__footnote {
+    color: $gray-600;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.service-investment-panel__text {
+    margin-bottom: 1rem;
+    color: $gray-700;
+    font-size: 1rem;
+    line-height: 1.65;
+}
+
+.service-investment-section {
+    .section-header {
+        max-width: 760px;
+        margin-inline: auto;
     }
 }
 
@@ -1722,63 +1680,6 @@
             margin-bottom: 0;
         }
     }
-}
-
-.home-pricing-card--starter {
-    .home-pricing-card__top {
-        background: rgba($primary, 0.1);
-    }
-
-    .home-pricing-card__label {
-        color: darken($primary, 12%);
-    }
-
-    .home-pricing-card__price {
-        color: $dark;
-    }
-
-    .home-pricing-card__period {
-        color: $gray-600;
-    }
-}
-
-.home-pricing-card--growth {
-    .home-pricing-card__top {
-        background: $primary;
-    }
-
-    .home-pricing-card__label {
-        color: rgba($white, 0.82);
-    }
-
-    .home-pricing-card__price,
-    .home-pricing-card__period {
-        color: $white;
-    }
-}
-
-.home-pricing-card--competitive {
-    .home-pricing-card__top {
-        background: $dark;
-    }
-
-    .home-pricing-card__label {
-        color: rgba($white, 0.65);
-    }
-
-    .home-pricing-card__price,
-    .home-pricing-card__period {
-        color: $white;
-    }
-}
-
-.home-pricing-footnote {
-    max-width: 760px;
-    margin-top: 2rem;
-    margin-inline: auto;
-    color: $gray-600;
-    font-size: 0.92rem;
-    line-height: 1.7;
 }
 
 .industries-ask-us {

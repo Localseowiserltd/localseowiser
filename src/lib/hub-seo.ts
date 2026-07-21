@@ -243,32 +243,3 @@ export function buildServicesHubSchemas(
   ]
 }
 
-export function buildPackagesHubSchemas(
-  items: { name: string; description?: string }[],
-) {
-  return [
-    {
-      '@context': 'https://schema.org',
-      '@type': 'WebPage',
-      name: 'Local SEO Packages | Local SEO Wiser',
-      description:
-        'Explore custom Local SEO packages tailored to your business goals. We build strategies based on your market, competition, and growth stage.',
-      url: buildAbsoluteUrl('/packages'),
-      isPartOf: { '@type': 'WebSite', name: SITE_NAME, url: SITE_ORIGIN },
-      mainEntity: {
-        '@type': 'ItemList',
-        name: 'Local SEO Packages',
-        itemListElement: items.map((item, index) => ({
-          '@type': 'ListItem',
-          position: index + 1,
-          name: item.name,
-          ...(item.description ? { description: item.description } : {}),
-        })),
-      },
-    },
-    buildBreadcrumbSchema([
-      { name: 'Home', path: '/' },
-      { name: 'Packages', path: '/packages' },
-    ]),
-  ]
-}

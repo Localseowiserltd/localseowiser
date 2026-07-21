@@ -126,15 +126,12 @@ const ServiceCostLedgerSection = ({ block }: { block: ServiceContentBlock }) => 
                 </div>
               ) : null}
               <p className="section-subtitle smb-cost-ledger-card__text mb-0">
-                If the answers are vague, walk away. Our{' '}
-                <Link href="/packages" className="smb-cost-ledger-card__link">
-                  packages page
-                </Link>{' '}
-                breaks down exactly what each tier includes, and your{' '}
+                If the answers are vague, walk away. Your{' '}
                 <Link href="/contact" className="smb-cost-ledger-card__link">
                   audit
                 </Link>{' '}
-                comes with a recommendation matched to your actual market, not an upsell script.
+                comes with a custom recommendation matched to your actual market, not an upsell script or fixed
+                package.
               </p>
             </div>
           </div>

@@ -157,30 +157,21 @@ export const verifiedGoogleReviews: {
   datePublished?: string
 }[] = []
 
-export const homePricingPlans = [
-  {
-    name: 'Starter',
-    bestFor: 'Solo & new local businesses getting the foundation right',
-    priceRange: '$150–$300',
-    variant: 'starter' as const,
-    includes: ['GBP Optimization', 'Citation Cleanup', 'Monthly Reporting'],
-  },
-  {
-    name: 'Growth',
-    bestFor: 'Established businesses ready to win the Map Pack',
-    priceRange: '$750–$2,500',
-    variant: 'growth' as const,
-    featured: true,
-    includes: ['Everything in Starter', 'Service Pages', 'Review Strategy'],
-  },
-  {
-    name: 'Competitive',
-    bestFor: 'Legal, medical & home services in dense categories',
-    priceRange: '$1,500–$5,000',
-    variant: 'competitive' as const,
-    includes: ['Everything in Growth', 'Authority Link Building', 'Advanced Local SEO'],
-  },
-]
+export const homeInvestmentSection = {
+  eyebrow: 'Investment',
+  title: 'Custom quotes built around your business — not fixed packages',
+  subtitle:
+    'We do not offer fixed pricing or predefined packages. Every engagement is quoted individually based on your goals, competition, and the scope of work required.',
+  factors: [
+    'Your industry and local competition',
+    'Number of locations and service areas',
+    'Current digital foundation (site, profile, citations)',
+    'Growth goals and timeline',
+  ],
+  ctaLabel: 'Request a Proposal',
+  ctaHref: '/contact',
+  footnote: 'No long contracts. Clear scope and pricing before any work begins.',
+}
 
 export const homeCtaSection = {
   title: 'Ready to get found in Pittsburgh?',
@@ -307,11 +298,8 @@ export const faqItems: HomeFaqItem[] = [
   {
     question: 'How much do local SEO services cost in Pittsburgh?',
     answer:
-      "It depends on your industry's competition and goals. Foundational plans start lower, while competitive categories like legal, medical, and home services need more. See our pricing ranges above, or compare full Local SEO packages for engagement options. A quick call gets you an exact number.",
-    links: [
-      { label: 'Local SEO packages', href: '/packages' },
-      { label: 'pricing ranges above', href: '/#pricing' },
-    ],
+      "It depends on your industry's competition, current foundation, and goals. We quote every project individually after understanding your market — no fixed packages or one-size-fits-all pricing. A quick call gets you a clear proposal.",
+    links: [{ label: 'Request a proposal', href: '/contact' }],
   },
   {
     question: 'How competitive is local SEO in Pittsburgh?',
@@ -491,6 +479,8 @@ export type ServiceOutcomeCard = {
   bullets?: string[]
   takeaway?: string
   icon?: string
+  ctaLabel?: string
+  ctaHref?: string
 }
 
 export type ServiceDeliverableItem = {
@@ -530,6 +520,7 @@ export type ServiceClosingCta = {
   pickLabel?: string
   primaryButton: { label: string; href: string; description?: string }
   secondaryButton?: { label: string; href: string; description?: string }
+  trustItems?: { label: string; icon: string }[]
 }
 
 export type ServicePlaybookCard = {
@@ -550,6 +541,14 @@ export type ServiceHeroTrustItem = {
   icon: string
 }
 
+export type ServiceInvestmentSection = {
+  eyebrow: string
+  title: string
+  paragraphs: string[]
+  factors?: string[]
+  cta: { label: string; href: string }
+}
+
 export type ServicePage = {
   slug: string
   category: string
@@ -566,12 +565,14 @@ export type ServicePage = {
   imageAlt?: string
   heroImage?: string
   heroImageDimensions?: { width: number; height: number }
-  heroLayout?: 'default' | 'centered' | 'split'
+  heroLayout?: 'default' | 'centered' | 'split' | 'showcase' | 'gmp' | 'technical'
   heroBadges?: string[]
   heroParagraphs?: string[]
   heroPrimaryCta?: { label: string; href: string }
   heroSecondaryCta?: { label: string; href: string }
   heroTrustItems?: ServiceHeroTrustItem[]
+  /** Show compact lead form in centered hero */
+  heroForm?: boolean
   hideStats?: boolean
   stats?: ServiceStat[]
   challenge?: {
@@ -628,6 +629,9 @@ export type ServicePage = {
   }
   whyChoose?: string[]
   whyChooseItems?: ServiceWhyChooseItem[]
+  whyChooseEyebrow?: string
+  whyChooseTitle?: string
+  whyChooseIntro?: string
   hideWhyChoose?: boolean
   faq?: {
     eyebrow: string
@@ -635,6 +639,7 @@ export type ServicePage = {
     subtitle?: string
     items: ServiceFaqItem[]
   }
+  investment?: ServiceInvestmentSection
   exploreCta?: {
     text: string
     buttonLabel: string
@@ -1093,12 +1098,12 @@ export const servicePages: ServicePage[] = [
       eyebrow: 'FAQ',
       title: 'Common Questions About Google Ads Management',
       subtitle:
-        'Transparent pricing — separated the way it should be. Your total cost has two parts: ad spend paid directly to Google, and a flat management fee paid to us. For most local Pittsburgh campaigns, sensible starting budgets run from a few hundred to a few thousand dollars a month. Management typically runs roughly $500–$1,500/month depending on complexity. Book a call for an exact quote.',
+        'Google Ads investment has two parts: ad spend paid directly to Google, and our management fee. Both are quoted to your goals — we do not sell fixed packages.',
       items: [
         {
           question: 'How much does Google Ads management cost in Pittsburgh?',
           answer:
-            'There are two costs: your ad spend (paid to Google) and our management fee (paid to us). For most local businesses, management runs roughly $500–$1,500/month depending on complexity, with ad spend set to your budget and goals. We always quote them separately — if an agency can\'t give you two clear numbers, that\'s a red flag.',
+            'There are two costs: your ad spend (paid to Google) and our management fee (paid to us). We always quote them separately based on campaign complexity and goals — if an agency can\'t give you two clear numbers, that\'s a red flag.',
         },
         {
           question: 'How fast will I see results from Google Ads?',
@@ -1126,6 +1131,21 @@ export const servicePages: ServicePage[] = [
             'No — and be cautious of anyone who does. Google prohibits ranking guarantees, and lead volume depends on factors beyond the ad account, including your offer and follow-up. We commit to transparent management, real reporting, and steady improvement in cost per lead.',
         },
       ],
+    },
+    investment: {
+      eyebrow: 'Investment',
+      title: 'Google Ads management quoted for your campaigns',
+      paragraphs: [
+        'We do not offer fixed Google Ads packages. Your management fee and recommended ad spend are based on your market, offer, and the complexity of the account you need.',
+        'You always know both numbers separately before you start — ad spend to Google, management fee to us.',
+      ],
+      factors: [
+        'Campaign complexity and number of services',
+        'Target geography and competition',
+        'Tracking and conversion setup needs',
+        'Whether you need search, Local Services Ads, or both',
+      ],
+      cta: { label: 'Book a Consultation', href: '/contact' },
     },
     closingCta: {
       title: 'See where your ad budget is actually going',
@@ -1358,12 +1378,12 @@ export const servicePages: ServicePage[] = [
       eyebrow: 'FAQ',
       title: 'Common Questions About WordPress Development',
       subtitle:
-        'Transparent pricing — matched to the job your site does. WordPress itself is free; what you\'re paying for is the design, development, content, and SEO that make it work. Starter sites run a few hundred to a couple thousand dollars; business websites typically $3,000–$8,000+; WooCommerce stores from $2,000–$5,000. We quote build and ongoing care separately. Book a call for an exact quote.',
+        'Website projects are quoted individually. WordPress itself is free — you invest in design, development, content, and SEO scoped to what your business needs. No fixed packages.',
       items: [
         {
           question: 'How much does a WordPress website cost in Pittsburgh?',
           answer:
-            'It depends on scope. A simple brochure site runs from a few hundred to a couple thousand dollars; a full business website with service and location pages and an SEO foundation typically runs $3,000–$8,000+; WooCommerce stores start around $2,000–$5,000. We quote the build and ongoing care separately so there are no surprises.',
+            'It depends on scope: page count, features, content readiness, and whether you need e-commerce or ongoing care. We quote the build and ongoing maintenance separately so there are no surprises — after a short discovery call, not from a price list.',
         },
         {
           question: 'How long does a WordPress build take?',
@@ -1391,6 +1411,21 @@ export const servicePages: ServicePage[] = [
             'Yes. We offer ongoing care — updates, backups, security, and small fixes — plus the local SEO work that keeps the site growing as an asset, not just sitting there.',
         },
       ],
+    },
+    investment: {
+      eyebrow: 'Investment',
+      title: 'Website development quoted to your project',
+      paragraphs: [
+        'We do not sell fixed website packages. Your quote reflects the pages, features, content, and SEO foundation your business actually needs — whether you are launching fresh or rebuilding an existing site.',
+        'Build cost and ongoing care are quoted separately so the investment stays clear from day one.',
+      ],
+      factors: [
+        'Page count, design complexity, and integrations',
+        'Content readiness and migration needs',
+        'Local SEO and conversion requirements',
+        'Ongoing maintenance and growth support',
+      ],
+      cta: { label: 'Request a Website Quote', href: '/contact' },
     },
     closingCta: {
       title: 'Let\'s build a site that actually works for your business',
@@ -1600,7 +1635,7 @@ export const servicePages: ServicePage[] = [
         title: 'Built for local and small business',
         icon: 'tabler:building-store',
         description:
-          'Many Pittsburgh Shopify agencies chase large brands with $15,000–$50,000 budgets. We build practical, high-performing stores for local merchants, startups, and growing brands that need every dollar to work.',
+          'Many Shopify agencies chase enterprise brands with enterprise budgets. We build practical, high-performing stores for local merchants, startups, and growing brands that need every dollar to work.',
       },
       {
         title: 'One team for store and rankings',
@@ -1625,12 +1660,12 @@ export const servicePages: ServicePage[] = [
       eyebrow: 'FAQ',
       title: 'Common Questions About Shopify Development',
       subtitle:
-        'Transparent pricing — sized to your store, not inflated. Large agencies often start at $15,000+ because they target enterprise brands; we scope to what local and small businesses actually need — starter stores, full builds, migrations, and ongoing care quoted separately. Book a call for an exact quote.',
+        'Shopify projects are quoted to your catalog and features — not inflated enterprise packages. Build cost and ongoing work are scoped separately.',
       items: [
         {
           question: 'How much does Shopify development cost in Pittsburgh?',
           answer:
-            'It depends on your catalog and features. Large agencies often start at $15,000+ because they target enterprise brands; we scope to what local and small businesses actually need, and quote a fixed number once we see your store\'s requirements. We separate the build cost from ongoing work so there are no surprises.',
+            'It depends on your catalog, design, apps, and migrations. Large agencies often price for enterprise brands; we scope to what local and small businesses actually need, and quote a clear number once we see your store\'s requirements. We separate the build cost from ongoing work so there are no surprises.',
         },
         {
           question: 'Isn\'t Shopify already good for SEO?',
@@ -1658,6 +1693,21 @@ export const servicePages: ServicePage[] = [
             'Yes, always. The store, account, content, and data are yours, with full access. No lock-in.',
         },
       ],
+    },
+    investment: {
+      eyebrow: 'Investment',
+      title: 'Shopify development priced for your store',
+      paragraphs: [
+        'We do not offer fixed Shopify packages. Your quote is based on catalog size, design, integrations, and whether you need a new build, a migration, or ongoing optimization.',
+        'You receive a clear proposal after discovery — scoped to what your store needs, not an enterprise template.',
+      ],
+      factors: [
+        'Catalog size and product complexity',
+        'Theme customization and app integrations',
+        'Migration and SEO redirect requirements',
+        'Ongoing optimization and care after launch',
+      ],
+      cta: { label: 'Request a Website Quote', href: '/contact' },
     },
     closingCta: {
       title: 'Let\'s build a store that sells — and gets found',
@@ -1879,12 +1929,12 @@ export const servicePages: ServicePage[] = [
       eyebrow: 'FAQ',
       title: 'Common Questions About Social Media Management',
       subtitle:
-        'Transparent pricing — no surprises. Foundational plans for consistent posting on 1–2 platforms start at $300–$500/mo; Growth plans with content and community management run $700–$1,500/mo; Full-Service multi-platform management with paid ads runs $1,500–$3,500/mo. Book a free call for an exact quote.',
+        'Social media management is quoted individually based on platforms, posting cadence, and content needs — no fixed packages.',
       items: [
         {
           question: 'How often will you post?',
           answer:
-            'Typically 3–5 posts per week per platform, depending on your plan. We\'ll recommend a frequency based on your industry and goals, not a one-size-fits-all number.',
+            'Typically 3–5 posts per week per platform, depending on your scope. We\'ll recommend a frequency based on your industry and goals, not a one-size-fits-all number.',
         },
         {
           question: 'Do you create the content or do I need to provide it?',
@@ -2012,8 +2062,6 @@ export const serviceCategories = [
   },
 ]
 
-/** @deprecated Import from `@/data/packages` instead. */
-export { packageComparison, packages } from './packages'
 
 /** Blog content hub — single source lives in `@/data/blog` (re-exported for compatibility). */
 export type { BlogPost } from '@/types/blog'

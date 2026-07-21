@@ -10,9 +10,13 @@ import ScrollReveal from '@/components/ScrollReveal'
 import SectionHeader from '@/components/SectionHeader'
 import IconifyIcon from '@/components/wrappers/IconifyIcon'
 import ServiceHeroParagraphSlider from '@/app/services/ServiceHeroParagraphSlider'
+import ServiceDetailGmp from '@/app/services/ServiceDetailGmp'
+import ServiceDetailTechnical from '@/app/services/ServiceDetailTechnical'
 import ServiceDetailSmallBusiness from '@/app/services/ServiceDetailSmallBusiness'
 import ServiceOutcomesTree from '@/app/services/ServiceOutcomesTree'
 import ServiceOutcomesFeatures from '@/app/services/ServiceOutcomesFeatures'
+import LocalSeoConsultationForm from '@/components/forms/LocalSeoConsultationForm'
+import VisibilityScanForm from '@/components/forms/VisibilityScanForm'
 import { useScrollReveal } from '@/hooks/useScrollReveal'
 import { defaultServiceStats } from '@/data/service-page-seo'
 import { ServiceDeliverableItem, ServicePage, ServiceStat } from '@/data/site-content'
@@ -181,7 +185,13 @@ const ServiceDeliverablesDetailedGridItem = ({
 }
 
 const ServiceDeliverablesDetailedGrid = ({ items }: { items: ServiceDeliverableItem[] }) => (
-  <div className={clsx('services-grid-panel', items.length === 5 && 'services-grid-panel--five')}>
+  <div
+    className={clsx(
+      'services-grid-panel',
+      items.length === 5 && 'services-grid-panel--five',
+      items.length === 8 && 'services-grid-panel--eight',
+      items.length === 10 && 'services-grid-panel--ten',
+    )}>
     {items.map((item, index) => (
       <ServiceDeliverablesDetailedGridItem key={item.title} item={item} index={index} />
     ))}
@@ -204,7 +214,7 @@ const ServiceDeliverablesSection = ({
   <section className="section service-detail-deliverables">
     <Container>
       <ScrollReveal animation="fade-up">
-        <SectionHeader eyebrow={eyebrow} title={title} />
+        <SectionHeader align="center" eyebrow={eyebrow} title={title} />
         {intro ? <p className="section-subtitle mb-4">{intro}</p> : null}
       </ScrollReveal>
       {detailedItems && detailedItems.length > 0 ? (
@@ -233,12 +243,333 @@ const ServiceStatCounter = ({ stat }: { stat: ServiceStat }) => {
   )
 }
 
+const ServiceHeroFormBar = () => (
+  <div className="hero-form-card service-detail-hero__form-bar">
+    <VisibilityScanForm
+      id="visibility-scan-form"
+      buttonLabel="Get My Free Visibility Scan"
+      layout="horizontal"
+      showNote={false}
+    />
+  </div>
+)
+
 const ServiceDetailHero = ({ service }: { service: ServicePage }) => {
   const badges = service.heroBadges ?? DEFAULT_HERO_BADGES
   const stats = service.stats ?? defaultServiceStats
   const showStats = !service.hideStats
   const isCenteredLayout = service.heroLayout === 'centered'
   const isSplitLayout = service.heroLayout === 'split'
+  const isShowcaseLayout = service.heroLayout === 'showcase'
+  const isGmpLayout = service.heroLayout === 'gmp'
+  const isTechnicalLayout = service.heroLayout === 'technical'
+
+  if (isTechnicalLayout) {
+    return (
+      <section className="service-detail-hero service-detail-hero--technical">
+        <div className="service-detail-hero__technical-glow" aria-hidden="true" />
+        <Container>
+          <Row className="align-items-center g-4 g-xl-4">
+            <Col lg={5} xl={5}>
+              <ScrollReveal animation="fade-up">
+                <p className="section-eyebrow mb-3">{service.category}</p>
+                <h1 className="page-hero-header__title service-detail-hero__technical-title">{service.title}</h1>
+                {service.description ? (
+                  <p className="service-detail-hero__technical-lead">{service.description}</p>
+                ) : null}
+                {service.heroTrustItems && service.heroTrustItems.length > 0 ? (
+                  <ul className="service-detail-hero__technical-trust list-unstyled">
+                    {service.heroTrustItems.map((item) => (
+                      <li key={item.label}>
+                        <IconifyIcon icon={item.icon || 'tabler:circle-check-filled'} aria-hidden="true" />
+                        <span>{item.label}</span>
+                      </li>
+                    ))}
+                  </ul>
+                ) : null}
+                <div className="service-detail-hero__technical-actions">
+                  {service.heroPrimaryCta ? (
+                    <ButtonLink variant="primary" href={service.heroPrimaryCta.href}>
+                      {service.heroPrimaryCta.label}
+                      <IconifyIcon icon="tabler:arrow-right" aria-hidden="true" />
+                    </ButtonLink>
+                  ) : null}
+                  {service.heroSecondaryCta ? (
+                    <ButtonLink variant="outline-primary" href={service.heroSecondaryCta.href}>
+                      <IconifyIcon icon="tabler:phone" aria-hidden="true" />
+                      {service.heroSecondaryCta.label}
+                    </ButtonLink>
+                  ) : null}
+                </div>
+              </ScrollReveal>
+            </Col>
+            <Col lg={3} xl={3} className="text-center">
+              <ScrollReveal animation="fade-up" delay={60} hoverable={false}>
+                <div className="service-detail-hero__technical-laptop">
+                  <Image
+                    src={service.heroImage ?? '/tech-seo-hero-laptop-transparent.png'}
+                    alt={service.imageAlt ?? 'Technical SEO dashboard'}
+                    width={service.heroImageDimensions?.width ?? 1344}
+                    height={service.heroImageDimensions?.height ?? 936}
+                    className="service-detail-hero__technical-laptop-img"
+                    priority
+                    unoptimized
+                  />
+                </div>
+              </ScrollReveal>
+            </Col>
+            <Col lg={4} xl={4}>
+              <ScrollReveal animation="fade-up" delay={100} hoverable={false}>
+                <LocalSeoConsultationForm
+                  id="technical-seo-consultation-form"
+                  title="Ready to Improve Your Website's Performance?"
+                  subtitle="Get a free consultation and receive a custom technical SEO strategy tailored to your business."
+                  buttonLabel="Get My Free Consultation"
+                  privacyNote="We respect your privacy. No spam. Ever."
+                />
+              </ScrollReveal>
+            </Col>
+          </Row>
+        </Container>
+      </section>
+    )
+  }
+
+  if (isGmpLayout) {
+    const title = service.title
+    const accentMatch = title.match(/^(.*?)\b(Local Calls)\b(.*)$/i)
+    const titleNode = accentMatch ? (
+      <>
+        {accentMatch[1]}
+        <span className="service-detail-hero__gmp-accent">{accentMatch[2]}</span>
+        {accentMatch[3]}
+      </>
+    ) : (
+      title
+    )
+
+    return (
+      <section className="service-detail-hero service-detail-hero--gmp">
+        <div className="service-detail-hero__gmp-glow" aria-hidden="true" />
+        <Container>
+          <Row className="align-items-center g-4 g-xl-5">
+            <Col lg={5} xl={5}>
+              <ScrollReveal animation="fade-up">
+                <p className="section-eyebrow mb-3">{service.category}</p>
+                <h1 className="page-hero-header__title service-detail-hero__gmp-title">{titleNode}</h1>
+                {service.description ? <p className="service-detail-hero__gmp-lead">{service.description}</p> : null}
+                {service.heroTrustItems && service.heroTrustItems.length > 0 ? (
+                  <ul className="service-detail-hero__gmp-trust list-unstyled">
+                    {service.heroTrustItems.map((item) => (
+                      <li key={item.label}>
+                        <IconifyIcon icon={item.icon || 'tabler:circle-check'} aria-hidden="true" />
+                        <span>{item.label}</span>
+                      </li>
+                    ))}
+                  </ul>
+                ) : null}
+                <div className="service-detail-hero__gmp-actions">
+                  {service.heroPrimaryCta ? (
+                    <ButtonLink variant="primary" href={service.heroPrimaryCta.href}>
+                      {service.heroPrimaryCta.label}
+                      <IconifyIcon icon="tabler:arrow-right" aria-hidden="true" />
+                    </ButtonLink>
+                  ) : null}
+                  {service.heroSecondaryCta ? (
+                    <ButtonLink variant="outline-primary" href={service.heroSecondaryCta.href}>
+                      {service.heroSecondaryCta.label}
+                    </ButtonLink>
+                  ) : null}
+                </div>
+              </ScrollReveal>
+            </Col>
+            <Col lg={3} xl={3} className="text-center">
+              <ScrollReveal animation="fade-up" delay={80} hoverable={false}>
+                <div className="service-detail-hero__gmp-phone">
+                  <Image
+                    src={service.heroImage ?? '/gmp-hero-phone.png'}
+                    alt={service.imageAlt ?? 'Google Maps on mobile'}
+                    width={service.heroImageDimensions?.width ?? 768}
+                    height={service.heroImageDimensions?.height ?? 1024}
+                    className="service-detail-hero__gmp-phone-img"
+                    priority
+                    unoptimized
+                  />
+                </div>
+              </ScrollReveal>
+            </Col>
+            <Col lg={4} xl={4}>
+              <ScrollReveal animation="fade-up" delay={120} hoverable={false}>
+                <LocalSeoConsultationForm
+                  id="gmp-consultation-form"
+                  title="Ready to Grow Your Local Visibility?"
+                  subtitle="Get a free consultation and receive a custom Google Map optimization strategy."
+                  buttonLabel="Get My Free Consultation"
+                  privacyNote="We respect your privacy. No spam. Ever."
+                />
+              </ScrollReveal>
+            </Col>
+          </Row>
+        </Container>
+      </section>
+    )
+  }
+
+  if (isShowcaseLayout) {
+    const trustItems =
+      service.heroTrustItems ??
+      (service.heroBadges ?? DEFAULT_HERO_BADGES).map((label) => ({
+        label,
+        icon: 'tabler:circle-check',
+      }))
+
+    const titleParts = service.title.split('Pittsburgh')
+    const titleNode =
+      titleParts.length === 2 ? (
+        <>
+          {titleParts[0]}
+          <span className="service-detail-hero__showcase-accent">Pittsburgh</span>
+          {titleParts[1]}
+        </>
+      ) : (
+        service.title
+      )
+
+    return (
+      <section className="service-detail-hero service-detail-hero--showcase">
+        <div className="service-detail-hero__showcase-glow" aria-hidden="true" />
+        <Container>
+          <Row className="align-items-center g-4 g-xl-5">
+            <Col lg={6} xl={6}>
+              <ScrollReveal animation="fade-up">
+                <p className="section-eyebrow mb-3">Local SEO Services in Pittsburgh</p>
+                <h1 className="page-hero-header__title service-detail-hero__showcase-title">{titleNode}</h1>
+                {service.description ? (
+                  <p className="service-detail-hero__showcase-lead">{service.description}</p>
+                ) : null}
+                <ul className="service-detail-hero__showcase-trust list-unstyled">
+                  {trustItems.map((item) => (
+                    <li key={item.label}>
+                      <IconifyIcon icon={item.icon || 'tabler:circle-check'} aria-hidden="true" />
+                      <span>{item.label}</span>
+                    </li>
+                  ))}
+                </ul>
+                <div className="service-detail-hero__showcase-actions">
+                  {service.heroPrimaryCta ? (
+                    <ButtonLink
+                      variant="primary"
+                      href={service.heroPrimaryCta.href}
+                      className="service-detail-hero__showcase-cta">
+                      {service.heroPrimaryCta.label}
+                      <IconifyIcon icon="tabler:arrow-right" aria-hidden="true" />
+                    </ButtonLink>
+                  ) : null}
+                  {service.heroSecondaryCta ? (
+                    <ButtonLink
+                      variant="light"
+                      href={service.heroSecondaryCta.href}
+                      className="service-detail-hero__showcase-call">
+                      <IconifyIcon icon="tabler:phone" aria-hidden="true" />
+                      {service.heroSecondaryCta.label}
+                    </ButtonLink>
+                  ) : null}
+                </div>
+              </ScrollReveal>
+            </Col>
+            <Col lg={6} xl={6}>
+              <ScrollReveal animation="fade-up" delay={80} hoverable={false}>
+                <div className="lseo-hero-stage">
+                  <div className="lseo-hero-stage__skyline">
+                    <Image
+                      src="/images/locations/north-shore-pittsburgh-local-business-seo.webp"
+                      alt=""
+                      width={1200}
+                      height={800}
+                      className="lseo-hero-stage__skyline-img"
+                      priority
+                      unoptimized
+                    />
+                  </div>
+
+                  {/* Decorative UI widgets — visual only, not live company metrics */}
+                  <div className="lseo-hero-float lseo-hero-float--gbp" aria-hidden="true">
+                    <p className="lseo-hero-float__label">Google Business Profile</p>
+                    <div className="lseo-hero-float__rating-row">
+                      <span className="lseo-hero-float__score">4.9</span>
+                      <span className="lseo-hero-float__stars">
+                        <IconifyIcon icon="tabler:star-filled" />
+                        <IconifyIcon icon="tabler:star-filled" />
+                        <IconifyIcon icon="tabler:star-filled" />
+                        <IconifyIcon icon="tabler:star-filled" />
+                        <IconifyIcon icon="tabler:star-filled" />
+                      </span>
+                    </div>
+                    <p className="lseo-hero-float__meta">1,248 reviews</p>
+                    <div className="lseo-hero-float__bars">
+                      <span />
+                      <span />
+                      <span />
+                      <span />
+                      <span />
+                    </div>
+                  </div>
+
+                  <div className="lseo-hero-float lseo-hero-float--search" aria-hidden="true">
+                    <p className="lseo-hero-float__label">Total Searches</p>
+                    <div className="lseo-hero-float__metric-row">
+                      <span className="lseo-hero-float__metric">12.6K</span>
+                      <span className="lseo-hero-float__badge">+34%</span>
+                    </div>
+                    <p className="lseo-hero-float__meta">vs last month</p>
+                    <svg className="lseo-hero-float__spark" viewBox="0 0 140 40" fill="none" aria-hidden="true">
+                      <path
+                        d="M2 32 C16 30 22 18 34 20 C46 22 52 34 64 28 C76 22 84 10 98 12 C112 14 122 8 138 4"
+                        stroke="currentColor"
+                        strokeWidth="2.75"
+                        strokeLinecap="round"
+                      />
+                      <path
+                        d="M2 32 C16 30 22 18 34 20 C46 22 52 34 64 28 C76 22 84 10 98 12 C112 14 122 8 138 4 L138 40 L2 40 Z"
+                        fill="url(#lseoSparkFill)"
+                        opacity="0.18"
+                      />
+                      <defs>
+                        <linearGradient id="lseoSparkFill" x1="0" y1="0" x2="0" y2="1">
+                          <stop offset="0%" stopColor="#22c55e" />
+                          <stop offset="100%" stopColor="#22c55e" stopOpacity="0" />
+                        </linearGradient>
+                      </defs>
+                    </svg>
+                  </div>
+
+                  <div className="lseo-hero-float lseo-hero-float--map" aria-hidden="true">
+                    <div className="lseo-hero-map">
+                      <span className="lseo-hero-map__road lseo-hero-map__road--h1" />
+                      <span className="lseo-hero-map__road lseo-hero-map__road--h2" />
+                      <span className="lseo-hero-map__road lseo-hero-map__road--v1" />
+                      <span className="lseo-hero-map__road lseo-hero-map__road--v2" />
+                      <span className="lseo-hero-map__block lseo-hero-map__block--a" />
+                      <span className="lseo-hero-map__block lseo-hero-map__block--b" />
+                      <span className="lseo-hero-map__block lseo-hero-map__block--c" />
+                      <span className="lseo-hero-map__pin lseo-hero-map__pin--red" />
+                      <span className="lseo-hero-map__pin lseo-hero-map__pin--blue" />
+                      <span className="lseo-hero-map__pin lseo-hero-map__pin--orange" />
+                      <span className="lseo-hero-map__pin lseo-hero-map__pin--yellow" />
+                      <span className="lseo-hero-map__pin lseo-hero-map__pin--teal" />
+                    </div>
+                  </div>
+                </div>
+              </ScrollReveal>
+            </Col>
+          </Row>
+          <ScrollReveal animation="fade-up" delay={140} hoverable={false}>
+            <ServiceHeroFormBar />
+          </ScrollReveal>
+        </Container>
+      </section>
+    )
+  }
 
   if (isSplitLayout) {
     return (
@@ -275,6 +606,9 @@ const ServiceDetailHero = ({ service }: { service: ServicePage }) => {
               </Col>
             ) : null}
           </Row>
+          <ScrollReveal animation="fade-up" delay={140} hoverable={false}>
+            <ServiceHeroFormBar />
+          </ScrollReveal>
         </Container>
       </section>
     )
@@ -354,6 +688,9 @@ const ServiceDetailHero = ({ service }: { service: ServicePage }) => {
               </ScrollReveal>
             </Col>
           </Row>
+          <ScrollReveal animation="fade-up" delay={140} hoverable={false}>
+            <ServiceHeroFormBar />
+          </ScrollReveal>
         </Container>
       </section>
     )
@@ -410,6 +747,9 @@ const ServiceDetailHero = ({ service }: { service: ServicePage }) => {
             </Col>
           ) : null}
         </Row>
+        <ScrollReveal animation="fade-up" delay={140} hoverable={false}>
+          <ServiceHeroFormBar />
+        </ScrollReveal>
       </Container>
     </section>
   )
@@ -470,6 +810,7 @@ const ServiceDetailSimple = ({ service, relatedServices }: ServiceDetailSections
 
 const ServiceDetailFull = ({ service }: { service: ServicePage }) => {
   const [openFaq, setOpenFaq] = useState(0)
+  const isLocalSeo = service.slug === 'local-seo'
 
   if (!service.challenge || !service.idealFit || !service.outcomes || !service.process || !service.faq) {
     return null
@@ -803,9 +1144,35 @@ const ServiceDetailFull = ({ service }: { service: ServicePage }) => {
         <section className="section bg-light service-detail-why-section">
           <Container>
             <ScrollReveal animation="fade-up">
-              <SectionHeader align="left" eyebrow="Why choose us" title="Why choose Local SEO Wiser" />
+              <SectionHeader
+                align={isLocalSeo ? 'center' : 'left'}
+                eyebrow={service.whyChooseEyebrow ?? (isLocalSeo ? 'Why Local SEO Wiser' : 'Why choose us')}
+                title={service.whyChooseTitle ?? 'Why choose Local SEO Wiser'}
+                subtitle={service.whyChooseIntro}
+              />
             </ScrollReveal>
             {service.whyChooseItems && service.whyChooseItems.length > 0 ? (
+              isLocalSeo ? (
+                <div className="lseo-why-grid">
+                  {service.whyChooseItems.map((item, idx) => (
+                    <ScrollReveal
+                      key={item.title}
+                      animation="fade-up"
+                      delay={idx * 50}
+                      className="lseo-why-grid__item">
+                      <article className="lseo-why-card">
+                        <div className="lseo-why-card__head">
+                          <span className="lseo-why-card__icon-wrap" aria-hidden="true">
+                            <IconifyIcon icon={item.icon ?? 'tabler:circle-check'} className="lseo-why-card__icon" />
+                          </span>
+                          <h3 className="lseo-why-card__title">{item.title}</h3>
+                        </div>
+                        <p className="lseo-why-card__text">{item.description}</p>
+                      </article>
+                    </ScrollReveal>
+                  ))}
+                </div>
+              ) : (
               <Row className="g-3 g-lg-4 service-detail-why-section__grid">
                 {service.whyChooseItems.map((item, idx) => (
                   <Col lg={4} md={6} key={item.title}>
@@ -824,6 +1191,7 @@ const ServiceDetailFull = ({ service }: { service: ServicePage }) => {
                   </Col>
                 ))}
               </Row>
+              )
             ) : (
               <Row className="g-3 justify-content-center">
                 {service.whyChoose!.map((item, idx) => {
@@ -842,6 +1210,88 @@ const ServiceDetailFull = ({ service }: { service: ServicePage }) => {
                 })}
               </Row>
             )}
+          </Container>
+        </section>
+      ) : null}
+
+      {service.investment && isLocalSeo ? (
+        <section className="section service-investment-section service-investment-section--local" id="investment">
+          <Container>
+            <ScrollReveal animation="fade-up">
+              <div className="service-investment-panel service-investment-panel--wide">
+                <SectionHeader
+                  align="center"
+                  eyebrow={service.investment.eyebrow}
+                  title={service.investment.title}
+                  subtitle={service.investment.paragraphs[0]}
+                />
+                {service.investment.paragraphs.slice(1, 2).map((paragraph) => (
+                  <p key={paragraph.slice(0, 48)} className="service-investment-panel__text">
+                    {paragraph}
+                  </p>
+                ))}
+                {service.investment.factors && service.investment.factors.length > 0 ? (
+                  <ul className="service-investment-panel__factors service-investment-panel__factors--grid">
+                    {service.investment.factors.map((factor) => (
+                      <li key={factor}>
+                        <IconifyIcon icon="tabler:check" className="service-investment-panel__icon" />
+                        <span>{factor}</span>
+                      </li>
+                    ))}
+                  </ul>
+                ) : null}
+                {service.investment.paragraphs.slice(2).map((paragraph) => (
+                  <p key={paragraph.slice(0, 48)} className="service-investment-panel__text">
+                    {paragraph}
+                  </p>
+                ))}
+                <div className="service-investment-panel__actions">
+                  <ButtonLink variant="primary" href={service.investment.cta.href}>
+                    {service.investment.cta.label}
+                    <IconifyIcon icon="tabler:arrow-right" aria-hidden="true" />
+                  </ButtonLink>
+                </div>
+              </div>
+            </ScrollReveal>
+          </Container>
+        </section>
+      ) : service.investment ? (
+        <section className="section service-investment-section bg-light" id="investment">
+          <Container>
+            <ScrollReveal animation="fade-up">
+              <SectionHeader
+                eyebrow={service.investment.eyebrow}
+                title={service.investment.title}
+                subtitle={service.investment.paragraphs[0]}
+              />
+            </ScrollReveal>
+            <ScrollReveal animation="fade-in" delay={80} hoverable={false}>
+              <div className="service-investment-panel">
+                {service.investment.paragraphs.slice(1).map((paragraph) => (
+                  <p key={paragraph.slice(0, 48)} className="service-investment-panel__text">
+                    {paragraph}
+                  </p>
+                ))}
+                {service.investment.factors && service.investment.factors.length > 0 ? (
+                  <>
+                    <p className="service-investment-panel__label">What shapes your quote</p>
+                    <ul className="service-investment-panel__factors">
+                      {service.investment.factors.map((factor) => (
+                        <li key={factor}>
+                          <IconifyIcon icon="tabler:check" className="service-investment-panel__icon" />
+                          <span>{factor}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </>
+                ) : null}
+                <div className="service-investment-panel__actions">
+                  <ButtonLink variant="primary" href={service.investment.cta.href}>
+                    {service.investment.cta.label}
+                  </ButtonLink>
+                </div>
+              </div>
+            </ScrollReveal>
           </Container>
         </section>
       ) : null}
@@ -881,7 +1331,46 @@ const ServiceDetailFull = ({ service }: { service: ServicePage }) => {
         </Container>
       </section>
 
-      {service.closingCta ? (
+      {service.closingCta && isLocalSeo ? (
+        <section className="section service-closing-final" id="service-closing-cta">
+          <Container>
+            <ScrollReveal animation="fade-up">
+              <div className="service-closing-final__card">
+                <div className="service-closing-final__copy">
+                  <h2 className="service-closing-final__title">{service.closingCta.title}</h2>
+                  {service.closingCta.paragraphs.map((paragraph) => (
+                    <p key={paragraph.slice(0, 48)} className="service-closing-final__text">
+                      {paragraph}
+                    </p>
+                  ))}
+                  {service.closingCta.trustItems && service.closingCta.trustItems.length > 0 ? (
+                    <ul className="service-closing-final__trust list-unstyled">
+                      {service.closingCta.trustItems.map((item) => (
+                        <li key={item.label}>
+                          <IconifyIcon icon={item.icon || 'tabler:circle-check'} aria-hidden="true" />
+                          <span>{item.label}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  ) : null}
+                </div>
+                <div className="service-closing-final__actions">
+                  <ButtonLink variant="primary" href={service.closingCta.primaryButton.href} className="service-closing-final__btn">
+                    {service.closingCta.primaryButton.label}
+                    <IconifyIcon icon="tabler:arrow-right" aria-hidden="true" />
+                  </ButtonLink>
+                  {service.closingCta.secondaryButton ? (
+                    <a href={service.closingCta.secondaryButton.href} className="service-closing-final__phone">
+                      <IconifyIcon icon="tabler:phone" aria-hidden="true" />
+                      {service.closingCta.secondaryButton.label}
+                    </a>
+                  ) : null}
+                </div>
+              </div>
+            </ScrollReveal>
+          </Container>
+        </section>
+      ) : service.closingCta && !isLocalSeo ? (
         <section className="section home-cta-section home-cta-section--layered" id="service-closing-cta">
           <Container>
             <ScrollReveal animation="fade-up">
@@ -936,7 +1425,7 @@ const ServiceDetailFull = ({ service }: { service: ServicePage }) => {
             </ScrollReveal>
           </Container>
         </section>
-      ) : service.exploreCta ? (
+      ) : service.exploreCta && !isLocalSeo ? (
         <section className="home-cta-section" id="service-explore-cta">
           <Container>
             <ScrollReveal animation="fade-up">
@@ -970,10 +1459,17 @@ const ServiceDetailSections = ({ service, relatedServices }: ServiceDetailSectio
     className={clsx(
       'service-detail-page',
       service.pageLayout === 'small-business' && 'service-detail-page--smb',
+      service.slug === 'local-seo' && 'service-detail-page--local-seo',
+      service.slug === 'google-map-optimization' && 'service-detail-page--gmp',
+      service.slug === 'technical-seo' && 'service-detail-page--technical',
     )}>
     <ServiceDetailHero service={service} />
     {service.variant === 'full' ? (
-      service.pageLayout === 'small-business' ? (
+      service.slug === 'google-map-optimization' ? (
+        <ServiceDetailGmp service={service} />
+      ) : service.slug === 'technical-seo' ? (
+        <ServiceDetailTechnical service={service} />
+      ) : service.pageLayout === 'small-business' ? (
         <ServiceDetailSmallBusiness service={service} />
       ) : (
         <ServiceDetailFull service={service} />
