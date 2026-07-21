@@ -1,5 +1,7 @@
 import { SITE_NAME, SITE_ORIGIN } from '@/config/site'
+import { contactInfo } from '@/data/site-content'
 import type { ServicePage } from '@/data/site-content'
+import { buildOrganizationSchema } from '@/lib/hub-seo'
 import type { Metadata } from 'next'
 
 export function getServicePageUrl(service: ServicePage) {
@@ -106,6 +108,43 @@ export function buildServiceSchema(service: ServicePage) {
   }
 }
 
+/** Business entity (NAP-consistent, city-only) offering this service. */
+export function buildServiceProfessionalServiceSchema(service: ServicePage) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'ProfessionalService',
+    name: SITE_NAME,
+    description:
+      'Local SEO and digital marketing agency in Pittsburgh, PA helping businesses rank in the Google Map Pack and win more local customers.',
+    url: SITE_ORIGIN,
+    telephone: contactInfo.phoneTel,
+    email: contactInfo.email,
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Pittsburgh',
+      addressRegion: 'PA',
+      addressCountry: 'US',
+    },
+    areaServed: {
+      '@type': 'City',
+      name: 'Pittsburgh',
+      containedInPlace: {
+        '@type': 'State',
+        name: 'Pennsylvania',
+      },
+    },
+    image: `${SITE_ORIGIN}/logo.png`,
+    makesOffer: {
+      '@type': 'Offer',
+      itemOffered: {
+        '@type': 'Service',
+        name: service.title,
+        url: getServicePageUrl(service),
+      },
+    },
+  }
+}
+
 export function buildServiceImageObjectSchema(service: ServicePage) {
   const image = getServiceImage(service)
   return {
@@ -142,6 +181,8 @@ export function buildServiceFaqSchema(service: ServicePage) {
 export function buildServicePageSchemas(service: ServicePage) {
   return [
     buildServiceSchema(service),
+    buildServiceProfessionalServiceSchema(service),
+    buildOrganizationSchema(),
     buildServiceBreadcrumbSchema(service),
     buildServiceImageObjectSchema(service),
     buildServiceFaqSchema(service),
